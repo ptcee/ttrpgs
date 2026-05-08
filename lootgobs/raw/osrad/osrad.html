@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Old School Radical. A (mostly) One Page RPG.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        :root {
+            --main: #00a2ca;
+            --highlight: #e1457c;
+            --die: #6ab85b;
+            --bg: #f5f0e8;
+            --card-pink: #f6dee6;
+            --card-blue: #dbedf7;
+            --card-green: #dff2e1;
+            --card-yellow: #f5f0cc;
+            --border: #c8c0b0;
+            --text: #1a1a1a;
+            --faint: #d0c8b8;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 12px;
+            line-height: 1.65;
+            padding: 36px 32px 80px;
+        }
+
+        a {
+            color: var(--highlight);
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 12px;
+        }
+
+        a:hover {
+            background-color: var(--main);
+        }
+
+        .page-header {
+            margin-bottom: 36px;
+            border-bottom: 4px solid var(--highlight);
+            padding-bottom: 24px;
+        }
+
+        .page-header h1 {
+            font-family: 'Londrina Solid', sans-serif;
+            font-weight: 900;
+            font-size: 8.5em;
+            color: var(--main);
+            letter-spacing: 8px;
+            line-height: 1;
+            text-shadow: 6px 6px 0 var(--highlight);
+        }
+
+        .page-header .tagline {
+            font-family: 'Londrina Solid', sans-serif;
+            font-weight: 300;
+            font-size: 18px;
+            letter-spacing: 3px;
+            color: var(--highlight);
+            margin-top: 6px;
+        }
+
+        .page-header .intro {
+            margin-top: 16px;
+            max-width: 650px;
+            font-size: 12px;
+            line-height: 1.75;
+        }
+
+        .two-col {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .col {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .col-fixed {
+            flex: 0 0 360px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .card {
+            border-radius: 12px;
+            padding: 18px 20px;
+            border: 1px solid var(--border);
+            margin-bottom: 16px;
+        }
+
+        .card.pink {
+            background: var(--card-pink);
+        }
+
+        .card.blue {
+            background: var(--card-blue);
+        }
+
+        .card.green {
+            background: var(--card-green);
+        }
+
+        .card.yellow {
+            background: var(--card-yellow);
+        }
+
+        h2 {
+            font-family: 'Londrina Solid', sans-serif;
+            font-weight: 900;
+            font-size: 26px;
+            letter-spacing: 3px;
+            color: var(--main);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 6px;
+            margin-bottom: 12px;
+        }
+
+        h3 {
+            font-family: 'Londrina Solid', sans-serif;
+            font-weight: 400;
+            font-size: 15px;
+            letter-spacing: 2px;
+            color: var(--highlight);
+            margin: 12px 0 6px;
+            text-transform: uppercase;
+        }
+
+        p {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        em {
+            font-style: italic;
+            color: var(--highlight);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 10px;
+        }
+
+        ul li {
+            padding: 3px 0 3px 16px;
+            position: relative;
+            border-bottom: 1px dotted var(--faint);
+        }
+
+        ul li:last-child {
+            border-bottom: none;
+        }
+
+        ul li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--main);
+        }
+
+        ol {
+            padding-left: 18px;
+            margin-bottom: 10px;
+        }
+
+        ol li {
+            padding: 3px 0;
+            border-bottom: 1px dotted var(--faint);
+        }
+
+        ol li:last-child {
+            border-bottom: none;
+        }
+
+        blockquote {
+            background: rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--highlight);
+            padding: 10px 14px;
+            font-size: 11px;
+            line-height: 1.65;
+            font-style: italic;
+            margin: 10px 0;
+            border-radius: 0 6px 6px 0;
+        }
+
+        blockquote strong {
+            color: var(--highlight);
+            font-style: normal;
+        }
+
+        blockquote ul,
+        h3 {
+            margin: 0px;
+        }
+
+        .card img {
+            display: block;
+            margin: 16px auto;
+            max-width: 100%;
+        }
+
+        .pre {
+            background: rgba(90, 90, 90, 0.07);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 10px 14px;
+            font-size: 11px;
+            font-family: 'Courier New', monospace;
+            margin: 8px 0;
+        }
+
+        code {
+            font-family: 'Courier New', monospace;
+            background: rgba(0, 0, 0, 0.07);
+            padding: 1px 5px;
+            border-radius: 3px;
+            font-size: 11px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 8px 0 12px;
+            font-size: 11px;
+        }
+
+        th {
+            font-family: 'Londrina Solid', sans-serif;
+            font-size: 13px;
+            letter-spacing: 1px;
+            color: var(--main);
+            text-align: left;
+            padding: 4px 8px;
+            border-bottom: 2px solid var(--main);
+            background: rgba(0, 200, 83, 0.08);
+        }
+
+        td {
+            padding: 4px 8px;
+            border-bottom: 1px solid var(--faint);
+            vertical-align: top;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background: rgba(0, 0, 0, 0.03);
+        }
+
+        td:first-child {
+            color: var(--highlight);
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .die {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            border-radius: 5px;
+            background: white;
+            /* border: 2px solid var(--die); */
+            flex-shrink: 0;
+            vertical-align: middle;
+        }
+
+        .die svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .pd {
+            fill: var(--die);
+        }
+
+        .trick-row {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 4px 0;
+            border-bottom: 1px dotted var(--faint);
+            font-size: 11px;
+        }
+
+        .trick-row:last-of-type {
+            border-bottom: none;
+        }
+
+        .trick-row:hover {
+            background: rgba(0, 0, 0, 0.03);
+        }
+
+        .trick-name {
+            margin-left: 5px;
+        }
+
+        .dice-tables {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .dice-tables>div {
+            flex: 1;
+        }
+
+        .conditables,
+        .feattables {
+            display: flex;
+            gap: 10px;
+        }
+
+        .note {
+            font-size: 10px;
+            color: #666;
+            font-style: italic;
+        }
+
+        .loop-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 16px;
+        }
+
+        .loop-step {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            padding: 8px 12px;
+            border-left: 4px solid var(--main);
+        }
+
+        .loop-step .num {
+            font-family: 'Londrina Solid', sans-serif;
+            font-size: 30px;
+            color: var(--main);
+            line-height: 1;
+            flex-shrink: 0;
+            width: 26px;
+        }
+
+        .loop-step .txt {
+            font-size: 12px;
+            padding-top: 4px;
+        }
+
+        .loop-step .txt strong {
+            color: var(--highlight);
+        }
+
+        .sheet-ref {
+            margin-top: 16px;
+            border-top: 3px dashed var(--highlight);
+            padding-top: 28px;
+        }
+
+        .sheet-ref h2 {
+            color: var(--highlight);
+        }
+
+        .sheet-ref p {
+            font-size: 11px;
+            color: #2d2a2a;
+            font-style: italic;
+        }
+
+        .sheet-ref img {
+            width: 100%;
+            max-width: 960px;
+            display: block;
+            margin-top: 16px;
+            border: 2px solid var(--border);
+            border-radius: 10px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--faint);
+            margin: 10px 0;
+        }
+
+        .cputable {
+            width: 50%;
+        }
+
+        .cputable2 {
+            width: 100%;
+        }
+
+        #nav {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+        }
+
+        #nav-toggle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--main);
+            color: #fff;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 6px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+        }
+
+        #nav-menu {
+            display: none;
+            position: absolute;
+            bottom: 48px;
+            right: 0;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 6px 0;
+            min-width: 180px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+        }
+
+        #nav-menu.open {
+            display: block;
+        }
+
+        #nav-menu a {
+            display: block;
+            padding: 7px 16px;
+            font-size: 12px;
+            color: #333;
+            text-decoration: none;
+            font-family: var(--font, monospace);
+        }
+
+        #nav-menu a:hover {
+            background: #fa9ad5;
+        }
+
+        @media only screen and (max-width: 960px) {
+            .two-col {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .conditables {
+                flex-direction: column;
+            }
+
+            .page-header h1 {
+                font-size: 6.5em;
+            }
+
+            .feattables {
+                flex-wrap: wrap;
+            }
+
+            .hideheader {
+                display: none;
+                margin-top: 0;
+            }
+
+            .tablemerge {
+                margin-top: -20px;
+                border-top: solid 0.2px #cfcfcf;
+                width: 92%;
+            }
+
+            .cputable {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page-header">
+        <h1>OSRad.</h1>
+        <p><em>Old School Radical. v1.0 - 05/26</em></p>
+        <div class="tagline">A one page GMless RPG about shredding glory and eating shit in the world of Orrelia for 1-4
+            players.
+        </div>
+        <p class="intro">
+            You're a skater in the realm of Orrelia. Elf, goblin, dwarf, orc, halfling, whatever. You've got your board
+            and you know the sickest spots.<br><br>
+            It's The Warden's Run Long Weekend for the city of Glimmerhold, most of the citizens have cleared out for
+            <strong>3 days</strong> while everyone
+            watches the race in the eastern grasslands.<br><br>
+            You got your hands on a <em>Reveal Wide Mind</em> spell scroll, which allows you to record and create
+            memories of your skate tricks! This is the perfect time to hit the busier spots in Glimmerhold and capture
+            tricks for a skate "video". You have 3 days to land the best tricks you can before the city returns to its
+            overcrowded self.<br><br>
+            You're not trying to win, they're trying to get the raddest clips before the city shuts you down.
+        </p>
+
+        <h2><a href="https://ptcee.github.io/osrad/">NEW HOME HERE</a></h2>
+    </div>
+
+    <body>
+
+</html>
