@@ -1,3 +1,3 @@
 # ttrpgs
 
-[ttrpgs are sittin right here](https://ptcee.github.io/ttrpgs)
+[ttrpgs are sittin right here](ptcee.github.io/ttrpgs/)
