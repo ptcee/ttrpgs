@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANVIL. Drop 'em like stones.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        :root {
+            --main: #647145;
+            --highlight: #F4F4F6;
+            --tert: #735D78;
+            --bg: #f5f0e8;
+            --border: #E6E6E9;
+            --text: #333333;
+            --faint: #938e84;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+            line-height: 1.65;
+            padding: 36px 36px 80px;
+        }
+
+        a {
+            color: var(--tert);
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        a:hover {
+            background-color: var(--main);
+            color: var(--bg);
+        }
+
+        h1,h2,h3,h4 {
+            font-family: "Young Serif", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .header {
+            font-size: 6.5em;;
+        }
+
+        @media only screen and (max-width: 960px) {
+
+
+        }
+    </style>
+</head>
+
+<body>
+<div class="header">
+            <h1>ANVIL</h1>
+        <p><em>Drop 'em like stones. - v0.1</em></p>
+        <div class="tagline">A TTRPG about a dwarven strike force carrying out missions deep in enemy territory 200 years before the Gobfather establishes the Underhold. Four players, one GM.
+        </div>
+        <p class="intro">
+            100 years after the craters were first discovered evil things began to crawl out from the depths of the world. With them they brought the arcane. Dwarves, being born of the depths themselves found themselves uniquely resilient to these magical effects, thus ANVIL was created. A secret strike force of the most elite and explosive dwarves, assembled to carry out the most dangerous missions for the Queen of Glimmerhold. You are one such strike force. These are your missions. Get in, drop 'em like stones and get out.
+        </p>
+    </div>
+
+    <div id="nav">
+        <div id="nav-menu">
+            <a href="#dotricks">What you need</a>
+            <a href="#scoring"><em>Gameplay Loop</em></a>
+            <a href="#spots">Join the Squad</a>
+            <a href="#tricks">Core Mechanics</a>
+            <a href="#kudos">HQ - The Overhold</a>
+            <a href="#session">▸ Missions</a>
+            <a href="#video"><em>▸ Preparing</em></a>
+            <a href="#sk8"><em>▸ Embarking</em></a>
+            <a href="#legspots"><em>▸ Advancement</em></a>
+            <a href="#legends1">Dungeons</a>
+            <a href="#legends2"><em>▸ Factions</em></a>
+        </div>
+        <button id="nav-toggle" onclick="document.getElementById('nav-menu').classList.toggle('open')"
+            title="jump">☰</button>
+    </div>
+
+
+</body>
+
+</html>
