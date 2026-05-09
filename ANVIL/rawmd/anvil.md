@@ -1032,4 +1032,14 @@ The dwarf had something marked on their skin after a loss. No mechanical effect.
 The dwarf carries something from a mission that they have not put down. An object, a name, a promise. Define it with the GM. Once per campaign it matters mechanically in a way the GM will not telegraph in advance.
 
 **66. Still Standing**
-The dwarf has survived things that should have finished them. Other dwarves know it. Once per mission when this dwarf would gain their final GRIT mark, they may make one additional action before going down.
+The dwarf has survived things that should have finished them. Other dwarves know it. Once per mission when this dwarf would mark their final GRIT, they do not. They continue on 1 remaining GRIT. This can only happen once.
+ 
+---
+ 
+## Death
+ 
+When a dwarf marks their final GRIT they are going down. Before they do, they may take one last action. It must be plausible given their position and condition. They may choose to reroll both CMP or TNT dice for this action and take the new results.
+ 
+Then they are gone.
+ 
+The squad decides what happens to the body. The Overhold is notified. Downtime handles the rest.
