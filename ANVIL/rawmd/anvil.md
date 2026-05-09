@@ -701,3 +701,171 @@ Gear in the prep stash is available to requisition. Some items may cost Embers. 
 The Overhold maintains a stash of operational equipment available between missions. Contents depend on Squad Reputation and Ember investment during downtime. The stash is not a shop. Dwarves do not browse it. They requisition what they need and the handlers decide what is available.
 
 The GM maintains the stash list. It grows and shrinks with the campaign.
+
+# Missions
+
+Missions are one-shot dungeons. The squad is assigned an objective by the Hand, given what intel exists, and dropped in. What happens after that is theirs to navigate.
+
+Every mission has a map and a sheet. The sheet handles the macro structure. The map handles the room level detail. Together they give the GM everything needed to run the mission and enough flexibility to respond to whatever the squad does.
+
+---
+
+## Intel Tiers
+
+The squad never has full information. What they know going in depends on what they bought or earned during downtime.
+
+**Briefing Intel** is provided by the Hand at mission assignment. It is official, possibly outdated, and occasionally wrong. It gives the squad rough layout, primary objective, known faction presence, and recommended drop points.
+
+**Scout Intel** is firsthand reconnaissance gathered during downtime via the Scout action. It is reliable. It fills in patrol routes, enemy TMPR values, entrance details, and secondary objective locations. Scout intel is represented as additional keyed rooms on the partial map.
+
+The squad's pre-mission map is a partial key. Rooms they have intel on are filled in. Everything else is dark until they move through it.
+
+---
+
+## Drop Points and Extraction
+
+The squad chooses their drop point from available entrances during Prep. Entrances are defined on the mission sheet with characteristics. Some are guarded. Some are structural and require breaching. Some require specific gear or skills to use.
+
+Extraction is improvised. The squad gets out however they can. A Hammer may close options, seal routes, or change what extraction looks like entirely. There is no guaranteed exit.
+
+---
+
+## The Mission Sheet
+
+The GM fills in the mission sheet during prep. It defines the macro structure of the mission. Room level detail lives on the keyed map.
+
+---
+
+### Mission Name and Type
+
+Name the mission. Assign it an objective type from the d8 table.
+
+---
+
+### Objectives
+
+Every mission has one primary objective and up to three secondary objectives. Ember payout is assigned per objective at briefing.
+
+The squad earns Embers for each objective successfully completed. Failing the primary objective is a failed mission. Secondary objectives can still pay out on a failed mission if completed before extraction.
+
+---
+
+### Ember Payout
+
+| Objective | Payout |
+|-----------|--------|
+| Primary | GM assigned at briefing |
+| Secondary (each) | GM assigned at briefing |
+| Full completion bonus | Optional, GM discretion |
+
+---
+
+### Heat Thresholds and Hammers
+
+| Stage | Heat | Hammer |
+|-------|------|--------|
+| Cold | 0-5 | None |
+| Warm | 6-10 | None |
+| Hot | 11-15 | Optional |
+| White Hot | 16-19 | Optional |
+| Shatterpoint | 20+ | Always |
+
+The GM defines hammer events during prep for Hot and White Hot if used. Shatterpoint always has a hammer. Hammers change mission conditions. They are never just reinforcements.
+
+**Hammer examples:**
+- Blast doors seal, isolating sections of the map
+- Lights extinguish across the location
+- Mining drills or industrial machinery activates
+- Abyssal fog rises from the depths
+- Elite wardens deploy to key positions
+- Rail lines or transit systems activate
+- Tunnels collapse, closing routes
+- Arcane suppression fields engage
+- A contained creature or weapon is released
+- Full faction lockdown, every exit watched
+
+Write the specific hammer for this mission in the sheet. Define what changes, what closes, what activates, and what the squad now has to deal with.
+
+---
+
+### Faction
+
+Name the faction present. Define their behavior at each Heat stage.
+
+| Stage | Behavior |
+|-------|----------|
+| Cold | |
+| Warm | |
+| Hot | |
+| White Hot | |
+| Shatterpoint | |
+
+---
+
+### Environment
+
+Describe the location. Note any environmental mechanics that apply throughout the mission: darkness, flooding, structural instability, arcane interference, industrial noise. These are conditions that affect rolls or Heat generation independent of faction activity.
+
+---
+
+### Entrances
+
+List available drop points with characteristics.
+
+| Entrance | Characteristics |
+|----------|----------------|
+| | |
+| | |
+
+---
+
+### Extraction Notes
+
+Note any extraction conditions or complications. Leave blank if fully improvised. Note if a hammer will affect extraction options.
+
+---
+
+## The Keyed Map
+
+The GM draws the map and assigns each room or area a number. Each number corresponds to a key entry. The map and key are used together at the table.
+
+**Room key format:**
+
+> **04. FORGE HALL**
+> 2x Wardens (TMPR 3, jack, runeaxe)
+> Blast furnace running. BLAST 4+ in this room raises Heat +1 additional.
+> Door to 05 is sealed. Requires explosives or TMPR[+] to breach.
+
+Keep entries functional. Enemies, TMPR, gear, environmental details, connections, relevant mechanics. The GM loosens or tightens detail to their preference.
+
+The squad's pre-mission intel is a partial key. Briefing intel fills in broad strokes. Scout intel fills in specific rooms. Blank rooms are dark until entered.
+
+---
+
+## Objective Types: d8
+
+Roll or choose an objective type. Build the primary and secondary objectives around it.
+
+**1. Extraction**
+Get a target out. Person, object, or information. Primary success is the target leaves with the squad. Complications: target is unwilling, target is fragile, target is actively being moved.
+
+**2. Elimination**
+Remove a specific target permanently. Primary success is confirmed removal. Complications: target is protected, target is mobile, collateral must be avoided.
+
+**3. Sabotage**
+Destroy, disable, or corrupt something. Primary success is the thing no longer functions. Complications: the thing is guarded, destroying it has environmental consequences, it must look like an accident.
+
+**4. Recovery**
+Retrieve something without destroying it. Primary success is the object leaves intact. Complications: object is large, fragile, cursed, or contested by another faction.
+
+**5. Surveillance**
+Observe without being observed. Primary success is leaving with the intel. Complications: the target is unpredictable, the observation window is limited, the squad cannot engage.
+
+**6. Interruption**
+Stop something from happening before it does. Primary success is the event never occurs. Complications: the squad does not know exactly when, multiple triggers exist, stopping it causes its own consequences.
+
+**7. Escort**
+Get someone through hostile territory alive. Primary success is delivery. Complications: the person is a liability, they generate Heat, they have their own agenda.
+
+**8. Infiltration**
+Get in, complete a task, get out without anyone knowing you were there. Primary success is zero trace. Heat management is the entire mission. Any hammer is effectively a failure condition.
