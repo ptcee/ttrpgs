@@ -65,46 +65,33 @@
 
 ## DICE
 
-d6 Composure
-d6 Explosive
+d4 Composure (d6 from Runeaxe)
+d4 Explosive (d6 from Explosive Kit)
 
-Skills define whether they step up or down a die and which.
+### FUSE
 
-FUSE
+| Die | Result |
+|-----|--------|
+| 1-2 | clean quiet fast |
+| 3-4 | standard, stable |
+| 5-6 | messy, slow, complicated |
 
-1-2 clean quiet fast
-
-3-4 standard, stable
-
-5-6 messy, slow, complicated
-
-Breaking a door
-
-BLAST beats TMPR → succeeds
-
-FUSE determines whether it was clean or messy
-
-Sneaking past guards
-
-BLAST determines if you alert the guard
-
-FUSE determines how far you get
-
-Killing an enemy
-
-BLAST determines effectiveness against TMPR
-
-FUSE determines whether it becomes a brawl
-
-Setting explosives
-
-BLAST determines destructive output
-
-FUSE determines timing/control/complications
-
-coordinated action
-
-all players use their turn to roll 1 pool and assign 1 fuse 1 blast. 6-6-6 is instant heat stage rise. 1-1 smother does not work with coord acts
+> Examples
+> - Breaking a door
+>   - BLAST beats TMPR → succeeds
+>   - FUSE determines whether it was clean or messy
+>
+> - Sneaking past guards
+>   - BLAST determines if you alert the guard
+>   - FUSE determines how far you get
+>
+> - Killing an enemy
+>   - BLAST determines effectiveness against TMPR
+>   - FUSE determines whether it becomes a brawl
+>
+> - Setting explosives
+>   - BLAST determines destructive output
+>   - FUSE determines timing/control/complications
 
 ### Rolling Stones
 
@@ -130,6 +117,10 @@ Roll stones as normal.
     - Everything in the world has Temper (TMPR) levels, this is the amount of 4+ dice it takes to destroy whatever it is.
     - Player describes intent, GM narrates what actually gets levelled.
     - All dice from the explosion pool, hits and misses, become aftermath dice.
+
+### Coordinated Action
+
+All players may use their turns together to roll one pool and assign 1 fuse 1 blast die as normal. If across all dice 6-6-6 is rolled, immediately increase Heat 1 stage. 1-1 smother does not work with coord acts
 
 ### Aftermath
 
