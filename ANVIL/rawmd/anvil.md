@@ -567,3 +567,137 @@ A skill can be leveled three times. A fully leveled skill cannot be stripped by 
 **65. Furnace Crew** Buys the squad one more breath. The first Hammer drop each mission is delayed by 1 turn.
 
 **66. White Iron** Has been here before and walked out. Once per mission, survive a clean hit to GRIT as a maim instead.
+
+# Downtime: The Overhold
+
+Between missions ANVIL ops return to the Overhold. A large brutalist structure on the northwest edge of Glimmerhold, it smells of forge smoke and cold stone. The Queen knows it exists. Her Hand runs it. The council does not know it exists at all.
+
+Downtime is not rest. It is recovery, politics, preparation, and grief. It is dwarves staring into furnace pits and armorers cutting damaged plate off someone who isn't talking about what happened. It is the job between the job.
+
+---
+
+## Embers
+
+Embers are ANVIL's operational currency. Political capital. Hidden support. Requisitioned resources. The fuel that keeps the strike force alive and off the books.
+
+Missions have a set Ember payout assigned at briefing. Each dwarf earns that payout for every objective successfully completed. All Embers go into the squad's shared bank. Squads can bank Embers between missions.
+
+When a dwarf spends Embers it is called burning them.
+
+---
+
+## Squad Reputation
+
+The GM tracks Squad Reputation on a campaign-length track. Reputation reflects how ANVIL's handlers, rivals, and enemies perceive the squad. It cuts both ways.
+
+High Reputation means the Overhold gives you better access, reduced action costs, and first pick of mission assignments. It also means enemy factions with the right intel know your squad exists. They start preparing.
+
+Low Reputation means the Overhold treats you as expendable. Action costs increase. Assignments are worse. But enemies know nothing about you. You move in total shadow.
+
+Reputation changes from mission debrief consequences, faction reactions, and Overhold Actions like Pull Strings and Memorialize.
+
+---
+
+## Downtime Structure
+
+### 1. Debrief
+
+The squad reviews the mission with the Hand or their assigned handler. Players and GM work through the following questions together:
+
+- Did Heat reach any Hammer thresholds?
+- Was the primary objective completed?
+- Were secondary objectives completed?
+- Was ANVIL exposed or were civilians or factions involved?
+- What rumors spread as a result?
+
+The GM narrates campaign consequences. Players roll where faction reactions, rumor spread, or political fallout require it. This phase resolves Ember payout, adjusts Squad Reputation, and sets the difficulty and context of future missions.
+
+Debrief is where the campaign breathes. A clean mission closes quietly. A botched one echoes for sessions.
+
+### 2. Recovery
+
+Resolve Scars, funerals, retirements, and decompression. This phase has no rolls unless a dwarf is rolling for Scars.
+
+The GM should give this phase space. A dwarf who lost their last GRIT and made it out needs a moment. A squad that lost someone needs a funeral. These scenes give the campaign emotional memory. Name the dead. Describe the funeral anvil. Let the silence sit.
+
+Dwarves who retire here hand their op sheet to the player. The player rolls a new operative. The Overhold only takes the best.
+
+### 3. Overhold Actions
+
+Each dwarf may take up to 2 actions. No dwarf may take the same action twice in a single downtime. Actions cost Embers burned from the squad bank. Costs vary by action. Low Squad Reputation increases some costs. High Squad Reputation reduces others.
+
+---
+
+#### SLAG IT
+*Drink deep, talk loud, decompress.*
+Dwarven decompression. The dwarf spends time in the Overhold's lower halls, drinking, fighting, and remembering. May prevent or redirect one incoming Scar result. May generate a rumor the GM can use.
+
+---
+
+#### TRAIN
+*Evolve a skill.*
+The dwarf levels one skill of their choice using the advancement rules. This replaces the post-extraction advancement trigger. A dwarf who takes Train this downtime may not advance a skill for free after the next mission.
+
+---
+
+#### FORGE
+*Craft specialized gear.*
+The dwarf works with the Overhold's armourers to produce a piece of specialized equipment. The GM and player define the item together within the prep stash guidelines. Higher cost for more powerful or unusual items.
+
+---
+
+#### SCOUT
+*Reveal mission intel.*
+The dwarf runs advance reconnaissance on a potential mission target. Reveals one piece of hidden mission intel: layout, TMPR of key enemies, Hammer thresholds, faction presence, or extraction complications.
+
+---
+
+#### PULL STRINGS
+*Manipulate Glimmerhold politics.*
+The dwarf works back channels inside Glimmerhold to shift faction relations, suppress rumors, or reposition ANVIL's political standing. May adjust Squad Reputation. May affect future mission assignments.
+
+---
+
+#### INTERROGATE
+*Extract intel from prisoners or artifacts.*
+The dwarf works on a mission asset: a captured enemy, a recovered document, a strange relic from the depths. Generates specific actionable intel or reveals lore about enemy factions or the craters.
+
+---
+
+#### REINFORCE
+*Add temporary mission assets.*
+The dwarf requisitions additional resources for the next mission: a support contact, a safe extraction point, a distraction, a piece of borrowed heavy equipment. These are single-use mission assets.
+
+---
+
+#### BOND
+*Create a squad link.*
+Two dwarves spend downtime together and establish a Bond. Bonded dwarves gain a specific mechanical benefit when acting together on missions. The players define the nature of the Bond and the GM approves the benefit.
+
+---
+
+#### MEMORIALIZE
+*Honor the dead and retired.*
+The dwarf formally adds a fallen or retired operative to the Overhold's memorial wall. This is not just ceremony. Memorialized operatives permanently affect the Overhold in small ways: their name on a plaque, their runeaxe mounted above the forge, their methods taught to new recruits. May affect Squad Reputation. May unlock a one-time benefit tied to what that dwarf was known for.
+
+---
+
+### 4. Prep
+
+The squad reviews the next mission briefing together. This phase should feel tactical and exciting. Players interact with:
+
+- Mission objectives and Ember payout
+- The prep stash: available gear and equipment
+- Loadout selection
+- Insertion plan and drop point
+- Extraction route
+
+Gear in the prep stash is available to requisition. Some items may cost Embers. The squad decides together who carries what. When the loadouts are set the mission begins.
+
+---
+
+## The Prep Stash
+
+The Overhold maintains a stash of operational equipment available between missions. Contents depend on Squad Reputation and Ember investment during downtime. The stash is not a shop. Dwarves do not browse it. They requisition what they need and the handlers decide what is available.
+
+The GM maintains the stash list. It grows and shrinks with the campaign.
