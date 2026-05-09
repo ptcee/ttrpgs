@@ -440,3 +440,130 @@ If a dwarf dies mid mission, a player can roll up a new op immediately and the t
 # MISSIONS 
 
 Missions are effectively one shot dungeons. The dwarves always have a clear objective given to them by the ANVIL shadowy council.
+
+# Squad Aftermath
+
+Certain skills and situations grant the squad aftermath dice of their own. These are tracked separately from the GM's aftermath pool.
+
+Any dwarf may spend 1 squad aftermath die before rolling to add it to their dice pool for that roll. Assign it to FUSE or BLAST as normal. Spent dice are removed.
+
+Squad aftermath dice do not carry between missions.
+
+---
+
+# Skill Advancement
+
+After extraction, each dwarf may level one skill of their choice. To level a skill, choose one upgrade type and rewrite the skill line to reflect what the dwarf has learned. Each upgrade type may only be taken once per skill. The player rewrites the line, the GM approves, the new line replaces the old permanently.
+
+- **Extend** applies to the whole squad, not just you
+- **Deepen** triggers in one additional situation or context
+- **Sharpen** the mechanical effect becomes more decisive
+- **Linger** the effect lasts longer or carries into the next phase
+- **Bend** add one exception to a core rule, once per mission
+- **Survive** the skill gains one extra use before it is wiped
+
+A skill can be leveled three times. A fully leveled skill cannot be stripped by a Scar.
+
+---
+
+# Skills: d66 Table
+
+## 11-16 COLD OPS
+*stealth, heat control, smother*
+
+**11. Skulker** Disappears between heartbeats. May reroll 1 CMP die when hiding.
+
+**12. Ashcloak** Leaves no trace, makes no sound. Smother triggers on 1-2 instead of double 1s.
+
+**13. Shadow Drill** Knows every blind spot before entering a room. Once per mission, a BLAST of 4+ does not raise Heat.
+
+**14. Dead Quiet** Can shut everything out when it counts. Once per mission, treat your FUSE result as a 1 regardless of what you rolled.
+
+**15. Ghost Protocol** Moves like the tunnel wants him there. Once per mission, the GM must spend 2 additional aftermath dice to act against this dwarf.
+
+**16. Cold Read** Watches before acting. Once per mission, ask the GM one question about an enemy's skills or gear before rolling.
+
+---
+
+## 21-26 BREACHERS
+*explosives, heat weaponization, destruction*
+
+**21. Smoke Eater** Thrives where others choke. Once per mission, ignore one Heat gain entirely.
+
+**22. Controlled Burn** Knows that sometimes loud is the plan. When Heat raises, gain 1 squad aftermath die.
+
+**23. Fuse Cutter** Steady hands, steady mind. Once per mission, treat a FUSE 6 as a 3.
+
+**24. Overpacked** Always brings more than needed. Roll one extra TNT die and discard the lowest.
+
+**25. Demolitions** Knows exactly where to place it. Explosive actions against structures always treat one [+] as already met.
+
+**26. Pressure Cook** Uses the chaos. Once per mission, a Hammer drop grants 2 squad aftermath dice instead of raising Heat.
+
+---
+
+## 31-36 ANCHORS
+*TMPR, survival, absorption*
+
+**31. Ironborn** Built like the mountain. Gains 1 additional GRIT.
+
+**32. Stoneback** Immovable when planted. When this dwarf takes no movement on their turn, TMPR increases by 2.
+
+**33. Blastcoat** Rated for the worst. Explosive damage maims this dwarf's gear once per mission instead of destroying it.
+
+**34. Rune Bracing** Reads impact before it arrives. Once per mission, redirect a hit targeting an adjacent dwarf to this dwarf instead.
+
+**35. Last Wall** Won't go down while someone needs covering. When on final GRIT, TMPR increases by 2.
+
+**36. Deepplate** Built for collapse. TMPR 5 against environmental damage: cave-ins, floods, fire.
+
+---
+
+## 41-46 HANDLERS
+*aftermath, social, intel*
+
+**41. Counterintel** Knows how they think. Once per mission, remove 2 dice from the GM's aftermath pool.
+
+**42. Tunnel Sense** Hears them coming. Once per mission, after the GM declares an aftermath move, the squad may act before it resolves.
+
+**43. Loud and Proud** Too confident to seem suspicious. Low BLAST in social encounters never increases NPC Doubt.
+
+**44. Interrogator** Gets what they need one way or another. May intentionally raise Doubt to extract one piece of information before an NPC turns hostile.
+
+**45. Iron Nerves** Doesn't flinch, doesn't react. Ignore the first aftermath action targeting this dwarf each mission.
+
+**46. Black Lung Humor** Disarms with a laugh even when bleeding. Once per scene, shift NPC Mood up 1 after a failed interaction.
+
+---
+
+## 51-56 FORGERS
+*gear, prep, logistics*
+
+**51. Pack Rat** Carries more than anyone thinks possible. Gains 2 additional item slots.
+
+**52. Salvager** Nothing gets left behind. *(Requires downtime rules — revisit)*
+
+**53. Quickpatch** Fixes it fast, fixes it good enough. Restore 1 use to any damaged gear once per mission.
+
+**54. Sacrificial Rigging** Knows what's worth burning. Destroy a piece of gear to reduce Heat by 2.
+
+**55. Mule** Can carry a dwarf and their kit without slowing down. *(Requires encumbrance rules — revisit)*
+
+**56. Requisitions** Knows how to pull strings at the Overhold. Once per downtime, add one item to the prep stash for free.
+
+---
+
+## 61-66 ASHWALKERS
+*Shatterpoint survival, Hammer interaction, escalation*
+
+**61. Anvilborn** Forged in the worst of it. Immediately after a Hammer drops, gain 1 step-up on CMP for the rest of the mission.
+
+**62. Temper Reader** Feels the mission tipping before it does. GM must reveal the next Hammer effect before it triggers.
+
+**63. Pressure Walker** Operates best when everything's on fire. While Heat is White Hot or higher, FUSE results of 5-6 count as 4.
+
+**64. Crackrunner** Built for exits. At Shatterpoint, this dwarf has a guaranteed escape route if not incapacitated.
+
+**65. Furnace Crew** Buys the squad one more breath. The first Hammer drop each mission is delayed by 1 turn.
+
+**66. White Iron** Has been here before and walked out. Once per mission, survive a clean hit to GRIT as a maim instead.
