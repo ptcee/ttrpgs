@@ -869,3 +869,167 @@ Get someone through hostile territory alive. Primary success is delivery. Compli
 
 **8. Infiltration**
 Get in, complete a task, get out without anyone knowing you were there. Primary success is zero trace. Heat management is the entire mission. Any hammer is effectively a failure condition.
+
+# Scars
+
+Scars are permanent. They cannot be removed, bought off, or healed. They are not punishments. They are changes. The job marks everyone who does it long enough. Some marks make certain things harder. Some open up new ways to operate. Some are just there, part of who the dwarf is now.
+
+When a dwarf gains a Scar roll d66 or choose an appropriate entry with the GM. Name it. Write one sentence about how it happened. Mark it on the op sheet.
+
+If a dwarf rolls a Scar they already have it deepens. The GM and player decide together what that means fictionally. The mechanical effect does not stack unless it makes sense to.
+
+Each dwarf has 3 Scar slots. When all 3 are full and a new Scar would be gained, permanently lose 1 GRIT instead.
+
+A fully leveled skill cannot be stripped by a Scar.
+
+---
+
+## Rolling for Scars
+
+After every mission each surviving dwarf rolls for Scars.
+
+Roll a d6. Add 1 extra d6 for every GRIT lost during the mission.
+
+If any die shows a 1 or 2, gain 1 Scar. Only ever gain 1 Scar per mission regardless of how many dice show 1-2.
+
+| GRIT Lost | Dice Rolled | Approx Chance |
+|-----------|-------------|---------------|
+| 0 | 1d6 | 33% |
+| 1 | 2d6 | 55% |
+| 2 | 3d6 | 70% |
+| 3 | 4d6 | 80% |
+| 4 | Dead | No roll |
+
+---
+
+## Scar Table: d66
+
+### 11-16 THE BODY
+
+**11. Missing Finger**
+One less finger than before. No mechanical effect. It catches people's eye when they look at your hand.
+
+**12. Burn Scarring**
+Significant burns across part of the body. Armour fits differently now. Once per mission when gear would be destroyed by fire or explosive damage, it is maimed instead.
+
+**13. Chronic Pain**
+Something healed wrong. It flares unpredictably. Once per mission the GM may impose a FUSE result of 5 on a roll of their choice. The dwarf knows it is coming. They push through anyway.
+
+**14. Missing Eye**
+Depth perception is gone. Range and fine detail are harder to judge. FUSE results of 1 on ranged or precise actions count as 2 instead. The dwarf has learned to compensate in other ways.
+
+**15. Limp**
+One leg took something it did not fully recover from. Movement is different now, not absent. No mechanical effect unless a hammer or environmental condition specifically affects movement.
+
+**16. Tremor**
+One hand shakes under certain conditions. Under stress or after a hard hit, the next roll using that hand treats a FUSE result of 1 as a 2. The other hand is steady as stone.
+
+---
+
+### 21-26 THE SENSES
+
+**21. Partial Hearing Loss**
+Loud work in enclosed spaces. One ear is mostly gone. The dwarf cannot be surprised by sounds alone. What they do hear, they trust completely. Once per mission, ignore a GM free move that relied entirely on sound.
+
+**22. Tinnitus**
+Constant ringing. It never stops. The dwarf has learned to work through it. Under very loud conditions the GM may note it is worse. No mechanical effect. It is just always there.
+
+**23. Tunnel Vision**
+Peripheral vision narrowed after a close blast or trauma. The dwarf sees what they focus on with complete clarity. Anything outside direct focus requires deliberate attention. Once per mission, ask the GM one specific detail about whatever the dwarf is directly looking at.
+
+**24. Sensitivity to Light**
+Eyes that took damage respond badly to sudden brightness. Torches, flares, and exposed forge light cause brief difficulty. In darkness the dwarf sees better than most. CMP rerolls in low light conditions.
+
+**25. Phantom Limb**
+A limb is gone. A prosthetic or adapted technique has replaced most of its function. The dwarf has found ways to operate that others have not considered. Work with the GM to define one thing the adaptation does that an uninjured dwarf cannot.
+
+**26. Smell Gone**
+The dwarf cannot smell anything. Gas traps, chemical agents, and fire do not register early. The dwarf is also completely immune to any mechanics that rely on scent detection by enemies.
+
+---
+
+### 31-36 THE MIND
+
+**31. Nightmares**
+Something from a mission follows the dwarf into sleep. It does not affect the job. Between missions the GM may ask the player what the dwarf dreams about. The answer goes on the record.
+
+**32. Hypervigilance**
+The dwarf does not fully switch off. Ever. Cannot be ambushed. The GM must spend 1 additional aftermath die to act against this dwarf when they are stationary or waiting.
+
+**33. Emotional Flatness**
+Something went quiet inside after a particular mission. The dwarf functions completely. Social interactions feel different to those around them. Low BLAST in social encounters never increases NPC Doubt. The dwarf is hard to read.
+
+**34. Intrusive Memory**
+A specific moment replays without warning. The dwarf has learned to use it. Once per mission when facing a situation similar to the memory, gain 1 CMP reroll. The GM decides when the situation qualifies.
+
+**35. Claustrophobia**
+Tight spaces trigger a physical response. The dwarf knows this and manages it. In very confined spaces the GM may note the conditions. The dwarf still goes in. They just do it differently now.
+
+**36. Survivor Guilt**
+Someone did not make it back and this dwarf did. They carry it. Once per mission when an ally is incapacitated, this dwarf may act immediately outside of normal turn order to reach them. No roll required to attempt.
+
+---
+
+### 41-46 THE REPUTATION
+
+**41. Known Face**
+Something about this dwarf got noticed. A scar, a silhouette, a way of moving. In locations where the faction has intel on ANVIL, this dwarf raises Heat by 1 additional on a BLAST of 4+.
+
+**42. Burned Contact**
+A relationship outside the Overhold went wrong on a mission. One downtime action costs 1 additional Ember for the rest of the campaign. The GM and player define which one and why.
+
+**43. Marked by the Depths**
+Something from below the craters left a mark that others recognize. Creatures from the depths treat this dwarf differently. The GM defines how. It is not always worse.
+
+**44. Rumored Dead**
+Word got out that this dwarf did not make it. Useful in some situations. Once per mission this dwarf may approach a neutral NPC as a complete unknown regardless of Squad Reputation.
+
+**45. Debt**
+Something was owed to get out of a bad situation. The creditor has not forgotten. The GM holds this and may invoke it once per campaign at a dramatically appropriate moment.
+
+**46. Unwanted Attention**
+Someone outside ANVIL has taken an interest in this dwarf specifically. Not hostile yet. The GM tracks this across the campaign.
+
+---
+
+### 51-56 THE CRAFT
+
+**51. Shaky on Explosives**
+A close call with a bad fuse. The dwarf still does the work. TNT results of 6 on explosive actions count as 4 instead. Everything else is fine.
+
+**52. Cracked Grip**
+The dominant hand does not close all the way anymore. The runeaxe is still there. CMP rerolls no longer apply to actions requiring two-handed precision. One hand is enough for most things.
+
+**53. Overcautious**
+The dwarf checks everything twice now. Twice. They have not missed a trap since a particular mission. Once per mission automatically detect one hidden environmental threat before it triggers.
+
+**54. Reckless**
+Something broke the other way. The dwarf stopped calculating odds on certain things. Once per mission may reroll both dice and take either result. The GM notes when this Scar seems relevant to the fiction.
+
+**55. Institutional Memory**
+The dwarf has seen enough missions that patterns emerge. Once per mission ask the GM whether a situation resembles something in ANVIL's operational history. The GM answers honestly.
+
+**56. Method**
+The dwarf developed a specific way of doing things after something went wrong. Define a specific operational method with the GM. Once per mission when acting within that method, FUSE results of 5 count as 3.
+
+---
+
+### 61-66 THE MARKS
+
+**61. The Shakes After**
+Not during. After. When the mission ends and extraction is complete the dwarf's hands do not stop moving for a while. No mechanical effect. Other dwarves recognize it. Some of them have it too.
+
+**62. Ritual**
+The dwarf developed a specific pre-mission ritual after a bad one. If the ritual is completed before drop, gain 1 squad aftermath die at mission start. If interrupted or skipped, lose 1 CMP die step for the first roll of the mission.
+
+**63. Callused**
+The dwarf stopped reacting to things that used to register. Intimidation, horror, and morale effects do not apply. NPCs notice the dwarf is different. Some find it reassuring. Some do not.
+
+**64. Memorial Ink**
+The dwarf had something marked on their skin after a loss. No mechanical effect. When another dwarf dies or retires, the player may add to the description of the ink. It becomes a record.
+
+**65. The Weight**
+The dwarf carries something from a mission that they have not put down. An object, a name, a promise. Define it with the GM. Once per campaign it matters mechanically in a way the GM will not telegraph in advance.
+
+**66. Still Standing**
+The dwarf has survived things that should have finished them. Other dwarves know it. Once per mission when this dwarf would gain their final GRIT mark, they may make one additional action before going down.
