@@ -58,7 +58,7 @@
 ### Every ANVIL op starts with:
 
 - CMP die & TNT die
-- 3 Skills (relevant actions change dice sizes)
+- 3 Skills (relevant actions change dice sizes etc)
 - 1 ANVIL assigned Runeaxe (d6 CMP)
 - 1 Explosives Kit (d6 TNT)
 - 5 item slots to fill from prep
@@ -69,6 +69,42 @@ d6 Composure
 d6 Explosive
 
 Skills define whether they step up or down a die and which.
+
+FUSE
+
+1-2 clean quiet fast
+
+3-4 standard, stable
+
+5-6 messy, slow, complicated
+
+Breaking a door
+
+BLAST beats TMPR → succeeds
+
+FUSE determines whether it was clean or messy
+
+Sneaking past guards
+
+BLAST determines if you alert the guard
+
+FUSE determines how far you get
+
+Killing an enemy
+
+BLAST determines effectiveness against TMPR
+
+FUSE determines whether it becomes a brawl
+
+Setting explosives
+
+BLAST determines destructive output
+
+FUSE determines timing/control/complications
+
+coordinated action
+
+all players use their turn to roll 1 pool and assign 1 fuse 1 blast. 6-6-6 is instant heat stage rise. 1-1 smother does not work with coord acts
 
 ### Rolling Stones
 
@@ -106,7 +142,6 @@ The GM gains aftermath dice from the following sources:
 - **Mission start:** GM gains aftermath dice equal to the number of players x2
 - **Every 3 turns:** GM gains 1 aftermath die
 - **Roll stones shows any 1s:** GM gains 1 aftermath die
-- **GM's BLAST die shows a 6:** GM gains 2 aftermath dice
 
 #### Spending Aftermath
 
@@ -139,12 +174,49 @@ Players who move slow and quietely keep the pool starved. Players who act fast a
 
 When the GM rolls stones and assigns BLAST as a 6, that aftermath roll is refunded. Large brawls and loud confrontations can become self sustaining as the world escalates in response to escalation.
 
-## CLOCKS, ALARMS & TURNS
+### Smother Mechanic
+Heat reduction is now integrated directly into normal play.
+#### Smother
+If:
+* an action succeeds* and both assigned dice are 1s
+then:
+#### reduce Heat by 1 stage.
+This represents:
+* suppressing evidence* containing fallout* controlling the operation* quiet professionalism
+Smother is NOT a dedicated action.It emerges naturally through skilled play.
+This creates:
+* strategic value for low rolls* pacing control* breathing room* stealth through competence
 
-When players start a strike mission begin it's alarm clock, every time players assign a BLAST die raise the alarm by the result of that die.
-When a locations alarm hits it's thresholds the **hammer drops**.
+## CLOCKS, HEAT & TURNS
+
+### Heat
+
+When players start a strike mission begin it's Heat track, every time players assign a BLAST die of 4, 5 or 6 raise the track by 1.
+When a locations Heat it's thresholds the **hammer drops**.
 
 Each mission location has a specific hammer/s and one or more alarm thresholds.
+
+| Heat  | Stage        || ----- | ------------ || 0–5   | Cold         || 6–10  | Warm         || 11–15 | Hot          || 16–19 | White Hot    || 20+   | Shatterpoint |
+These stages define mission pacing and emotional state.
+
+Hammer events are major escalation moments.
+They are NOT just reinforcements.
+Hammer events should:
+* radically change the mission* alter conditions* reshape player priorities* escalate fiction dramatically
+Examples:
+* lockdowns* tunnel collapses* abyssal incursions* suppression fields* elite deployment* environmental catastrophe
+#### Shatterpoint
+At 20+ Heat:
+##### the mission reaches Shatterpoint.
+Shatterpoint is:
+* irreversible operational collapse* catastrophic escalation* survival/extraction phase
+Importantly:
+##### Shatterpoint is not automatic mission failure.
+Players may still:
+* complete objectives* survive* extract
+But the mission is now collapsing around them.
+
+### Turns
 
 Track turns while players are on a mission. Mark a turn everytime a player takes a notable action or rolls stones. A turn represents a few minutes in world. 
 
