@@ -1001,9 +1001,9 @@ This applies to: incapacitated dwarves, conscious folk being supported or guided
 
 | Objective | Description | Ember Payout |
 |-----------|-------------|--------------|
-| Primary | Extract the sacrifice alive | 1 Embers per dwarf |
-| Secondary | Interrupt the ritual before completion | 1 Embers per dwarf |
-| Secondary | Eliminate the Choir's ritual leader, Serevann | 1 Ember per dwarf |
+| Primary | Extract the sacrifice alive | 3 Embers per dwarf |
+| Secondary | Interrupt the ritual before completion | 2 Embers per dwarf |
+| Secondary | Eliminate the Choir's ritual leader, Serevann | 2 Embers per dwarf |
 | Full completion bonus | All three completed, squad extracted clean | 1 Ember per dwarf |
 
 ---
@@ -1012,10 +1012,10 @@ This applies to: incapacitated dwarves, conscious folk being supported or guided
 
 | Outcome | Payout |
 |---------|--------|
-| Primary only | 1 Embers per dwarf |
-| Primary + one secondary | 2 Embers per dwarf |
-| Full completion | 4 Embers per dwarf |
-| Primary failed, secondaries completed | 2 Embers per dwarf |
+| Primary only | 3 Embers per dwarf |
+| Primary + one secondary | 5 Embers per dwarf |
+| Full completion | 8 Embers per dwarf |
+| Primary failed, secondaries completed | 4 Embers per dwarf |
 | Full mission failure | 0 Embers |
 
 ---
