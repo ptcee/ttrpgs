@@ -55,10 +55,11 @@
 >
 > item tables and prep stash contents
 >
-> Ember costs for each Overhold Action
+> ember costs for each overhold Action
 >
-> Squad Reputation track thresholds and effects
+> squad reputation track thresholds and effects
 >
+> change "uses" to just "marked" and "marks"
 
 ---
 
@@ -80,7 +81,7 @@ When you Roll Stones you roll both dice and assign one to FUSE and one to BLAST.
 
 ### FUSE
 
-FUSE is your speed, precision and control. How well you execute.
+FUSE is execution. Your speed, precision and control.
 
 | Result | Effect |
 |--------|--------|
@@ -92,7 +93,7 @@ Low FUSE is efficient. High FUSE is a mess.
 
 ### BLAST
 
-BLAST is noise, force, and commotion. How loud you are being.
+BLAST is impact. Noise, force, and commotion.
 
 Low BLAST is quiet and controlled. High BLAST is large, loud, and powerful. Every time you assign a BLAST die showing 4, 5, or 6, raise the Heat track by 1.
 
@@ -105,7 +106,7 @@ Low BLAST is quiet and controlled. High BLAST is large, loud, and powerful. Ever
 Roll CMP and TNT. Assign one die to FUSE and one to BLAST.
 
 - FUSE determines how cleanly the action is executed
-- BLAST determines force and noise, checked against TMPR, raises Heat on 4+
+- BLAST determines force and noise, checked against TMPR and raises Heat on 4+
 
 > **Examples**
 >
@@ -125,14 +126,11 @@ Roll stones as normal.
 - BLAST: roll that many d6 explosion dice. 6s on explosion dice explode again, roll another d6.
   - Every 4+ on an explosion die destroys something.
   - Everything in the world has Temper (TMPR). The number of [+] brackets is how many 4+ dice are needed to destroy it.
-  - Player describes intent. GM narrates what actually gets levelled.
   - All dice from the explosion pool, hits and misses, become aftermath dice.
 
 ### Smother
 
-If an action succeeds and both assigned dice show 1s, reduce Heat by 1.
-
-Smother is not a dedicated action. It emerges naturally through skilled, quiet play. Low rolls are not failures. They are precision.
+If an action succeeds and both assigned dice show 1s, reduce Heat by 3.
 
 ---
 
@@ -140,7 +138,7 @@ Smother is not a dedicated action. It emerges naturally through skilled, quiet p
 
 The whole squad may combine their turns to act together. Each player rolls their own CMP and TNT and the results are pooled. Assign one die from the pool to FUSE and one to BLAST as normal.
 
-If two or more 6s appear anywhere across the full pool, immediately raise Heat by 1. Coordinating tactics is powerful. Multiple dwarves acting together is loud and hard to control.
+If two or more 6s appear anywhere across the full pool, immediately raise Heat by 3. Coordinating tactics is powerful. Multiple dwarves acting together is loud and hard to control.
 
 Smother does not apply to Stack Up.
 
@@ -155,23 +153,21 @@ The world does not wait for the players to act. Aftermath dice represent the GM'
 The GM gains aftermath dice from:
 
 - **Mission start:** aftermath dice equal to number of players x2
-- **Every 3 turns:** 1 aftermath die
-- **Any 1s showing on a player's Roll Stones:** 1 aftermath die per 1 rolled
+- **Every 3 turns:** 2 aftermath die
+- **Any 6s showing on a player's Roll Stones:** 1 aftermath
 
 ### Spending Aftermath
 
 The GM spends aftermath dice to roll stones for the world. When an enemy acts, a trap triggers, or the world threatens the players, the GM pulls dice from the pool and rolls them, assigning one to FUSE and one to BLAST.
 
-- **FUSE:** how effective the action is. Checked against player TMPR or used to oppose a player's roll.
-- **BLAST:** noise and chaos generated. Raises Heat on 4+ as normal.
+- **FUSE:** how effective the action is. Checked against player TMPR or used for enemy and world moves.
+- **BLAST:** impact, noise and chaos generated. Raises Heat on 4+ as normal.
 
 The GM must spend a minimum of 2 aftermath dice to roll stones. Spent dice are removed.
 
-When the GM assigns a BLAST die showing 6, that aftermath roll is refunded. Large brawls and loud confrontations can become self-sustaining as the world escalates.
-
 ### Free Moves
 
-Free moves cost nothing. The GM can make a free move at any time without spending aftermath. Free moves never directly threaten or act against players.
+The GM can make a free move at any time without spending aftermath. Free moves never directly threaten or act against players.
 
 - A patrol completes its route and begins again
 - A light goes out or comes on
@@ -193,7 +189,7 @@ A small aftermath pool means breathing room. A large pool means the world is loa
 
 Certain skills and situations grant the squad aftermath dice of their own. These are tracked separately from the GM's aftermath pool.
 
-Any dwarf may spend 1 squad aftermath die before rolling to add it to their dice pool for that roll. Assign it to FUSE or BLAST as normal. Spent dice are removed.
+Any dwarf may take 1 squad aftermath die before rolling to add it to their dice pool for that roll. Assign it to FUSE or BLAST as normal. Spent dice are removed.
 
 Squad aftermath dice do not carry between missions.
 
@@ -249,7 +245,7 @@ This applies to players acting against the world and the GM rolling against play
 
 ## Player Characters and Damage
 
-Hits are absorbed by gear, then skills, then GRIT. The fiction must support the absorption. A crossbow bolt does not get absorbed by your boots unless you dove behind something at the right moment.
+Hits can be mitigated by gear, skills, then GRIT. The fiction must support the mitigation. A crossbow bolt does not get absorbed by your boots unless you dove behind something at the right moment.
 
 **Absorption order:**
 
@@ -272,7 +268,7 @@ Skills also have 3 uses. Uses are only ever marked by absorbing hits, never by u
 - **Clean hit:** wipes all 3 uses, skill unavailable for the rest of the mission
 - **Maim:** marks 1 use
 
-A skill with marked uses can still be used to step up dice until all uses are gone. When a skill is wiped the dwarf is still capable, they just lost the edge training gave them.
+A skill with marked uses can still be used until all uses are gone. When a skill is wiped the dwarf is still capable, they just lost the edge training gave them.
 
 Enemies and traps can target skills directly. A disorienting gas does not damage armour. A veteran interrogator does not slash at your kit. Some threats know exactly what to hit.
 
@@ -280,7 +276,7 @@ Enemies and traps can target skills directly. A disorienting gas does not damage
 
 GRIT is final resolve. When there is nothing left to absorb a hit the hit lands on the dwarf directly.
 
-Every dwarf starts with 4 GRIT.
+Every dwarf starts with 3 GRIT.
 
 - **Clean hit to GRIT:** marks all GRIT, dwarf is dead
 - **Maim to GRIT:** marks 1 GRIT
@@ -291,11 +287,13 @@ Skills can boost GRIT. Ironborn gives 1 additional GRIT.
 
 ### Base TMPR
 
-Every dwarf has a base TMPR of 3. Skills can modify this upward.
+Every dwarf has a base TMPR of 3. Skills and items can modify this.
 
 ## Combat Flow
 
 Combat is not a separate phase. There is no initiative, no combat round, no turn order distinct from normal play. Violence is just another action.
+
+Each player can take one action per turn.
 
 When a player acts against an enemy they Roll Stones.
 
@@ -322,9 +320,9 @@ Enemies can have gear and skills that absorb hits just like players. The GM deci
 
 ## Runeaxe and Explosives Kit
 
-Equipment has 3 uses. Uses are not marked by using the item, only by absorbing hits. Consumable items tagged [x] are exceptions and mark a use each time they are used.
+Equipment has 3 uses. Uses are not marked by using the item, only by absorbing hits. Consumable items tagged [~] are exceptions and mark a use each time they are used.
 
-An item tagged [v] is explosive. If it takes a hit by outside means it explodes. Roll a d6 and roll that many explosive dice.
+An item tagged [*] is explosive. If it takes a hit by outside means it explodes. Roll a d6 and roll that many explosive dice.
 
 Every ANVIL op is assigned a Runeaxe and an Explosives Kit. These are mission tools, not just weapons.
 
@@ -342,12 +340,12 @@ Every NPC has a Mood on a scale of 1 to 6.
 
 | Mood | State |
 |------|-------|
-| 1 | Hostile: attacking or raising the alarm immediately |
-| 2 | Suspicious: not buying it, one wrong move |
-| 3 | Wary: cautious, watching |
-| 4 | Neutral: not their problem yet |
-| 5 | Friendly: willing to help or look the other way |
-| 6 | Allied: actively covering for the squad |
+| 6 | Hostile: attacking or raising the alarm immediately |
+| 5 | Suspicious: not buying it, one wrong move |
+| 4 | Wary: cautious, watching |
+| 3 | Neutral: not their problem yet |
+| 2 | Friendly: willing to help or look the other way |
+| 1 | Allied: actively covering for the squad |
 
 ## Suspicion
 
@@ -357,8 +355,8 @@ Every NPC also has a Suspicion track with 3 steps. When Suspicion hits its maxim
 
 When a dwarf interacts with an NPC roll stones and assign FUSE and BLAST.
 
-- FUSE must beat the NPC's current Mood value to move Mood up 1. If FUSE equals or falls below, Mood holds or drops at the GM's call.
-- If BLAST is low, advance the Suspicion track by 1. A quiet, careful dwarf is more suspicious. Very undwarfy.
+- FUSE must be under the NPC's current Mood value to move Mood down 1. If FUSE equals or is above, Mood holds or rises at the GM's call.
+- If BLAST is 1-2, advance the Suspicion track by 1. A quiet, careful dwarf is more suspicious. Very undwarfy.
 
 NPC Suspicion does not reset unless the squad has a disguise.
 
@@ -395,7 +393,7 @@ After extraction, each dwarf may level one skill of their choice. To level a ski
 - **Bend** add one exception to a core rule, once per mission
 - **Survive** the skill gains one extra use before it is wiped
 
-A skill can be leveled three times. A fully leveled skill cannot be stripped by a Scar.
+A skill can be leveled three times.
 
 ---
 
@@ -536,6 +534,8 @@ The squad's pre-mission map is a partial key. Rooms they have intel on are fille
 ## Drop Points and Extraction
 
 The squad chooses their drop point from available entrances during Prep. Entrances are defined on the mission sheet with characteristics. Some are guarded. Some are structural and require breaching. Some require specific gear or skills to use.
+
+The squad is dropped in from a giant owl or they approach on foot.
 
 Extraction is improvised. The squad gets out however they can. A Hammer may close options, seal routes, or change what extraction looks like entirely. There is no guaranteed exit.
 
@@ -946,7 +946,7 @@ Dwarves build Bonds through surviving missions together. Track Bond level separa
 
 | Bond | Effect |
 |------|--------|
-| 1 | Bonded. The relationship exists and is recognized by the Overhold. |
+| 1 | Bonded. The relationship exists. |
 | 2 | May Stack Up together. |
 | 3 | Aftermath generated by their Stack Up actions is reduced by 1, to a minimum of 1. |
 | 4 | Once per mission, when a bonded dwarf is targeted by a hit, you may become the target instead. Normal absorption order applies to you. |
@@ -975,7 +975,7 @@ This applies to: incapacitated dwarves, conscious folk being supported or guided
 
 **Two-dwarf carry:** when two dwarves share a load the penalty applies to only one of them. The squad decides who. The other dwarf rolls normally.
 
-**Stacking:** a dwarf carrying two loads takes the penalty twice, rolling two extra d6 and discarding the two lowest.
+**Carying multiple things:** a dwarf carrying two loads takes the penalty twice, rolling two extra d6 and discarding the two lowest.
 
 ---
 
@@ -1001,8 +1001,8 @@ This applies to: incapacitated dwarves, conscious folk being supported or guided
 
 | Objective | Description | Ember Payout |
 |-----------|-------------|--------------|
-| Primary | Extract the sacrifice alive | 4 Embers per dwarf |
-| Secondary | Interrupt the ritual before completion | 2 Embers per dwarf |
+| Primary | Extract the sacrifice alive | 1 Embers per dwarf |
+| Secondary | Interrupt the ritual before completion | 1 Embers per dwarf |
 | Secondary | Eliminate the Choir's ritual leader, Serevann | 1 Ember per dwarf |
 | Full completion bonus | All three completed, squad extracted clean | 1 Ember per dwarf |
 
@@ -1012,10 +1012,10 @@ This applies to: incapacitated dwarves, conscious folk being supported or guided
 
 | Outcome | Payout |
 |---------|--------|
-| Primary only | 4 Embers per dwarf |
-| Primary + one secondary | 6 Embers per dwarf |
-| Full completion | 8 Embers per dwarf |
-| Primary failed, secondaries completed | 3 Embers per dwarf |
+| Primary only | 1 Embers per dwarf |
+| Primary + one secondary | 2 Embers per dwarf |
+| Full completion | 4 Embers per dwarf |
+| Primary failed, secondaries completed | 2 Embers per dwarf |
 | Full mission failure | 0 Embers |
 
 ---
