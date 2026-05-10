@@ -1250,3 +1250,188 @@ Oddities are unusual, limited, and not always available. The GM decides what is 
 | Borrowed uniform | [F] | Convincing disguise for one specific faction context defined at Prep. Destroyed on a clean hit. Reduces Mood check difficulty by 1 while worn. | 1 | 2 |
 | Overhold cipher plate | — | Unlocks one ANVIL-infrastructure point: a sealed door, a dormant rune lock, a cached weapons cache. Useless against non-ANVIL architecture. | 1 | 2 |
 | Depth-creature ichor vial | [~] [F] | 2 uses. Applied to a surface: repels depth creatures for 1 turn. Applied to a wound: one hit that would mark gear or GRIT is ignored this turn. Numbness is not protection. | 1 | 3 |
+
+---
+
+## Character Generation
+
+Roll or choose from each table. All results are suggestions. The player has final say.
+
+---
+
+### Name
+
+Roll d66 for a given name and d66 for a surname.
+
+#### Given Names
+
+| d66 | Name | | d66 | Name |
+|-----|---------|-|-----|---------|
+| 11 | Aldric | | 41 | Maren |
+| 12 | Bryndis | | 42 | Osric |
+| 13 | Corra | | 43 | Petra |
+| 14 | Dunvik | | 44 | Ragni |
+| 15 | Edda | | 45 | Sable |
+| 16 | Fenrik | | 46 | Torben |
+| 21 | Garda | | 51 | Ulla |
+| 22 | Halvard | | 52 | Veska |
+| 23 | Ingrid | | 53 | Wulfar |
+| 24 | Jorvik | | 54 | Xanthe |
+| 25 | Keld | | 55 | Ysolde |
+| 26 | Lorra | | 56 | Zarvik |
+| 31 | Maddoc | | 61 | Brek |
+| 32 | Norda | | 62 | Dagna |
+| 33 | Orvyn | | 63 | Elka |
+| 34 | Pella | | 64 | Grimur |
+| 35 | Queld | | 65 | Hesta |
+| 36 | Runa | | 66 | Ivar |
+
+#### Surnames
+
+| d66 | Name | | d66 | Name |
+|-----|--------------|-|-----|--------------|
+| 11 | Ashmantle | | 41 | Ironmark |
+| 12 | Boulderborn | | 42 | Kettleforge |
+| 13 | Cinderhelm | | 43 | Longseam |
+| 14 | Deepcut | | 44 | Moltenfist |
+| 15 | Dustmantle | | 45 | Nailbiter |
+| 16 | Embervein | | 46 | Orebrow |
+| 21 | Faultline | | 51 | Pickfast |
+| 22 | Greymantle | | 52 | Quarryman |
+| 23 | Hammerfall | | 53 | Rockwarden |
+| 24 | Hardseam | | 54 | Splitstone |
+| 25 | Heatmark | | 55 | Steelbraided |
+| 26 | Holdfast | | 56 | Thundercut |
+| 31 | Ironbrow | | 61 | Undermark |
+| 32 | Ashvein | | 62 | Vaultborn |
+| 33 | Blackseam | | 63 | Warpick |
+| 34 | Coalmark | | 64 | Stonewarden |
+| 35 | Deepmantle | | 65 | Ashborn |
+| 36 | Forgeback | | 66 | Craghelm |
+
+---
+
+### Physique
+
+Roll d6 twice, once on each table.
+
+#### Build
+
+| d6 | Build |
+|----|-------|
+| 1 | Compact. Low centre of gravity. Built like a clenched fist. |
+| 2 | Broad. Shoulders like a doorframe. Takes up the whole tunnel. |
+| 3 | Wiry. All tendons and angles. Stronger than they look. |
+| 4 | Heavy. Dense. Things that hit them seem surprised. |
+| 5 | Lean. Long-limbed for a dwarf. Moves differently. |
+| 6 | Irregular. One side larger than the other. An old break, a old job, a old life. |
+
+#### Face
+
+| d6 | Face |
+|----|------|
+| 1 | Flat and broad, nose broken at least twice, eyes set deep. |
+| 2 | Sharp features, prominent brow, jaw like a shovel. |
+| 3 | Round and weathered, crow's feet from squinting in forge light. |
+| 4 | Asymmetrical. One ear lower. One eye that doesn't fully close. |
+| 5 | Gaunt. Cheekbones like ledges. Too much of the skull showing. |
+| 6 | Soft-featured and misleading. People underestimate them. They know it. |
+
+#### Beard
+
+| d6 | Beard |
+|----|-------|
+| 1 | None. Clean-shaven by choice or by circumstance. Either way, not discussed. |
+| 2 | Short and dense, oiled flat, practical. Gets in the way of nothing. |
+| 3 | Full and long, braided once, coming loose. Hasn't been redone since the last mission. |
+| 4 | Patchy. Grew in wrong and they kept it anyway. |
+| 5 | Elaborate. Rings, cord, something woven in that means something. |
+| 6 | Burned or cut short on one side. Grew back strange. |
+
+---
+
+### Trait
+
+Roll d66 twice. The first result is how the dwarf operates. The second is what they carry with them.
+
+#### How they operate
+
+| d66 | Trait |
+|-----|-------|
+| 11 | Moves first, thinks second. Has not been wrong enough times to stop. |
+| 12 | Counts exits before sitting down. Always. |
+| 13 | Speaks rarely. When they do, people listen without knowing why. |
+| 14 | Laughs at the wrong moments. Nerves, not cruelty. |
+| 15 | Takes notes. Small book, worn cover, cramped handwriting. |
+| 16 | Refuses to leave anyone behind. Has not been tested past the point of reason yet. |
+| 21 | Needs to know the plan before moving. Adjusts the plan constantly once moving. |
+| 22 | Operates best alone. Functional in a squad. Not comfortable. |
+| 23 | Makes friends with everyone. Remembers names, birthdays, debts. |
+| 24 | Does not discuss the job outside the job. Clean separation. |
+| 25 | Pushes until something breaks, then figures out what it was. |
+| 26 | Methodical. Same checks in the same order every time. |
+| 31 | Reads the room before acting. Slow to start, fast once moving. |
+| 32 | Volunteers for the worst jobs. Does not explain why. |
+| 33 | Keeps a running count of everything: rounds, exits, bodies, seconds. |
+| 34 | Improvises constantly. Has strong opinions about improvisation being a skill. |
+| 35 | Asks questions the GM has not considered. Usually at the wrong moment. |
+| 36 | Holds a grudge precisely and indefinitely. |
+| 41 | Treats equipment like a relationship. Names things. Mourns losses. |
+| 42 | Calm under pressure. Unsettling to be around. |
+| 43 | Competitive. With enemies, with squadmates, with their own last time. |
+| 44 | Collects information the way others collect scars. |
+| 45 | Apologises after violence. Quietly. To the target, not the squad. |
+| 46 | Does not acknowledge pain until the mission is over. |
+| 51 | Trusts the plan. Distrusts people who change it. |
+| 52 | Has a theory about everything. Shares it. |
+| 53 | Eats before every op. Makes whoever is nearby sit down and eat too. |
+| 54 | Dresses well for a strike operative. Has opinions about this. |
+| 55 | Keeps a list of names. Does not explain whose. |
+| 56 | Considers retreat a tactical option, not a failure. Arguments have not moved them. |
+| 61 | Has a tell under pressure. Knows about it. Cannot stop it. |
+| 62 | Protective of new operatives in a way they do not admit to. |
+| 63 | Does not sleep well in the Overhold. Sleeps fine in the field. |
+| 64 | Fixes things. Gear, relationships, problems. Needs something to fix. |
+| 65 | Has seen enough to find most things funny. |
+| 66 | Came back from something that should have finished them. Does not talk about it. |
+
+#### What they carry
+
+| d66 | Detail |
+|-----|--------|
+| 11 | A stone from the seam where they first worked. Smooth from handling. |
+| 12 | Someone else's op number, scratched into their kit. |
+| 13 | A letter they have not sent. Not addressed to anyone in particular anymore. |
+| 14 | A flask they refill and never offer. |
+| 15 | Three coins from a place they do not name. |
+| 16 | A small tool that belonged to someone who did not come back. |
+| 21 | A habit they picked up on a bad mission. They know it is a habit. |
+| 22 | A scar they give a different story to depending on who asks. |
+| 23 | The name of a contact in every district of Glimmerhold. |
+| 24 | An old injury that predicts weather. |
+| 25 | A promise they have not broken yet. |
+| 26 | Something they took from the first mission. Never talks about what it is. |
+| 31 | A reputation in a specific part of Glimmerhold they would prefer ANVIL not know about. |
+| 32 | A skill that has nothing to do with the job. They are very good at it. |
+| 33 | The name of someone in a hostile faction. Complicated. |
+| 34 | A ritual they perform before every op. Small, private, non-negotiable. |
+| 35 | Debt. Not Embers. The other kind. |
+| 36 | A commendation they never filed. |
+| 41 | A piece of depth-creature material they kept. No one knows. |
+| 42 | An alias that still has a reputation attached to it. |
+| 43 | A specific hatred. Precise, long-standing, patient. |
+| 44 | Knowledge of something the Overhold does not know they know. |
+| 45 | A standing arrangement with someone outside ANVIL. |
+| 46 | A mission they were not supposed to survive. They have not reconciled this. |
+| 51 | Something they stole from the Overhold. Small. Meaningful. |
+| 52 | A map of somewhere they have never been. |
+| 53 | Loyalty to someone no longer in the squad. |
+| 54 | A vice they manage with precision. |
+| 55 | An unanswered question about the craters. They are not done asking. |
+| 56 | A wound that healed wrong and never got documented. |
+| 61 | The last thing someone said to them before a mission went bad. |
+| 62 | A specific piece of intelligence they have never acted on. |
+| 63 | A reason they joined ANVIL that no longer applies. |
+| 64 | Something they built before the job. They do not know if it still stands. |
+| 65 | An enemy who respects them. Mutual. |
+| 66 | Nothing. They came in clean. That is its own kind of weight. |
