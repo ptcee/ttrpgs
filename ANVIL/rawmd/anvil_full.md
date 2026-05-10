@@ -419,9 +419,9 @@ High Reputation means the Overhold gives better access, reduced action costs, an
 
 Low Reputation means the Overhold treats the squad as expendable. Action costs increase. Assignments are worse. But enemies know nothing. The squad moves in total shadow.
 
-Reputation changes from mission debrief consequences, faction reactions, and Overhold Actions like Pull Strings and Memorialize.
+Reputation changes from Heat stage upon mission return, faction reactions, and Overhold Actions like Pull Strings and Memorialize.
 
-TODO: Squad Reputation track thresholds and specific effects.
+> move rep stuff here
 
 ## Downtime Structure
 
