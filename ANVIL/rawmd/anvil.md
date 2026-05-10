@@ -1043,3 +1043,210 @@ When a dwarf marks their final GRIT they are going down. Before they do, they ma
 Then they are gone.
  
 The squad decides what happens to the body. The Overhold is notified. Downtime handles the rest.
+
+# add to main file
+
+## Ember Payout Guidance
+
+Missions should pay out enough for each dwarf to take 2 Overhold Actions and requisition 2–3 items during downtime without full-clearing every objective. The target is roughly 5–7 Embers per dwarf per downtime at Rep tier 3.
+
+Use these benchmarks when setting payouts during Prep:
+
+- **Primary objective:** 3 Embers per dwarf. This is the floor. A squad that completes only the primary should be able to cover basic downtime needs.
+- **Each secondary objective:** 2 Embers per dwarf. Two secondaries plus the primary puts the squad in a comfortable position.
+- **Full completion bonus:** 1 Ember per dwarf. A windfall that rewards clean play without making full-clearing feel mandatory.
+
+Adjust by mission weight. A harder or more complex mission warrants a primary payout of 4 and secondaries of 2–3. A shorter or lower-stakes mission can sit at 2/1/1. Primary should always be worth more than any single secondary.
+
+---
+
+## Squad Reputation
+
+The GM tracks Squad Reputation on a campaign-length track. Reputation reflects how ANVIL's handlers, rivals, and enemies perceive the squad. It cuts both ways.
+
+High Reputation means the Overhold gives better access, reduced action costs, and first pick of mission assignments. It also means enemy factions with the right intel know the squad exists. They start preparing.
+
+Low Reputation means the Overhold treats the squad as expendable. Action costs increase. Assignments are worse. But enemies know nothing. The squad moves in total shadow.
+
+Reputation is tracked across 25 ticks divided into five tiers of 5. Mark ticks forward on success. Mark them back on failure. The tier the squad currently sits in determines all Rep effects.
+
+```
+SQUAD REPUTATION
+
+1 — GHOST       [ ][ ][ ][ ][ ]
+2 — RELIABLE    [ ][ ][ ][ ][ ]
+3 — KNOWN       [ ][ ][ ][ ][ ]
+4 — FEARED      [ ][ ][ ][ ][ ]
+5 — LEGEND      [ ][ ][ ][ ][ ]
+```
+
+Rep never goes above tier 5 or below tier 1. Ticks within a tier have no individual effect — only the tier matters. When ticks would advance past the top of a tier, move to the next tier and continue from tick 1.
+
+### Rep Tier Effects
+
+**1 — Ghost**
+The Overhold barely acknowledges the squad exists. Worst mission assignments. The stash is thin. All Overhold Action costs +2 Embers. No faction knows the squad's name. Complete shadow. Enemies never prepare specifically for them.
+
+**2 — Reliable**
+The Hand takes the squad seriously. Better stash access. All Overhold Action costs +1 Ember. Some chatter in hostile networks. Nothing specific. The squad might have a name but no face.
+
+**3 — Known**
+Neutral standing. Base costs apply. First pick of mission assignments is available but not guaranteed. Standard stash access. Factions with good intel networks are aware of ANVIL. General caution raised. Not personal yet.
+
+**4 — Feared**
+The Hand gives the squad priority. All Overhold Action costs −1 Ember (minimum 1). Stash has better options. The squad may call in one favour per campaign. Specific counter-measures begin. Elite patrols, better-equipped guards, deliberate trap placement. Enemies know who they are dealing with.
+
+**5 — Legend**
+Full Overhold backing. All Overhold Action costs −2 Embers (minimum 1). The stash is deep. The Queen's Hand takes personal interest in their survival. Every significant faction is preparing. Counter-intel operations. Bounties may exist. Some enemies will flee rather than fight. Others will bring everything they have.
+
+### Advancing and Losing Rep
+
+| Event | Ticks |
+|-------|-------|
+| Primary objective completed clean (no Shatterpoint) | +1 |
+| Full mission completion (all objectives, clean extract) | +2 |
+| Primary objective failed | −1 |
+| ANVIL exposed (faction identifies the squad) | −1 |
+| Squad member killed | −1 |
+| Memorialize downtime action | +1 |
+| Pull Strings downtime action (success) | ±1 (GM call) |
+
+Multiple events in one debrief combine. Failing the primary objective and losing a squadmate is −2 ticks.
+
+---
+
+## Overhold Actions
+
+Each dwarf may take up to 2 actions during downtime. No dwarf may take the same action twice in a single downtime. Actions cost Embers burned from the squad's shared bank. The base cost applies at Rep tier 3. Rep modifies all costs: tier 1 adds +2, tier 2 adds +1, tier 4 subtracts 1, tier 5 subtracts 2. Minimum cost is always 1 Ember. Actions marked with no cost never require Embers.
+
+| Action | Base cost |
+|--------|-----------|
+| Slag It | 1 |
+| Train | 2 |
+| Forge | 3 |
+| Scout | 2 |
+| Pull Strings | 3 |
+| Interrogate | 1 |
+| Reinforce | 2 |
+| Bond | 1 |
+| Recovery | — |
+| Memorialize | — |
+
+Recovery and Memorialize always cost 0. They cost the squad something. Just not Embers.
+
+#### SLAG IT
+*Drink deep, talk loud, decompress.*
+Dwarven decompression. The dwarf spends time in the Overhold's lower halls, drinking, fighting, and remembering. May prevent or redirect one incoming Scar result. May generate a rumor the GM can use.
+
+#### TRAIN
+*Evolve a skill.*
+The dwarf levels one skill of their choice using the advancement rules. A dwarf who takes Train this downtime may not also advance a skill for free after the next mission.
+
+#### FORGE
+*Craft specialized gear.*
+The dwarf works with the Overhold's armourers to produce a piece of specialized equipment. The GM and player define the item together within the prep stash guidelines. Higher cost for more powerful or unusual items.
+
+#### SCOUT
+*Reveal mission intel.*
+The dwarf runs advance reconnaissance on a potential mission target. Reveals one piece of hidden mission intel: layout, TMPR of key enemies, Hammer thresholds, faction presence, or extraction complications.
+
+#### PULL STRINGS
+*Manipulate Glimmerhold politics.*
+The dwarf works back channels inside Glimmerhold to shift faction relations, suppress rumors, or reposition ANVIL's political standing. May adjust Squad Reputation by ±1 tick on a success. May affect future mission assignments.
+
+#### INTERROGATE
+*Extract intel from prisoners or artifacts.*
+The dwarf works on a mission asset: a captured enemy, a recovered document, a strange relic from the depths. Generates specific actionable intel or reveals lore about enemy factions or the craters.
+
+#### REINFORCE
+*Add temporary mission assets.*
+The dwarf requisitions additional resources for the next mission: a support contact, a safe extraction point, a distraction, a piece of borrowed heavy equipment. These are single-use mission assets.
+
+#### BOND
+*Create or advance a squad link.*
+Two dwarves spend downtime together and establish or advance a Bond. This counts as the first tick toward the next Bond level. The players define the nature of the Bond and the GM approves any associated mechanical benefit.
+
+#### RECOVERY
+*No cost.*
+Resolve Scars, funerals, retirements, and decompression. All GRIT is fully recovered between missions. A dwarf who came back on their last mark starts the next mission at full 3 GRIT. Give this phase space.
+
+#### MEMORIALIZE
+*No cost. Honor the dead and retired.*
+The dwarf formally adds a fallen or retired operative to the Overhold's memorial wall. Memorialized operatives permanently affect the Overhold in small ways: a name on a plaque, a runeaxe mounted above the forge, their methods taught to new recruits. Grants +1 Rep tick. May unlock a one-time benefit tied to what that dwarf was known for.
+
+---
+
+## The Prep Stash
+
+The Overhold maintains a stash of operational equipment available between missions. Contents depend on Squad Reputation and Ember investment during downtime. The stash is not a shop. Dwarves do not browse it. They requisition what they need and the handlers decide what is available.
+
+The GM maintains the stash list. It grows and shrinks with the campaign. Higher Rep tiers unlock deeper stash access. Oddities are never guaranteed and always at GM discretion.
+
+### Item Tags
+
+| Tag | Meaning |
+|-----|---------|
+| [~] | Marks a use each time it is used |
+| [*] | Explosive if struck by outside force |
+| [v] | Volatile: functions as an explosive die when detonated |
+| [Q] | Quiet: never raises Heat |
+| [B] | Bulk: costs 2 item slots |
+| [F] | Fragile: destroyed on any hit, not just a clean hit |
+
+### Weapons and Tools
+
+| Item | Tags | Effect | Slots | Ember cost |
+|------|------|--------|-------|------------|
+| Hand axe | — | Standard sidearm. BLAST 2+ to use as a BLAST die. | 1 | — |
+| Runeaxe | — | ANVIL-issued. Raises CMP to d6. Already in kit. | — | — |
+| Throwing knife | [~] [Q] | 3 uses. Ranged. Never raises Heat. BLAST 2+ to hit. | 1 | — |
+| Crowbar | — | Treat doors and locks as TMPR 1 lower for breaching. | 1 | — |
+| Grapple and line | [B] | Enables vertical movement. Cannot raise Heat from movement. | 2 | 1 |
+| Shield slab | [B] | While held, TMPR +1. Cannot use Runeaxe two-handed. | 2 | 1 |
+| Runed crossbow | [~] | 3 bolts. Ranged BLAST die. Each shot marks 1 use. | 1 | 2 |
+
+### Armour and Protection
+
+| Item | Tags | Effect | Slots | Ember cost |
+|------|------|--------|-------|------------|
+| Leather jack | — | 3 uses. Standard absorption layer. | 1 | — |
+| Reinforced leather | — | 3 uses. TMPR +1 against standard attacks. | 1 | 1 |
+| Blast coat | [B] | 3 uses. Explosive damage that would destroy it maims instead, once per mission. Stacks with the Blastcoat skill. | 2 | 2 |
+| Depth plate | [B] | 3 uses. TMPR +2 overall. Environmental damage does not destroy it on a clean hit — maim only. | 2 | 3 |
+| Silencer wrap | [F] | Destroyed on first hit. Until then, BLAST raises Heat on 5+ instead of 4+. | 1 | 1 |
+
+### Explosives
+
+| Item | Tags | Effect | Slots | Ember cost |
+|------|------|--------|-------|------------|
+| Explosives Kit | [v] | ANVIL-issued. Raises TNT to d6. Infinite small charges. Already in kit. | — | — |
+| Satchel charge | [~] [*] [v] | 3 uses. Each use adds +1 explosive die to the pool. Detonates immediately if struck externally. | 1 | 1 |
+| Shaped charge | [~] [*] | 2 uses. Directed blast: treat one [+] on the target as already met. Must be placed (FUSE 3 or lower). | 1 | 2 |
+| Flashpot | [~] [v] [Q] | 3 uses. Explosive action that never raises Heat. Only affects living targets. TMPR [++] minimum to destroy. | 1 | 1 |
+| Depth charge | [*] [v] [B] | Single use. +3 explosive dice. Counts TMPR [+++] as [+] for structural demolition. | 2 | 3 |
+| Burnpack | [~] [*] [v] | 2 uses. Incendiary. Each explosion die that hits also sets the target or room feature alight. Fire adds 1 aftermath die per turn until extinguished. | 1 | 2 |
+
+### Consumables
+
+| Item | Tags | Effect | Slots | Ember cost |
+|------|------|--------|-------|------------|
+| Field kit | [~] | 3 uses. Restore 1 use to any damaged gear or skill. | 1 | 1 |
+| Stimulant draft | [~] | 2 uses. Treat CMP as one step higher for one roll. Cannot stack. | 1 | 1 |
+| Smoke canister | [~] [Q] | 3 uses. Fill a room with smoke. Enemies in smoke cannot target players. Players in smoke treat FUSE results of 1 as 2. | 1 | 1 |
+| Rope | — | Utility. Tie, lower, bind. 3 uses before it frays. | 1 | — |
+| Torch | [~] | 3 turns of light per use. Removes [DARK] condition in a room while held. | 1 | — |
+| Lamp oil flask | [~] [v] [*] | Improvised explosive. 1 explosive die when thrown and broken. If the carrier takes a clean hit the GM may detonate it. | 1 | — |
+| Antitoxin draught | [~] | 2 uses. Negate one poison, gas, or depth-substance effect already applied. Does not restore lost uses. | 1 | 1 |
+
+### Oddities
+
+Oddities are unusual, limited, and not always available. The GM decides what is in the stash before each Prep phase. They are never standard issue.
+
+| Item | Tags | Effect | Slots | Ember cost |
+|------|------|--------|-------|------------|
+| Depth-touched stone | [F] | Vibrates near creatures from below the craters. Provides no protection — destroyed if used to absorb a hit. | 1 | 2 |
+| Rune-etched chain | — | Binds a target that cannot escape by mundane means. Works on depth-touched creatures. Single use. | 1 | 3 |
+| Silencing cloth | [Q] | Wrap an object or surface. For one turn it makes no sound — kicks, explosions, movement included. Single use. | 1 | 2 |
+| Borrowed uniform | [F] | Convincing disguise for one specific faction context defined at Prep. Destroyed on a clean hit. Reduces Mood check difficulty by 1 while worn. | 1 | 2 |
+| Overhold cipher plate | — | Unlocks one ANVIL-infrastructure point: a sealed door, a dormant rune lock, a cached weapons cache. Useless against non-ANVIL architecture. | 1 | 2 |
+| Depth-creature ichor vial | [~] [F] | 2 uses. Applied to a surface: repels depth creatures for 1 turn. Applied to a wound: one hit that would mark gear or GRIT is ignored this turn. Numbness is not protection. | 1 | 3 |
