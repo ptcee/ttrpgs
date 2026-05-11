@@ -77,7 +77,7 @@
 
 Every dwarf has two dice: CMP (Composure) and TNT (Explosive). Base die for both is d4. Your Runeaxe raises CMP to d6. Your Explosives Kit raises TNT to d6. Skills can step dice up or down.
 
-When you Roll Stones you roll both dice and assign one to FUSE and one to BLAST.
+When you throw stones you roll both dice and assign one to FUSE and one to BLAST.
 
 ### FUSE
 
@@ -120,7 +120,7 @@ Roll CMP and TNT. Assign one die to FUSE and one to BLAST.
 
 ### Explosive Actions
 
-Roll stones as normal.
+Throw stones as normal.
 
 - FUSE: how many turns before detonation. Low fuse means immediate. High fuse means you have time.
 - BLAST: roll that many d6 explosion dice. 6s on explosion dice explode again, roll another d6.
@@ -146,7 +146,7 @@ Smother does not apply to Stack Up.
 
 ## Aftermath
 
-The world does not wait for the players to act. Aftermath dice represent the GM's ability to act, react, and escalate. The GM uses aftermath dice to Roll Stones for enemies, traps, and the world.
+The world does not wait for the players to act. Aftermath dice represent the GM's ability to act, react, and escalate. The GM uses aftermath dice to throw stones for enemies, traps, and the world.
 
 ### Generating Aftermath
 
@@ -154,16 +154,16 @@ The GM gains aftermath dice from:
 
 - **Mission start:** aftermath dice equal to number of players x2
 - **Every 3 turns:** 2 aftermath die
-- **Any 6s showing on a player's Roll Stones:** 1 aftermath
+- **Any 6s showing on a player's throw stones:** 1 aftermath
 
 ### Spending Aftermath
 
-The GM spends aftermath dice to roll stones for the world. When an enemy acts, a trap triggers, or the world threatens the players, the GM pulls dice from the pool and rolls them, assigning one to FUSE and one to BLAST.
+The GM spends aftermath dice to throw stones for the world. When an enemy acts, a trap triggers, or the world threatens the players, the GM pulls dice from the pool and rolls them, assigning one to FUSE and one to BLAST.
 
 - **FUSE:** how effective the action is. Checked against player TMPR or used for enemy and world moves.
 - **BLAST:** impact, noise and chaos generated. Raises Heat on 4+ as normal.
 
-The GM must spend a minimum of 2 aftermath dice to roll stones. Spent dice are removed.
+The GM must spend a minimum of 2 aftermath dice to throw stones. Spent dice are removed.
 
 ### Free Moves
 
@@ -295,12 +295,12 @@ Combat is not a separate phase. There is no initiative, no combat round, no turn
 
 Each player can take one action per turn.
 
-When a player acts against an enemy they Roll Stones.
+When a player acts against an enemy they throw stones.
 
 - FUSE determines how cleanly the action executes
 - BLAST is checked against TMPR and raises Heat on 4+
 
-When the GM acts against a player they spend aftermath dice and Roll Stones.
+When the GM acts against a player they spend aftermath dice and throw stones.
 
 - GM FUSE determines how effective the world's action was
 - GM BLAST is checked against the dwarf's TMPR and raises Heat on 4+
@@ -353,7 +353,7 @@ Every NPC also has a Suspicion track with 3 steps. When Suspicion hits its maxim
 
 ## Social Rolls
 
-When a dwarf interacts with an NPC roll stones and assign FUSE and BLAST.
+When a dwarf interacts with an NPC throw stones and assign FUSE and BLAST.
 
 - FUSE must be under the NPC's current Mood value to move Mood down 1. If FUSE equals or is above, Mood holds or rises at the GM's call.
 - If BLAST is 1-2, advance the Suspicion track by 1. A quiet, careful dwarf is more suspicious. Very undwarfy.
@@ -969,7 +969,7 @@ Bond levels are tracked identically on both dwarves' sheets. If one sheet says l
 
 # ENCUMBRANCE
 
-When carrying something the size of a folk or larger, roll an extra d6 when you Roll Stones and discard the lowest die before assigning FUSE and BLAST.
+When carrying something the size of a folk or larger, roll an extra d6 when you throw stones and discard the lowest die before assigning FUSE and BLAST.
 
 This applies to: incapacitated dwarves, conscious folk being supported or guided, large objects, and anything else the GM judges to be roughly folk-sized or bigger.
 
