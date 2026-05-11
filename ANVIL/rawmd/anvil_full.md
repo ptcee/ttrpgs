@@ -1935,3 +1935,97 @@ Roll d66 twice. The first result is how the dwarf operates. The second is what t
 | 62 | A specific piece of intelligence they have never acted on. |
 | 63 | A reason they joined ANVIL that no longer applies. |
 | 64 | Something they built before the job. They do not know if it still stands. |
+
+# ANVIL Mission Map Builder
+
+## Encounter table
+
+| d6 | Result |
+|----|--------|
+| 1 | Threat — active harm |
+| 2 | Threat — active harm |
+| 3 | Obstacle — passive harm |
+| 4 | Quiet — intel, tool, or clue |
+| 5 | Opportunity — obstacle + boon |
+| 6 | Boon — gear, contact, or edge |
+
+## Room types
+
+| Die | Type | Rule |
+|-----|------|------|
+| 1 | Dead end | touches ≤ 1 neighbor |
+| 2 | Passage | touches ≤ 2 neighbors |
+| 3 | Split | touches ≤ 3 neighbors |
+| 4 | Crossroads | touches ≤ 4 neighbors |
+| 5 | Tower | stack — must touch ≥ 2 |
+| 6 | Hall | merge — touches ≤ 4 |
+
+## Modifiers
+
+Highest neighboring die (4–6): Secret Exit · Trapped · Crumbling · Flooded · Damp
+
+Lowest neighboring die (1–3): Ornate · Pristine · Opulent · Hidden Alcove · Locked
+
+## Room names — occupied stronghold (total = die + all neighbor dice)
+
+| Total | Room |
+|-------|------|
+| 3 | Bunk Room |
+| 4 | Pit Cell |
+| 5 | Charnel Pit |
+| 6 | Muster Hall |
+| 7 | Cold Store |
+| 8 | Gatehouse |
+| 9 | Cookhouse |
+| 10 | Smithy |
+| 11 | Armoury |
+| 12 | Stable |
+| 13 | Watchpost |
+| 14 | Ledger Room |
+| 15 | Scriptorium |
+| 16 | Undercroft |
+| 17 | War Room |
+| 18 | Vault |
+| 19 | Workroom |
+| 20–22 | Great Hall |
+| 23–25 | Inner Keep |
+| 26–28 | Sanctum |
+| 29–31 | Warden's Chamber |
+| 32+ | The Deep Place |
+
+## Entrances
+
+The entry room is always die 1. Roll d6 twice — once for position, once for character.
+
+### Position (d6)
+
+| d6 | Entrance sits... |
+|----|-----------------|
+| 1 | On the north face — roof access, high window, or parapet gate |
+| 2 | On the south face — main approach, road-facing gate or yard door |
+| 3 | On the east face — servant access, side passage, or drainage tunnel |
+| 4 | On the west face — collapsed wall, hidden postern, or sally port |
+| 5 | Below — sewer, undercroft shaft, or collapsed floor from below |
+| 6 | Above — roof hatch, chimney drop, or lifted grating |
+
+### Character (d6)
+
+| d6 | The entrance is... |
+|----|-------------------|
+| 1 | Guarded. Two sentries, no cover on approach. |
+| 2 | Locked. Requires a key, a crowbar, or a shaped charge. |
+| 3 | Trapped. Concealed alarm or pressure trigger. Scout to spot it. |
+| 4 | Watched. No guards but line of sight from an interior room. |
+| 5 | Clear. Unguarded, unlocked, unremarkable. Too easy. |
+| 6 | Contested. Someone else is already using it — friend, enemy, or neither. |
+
+## Procedure
+
+1. Roll a handful of d6s.
+2. Place the first die anywhere — this is the entry room.
+3. Roll entrance position and character. Note both.
+4. For each remaining die, place it on the frontier (adjacent to any placed die) only if the room type rule is satisfied for both the new die and every neighbor it would touch.
+5. Sum the placed die with all its neighbors to get the room total. Look up the name.
+6. Check highest and lowest neighbors for a modifier.
+7. Roll d6 for encounter.
+8. Towers (5) must stack — place only where ≥ 2 neighbors already exist. Halls (6) merge all touching dice into one room.
