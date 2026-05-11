@@ -1,3 +1,92 @@
+# ORGANIZE
+
+# ANVIL — Reorganized Table of Contents
+
+## PART ONE: AT THE TABLE
+
+**Core Mechanics**
+- Rolling Stones (Standard Actions, Explosive Actions, Smother)
+- Stack Up
+- Aftermath (Generating, Spending, Free Moves, Squad Aftermath)
+- Heat (Track, Stages, Shatterpoint)
+- Combat and Damage (Temper, Hit Resolution, Gear/Skills/GRIT absorption, Combat Flow)
+- Social (Mood, Suspicion, Social Rolls)
+- Encumbrance
+
+**Reference**
+- Skills: d66 Table
+- Enemy TMPR Examples
+- NPC Mood Track
+- Heat Track and Hammers
+
+---
+
+## PART TWO: BEFORE YOU PLAY
+
+**Assembling the Squad**
+- What Every Dwarf Starts With
+- Dice
+- Character Generation (Name, Physique, Trait tables)
+- Starting Gear (Runeaxe, Explosives Kit)
+- Skills (how to read them, how uses work)
+- Bonds (establishment and tracking)
+
+**Running Missions**
+- Intel Tiers
+- Drop Points and Extraction
+- The Mission Sheet (how to fill one)
+- The Keyed Map (room key format)
+- Objective Types: d8
+- Ember Payout Guidance
+
+**The Prep Stash**
+- Item Tags
+- Weapons and Tools
+- Armour and Protection
+- Explosives
+- Consumables
+- Oddities
+
+---
+
+## PART THREE: BETWEEN SESSIONS
+
+**Downtime: The Overhold**
+- Embers
+- Squad Reputation (Track, Tier Effects, Advancing and Losing)
+- Downtime Structure
+  - 1. Debrief
+  - 2. Recovery
+  - 3. Overhold Actions
+  - 4. Prep
+
+**Overhold Actions Reference**
+- Slag It / Train / Forge / Scout / Pull Strings / Interrogate / Reinforce / Bond / Recovery / Memorialize
+- Ember Costs by Rep Tier
+
+**Skill Advancement**
+- Upgrade Types
+- Advancement Limits
+
+**Scars**
+- Rolling for Scars
+- Scar Table: d66
+
+**Bonds**
+- Advancing Bonds
+- Bond Levels
+
+**Death and Retirement**
+
+---
+
+## APPENDIX
+
+**Sample Mission: The Hollow Chant**
+- Mission Sheet
+- Keyed Map
+- GM Notes
+
 # ANVIL
 
 > A TTRPG about a dwarven strike force carrying out missions deep in enemy territory 200 years before the Gobfather establishes the Underhold. Four players, one GM.
