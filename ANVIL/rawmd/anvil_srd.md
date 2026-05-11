@@ -1,5 +1,8 @@
 # ANVIL
-v0.8 - todo: go over all stash items and fix any bad effects, go over the hollow chant and revise anything not good. make printable operative sheet, mission sheet and overhold tracker. write some faction running mechanics for outside mission tracking. come up with some more items for the stash. write the lore. MAYBE add in wallet dungeons procedures. compact gameplay loop guide.
+> v0.8 - todo: go over all stash items and fix any bad effects, go over the hollow chant and revise anything not good. make printable operative sheet, mission sheet and overhold tracker. write some faction running mechanics for outside mission tracking. come up with some more items for the stash. write the lore. MAYBE add in wallet dungeons procedures. compact gameplay loop guide.
+>
+> mission to mission pacing.. how many missions before a campaign ends.. campaign-level objective..
+> 
 
 > A TTRPG about a dwarven strike force carrying out missions deep in enemy territory 200 years before the Gobfather establishes the Underhold. Four players, one GM.
 
@@ -38,6 +41,10 @@ v0.8 - todo: go over all stash items and fix any bad effects, go over the hollow
 
 # TOME 1: AT THE TABLE 
 
+## GM Quick Drop
+
+wip - what you're actually tracking during a session (Heat, Aftermath pool, Beats) and what the moment to moment feel should be. "how to run the game" for new GMs. two paragraph framing ("here's what a session looks like, here's what the GM is tracking")
+
 ## Dice & Throwing Stones
 
 Every dwarf has two stats: Composure (CMP) and Explosives (TNT). The base die for both is a d4. All ANVIL operatives are assigned a Runeaxe and an Explosives Kit that raises this base die to d6 for each.
@@ -46,7 +53,7 @@ Rolling to find the results of actions is called throwing stones. When you throw
 
 ### FUSE
 
-FUSE is a dwarves execution under pressure. Their speed, precision and control.
+FUSE is a dwarf's execution under pressure. Their speed, precision and control.
 
 | Result | Effect |
 |--------|--------|
@@ -58,7 +65,7 @@ Low FUSE is efficient. High FUSE gets messy.
 
 ### BLAST
 
-BLAST is a dwarves impact. The noise, force or commotion caused by the action.
+BLAST is a dwarf's impact. The noise, force or commotion caused by the action.
 
 | Result | Effect |
 |--------|--------|
@@ -89,7 +96,7 @@ Roll CMP and TNT. Assign one die as FUSE and one as BLAST.
 
 When using equipment marked [E], it is an Explosive action. Throw stones as normal, the assigned FUSE is how long til detonation and the assigned BLAST is how many Explosion dice are rolled as the explosive goes off. 
 
-- Unlike standard actions raise the Heat track by the value of the BLAST die.
+- Unlike standard actions, raise the Heat track by the full value of the BLAST die.
 - FUSE: How many beats before detonation. Low fuse means immediate. High fuse means there is time.
 - BLAST: Roll that many Explosion dice. 6s on Explosion dice explode again, roll another d6 for each 6.
   - Every **4+** on an Explosion die is a **hit** and destroys something in the vicinity.
@@ -110,15 +117,15 @@ When using equipment marked [E], it is an Explosive action. Throw stones as norm
 
 ### Smother
 
-If a dwarf attempts a **standard action** and both assigned dice are 1s, reduce the Heat track by 3.
+If a dwarf performs a **standard action** and assigns both dice as 1s, reduce the Heat track by 3.
 
 ---
 
 ## Stack Up
 
-A squad may combine their turns to act together. Each player rolls their own CMP and TNT and the results are pooled. Then they assign one die from the pool to FUSE and one to BLAST as normal.
+A squad may combine their turns to act together for a standard action. Each player rolls their own CMP and TNT and the results are pooled. Then they assign one die from the pool to FUSE and one to BLAST as normal.
 
-If two or more 6s appear anywhere across the full pool, immediately raise Heat by 3. Coordinating tactics is powerful but multiple dwarves acting together can be loud and hard to control.
+If two or more 6s appear anywhere across the full pool, immediately raise Heat by 1 plus 1 for each participating dwarf. Coordinating tactics is powerful but multiple dwarves acting together can be loud and hard to control.
 
 A Stack Up can never trigger Smother, unless a Skill or mechanic says otherwise.
 
@@ -133,7 +140,7 @@ The world is acting whether the squad has been noticed or not, but Aftermath dic
 The GM gains aftermath dice from:
 
 - **Mission start:** Gain Aftermath dice equal to number of players.
-- **Every 3 turns:** Gain 2 aftermath dice.
+- **Every 3 Beats:** Gain 2 aftermath dice.
 - **Any assigned 6s:** Gain 1 Aftermath if after a player assigns dice there are any 6s.
 
 ### Spending Aftermath
@@ -143,7 +150,7 @@ The GM spends aftermath dice to actively throw stones for the world. When an ene
 - **FUSE:** How effective the action is. Checked against player TMPR or used for enemy and world moves.
 - **BLAST:** The impact, noise and chaos generated. Raises Heat on 4+ as normal.
 
-The GM must spend a **minimum of 2 aftermath dice** to throw stones. Spent **dice are removed**.
+The GM must spend a **minimum of 2 aftermath dice** to throw stones. Spent **dice are removed**. If a pool has fewer than 2 dice, a GM cannot throw stones.
 
 ### Free Moves
 
@@ -191,7 +198,7 @@ Each mission has specific Hammer events defined by the GM during prep. Hammers s
 
 At 20+ Heat the mission reaches Shatterpoint. This is not automatic failure, the squad may still complete objectives and extract but the mission will begin collapsing around them. Every exit is watched, every door barred, something from the Deep wakes. Some missions have Hammers at Hot and White Hot but every mission has a Shatterpoint Hammer.
 
-When a mission hits Shatterpoint, it's Heat can no longer be reduced.
+When a mission hits Shatterpoint, Heat can no longer be reduced.
 
 ### Time, turns and Beats.
 
@@ -203,13 +210,13 @@ The game of ANVIL does not need to track specific time within the world, Heat pa
 
 The game of ANVIL does not use hit points or health. Instead everything in the world has Temper. Temper is an objects resistance to outside pressure and how hard it is to break.
 
-### Temper (TMPR)
+### Temper
 
 Every object or creature has a Temper value. As a GM, make sure to tell players Temper values freely. Knowing what you are up against is part of making good decisions and will reduce analysis paralysis at the table. The players will know something's Temper after their first action against it anyway.
 
-#### Reading TMPR
+#### Reading Temper
 
-- **The value** is the BLAST threshold. Your BLAST die must equal or beat this number to act against it.
+- **The value** is the BLAST threshold. Your BLAST die must equal or beat this number to act against it. No value means it cannot be handled by standard actions.
 - **The brackets** are the Explosive threshold. The number of [+] symbols is how many Explosion dice htis are needed to destroy it. No brackets means one successful hit destroys it.
 
 **Examples:**
@@ -224,7 +231,7 @@ Every object or creature has a Temper value. As a GM, make sure to tell players 
 When a BLAST die is applied against a Temper value:
 
 - **BLAST higher than Temper:** Clean hit. Wipes all marks on whatever took the hit.
-- **BLAST equals Temper:** Maim. 1 mark on what took the hit.
+- **BLAST equal to Temper:** Maim. 1 mark on what took the hit.
 - **BLAST below Temper:** Botch. Miss, glance, no effect.
 
 This applies to players acting against the world and the GM rolling against players.
@@ -281,7 +288,7 @@ Enemies are defined by their Temper and what they carry.
 - Guard in blast resistant platemail: T4[++]
 - Hulking creature from the depths: T5[+++]
 
-Enemies can have gear and skills that absorb hits just like players. The GM decides what enemies sacrifice to avoid death.
+Enemies can have gear and skills that absorb hits just like players. The GM decides what enemies sacrifice to avoid death. Enemy gear has 3 marks like player gear unless noted otherwise.
 
 ## Combat Flow
 
@@ -301,13 +308,15 @@ When the GM acts against a player they spend aftermath dice and throw stones.
 
 The fiction determines what is possible. A dwarf slipping a knife into a guard from the shadows rolls against Temper hoping for low FUSE. A dwarf in a straight fight against an armoured veteran is looking to roll as high as they can either way.
 
+If two entities wish to attack at the same time, the lower FUSE hits first.
+
 ---
 
 ## Interacting with NPCs
 
 ## Posture
 
-Every NPC has a Posture on a scale of 1 to 6.
+Every NPC has a Posture on a scale of 1 to 6. Faction posture should be defined in the mission sheet, but if unsure of a specific NPCs posture, roll a d6.
 
 | Posture | State |
 |------|-------|
@@ -329,7 +338,7 @@ When a dwarf interacts with an NPC throw stones and assign FUSE and BLAST.
 - FUSE: If FUSE is under current Posture, move Posture down 1. If equal, Posture stays.
 - BLAST: If BLAST is 4-6, mark a Trust.
 
-NPC Trust does not reset unless the squad has a disguise or some other way for the NPC to not know/remember them.
+NPC Posture and Trust does not reset unless the squad has a disguise or some other way for the NPC to not know/remember them. It also persists from mission to mission unless a Pull Strings action is succesfully taken.
 
 ---
 
@@ -606,7 +615,7 @@ During downtime, a dwarf may spend Embers to level one skill of their choice. Fo
 
 **15. Ghost Pact** I am unseen, unheard, undeniable. | Once per mission, the GM must spend 2 additional aftermath dice to act against this dwarf.
 
-**16. Cold Read** I have internalzied the mission brief. | Once per mission, gain 1 piece of intel about the mission from the GM.
+**16. Cold Read** I have internalized the mission brief. | Once per mission, gain 1 piece of intel about the mission from the GM.
 
 
 ##### 21-26 BREACHERS
@@ -626,7 +635,7 @@ During downtime, a dwarf may spend Embers to level one skill of their choice. Fo
 
 
 ##### 31-36 ANCHORS
-*Tepmer, survival, absorption*
+*Temper, survival, absorption*
 
 **31. Ironbuilt** I am built like the mountain. | Gain 1 additional GRIT.
 
@@ -648,7 +657,7 @@ During downtime, a dwarf may spend Embers to level one skill of their choice. Fo
 
 **42. Tunnel Sense** I hear things coming. | Once per mission, after the GM declares an Aftermath move, the squad may act before it resolves.
 
-**43. Loud and Proud** My confidence is contagious. | Can only mark an NPCs Trust on a BLAST of 6.
+**43. Loud and Proud** My confidence is contagious. | Only marks down an NPCs Trust on a BLAST of 6.
 
 **44. Interrogator** I get what I need one way or another. | May intentionally mark Trust to extract one piece of intel from an NPC.
 
@@ -730,7 +739,7 @@ The squad never has full information. What they know going in depends on what th
 
 **Scout Intel** is firsthand reconnaissance gathered during downtime via the Scout action and it is reliable. It can fill in patrol routes, enemy Temper values, entrance details, and secondary objective locations. Scout intel is represented as additional keyed rooms on the partial map.
 
-The squad's pre mission map is a partial key. Rooms they have intel on are filled in. Everything else is dark until they move through it.
+The squad's pre mission map is a partial key. Rooms they have intel on are filled in. Everything else is dark until they move through it. The players can see their entry point and any directly adjacent rooms.
 
 ### Drop Points and Extraction
 
@@ -922,7 +931,7 @@ SQUAD REPUTATION
 5 - LEGEND     [ ][ ][ ][ ][ ]
 ```
 
-Rep never goes above tier 5 or below tier 1. Marks within a tier have no individual effect, only the tier matters. When marks would advance past the top of a tier, move to the next tier and continue from mark 1, the opposite for when you're reducing marks.
+Rep never goes above tier 5 or below tier 1. Marks within a tier have no individual effect, only the tier matters. When marks would advance past the top of a tier, move to the next tier and continue from mark 1, the opposite for when you're reducing marks. If you're at MYTH 1 and would reduce Rep it stays at MYTH 1. You cannot be reduced beyond MYTH 1 or be raised above LEGEND 5.
 
 #### Rep Tier Effects
 
@@ -1242,11 +1251,11 @@ An Explosive Kit can upgrade it's Mix and it's Casing.
 
 A player may also request a piece of specialized equipment. The GM and player define the item together within the prep stash guidelines. Higher cost for more powerful or unusual items.
 
-#### SCOUT (2 Ember)
+#### SCOUT (1-3 Ember)
 *Reveal mission intel.*
-The dwarf runs advance reconnaissance on a potential mission target. Reveals one piece of hidden mission intel: layout, Temper of key enemies, Hammer thresholds, faction presence, or extraction complications.
+The dwarf runs advance reconnaissance on a potential mission target. Reveals one piece of hidden mission intel per ember: layout, Temper of key enemies, Hammer thresholds, faction presence, or extraction complications.
 
-#### PULL STRINGS (2 Ember)
+#### PULL STRINGS (3 Ember)
 *Manipulate Glimmerhold politics.*
 The dwarf works back channels inside Glimmerhold to shift faction relations, suppress rumors, or reposition ANVIL's political standing. May adjust Squad Reputation by 1 mark on a success. May affect future mission assignments.
 
@@ -1538,7 +1547,7 @@ Connects to: 02.
 
 **2x Choir Sentries** (TMPR 2, leather, hand axe)
 
-Sentries are bored and half-attentive. Social encounter possible at Cold: a convincing bluff (FUSE 3 or lower, BLAST 2 or lower to avoid suspicion) gets the squad through without a fight.
+Sentries are bored and half attentive. Social encounter possible at Cold, Posture: Neutral. A convincing bluff gets the squad through without a fight.
 
 At Warm or higher they are on edge and will not be fooled. Attack on sight.
 
@@ -1686,3 +1695,7 @@ Connects to: 09.
 ---
 
 > Inspo: metal gear solid, hitman, deep rock galactic, splinter cell, wildsea, daggerheart
+
+# QUICK REFERENCE
+
+wip - "what do you roll for" quick reference. brief "when would I assign FUSE vs BLAST to a task" paragraph or table
