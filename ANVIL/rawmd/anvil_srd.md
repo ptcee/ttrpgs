@@ -86,11 +86,11 @@ Roll CMP and TNT. Assign one die as FUSE and one as BLAST.
 
 > **Examples**
 >
-> Breaking a door: BLAST beating TMPR means it opens. FUSE determines whether it was quiet or loud.
+> Breaking a door: BLAST beating Temper means it opens. FUSE determines whether it was quiet or loud.
 >
 > Sneaking past guards: BLAST determines whether you alert anyone. FUSE determines how far you get.
 >
-> Killing an enemy: BLAST is checked against TMPR. FUSE determines whether it's an execution or a brawl.
+> Killing an enemy: BLAST is checked against Temper. FUSE determines whether it's an execution or a brawl.
 
 ### Explosive Actions
 
@@ -147,7 +147,7 @@ The GM gains aftermath dice from:
 
 The GM spends aftermath dice to actively throw stones for the world. When an enemy acts, a trap triggers or the world threatens the players, the GM pulls dice from the pool and rolls them, assigning one to FUSE and one to BLAST just as a player would.
 
-- **FUSE:** How effective the action is. Checked against player TMPR or used for enemy and world moves.
+- **FUSE:** How effective the action is. Checked against player Temper or used for enemy and world moves.
 - **BLAST:** The impact, noise and chaos generated. Raises Heat on 4+ as normal.
 
 The GM must spend a **minimum of 2 aftermath dice** to throw stones. Spent **dice are removed**. If a pool has fewer than 2 dice, a GM cannot throw stones.
@@ -799,7 +799,7 @@ The GM defines Hammer events during prep for Hot and White Hot if used, Shatterp
 
 - Every door in the location drops its iron bar simultaneously.
 - The furnaces are vented. Superheated air floods the lower levels. [DARK] rooms become [SCALDING].
-- Arcane wards seal every threshold. All doors require minimum TMPR[++] to breach.
+- Arcane wards seal every threshold. All doors require minimum T[++] to breach.
 - Support columns are deliberately brought down. One route per Beat collapses.
 - All light sources are doused at once. Every room becomes [DARK].
 - The ritual completes. Something begins clawing it's way up from the depths.
@@ -1243,7 +1243,7 @@ An Explosive Kit can upgrade it's Mix and it's Casing.
 | d6 | Name | Detail |
 |-----|------|--------|
 | 1 | Shrapnel-Packed | Filled with slag. Explosion dice explode on 5 or 6. |
-| 2 | Magnetized | Sticks to iron. Can be placed on TMPR[++] metal objects without a FUSE roll. |
+| 2 | Magnetized | Sticks to iron. Can be placed on T[++] metal objects without a FUSE roll. |
 | 3 | Waterproof Seal | Can be used underwater or in flooding environments. |
 | 4 | Timer-Rigged | Reliable clockwork. Treat FUSE results of 1 or 6 as any value. |
 | 5 | Flash-Bang | Designed to stun. Remove an Aftermath die from the GM pool for every hit. |
@@ -1300,7 +1300,7 @@ The dwarf formally adds an anvil to the Overhold's memorial chamber for fallen o
 
 ### The Prep Stash
 
-The Overhold maintains a stash of operational equipment available between missions. Contents depend on Squad Reputation and Ember investment during downtime. The stash is not a shop. Dwarves do not browse it. They requisition what they need and the handlers decide what is available.
+The Overhold maintains a stash of operational equipment available between missions. Contents depend on Squad Reputation and Ember investment during downtime. The stash is not a shop, dwarves do not browse it. They requisition what they need and the handlers decide what is available.
 
 The GM maintains the stash list. It grows and shrinks with the campaign. Higher Rep tiers unlock deeper stash access. Oddities are never guaranteed and always at GM discretion.
 
@@ -1319,59 +1319,60 @@ The GM maintains the stash list. It grows and shrinks with the campaign. Higher 
 
 | Item | Tags | Effect | Slots | Ember cost |
 |------|------|--------|-------|------------|
-| Hand axe | — | Standard sidearm. BLAST 2+ to use as a BLAST die. | 1 | — |
-| Runeaxe | — | ANVIL-issued. Raises CMP to d6. Already in kit. | — | — |
-| Throwing knife | [~] [Q] | 3 uses. Ranged. Never raises Heat. BLAST 2+ to hit. | 1 | — |
-| Crowbar | — | Treat doors and locks as TMPR 1 lower for breaching. | 1 | — |
-| Grapple and line | [B] | Enables vertical movement. Cannot raise Heat from movement. | 2 | 1 |
-| Shield slab | [B] | While held, TMPR +1. Cannot use Runeaxe two-handed. | 2 | 1 |
-| Runed crossbow | [~] | 3 bolts. Ranged BLAST die. Each shot marks 1 use. | 1 | 2 |
+| Runeaxe | — | ANVIL issued. Raises CMP to d6. Already in kit. | — | 3 |
+| Throwing knife | [~] [Q] | Ranged. Never raises Heat. | 1 | — |
+| Crowbar | — | Treat doors and locks as Temper -1 when breaching. | 1 | — |
+| Grapple and line | [B] | Enables vertical movement. | 2 | 1 |
+| Blast Shield | [B] | While held, T+1[++]. | 2 | 1 |
+| Runed crossbow | [~] | Ranged TNT die. | 1 | 2 |
 
 #### Armour and Protection
 
 | Item | Tags | Effect | Slots | Ember cost |
 |------|------|--------|-------|------------|
-| Leather jack | — | 3 uses. Standard absorption layer. | 1 | — |
-| Reinforced leather | — | 3 uses. TMPR +1 against standard attacks. | 1 | 1 |
-| Blast coat | [B] | 3 uses. Explosive damage that would destroy it maims instead, once per mission. Stacks with the Blastcoat skill. | 2 | 2 |
-| Depth plate | [B] | 3 uses. TMPR +2 overall. Environmental damage does not destroy it on a clean hit — maim only. | 2 | 3 |
-| Silencer wrap | [F] | Destroyed on first hit. Until then, BLAST raises Heat on 5+ instead of 4+. | 1 | 1 |
+| Leather jack | — | Standard absorption layer. | 1 | — |
+| Reinforced leather | — | Temper +1 against standard attacks. | 1 | 1 |
+| Blast coat | [B] | Explosive damage that would destroy it maims instead once per mission. | 2 | 2 |
+| Depth plate | [B] | Temper +2. Environmental damage does not destroy it on a clean hit, maim only. | 2 | 3 |
+| Silencer wrap | [F] | BLAST raises Heat on 5+ instead of 4+. | 1 | 1 |
 
 #### Explosives
 
 | Item | Tags | Effect | Slots | Ember cost |
 |------|------|--------|-------|------------|
-| Explosives Kit | [v] | ANVIL-issued. Raises TNT to d6. Infinite small charges. Already in kit. | — | — |
-| Satchel charge | [~] [*] [v] | 3 uses. Each use adds +1 explosive die to the pool. Detonates immediately if struck externally. | 1 | 1 |
-| Shaped charge | [~] [*] | 2 uses. Directed blast: treat one [+] on the target as already met. Must be placed (FUSE 3 or lower). | 1 | 2 |
-| Flashpot | [~] [v] [Q] | 3 uses. Explosive action that never raises Heat. Only affects living targets. TMPR [++] minimum to destroy. | 1 | 1 |
-| Depth charge | [*] [v] [B] | Single use. +3 explosive dice. Counts TMPR [+++] as [+] for structural demolition. | 2 | 3 |
-| Burnpack | [~] [*] [v] | 2 uses. Incendiary. Each explosion die that hits also sets the target or room feature alight. Fire adds 1 aftermath die per turn until extinguished. | 1 | 2 |
+| Explosives Kit | [V] | ANVIL issued. Raises TNT to d6. Infinite small charges. Already in kit. | — | 4 |
+| Satchel charge | [~] [E] [V] | Each mark filled adds +1 Explosive die to the pool. | 1 | 1 |
+| Shaped charge | [~] [E] | Directed blast: ignore [+] of target Temper. Must be placed with FUSE 3 or lower or explodes. | 1 | 2 |
+| Flashpot | [~] [V] [Q] | Only affects living targets. d4 TNT die. | 1 | 1 |
+| Depth charge | [E] [V] [B] | Single use. +3 Explosive dice. Each hit counts as 2 vs structures. | 2 | 3 |
+| Burnpack | [~] [E] [V] | Incendiary. Each explosion die that hits also sets the target or room feature on fire. Fire deals 1 Maim to target and adds 1 Aftermath die per Beat until extinguished. | 1 | 2 |
+| Sapper Charges | [~] [E] [B] | d8 TNT die. | 1 | 2 |
+| Cluster Keg | [~] [E] [B] | d12 TNT die. | 2 | 3 |
 
 #### Consumables
 
 | Item | Tags | Effect | Slots | Ember cost |
 |------|------|--------|-------|------------|
-| Field kit | [~] | 3 uses. Restore 1 use to any damaged gear or skill. | 1 | 1 |
-| Stimulant draft | [~] | 2 uses. Treat CMP as one step higher for one roll. Cannot stack. | 1 | 1 |
-| Smoke canister | [~] [Q] | 3 uses. Fill a room with smoke. Enemies in smoke cannot target players. Players in smoke treat FUSE results of 1 as 2. | 1 | 1 |
-| Rope | — | Utility. Tie, lower, bind. 3 uses before it frays. | 1 | — |
-| Torch | [~] | 3 turns of light per use. Removes [DARK] condition in a room while held. | 1 | — |
-| Lamp oil flask | [~] [v] [*] | Improvised explosive. 1 explosive die when thrown and broken. If the carrier takes a clean hit the GM may detonate it. | 1 | — |
-| Antitoxin draught | [~] | 2 uses. Negate one poison, gas, or depth-substance effect already applied. Does not restore lost uses. | 1 | 1 |
+| Field kit | [~] | Clear 1 mark from a damaged gear or skill. | 1 | 1 |
+| Stimulant flask | [~] | Treat CMP as d4 for one roll. Cannot stack. | 1 | 1 |
+| Smoke canister | [~] [Q] | Fill a room with smoke. Enemies in smoke cannot target players. Players in smoke treat FUSE results of 1 and 2 as 3. | 1 | 1 |
+| Rope | — | Utility. Tie, lower, bind. | 1 | — |
+| Torch | [~] | 3 Beats of light per mark. Removes [DARK] condition in a room while held. | 1 | — |
+| Lamp oil flask | [~] [V] [E] | Improvised explosive. 1 Explosive die when thrown. | 1 | — |
+| Medical stout | [~] | Roll a d6, on a 5+ restore 1 GRIT | 1 | 3 |
 
 #### Oddities
 
-Oddities are unusual, limited, and not always available. The GM decides what is in the stash before each Prep phase. They are never standard issue.
+Oddities are unusual, limited, and not always available. The GM decides what is in the stash before each Prep phase. These are not standard issue.
 
 | Item | Tags | Effect | Slots | Ember cost |
 |------|------|--------|-------|------------|
-| Depth-touched stone | [F] | Vibrates near creatures from below the craters. Provides no protection — destroyed if used to absorb a hit. | 1 | 2 |
-| Rune-etched chain | — | Binds a target that cannot escape by mundane means. Works on depth-touched creatures. Single use. | 1 | 3 |
-| Silencing cloth | [Q] | Wrap an object or surface. For one turn it makes no sound — kicks, explosions, movement included. Single use. | 1 | 2 |
-| Borrowed uniform | [F] | Convincing disguise for one specific faction context defined at Prep. Destroyed on a clean hit. Reduces Mood check difficulty by 1 while worn. | 1 | 2 |
-| Overhold cipher plate | — | Unlocks one ANVIL-infrastructure point: a sealed door, a dormant rune lock, a cached weapons cache. Useless against non-ANVIL architecture. | 1 | 2 |
-| Depth-creature ichor vial | [~] [F] | 2 uses. Applied to a surface: repels depth creatures for 1 turn. Applied to a wound: one hit that would mark gear or GRIT is ignored this turn. Numbness is not protection. | 1 | 3 |
+| Deeptouched stone | [F] | Vibrates near creatures from below. | 1 | 2 |
+| Rune-etched chain | — | Single use. Binds a target that cannot escape by mundane means. Works on deepbeasts. | 1 | 3 |
+| Silence tarp | [Q] | Wrap an object or surface. For one turn it makes no sound, kicks, explosions, movement included. Single use. | 1 | 2 |
+| Borrowed uniform | [F] | Convincing disguise for one specific faction. Treat CMP rolls vs Posture as -2. | 1 | 2 |
+| Overhold cipher plate | — | Unlocks one ANVIL infrastructure point: a sealed door, a dormant rune lock, a cached weapons cache. Useless against non ANVIL architecture. | 1 | 2 |
+| Deepbeast ichor vial | [~] [F] | Applied to a surface: repels deepbeasts for d4 beats. Applied to a wound: one hit that would mark skills or GRIT is ignored this turn. Numbness is not exactly protection. | 1 | 3 |
 
 ---
 
@@ -1405,7 +1406,7 @@ wip, write orrelia pre-northern war lore here.
 
 ### THE HOLLOW CHANT
 
-*An ANVIL mission for 4 players*
+*An ANVIL mission for 2-4 players.*
 
 ---
 
@@ -1415,9 +1416,9 @@ wip, write orrelia pre-northern war lore here.
 
 **Objective Type:** Extraction (primary) / Interruption (secondary)
 
-**Location:** The Ashford Compound. An abandoned dwarven administrative outpost built into the rock shelf beneath the Glimmerhold plateau, decommissioned after a collapse three decades ago. The cult has been operating here for months. The Overhold received a tip from a terrified labourer who saw people being taken below. ANVIL confirmed activity two days ago. The ritual is tonight.
+**Location:** The Ashfjord Compound. An abandoned dwarven administrative outpost built into the rock shelf north east of Glimmerhold, decommissioned after a collapse three decades ago. A cult has been operating here for months. The Overhold received a tip from a terrified labourer who saw folks being taken below. ANVIL confirmed activity two days ago. The ritual is tonight.
 
-**Faction:** The Hollow Choir. A fanatical depth-cult who believe the creatures from the craters are gods ascending. They want to accelerate the process. They are armed, organized, and willing to die for this. Most are former miners and labourers, desperate and converted. A small number are true believers who have been changed by prolonged depth exposure.
+**Faction:** The Hollow Choir. A fanatical deep cult who believe the creatures from below the craters are gods ascending and want to accelerate the process. They are armed, organized, and willing to die for their cause. Most are former miners and labourers, desperate and converted. A small number are true believers who have been changed by prolonged exposure to the arcane from below.
 
 ---
 
@@ -1427,7 +1428,7 @@ wip, write orrelia pre-northern war lore here.
 |-----------|-------------|--------------|
 | Primary | Extract the sacrifice alive | 3 Embers per dwarf |
 | Secondary | Interrupt the ritual before completion | 2 Embers per dwarf |
-| Secondary | Eliminate the Choir's ritual leader, Serevann | 2 Embers per dwarf |
+| Secondary | Eliminate the Choir's leader, Sevran | 2 Embers per dwarf |
 | Full completion bonus | All three completed, squad extracted clean | 1 Ember per dwarf |
 
 ---
@@ -1447,7 +1448,7 @@ wip, write orrelia pre-northern war lore here.
 ##### Intel Tiers
 
 **Briefing Intel (all squads receive):**
-- Abandoned compound, two known entrances: service tunnel from the plateau road and a collapsed shaft that has been cleared
+- Abandoned compound, two known entrances: service tunnel from the cliff road and a collapsed shaft that has been cleared
 - Choir numbers estimated at 12-16 members
 - Ritual site believed to be in the lowest level
 - One confirmed civilian taken three nights ago
@@ -1456,8 +1457,8 @@ wip, write orrelia pre-northern war lore here.
 - Service tunnel entrance is unguarded but trapped (room 01)
 - Choir sentries patrol rooms 02 and 04
 - The sacrifice is being held in room 07, conscious and restrained
-- Serevann is in room 09 and has not left since yesterday
-- The chasm in room 10 is already open and singing
+- Sevran is in room 09 and has not left since yesterday
+- The chasm in room 10 is already open
 
 ---
 
@@ -1467,9 +1468,9 @@ wip, write orrelia pre-northern war lore here.
 |-------|------|--------|
 | Cold | 0-5 | None |
 | Warm | 6-10 | None |
-| Hot | 11-15 | The ritual accelerates. Choir members throughout the compound begin chanting. All Choir gain +1 to effective TMPR as the noise and fervour make them harder to deal with cleanly. Smother requires triple 1s until Heat drops. |
-| White Hot | 16-19 | Serevann completes the first invocation. The chasm opens fully. The compound begins to shake. Loose debris falls in all rooms. Any explosive action risks a cave-in: on a BLAST of 6, that room's exits each have a 50% chance of becoming blocked (GM rolls d6, 4+ = blocked). |
-| Shatterpoint | 20+ | The summon succeeds. Something begins to come through the chasm. The compound starts to fail structurally. Each turn the squad does not extract or seal the chasm, one random exit in the compound becomes blocked. The squad may seal the chasm by detonating explosives directly into it (requires 2 successful [+] hits against the chasm, TMPR [++]). Sealing the chasm sends the creature back and stabilizes the compound. Failing to seal it means extraction under full structural collapse. |
+| Hot | 11-15 | The ritual accelerates and choir members throughout the compound begin chanting. All Choir gain +1 to effective Temper as the noise and fervour make them harder to deal with cleanly. Two cultists begin to move the sacrifice to the chasm. |
+| White Hot | 16-19 | The sacrifice arrives at Sevran and he completes the first invocation. The compound begins to shake, loose debris falls in all rooms. Any explosive action risks a cave-in: on a BLAST of 6, that room's exits each have a 50% chance of becoming blocked (GM rolls d6, 4+ is blocked). |
+| Shatterpoint | 20+ | The summon succeeds and the sacrifice is lost. Something begins to come through the chasm. The compound starts to fail structurally; each turn the squad does not extract or seal the chasm, one random exit in the compound becomes blocked. The squad may seal the chasm by detonating explosives directly into it (T[++++]). Sealing the chasm sends the creature back and stabilizes the compound. Failing to seal it means extraction under full structural collapse. |
 
 ---
 
@@ -1477,21 +1478,21 @@ wip, write orrelia pre-northern war lore here.
 
 | Stage | Choir Behavior |
 |-------|---------------|
-| Cold | Cultists move in small groups, focused on the ritual. Not expecting trouble. Social encounter possible with a good disguise or bluff. |
-| Warm | A sentry has gone quiet. Choir members are nervous, checking corridors. Harder to bluff. Will raise alarm on any suspicious roll. |
-| Hot | Full alert. Choir members move in pairs and head toward noise. Serevann does not stop the ritual. Sends his devoted to deal with intruders. |
-| White Hot | Serevann is unreachable by social means. Devoted members begin self-destructive behaviour, using themselves as weapons. |
-| Shatterpoint | Choir fractures. Some flee. True believers stay and pray as the compound collapses. Serevann is trying to widen the chasm, not fight the squad. |
+| Cold | Cultists move in small groups, focused on the ritual. Not expecting trouble. Social encounters possible with a good disguise or bluff. |
+| Warm | A sentry has gone quiet and Choir members are nervous, checking corridors. Harder to bluff and will raise alarm on any Trust marked. |
+| Hot | Full alert. Choir members move in pairs and head toward noise. Sevran does not stop the ritual, he sends his devoted to deal with intruders. |
+| White Hot | Sevran is unreachable by social means. Devoted members begin self destructive behaviour, using themselves as weapons. |
+| Shatterpoint | Choir fractures, some flee. True believers stay and pray as the compound collapses. Sevran is trying to widen the chasm, not fight the squad. |
 
 ---
 
 ##### Environment
 
-The Ashford Compound is cold, damp, and dark. Torches have been placed by the Choir but coverage is uneven. Several rooms are in near-darkness. The stone is old and the collapse three decades ago left structural weaknesses throughout.
+The Ashfjord Compound is cold, damp, and dark. Torches have been placed by the Choir but coverage is uneven. Several rooms are in near total darkness. The stone is old and the collapse three decades ago left structural weaknesses throughout.
 
 **Environmental mechanics:**
-- Rooms marked [DARK] have no light source. CMP rerolls for dwarves with Sensitivity to Light Scar. All other dwarves treat FUSE results of 1 as 2 in [DARK] rooms.
-- Rooms marked [UNSTABLE] have cracked ceilings. Explosive BLAST of 6 in an unstable room triggers a minor cave-in: 1 aftermath die added to GM pool and one exit becomes difficult terrain (FUSE 5+ to move through quickly).
+- Rooms marked [DARK] have no light source. All dwarves add +2 to FUSE results in [DARK] rooms.
+- Rooms marked [UNSTABLE] have cracked ceilings. Explosive BLAST of 6 in an unstable room triggers a minor cave in: roll a d6. On a 4-6 one room exit becomes blocked.
 - The chanting from room 10 can be heard throughout the compound from Warm onward. It gets louder as Heat rises.
 
 ---
@@ -1545,7 +1546,7 @@ Connects to: 02.
 ##### 02. GUARD POST
 *Small carved-out chamber. A table, two stools, a dying torch. Smells of cheap pipe smoke.*
 
-**2x Choir Sentries** (TMPR 2, leather, hand axe)
+**2x Choir Sentries** (T2, leather, hand axe)
 
 Sentries are bored and half attentive. Social encounter possible at Cold, Posture: Neutral. A convincing bluff gets the squad through without a fight.
 
@@ -1571,10 +1572,10 @@ Connects to: 02, 04 (line of sight only from shaft top).
 ##### 04. STAGING AREA
 *[UNSTABLE] A wider chamber used as a Choir assembly point. Crates of supplies, religious markings chalked on the walls. Two torches.*
 
-**1x Choir Devotee** (TMPR 2, leather, hand axe) — on watch, facing the shaft
-**1x Choir Devotee** (TMPR 2, leather, hand axe) — seated, writing in a journal
+**1x Choir Devotee** (T2, leather, hand axe) — on watch, facing the shaft
+**1x Choir Devotee** (T2, leather, hand axe) — seated, writing in a journal
 
-The journal contains notes on the ritual timeline. Readable in 1 turn. Reveals that the sacrifice was chosen specifically: a young stonemason's apprentice named Brynn who apparently wandered too close to a Choir meeting three weeks ago. Also reveals Serevann's name and that he has been below without sleeping for four days.
+The journal contains notes on the ritual timeline. Readable in 1 turn. Reveals that the sacrifice was chosen specifically: a young stonemason's apprentice named Brynn who apparently wandered too close to a Choir meeting three weeks ago. Also reveals Sevran's name and that he has been below without sleeping for four days.
 
 At Hot or higher a third devotee arrives from room 05 to report in and stays.
 
@@ -1585,7 +1586,7 @@ Connects to: 02, 03, 05.
 ##### 05. BARRACKS
 *[DARK] Bedrolls, personal effects, a cold cook fire. The Choir sleeps here in shifts.*
 
-**3x Choir Members** (TMPR 1, no armour, hand axe or club) — sleeping or resting
+**3x Choir Members** (T1, no armour, hand axe or club) — sleeping or resting
 
 At Cold and Warm these three are asleep. A quiet squad can pass through or neutralize them without a fight. FUSE 3 or lower to move through without waking them.
 
@@ -1604,7 +1605,7 @@ No enemies.
 
 The Choir has stockpiled supplies here: food, rope, torches, two flasks of lamp oil. One barrel is marked with depth-cult symbols and contains a viscous black liquid. Contact with skin causes temporary numbness (treat as 1 marked use on any skill that relies on touch or fine motor control, lasts until end of mission).
 
-The oil flasks are improvised explosives tagged [v]. Each counts as a single explosive die when thrown and broken.
+The oil flasks are improvised explosives tagged [V]. Each counts as a single explosive die when thrown and broken.
 
 Connects to: 05, 07, 08.
 
@@ -1617,9 +1618,9 @@ Connects to: 05, 07, 08.
 
 Brynn is cooperative and desperate to leave. Will follow instructions. Cannot fight. Moves slowly (see extraction notes). Responds well to a calm direct dwarf. Will panic if there is sustained violence nearby: FUSE 3 or lower from any dwarf to keep them calm in combat situations, otherwise they freeze for 1 turn.
 
-The door is bolted from outside. The key from room 02 opens it. The bolt can also be broken (TMPR 2, BLAST 2+ destroys it quietly enough with low FUSE).
+The door is bolted from outside. The key from room 02 opens it. The bolt can also be broken (T2, BLAST 2+ destroys it quietly enough with low FUSE).
 
-Brynn knows: the ritual is tonight, there are more cultists below than above, and there is something wrong with Serevann's eyes.
+Brynn knows: the ritual is tonight, there are more cultists below than above, and there is something wrong with Sevran's eyes.
 
 Connects to: 06.
 
@@ -1628,11 +1629,11 @@ Connects to: 06.
 ##### 08. ANTECHAMBER
 *[UNSTABLE] The entry to the ritual levels. Carved archway marked with depth-cult scripture. The air is warmer here. The chanting is audible regardless of Heat stage.*
 
-**2x Choir Devoted** (TMPR 3, reinforced leather, runeaxe) — these are true believers, changed by depth exposure. Their eyes reflect light wrong.
+**2x Choir Devoted** (T3, reinforced leather, runeaxe) — these are true believers, changed by depth exposure. Their eyes reflect light wrong.
 
 These two do not negotiate and do not bluff. They will not leave their post under any circumstances short of death. They are calmer than the cultists above, which is worse.
 
-At White Hot a third Devoted arrives from room 09 sent by Serevann.
+At White Hot a third Devoted arrives from room 09 sent by Sevran.
 
 The archway itself is inscribed. A dwarf who reads it and succeeds on FUSE 2 or lower understands enough: the ritual calls something up by giving it a willing vessel. The sacrifice is not being killed. They are being offered as a permanent host.
 
@@ -1641,21 +1642,21 @@ Connects to: 06, 09.
 ---
 
 ##### 09. RITUAL CHAMBER
-*[DARK] [UNSTABLE] A large natural cavern expanded by hand. The floor is inscribed with a massive summoning circle in what appears to be depth-creature ichor. Twelve Choir members kneel in concentric rings around the edge. At the far end, Serevann.*
+*[DARK] [UNSTABLE] A large natural cavern expanded by hand. The floor is inscribed with a massive summoning circle in what appears to be depth-creature ichor. Twelve Choir members kneel in concentric rings around the edge. At the far end, Sevran.*
 
-**10x Choir Members** (TMPR 1, no armour, ritual daggers) — kneeling, chanting, effectively unaware of anything outside the ritual until attacked or until Hot is reached
+**10x Choir Members** (T1, no armour, ritual daggers) — kneeling, chanting, effectively unaware of anything outside the ritual until attacked or until Hot is reached
 
-**Serevann** (TMPR 4, depth-touched hide, ritual blade, 2 skills: Devoted and Depth Voice) — the ritual leader. Standing at the far end of the circle, arms raised. His eyes are fully black. He has been in contact with something from below for a long time.
+**Sevran** (T4, depth-touched hide, ritual blade, 2 skills: Devoted and Depth Voice) — the ritual leader. Standing at the far end of the circle, arms raised. His eyes are fully black. He has been in contact with something from below for a long time.
 
-*Serevann's Skills:*
+*Sevran's Skills:*
 - **Devoted (3 uses):** Once per roll, ignore a maim result. The faith absorbs it.
-- **Depth Voice (3 uses):** Once per turn, Serevann may target a dwarf's skills directly with his BLAST instead of their gear or GRIT.
+- **Depth Voice (3 uses):** Once per turn, Sevran may target a dwarf's skills directly with his BLAST instead of their gear or GRIT.
 
-Serevann will not stop the ritual to fight. He directs the Choir and uses aftermath dice to act through them. He only fights directly if the squad reaches him or if the ritual circle is disrupted.
+Sevran will not stop the ritual to fight. He directs the Choir and uses aftermath dice to act through them. He only fights directly if the squad reaches him or if the ritual circle is disrupted.
 
-Disrupting the ritual circle (destroying the inscriptions, TMPR [+], requires direct explosive or sustained effort) ends the secondary objective and counts as Interruption success. It also immediately adds 4 aftermath dice to the GM pool as Serevann's concentration breaks and he turns his full attention on the squad.
+Disrupting the ritual circle (destroying the inscriptions, T[+], requires direct explosive or sustained effort) ends the secondary objective and counts as Interruption success. It also immediately adds 4 aftermath dice to the GM pool as Sevran's concentration breaks and he turns his full attention on the squad.
 
-If Serevann is eliminated before the ritual completes the Choir fractures immediately regardless of Heat stage. Half flee, half collapse in grief.
+If Sevran is eliminated before the ritual completes the Choir fractures immediately regardless of Heat stage. Half flee, half collapse in grief.
 
 Connects to: 08, 10.
 
@@ -1670,7 +1671,7 @@ The chasm sings at certain frequencies. Dwarves who spend more than 1 turn adjac
 
 **At Shatterpoint:** the summon succeeds. A limb, then another, begins to emerge. The creature is enormous and the chasm is the only thing containing it. Structural failure begins immediately.
 
-**Sealing the chasm:** requires detonating explosives directly into the fissure. The chasm has TMPR [++]. Two successful 4+ explosive dice collapse the fissure, send the creature back, and stabilize the compound. The squad has time to extract. This counts as full Interruption success even if the ritual circle was not disrupted.
+**Sealing the chasm:** requires detonating explosives directly into the fissure. The chasm has T[++]. Two successful 4+ explosive dice collapse the fissure, send the creature back, and stabilize the compound. The squad has time to extract. This counts as full Interruption success even if the ritual circle was not disrupted.
 
 **Failing to seal the chasm:** the creature continues to emerge. One exit per turn becomes blocked as the compound collapses. Extraction becomes a straight race.
 
@@ -1684,13 +1685,13 @@ Connects to: 09.
 
 **Brynn:** do not make Brynn helpless. They are scared but functional. They can hold a torch, relay information, and make decisions. They become a character the squad wants to protect, not a package to carry.
 
-**Serevann:** he is not a final boss. He is a man who has looked at something from the depths for too long and decided it was beautiful. Play him with conviction, not malice. He genuinely believes he is opening a door for something divine.
+**Sevran:** he is not a final boss. He is a man who has looked at something from the depths for too long and decided it was beautiful. Play him with conviction, not malice. He genuinely believes he is opening a door for something divine.
 
 **The creature:** never describe it fully. A limb. A sound. The way the light bends wrong near the chasm. The squad should leave not entirely sure what they stopped, or whether they stopped it.
 
-**If the ritual completes and the squad seals the chasm:** mission is a partial success. Primary objective complete if Brynn is extracted. Secondary objective complete if chasm is sealed. Serevann surviving is a campaign hook.
+**If the ritual completes and the squad seals the chasm:** mission is a partial success. Primary objective complete if Brynn is extracted. Secondary objective complete if chasm is sealed. Sevran surviving is a campaign hook.
 
-**If everything goes wrong:** the compound collapses, the creature partially emerges, the squad extracts with or without Brynn. Serevann is either dead in the rubble or gone. Either way, something came through the chasm tonight, even briefly. The Overhold will want to know what.
+**If everything goes wrong:** the compound collapses, the creature partially emerges, the squad extracts with or without Brynn. Sevran is either dead in the rubble or gone. Either way, something came through the chasm tonight, even briefly. The Overhold will want to know what.
 
 ---
 
