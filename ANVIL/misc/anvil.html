@@ -1,0 +1,1831 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANVIL. Drop 'em like stones.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --main: #647145;
+            --highlight: #bda360;
+            --tert: #735D78;
+            --bg: #f5f0e8;
+            --border: #b1b1b1;
+            --text: #333333;
+            --faint: #938e84;
+            --card-bg: #edeae0;
+            --card-border: #4a4a4a;
+            --rule-thick: 4px;
+            --rule-thin: 2px;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+            line-height: 1.65;
+        }
+
+        /* ─── HEADER ─── */
+        .header {
+            background: var(--text);
+            color: var(--bg);
+            padding: 48px 48px 40px;
+            border-bottom: 6px solid var(--highlight);
+            position: relative;
+        }
+
+        .header h1 {
+            font-family: "Young Serif", serif;
+            font-size: 8em;
+            font-weight: 400;
+            line-height: 0.9;
+            letter-spacing: -2px;
+            color: var(--highlight);
+        }
+
+        .header .tagline {
+            font-size: 1em;
+            color: var(--faint);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-top: 8px;
+        }
+
+        .header .intro {
+            max-width: 720px;
+            color: #c8c3b8;
+            margin-top: 20px;
+            font-size: 13px;
+            line-height: 1.75;
+        }
+
+        .header .version {
+            font-size: 11px;
+            color: var(--faint);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-top: 6px;
+        }
+
+        /* ─── NAV ─── */
+        #nav {
+            background: var(--main);
+            border-bottom: 4px solid var(--card-border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        #nav-menu {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0;
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        #nav-menu.open {
+            max-height: 600px;
+        }
+
+        #nav-menu a {
+            display: block;
+            color: var(--bg);
+            text-decoration: none;
+            font-size: 11px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 10px 18px;
+            border-right: 1px solid rgba(255,255,255,0.15);
+            font-weight: bold;
+            font-family: 'Courier New', monospace;
+            transition: background 0.1s;
+        }
+
+        #nav-menu a:hover {
+            background: var(--highlight);
+            color: var(--text);
+        }
+
+        #nav-menu a.sub {
+            padding-left: 30px;
+            color: rgba(245,240,232,0.7);
+            font-size: 10px;
+        }
+
+        #nav-toggle {
+            display: block;
+            width: 100%;
+            background: var(--main);
+            color: var(--bg);
+            border: none;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            padding: 10px 18px;
+            text-align: left;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        #nav-toggle:hover { background: #556038; }
+
+        /* ─── MAIN LAYOUT ─── */
+        .wrapper {
+            padding: 36px 36px 80px;
+            max-width: 1400px;
+        }
+
+        /* Two-column flex grid */
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        /* ─── SECTION HEADINGS ─── */
+        .section-label {
+            font-family: "Young Serif", serif;
+            font-size: 2.4em;
+            font-weight: 400;
+            color: var(--text);
+            margin: 48px 0 16px;
+            padding-bottom: 8px;
+            border-bottom: var(--rule-thick) solid var(--text);
+            display: flex;
+            align-items: baseline;
+            gap: 16px;
+            width: 100%;
+        }
+
+        .section-label .anchor-id {
+            font-size: 0.4em;
+            color: var(--faint);
+            font-family: 'Courier New', monospace;
+            font-weight: normal;
+        }
+
+        .subsection-label {
+            font-family: "Young Serif", serif;
+            font-size: 1.3em;
+            font-weight: 400;
+            color: var(--text);
+            margin: 0 0 10px;
+            padding-bottom: 6px;
+            border-bottom: var(--rule-thin) solid var(--card-border);
+        }
+
+        .sub2-label {
+            font-family: 'Courier New', monospace;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--main);
+            margin: 14px 0 6px;
+        }
+
+        /* ─── CARDS ─── */
+        .card {
+            background: var(--card-bg);
+            border: var(--rule-thin) solid var(--card-border);
+            border-top: 4px solid var(--card-border);
+            padding: 20px 22px;
+            flex: 1 1 calc(50% - 8px);
+            min-width: 280px;
+        }
+
+        .card.full { flex: 1 1 100%; }
+        .card.third { flex: 1 1 calc(33% - 11px); min-width: 220px; }
+        .card.accent { border-top-color: var(--highlight); }
+        .card.tert { border-top-color: var(--tert); }
+        .card.dark {
+            background: var(--text);
+            color: var(--bg);
+            border-color: var(--text);
+        }
+
+        .card.dark .subsection-label { color: var(--highlight); border-color: rgba(255,255,255,0.2); }
+        .card.dark .sub2-label { color: var(--highlight); }
+        .card.dark p, .card.dark li { color: #c8c3b8; }
+        .card.dark code { background: rgba(255,255,255,0.1); color: var(--highlight); }
+        .card.dark table { color: #c8c3b8; }
+        .card.dark th { background: rgba(255,255,255,0.1); color: var(--highlight); }
+        .card.dark td { border-color: rgba(255,255,255,0.1); }
+
+        .card p { margin-bottom: 10px; }
+        .card p:last-child { margin-bottom: 0; }
+
+        /* ─── CALLOUT / QUOTE ─── */
+        .callout {
+            border-left: 4px solid var(--highlight);
+            background: rgba(189,163,96,0.08);
+            padding: 12px 16px;
+            margin: 12px 0;
+            font-style: italic;
+            color: var(--faint);
+            font-size: 13px;
+        }
+
+        /* ─── TABLES ─── */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            font-size: 12px;
+        }
+
+        th {
+            background: var(--text);
+            color: var(--bg);
+            text-align: left;
+            padding: 6px 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 11px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        td {
+            padding: 6px 10px;
+            border-bottom: 1px solid var(--border);
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) td { background: rgba(0,0,0,0.03); }
+
+        /* ─── CODE BLOCKS ─── */
+        pre {
+            background: var(--text);
+            color: var(--highlight);
+            padding: 14px 16px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            line-height: 1.7;
+            overflow-x: auto;
+            margin: 10px 0;
+            border-left: 4px solid var(--highlight);
+        }
+
+        code {
+            background: rgba(0,0,0,0.08);
+            padding: 1px 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+        }
+
+        /* ─── BADGES / TAGS ─── */
+        .badge {
+            display: inline-block;
+            background: var(--main);
+            color: var(--bg);
+            font-size: 10px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 2px 7px;
+            font-weight: bold;
+            margin-right: 4px;
+        }
+
+        .badge.gold { background: var(--highlight); color: var(--text); }
+        .badge.tert { background: var(--tert); color: var(--bg); }
+
+        /* ─── HEAT GAUGE DISPLAY ─── */
+        .heat-track {
+            display: flex;
+            gap: 4px;
+            margin: 10px 0;
+        }
+
+        .heat-stage {
+            flex: 1;
+            padding: 6px 4px;
+            text-align: center;
+            font-size: 10px;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            border: 2px solid var(--card-border);
+        }
+
+        .heat-stage.cold { background: #d4e8d4; }
+        .heat-stage.warm { background: #f0e0a0; }
+        .heat-stage.hot { background: #f0c080; }
+        .heat-stage.whitehot { background: #f0a060; color: white; }
+        .heat-stage.shatter { background: var(--text); color: var(--highlight); border-color: var(--highlight); }
+
+        /* ─── DICE DISPLAY ─── */
+        .dice-row {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin: 8px 0;
+        }
+
+        .die-box {
+            border: 2px solid var(--card-border);
+            background: var(--bg);
+            width: 52px;
+            height: 52px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: "Young Serif", serif;
+            font-size: 1.4em;
+            color: var(--text);
+        }
+
+        .die-box span {
+            font-family: 'Courier New', monospace;
+            font-size: 9px;
+            color: var(--faint);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        /* ─── SKILL CARD ─── */
+        .skill-entry {
+            border-left: 3px solid var(--main);
+            padding: 8px 12px;
+            margin-bottom: 8px;
+            background: rgba(255,255,255,0.4);
+        }
+
+        .skill-entry .skill-name {
+            font-weight: bold;
+            font-size: 13px;
+            color: var(--text);
+        }
+
+        .skill-entry .skill-creed {
+            font-style: italic;
+            color: var(--faint);
+            font-size: 12px;
+        }
+
+        .skill-entry .skill-permission {
+            font-size: 12px;
+            color: var(--text);
+            margin-top: 3px;
+        }
+
+        .skill-entry .skill-code {
+            font-family: 'Courier New', monospace;
+            font-size: 11px;
+            color: var(--tert);
+            font-weight: bold;
+        }
+
+        /* ─── GRIT / MARKS DISPLAY ─── */
+        .marks {
+            display: inline-flex;
+            gap: 4px;
+            align-items: center;
+        }
+
+        .mark {
+            width: 14px;
+            height: 14px;
+            border: 2px solid var(--card-border);
+            background: var(--bg);
+            display: inline-block;
+        }
+
+        /* ─── PHASE BLOCKS ─── */
+        .phase-header {
+            background: var(--text);
+            color: var(--highlight);
+            padding: 8px 14px;
+            font-family: "Young Serif", serif;
+            font-size: 1.1em;
+            margin-bottom: 0;
+            border-bottom: 2px solid var(--highlight);
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+        }
+
+        .phase-header .phase-num {
+            font-family: 'Courier New', monospace;
+            font-size: 11px;
+            color: var(--faint);
+            letter-spacing: 0.15em;
+        }
+
+        .phase-body {
+            padding: 14px;
+            background: var(--card-bg);
+            border: 2px solid var(--card-border);
+            border-top: none;
+        }
+
+        /* ─── LISTS ─── */
+        ul, ol {
+            padding-left: 18px;
+            margin: 8px 0;
+        }
+
+        li { margin-bottom: 4px; }
+
+        /* ─── SCAR ENTRY ─── */
+        .scar-entry {
+            border-left: 3px solid var(--tert);
+            padding: 8px 12px;
+            margin-bottom: 8px;
+            background: rgba(255,255,255,0.3);
+        }
+
+        .scar-entry strong {
+            color: var(--tert);
+            font-size: 12px;
+            letter-spacing: 0.05em;
+        }
+
+        .scar-entry p { margin-top: 4px; font-size: 12px; }
+
+        /* ─── REP TIER ─── */
+        .rep-tier {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .rep-tier:last-child { border-bottom: none; }
+
+        .rep-tier .tier-name {
+            font-family: "Young Serif", serif;
+            font-size: 1em;
+            min-width: 80px;
+            color: var(--main);
+        }
+
+        .rep-track {
+            display: flex;
+            gap: 4px;
+        }
+
+        .rep-box {
+            width: 16px;
+            height: 16px;
+            border: 2px solid var(--card-border);
+            background: var(--bg);
+        }
+
+        /* ─── LINKS ─── */
+        a {
+            color: var(--tert);
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 12px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        a:hover {
+            background-color: var(--main);
+            color: var(--bg);
+        }
+
+        /* ─── HR ─── */
+        hr {
+            border: none;
+            border-top: var(--rule-thick) solid var(--card-border);
+            margin: 40px 0;
+        }
+
+        /* ─── WIP STAMP ─── */
+        .wip-stamp {
+            display: inline-block;
+            border: 3px solid var(--border);
+            color: var(--faint);
+            padding: 4px 12px;
+            font-size: 11px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            transform: rotate(-1deg);
+            margin: 8px 0;
+        }
+
+        /* ─── FACTION BLOCK ─── */
+        .faction-block {
+            background: var(--bg);
+            border: 2px solid var(--card-border);
+            padding: 12px;
+            font-size: 12px;
+        }
+
+        .faction-block .faction-row {
+            display: flex;
+            gap: 8px;
+            padding: 4px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .faction-block .faction-row:last-child { border-bottom: none; }
+        .faction-block .faction-key { color: var(--faint); min-width: 110px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; }
+
+        /* ─── STEP TRACK ─── */
+        .step-track { margin: 10px 0; }
+        .step-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 5px 0;
+            border-bottom: 1px dashed var(--border);
+            font-size: 12px;
+        }
+
+        .step-row:last-child { border-bottom: none; }
+        .step-row .step-num {
+            font-weight: bold;
+            color: var(--main);
+            min-width: 56px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        /* Scrollspy highlight */
+        .card:target { outline: 3px solid var(--highlight); }
+
+        /* ─── SCROLLBAR ─── */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--card-bg); }
+        ::-webkit-scrollbar-thumb { background: var(--card-border); }
+    </style>
+</head>
+
+<body>
+
+<!-- ══════════════════════════════════════
+     HEADER
+══════════════════════════════════════ -->
+<div class="header">
+    <h1>ANVIL</h1>
+    <div class="version">v0.9 — Drop 'em like stones.</div>
+    <div class="tagline">A fantasy TTRPG for four players and one GM.</div>
+    <p class="intro">One hundred years after the craters were first discovered, evil things began to crawl out from the deep depths and with them they corrupted the natural arcana of the world. Dwarves, being born of the depths found themselves uniquely resilient to these magical effects, thus ANVIL was created. A covert strike force of the most elite and explosive dwarves, assembled to carry out the most dangerous missions for the Queen of Glimmerhold. You are one such strike force, these are your missions. Get in, drop 'em like stones and get out.</p>
+</div>
+
+<!-- ══════════════════════════════════════
+     NAV
+══════════════════════════════════════ -->
+<div id="nav">
+    <button id="nav-toggle" onclick="document.getElementById('nav-menu').classList.toggle('open')">☰ &nbsp;TABLE OF CONTENTS</button>
+    <div id="nav-menu">
+        <a href="#the-game">The Game of Anvil</a>
+        <a href="#core-loop">The Core Loop</a>
+        <a href="#core-loop" class="sub">▸ Phase 1 — Prep</a>
+        <a href="#phase-drop" class="sub">▸ Phase 2 — Drop In</a>
+        <a href="#phase-mission" class="sub">▸ Phase 3 — Mission</a>
+        <a href="#phase-extract" class="sub">▸ Phase 4 — Extract</a>
+        <a href="#throwing-stones">Throwing Stones</a>
+        <a href="#heat">Heat</a>
+        <a href="#aftermath">Aftermath & Beats</a>
+        <a href="#combat">Combat, Damage & Staying Alive</a>
+        <a href="#social">Social Interaction</a>
+        <a href="#movement">Moving Through Environments</a>
+        <a href="#creating">Creating a Dwarf Operative</a>
+        <a href="#skills">Skills</a>
+        <a href="#bonds">Bonds</a>
+        <a href="#gear">Gear & Stash</a>
+        <a href="#missions">Running Missions</a>
+        <a href="#factions">Factions & Campaigns</a>
+        <a href="#downtime">Downtime & The Overhold</a>
+        <a href="#scars">Scars</a>
+        <a href="#overhold-actions">Overhold Actions</a>
+        <a href="#reputation">Squad Reputation</a>
+        <a href="#stash">Overhold Gear Stash</a>
+        <a href="#gm-toolkit">GM Toolkit</a>
+    </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     CONTENT
+══════════════════════════════════════ -->
+<div class="wrapper">
+
+    <!-- THE GAME -->
+    <h2 class="section-label" id="the-game">The Game of Anvil</h2>
+    <div class="grid">
+        <div class="card full">
+            <p>ANVIL is a fantasy roleplaying game where you will become an elite dwarven taskforce, dropping in to hotzones to accomplish missions for the Queen. Within each mission you'll have to successfully accomplish objectives while managing how covert your squad acts.</p>
+            <p>There is no wrong way to move through a mission — whether you are skulking through each room expertly dispatching foes without being seen or blasting your way through walls and sending deepbeasts back into the abyss, what matters is accomplishing the objective. Sure, the Queen's Hand might not be happy with you lighting off a pile of powder kegs but that's a problem for later.</p>
+            <p>Upon successful return from a mission the job isn't over. You'll navigate the complicated web of agendas throughout the realm to decide who to deal with and when, but not before crushing a pint of the finest ale with your squad.</p>
+            <p>ANVIL is about managing your impact, execution and the GM — and the world's ability to respond to your actions. Every dwarf has a plan until their fuse is cut short. Use any method you can to <em>drop 'em like stones.</em></p>
+        </div>
+    </div>
+
+    <!-- CORE LOOP -->
+    <h2 class="section-label" id="core-loop">The Core Loop — How to Play</h2>
+    <div class="callout" style="width:100%; margin-bottom:16px;">A condensed reference for how a full campaign session flows. Use it as a checklist during play. Full rules for every step are in their respective sections.</div>
+
+    <div class="grid">
+        <!-- Phase 1 -->
+        <div class="card accent">
+            <div class="phase-header"><span class="phase-num">Phase 01</span> Prep — At the Overhold</div>
+            <div class="phase-body">
+                <p>Each dwarf takes up to <strong>2 Overhold Actions</strong>. Actions cost Embers from the squad's shared bank. No dwarf may take the same action twice in one downtime.</p>
+                <pre>Slag Off     1 Ember   Decompress. Prevent or redirect a Scar.
+Train        2 Ember   Level one skill.
+Forge        3 Ember   Upgrade Runeaxe or Explosives Kit.
+Scout        1-3 Ember Reveal pieces of mission intel.
+Pull Strings 3 Ember   Shift faction relations or Rep by 1.
+Interrogate  1 Ember   Extract intel from a prisoner or artifact.
+Reinforce    2 Ember   Add a single-use mission asset.
+Bond         1 Ember   Advance a Bond with one squadmate.
+Memorialize  -         Honor the dead. Grants +1 Rep.</pre>
+                <div class="sub2-label">Mission Briefing</div>
+                <p>The Hand assigns the mission. Players receive <strong>Briefing Intel</strong>: rough layout, primary and secondary objectives, Ember payouts, known faction presence, and drop points. Scout intel fills in additional keyed rooms if the action was taken.</p>
+                <div class="sub2-label">Loadout</div>
+                <p>Players fill their <strong>4 item slots</strong> from the prep stash. All operatives begin with a <strong>Runeaxe (CMP d6)</strong> and <strong>Explosives Kit (TNT d6)</strong>. Stash access depends on Squad Reputation. Gear costs Embers at purchase.</p>
+            </div>
+        </div>
+
+        <!-- Phase 2 -->
+        <div class="card" id="phase-drop">
+            <div class="phase-header"><span class="phase-num">Phase 02</span> Drop In</div>
+            <div class="phase-body">
+                <p>The squad chooses their <strong>drop point</strong>. Entrances are defined in the mission sheet with characteristics: guarded, trapped, structural, gear-gated. They arrive by <em>Strigwraith</em> or on foot.</p>
+                <div class="sub2-label">GM Sets the Table</div>
+                <ul>
+                    <li>GM starts their Aftermath pool at the <strong>number of players</strong>.</li>
+                    <li>Heat starts at <strong>0</strong>.</li>
+                    <li>Beat count starts at <strong>0</strong>.</li>
+                    <li>Hammers are prepped and ready.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Phase 3 -->
+        <div class="card dark full" id="phase-mission">
+            <div class="phase-header"><span class="phase-num">Phase 03</span> The Mission</div>
+            <div class="phase-body" style="background:#2a2a2a; color:#c8c3b8; border-color:#4a4a4a;">
+                <p>Each dwarf moves and takes an action. When the outcome is in question, <em>throw stones</em>.</p>
+                <pre style="background:#1a1a1a; border-color: var(--highlight);">Roll CMP and TNT. Assign one die as FUSE, one as BLAST.</pre>
+
+                <div class="grid" style="margin-top: 12px;">
+                    <div style="flex:1; min-width:220px; border: 2px solid #444; padding: 12px;">
+                        <div style="color:var(--highlight); font-weight:bold; font-size:11px; letter-spacing:0.15em; text-transform:uppercase; margin-bottom:6px;">FUSE — Execution, Speed, Precision</div>
+                        <table style="color:#c8c3b8;">
+                            <tr><td style="border-color:#444">1–2</td><td style="border-color:#444">Clean, efficient, fast</td></tr>
+                            <tr><td style="border-color:#444">3–4</td><td style="border-color:#444">Standard, stable</td></tr>
+                            <tr><td style="border-color:#444">5–6</td><td style="border-color:#444">Messy, slow, complicated</td></tr>
+                        </table>
+                        <p style="font-size:11px; color:#938e84; margin-top:6px;">Lower is better. Used against NPC Posture in social rolls.</p>
+                    </div>
+                    <div style="flex:1; min-width:220px; border: 2px solid #444; padding: 12px;">
+                        <div style="color:var(--highlight); font-weight:bold; font-size:11px; letter-spacing:0.15em; text-transform:uppercase; margin-bottom:6px;">BLAST — Impact, Noise, Force</div>
+                        <table style="color:#c8c3b8;">
+                            <tr><td style="border-color:#444">1–3</td><td style="border-color:#444">Subtle, controlled</td></tr>
+                            <tr><td style="border-color:#444">4–6</td><td style="border-color:#444">Loud, disruptive — raises Heat +1</td></tr>
+                        </table>
+                        <p style="font-size:11px; color:#938e84; margin-top:6px;">Checked against Temper to hit. Marks NPC Trust on 4–6.</p>
+                    </div>
+                </div>
+
+                <div class="sub2-label" style="color:var(--highlight);">Explosive Actions [E]</div>
+                <p>FUSE is detonation time. BLAST is how many Explosion Dice to roll. Heat rises by the full BLAST die value, not just +1.</p>
+
+                <div class="sub2-label" style="color:var(--highlight);">Smother</div>
+                <p>Both assigned dice show 1 on a standard action — reduce Heat by 3.</p>
+
+                <div class="sub2-label" style="color:var(--highlight);">Stack Up</div>
+                <p>Multiple dwarves acting together. Pool all rolled dice, assign one FUSE and one BLAST from the pool. If two or more 6s appear across the full pool, Heat +1 plus 1 per participating dwarf. Cannot trigger Smother unless a rule says otherwise.</p>
+
+                <div class="sub2-label" style="color:var(--highlight);">Beats & Aftermath</div>
+                <p>Mark 1 Beat after all players act. Every 3 Beats: GM gains 2 Aftermath dice. The GM may spend Aftermath at any point after a player turn to throw stones for enemies, traps, or the environment (minimum 2 dice per throw).</p>
+
+                <div class="sub2-label" style="color:var(--highlight);">Hit Resolution</div>
+                <pre style="background:#1a1a1a; border-color:var(--highlight);">BLAST > Temper   Clean hit. Fills all 3 marks.
+BLAST = Temper   Maim. Fills 1 mark.
+BLAST < Temper   Botch. No effect.</pre>
+
+                <p>Hits land on gear first or skills, then GRIT. When no gear or skills remain, roll d4 for both CMP and TNT. GRIT is last — 3 GRIT per dwarf. Marking the final GRIT means the dwarf is going down. One last action, then they're gone.</p>
+            </div>
+        </div>
+
+        <!-- Phase 4 -->
+        <div class="card" id="phase-extract">
+            <div class="phase-header"><span class="phase-num">Phase 04</span> Extract & Downtime</div>
+            <div class="phase-body">
+                <div class="sub2-label">Debrief Questions</div>
+                <ul>
+                    <li>Did Heat hit any Hammer thresholds?</li>
+                    <li>Primary objective complete?</li>
+                    <li>Secondary objectives complete?</li>
+                    <li>Was ANVIL exposed? Were civilians or factions involved?</li>
+                    <li>What rumors spread?</li>
+                </ul>
+                <div class="sub2-label">Ember Payout & Rep Shift</div>
+                <pre>Cold extraction       −2 Rep marks
+Warm extraction       −1 Rep mark
+Hot extraction         no change
+White Hot extraction   +1 Rep mark
+Shatterpoint           +2 Rep marks</pre>
+                <div class="sub2-label">Recovery</div>
+                <p>All GRIT restored. Surviving dwarves roll for Scars. Funerals are held. Retirements are named. Then back to Phase 1.</p>
+            </div>
+        </div>
+
+        <!-- Objectives -->
+        <div class="card">
+            <div class="phase-header" style="background:var(--tert); border-color:var(--bg);">Objective Types — d8</div>
+            <div class="phase-body">
+                <table>
+                    <thead><tr><th>#</th><th>Type</th><th>Primary Success</th></tr></thead>
+                    <tbody>
+                        <tr><td>1</td><td><strong>Extraction</strong></td><td>Target leaves with the squad.</td></tr>
+                        <tr><td>2</td><td><strong>Elimination</strong></td><td>Confirmed removal.</td></tr>
+                        <tr><td>3</td><td><strong>Sabotage</strong></td><td>The thing no longer functions.</td></tr>
+                        <tr><td>4</td><td><strong>Recovery</strong></td><td>Object leaves intact.</td></tr>
+                        <tr><td>5</td><td><strong>Surveillance</strong></td><td>Leave with the intel.</td></tr>
+                        <tr><td>6</td><td><strong>Interruption</strong></td><td>The event never occurs.</td></tr>
+                        <tr><td>7</td><td><strong>Escort</strong></td><td>Target delivered alive.</td></tr>
+                        <tr><td>8</td><td><strong>Infiltration</strong></td><td>Zero trace. Cold or Warm exit.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- THROWING STONES -->
+    <h2 class="section-label" id="throwing-stones">Throwing Stones</h2>
+    <div class="grid">
+        <div class="card">
+            <h3 class="subsection-label">Composure & Explosives</h3>
+            <p>Every dwarf has two dice: <strong>Composure (CMP)</strong> and <strong>Explosives (TNT)</strong>. The base die for both is a d3. All ANVIL operatives are assigned a <strong>Runeaxe</strong> and an <strong>Explosives Kit</strong> that raises each die to d6.</p>
+            <p>Rolling for the results of an action is called <strong>throwing stones</strong>. When you throw stones you roll both dice and assign one as FUSE and one as BLAST.</p>
+            <div class="callout">FUSE is about <em>how</em>. BLAST is about <em>what</em>.</div>
+            <table>
+                <thead><tr><th>You want to…</th><th>Assigned die logic</th></tr></thead>
+                <tbody>
+                    <tr><td>Move quietly</td><td>FUSE (lower = you get further)</td></tr>
+                    <tr><td>Hit hard through armour</td><td>BLAST (higher = more force)</td></tr>
+                    <tr><td>Execute cleanly in combat</td><td>FUSE (lower = clean and swift)</td></tr>
+                    <tr><td>Make noise as a distraction</td><td>BLAST (higher = louder)</td></tr>
+                    <tr><td>Charm or de-escalate an NPC</td><td>FUSE (lower beats Posture)</td></tr>
+                    <tr><td>Blow something up right now</td><td>FUSE (lower = immediate)</td></tr>
+                    <tr><td>Cause maximum damage</td><td>BLAST (higher = more dice)</td></tr>
+                    <tr><td>Keep Heat down</td><td>BLAST (lower = no Heat raise)</td></tr>
+                </tbody>
+            </table>
+            <p style="font-size:12px; color:var(--faint); margin-top:10px;">There is no "correct" assignment. Every roll is a trade-off between how cleanly something happens and how much chaos it creates. That tension is ANVIL's core.</p>
+        </div>
+
+        <div class="card">
+            <h3 class="subsection-label">Roll Types</h3>
+            <div class="sub2-label">Standard Actions</div>
+            <table>
+                <thead><tr><th>Roll</th><th>Assign</th><th>Effect</th></tr></thead>
+                <tbody>
+                    <tr><td>CMP + TNT</td><td>One die = FUSE</td><td>Execution quality. Lower is cleaner.</td></tr>
+                    <tr><td></td><td>One die = BLAST</td><td>Impact. 4–6 raises Heat +1. Checked vs Temper.</td></tr>
+                    <tr><td>Both 1s</td><td>—</td><td><strong>Smother.</strong> Heat −3.</td></tr>
+                </tbody>
+            </table>
+            <div class="sub2-label">Explosive Actions [E]</div>
+            <table>
+                <thead><tr><th>Roll</th><th>Assign</th><th>Effect</th></tr></thead>
+                <tbody>
+                    <tr><td>CMP + TNT</td><td>FUSE</td><td>Beats until detonation.</td></tr>
+                    <tr><td></td><td>BLAST</td><td>Number of Explosion Dice to roll.</td></tr>
+                    <tr><td>Heat</td><td>—</td><td>Rises by full BLAST die value.</td></tr>
+                    <tr><td>Explosion Dice</td><td>—</td><td>4+ = hit. 6 = explode again. All dice become GM Aftermath.</td></tr>
+                </tbody>
+            </table>
+            <div class="sub2-label">Temper Resolution</div>
+            <table>
+                <thead><tr><th>Result</th><th>Effect</th></tr></thead>
+                <tbody>
+                    <tr><td><code>BLAST > Temper</code></td><td>Clean hit. Fills all marks on target.</td></tr>
+                    <tr><td><code>BLAST = Temper</code></td><td>Maim. Fill 1 mark on target.</td></tr>
+                    <tr><td><code>BLAST &lt; Temper</code></td><td>Botch. Miss, glance, no effect.</td></tr>
+                </tbody>
+            </table>
+            <p style="margin-top:10px; font-size:12px;"><strong>Temper notation:</strong> <code>T2</code> BLAST 2+ to handle. <code>T2[++]</code> two Explosive hits to destroy. <code>T[++]</code> cannot be handled by standard actions. An Explosive hit is always a clean hit.</p>
+        </div>
+
+        <!-- Heat section -->
+        <div class="card full" id="heat">
+            <h3 class="subsection-label">Heat</h3>
+            <p>Every mission has a <strong>Heat gauge</strong>. Heat rises when players assign a BLAST die of 4, 5, or 6, or by using Explosives [E]. When Heat hits certain thresholds, the <strong>Hammer</strong> drops.</p>
+            <div class="heat-track">
+                <div class="heat-stage cold"><strong>Cold</strong><br><small>0–5</small><br><small>No Hammer</small></div>
+                <div class="heat-stage warm"><strong>Warm</strong><br><small>6–10</small><br><small>No Hammer</small></div>
+                <div class="heat-stage hot"><strong>Hot</strong><br><small>11–15</small><br><small>Hammer if prepped</small></div>
+                <div class="heat-stage whitehot"><strong>White Hot</strong><br><small>16–19</small><br><small>Hammer if prepped</small></div>
+                <div class="heat-stage shatter"><strong>Shatterpoint</strong><br><small>20+</small><br><small>Hammer always</small></div>
+            </div>
+            <p>Hammers change mission conditions. They are never just more enemies — they close routes, flip room states, escalate faction behavior, wake something below. At Shatterpoint, Heat cannot be reduced. Every exit is watched, every door barred, something big wakes.</p>
+        </div>
+    </div>
+
+    <!-- AFTERMATH -->
+    <h2 class="section-label" id="aftermath">Aftermath & Beats</h2>
+    <div class="grid">
+        <div class="card">
+            <h3 class="subsection-label">Aftermath Pools</h3>
+            <p>Aftermath dice are a <strong>pool of d6</strong> used by the GM to react and let the world put pressure on players. The GM must spend a <strong>minimum of 2 aftermath dice</strong> to throw stones. All Aftermath dice reset between missions.</p>
+            <div class="sub2-label">Generating Aftermath</div>
+            <ul>
+                <li><strong>Mission start:</strong> Gain Aftermath dice equal to number of players.</li>
+                <li><strong>Every 3 Beats:</strong> Gain 2 Aftermath dice.</li>
+                <li><strong>Any assigned 6s:</strong> Gain 1 Aftermath if a throw stones contains 6s.</li>
+                <li><strong>Explosion Dice:</strong> Gain Aftermath dice equal to any Explosion Dice rolled.</li>
+            </ul>
+            <div class="sub2-label">Squad Aftermath</div>
+            <p>Some skills and situations may grant Squad Aftermath dice, kept separate from the GM's pool. Any dwarf may take 1 Squad Aftermath die before rolling to add it to their throw stones pool. Assign FUSE and BLAST as normal, discard the unused die.</p>
+        </div>
+
+        <div class="card">
+            <h3 class="subsection-label">Free Moves</h3>
+            <p>The GM can make a free move at any time without needing Aftermath. Free moves are foreshadowing — the world around the squad. They never directly threaten or act against players.</p>
+            <div class="callout">Free Move Examples: A patrol completes its route and begins again. A light goes out or comes on. A door closes or locks. An enemy becomes suspicious but takes no action. The environment shifts: water rising, fire spreads, rubble settles.</div>
+            <div class="sub2-label">Time and Beats</div>
+            <p>Mark 1 Beat after all players have had a turn. Gain 2 Aftermath dice every 3 Beats. Time within the world is not specifically tracked — the Heat gauge and Agendas pace the session.</p>
+        </div>
+    </div>
+
+    <!-- COMBAT -->
+    <h2 class="section-label" id="combat">Combat, Damage & Staying Alive</h2>
+    <div class="grid">
+        <div class="card">
+            <h3 class="subsection-label">How Combat Works</h3>
+            <p>Combat is not a separate phase. There is no initiative, no combat round, no turn order. Players act freely, the GM reacts with Aftermath. When something attacks, describe the action and throw stones. Low FUSE is a quick clean execution; high FUSE turns into a brawl.</p>
+            <p>If two entities wish to attack simultaneously, the lower FUSE hits first.</p>
+            <div class="sub2-label">Temper in Combat</div>
+            <p>Every dwarf has a base Temper of <strong>T3</strong>. Skills and items can modify this.</p>
+            <table>
+                <thead><tr><th>Enemy</th><th>Temper</th></tr></thead>
+                <tbody>
+                    <tr><td>Guard in leather</td><td>T2</td></tr>
+                    <tr><td>Guard in chainmail</td><td>T3</td></tr>
+                    <tr><td>Guard in blast resistant platemail</td><td>T4[++]</td></tr>
+                    <tr><td>Hulking deepbeast</td><td>T5[+++]</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card">
+            <h3 class="subsection-label">Gear, Skills & GRIT</h3>
+            <p>Hits land on gear or skills first, then GRIT. Players may choose what absorbs — the fiction should support it.</p>
+            <div class="sub2-label">Gear & Skills</div>
+            <p>All gear and skills have <strong>3 marks</strong>. When gear marks are full, it is unavailable for the rest of the mission. A dwarf with no gear rolls d3 for both CMP and TNT. Filled skill marks do not clear unless the Slag Off downtime action is taken.</p>
+            <div class="sub2-label">GRIT</div>
+            <p>Every dwarf starts with <strong>3 GRIT</strong> — their final resolve.</p>
+            <ul>
+                <li><strong>Clean hit to GRIT:</strong> marks all 3.</li>
+                <li><strong>Maim to GRIT:</strong> marks 1.</li>
+            </ul>
+            <div class="sub2-label">Death</div>
+            <p>When a dwarf marks their final GRIT they are going down. They may take one last action — it must be plausible given their position and condition, and they may choose to reroll their throw stones. Then they are gone.</p>
+            <div class="callout">Enemies and traps can target skills or gear directly. A smart guard may attempt to ignite your satchel charges.</div>
+        </div>
+    </div>
+
+    <!-- SOCIAL -->
+    <h2 class="section-label" id="social">Social Interaction</h2>
+    <div class="grid">
+        <div class="card">
+            <h3 class="subsection-label">Posture & Trust</h3>
+            <p>Every NPC has a Posture on a scale of 1–6. If unsure, roll a d6. Every NPC also has <strong>3 Trust marks</strong>. When all Trust marks are filled it is destroyed and the NPC turns Hostile.</p>
+            <table>
+                <thead><tr><th>Posture</th><th>State</th></tr></thead>
+                <tbody>
+                    <tr><td>6</td><td>Hostile: will attack or raise alarm immediately</td></tr>
+                    <tr><td>5</td><td>Suspicious: not buying it, one wrong move</td></tr>
+                    <tr><td>4</td><td>Wary: cautious, watching</td></tr>
+                    <tr><td>3</td><td>Neutral: not their problem yet</td></tr>
+                    <tr><td>2</td><td>Friendly: willing to help or look the other way</td></tr>
+                    <tr><td>1</td><td>Allied: may actively cover for the squad</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="card">
+            <h3 class="subsection-label">Social Rolls</h3>
+            <p>When a dwarf interacts with an NPC, throw stones.</p>
+            <ul>
+                <li><strong>FUSE under Posture:</strong> Posture down 1.</li>
+                <li><strong>FUSE equal Posture:</strong> No change.</li>
+                <li><strong>BLAST 4–6:</strong> Mark Trust.</li>
+            </ul>
+            <p>NPC Posture and Trust does not reset between missions. Squads can reset Posture and Trust through using disguises or Overhold Actions.</p>
+        </div>
+    </div>
+
+    <!-- MOVEMENT -->
+    <h2 class="section-label" id="movement">Moving Through Environments</h2>
+    <div class="grid">
+        <div class="card">
+            <h3 class="subsection-label">Environment Tags</h3>
+            <table>
+                <thead><tr><th>Tag</th><th>Description</th><th>Effect</th></tr></thead>
+                <tbody>
+                    <tr><td><code>[DARK]</code></td><td>Dim or no light.</td><td>Add +2 to FUSE results.</td></tr>
+                    <tr><td><code>[UNSTABLE]</code></td><td>Structures are weak.</td><td>On Explosive BLAST 6 roll d6: 4–6 one exit becomes blocked.</td></tr>
+                    <tr><td><code>[SCALD]</code></td><td>Hot in here.</td><td><span class="wip-stamp">WIP</span></td></tr>
+                    <tr><td><code>[FLOOD]</code></td><td>Wet in here.</td><td><span class="wip-stamp">WIP</span></td></tr>
+                    <tr><td><code>[FOG]</code></td><td>Foggy in here.</td><td><span class="wip-stamp">WIP</span></td></tr>
+                    <tr><td><code>[TOXIC]</code></td><td>Poison in here.</td><td><span class="wip-stamp">WIP</span></td></tr>
+                    <tr><td><code>[DEEPTOUCH]</code></td><td>Weird.</td><td><span class="wip-stamp">WIP</span></td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="card">
+            <h3 class="subsection-label">Encumbrance</h3>
+            <p>When carrying something the size of a dwarf or larger: roll an extra d6 when throwing stones, discard the lowest die before assigning FUSE and BLAST.</p>
+            <div class="sub2-label">Two Dwarves Carrying</div>
+            <p>The penalty applies to both. Both roll stones with an extra d6, both discard the lowest die, then pool the dice together and assign.</p>
+            <div class="sub2-label">Multiple Large Things</div>
+            <p>Roll an extra d6 for each item. Discard a number of lowest dice equal to how many items carried. Assign as normal.</p>
+        </div>
+    </div>
+
+    <!-- CREATING A DWARF -->
+    <h2 class="section-label" id="creating">Creating a Dwarf Operative</h2>
+    <div class="grid">
+        <div class="card full">
+            <p>Roll on each table and mark results on your Operative Sheet. A player may choose results themselves, but more interesting characters come from letting the dice decide. Your dwarf will end up with: a name, a physique, traits and a thing you hold onto, a Runeaxe and Explosives Kit, three skills, and four gear slots to fill from stash.</p>
+        </div>
+
+        <!-- Names -->
+        <div class="card">
+            <h3 class="subsection-label">Given Names — d66</h3>
+            <table>
+                <thead><tr><th>d66</th><th>Name</th><th>d66</th><th>Name</th></tr></thead>
+                <tbody>
+                    <tr><td>11</td><td>Aldric</td><td>41</td><td>Maren</td></tr>
+                    <tr><td>12</td><td>Bryndis</td><td>42</td><td>Osric</td></tr>
+                    <tr><td>13</td><td>Corra</td><td>43</td><td>Petra</td></tr>
+                    <tr><td>14</td><td>Dunvik</td><td>44</td><td>Ragni</td></tr>
+                    <tr><td>15</td><td>Edda</td><td>45</td><td>Sable</td></tr>
+                    <tr><td>16</td><td>Fenrik</td><td>46</td><td>Torben</td></tr>
+                    <tr><td>21</td><td>Garda</td><td>51</td><td>Ulla</td></tr>
+                    <tr><td>22</td><td>Halvard</td><td>52</td><td>Veska</td></tr>
+                    <tr><td>23</td><td>Ingrid</td><td>53</td><td>Wulfar</td></tr>
+                    <tr><td>24</td><td>Jorvik</td><td>54</td><td>Xanthe</td></tr>
+                    <tr><td>25</td><td>Keld</td><td>55</td><td>Ysolde</td></tr>
+                    <tr><td>26</td><td>Lorra</td><td>56</td><td>Zarvik</td></tr>
+                    <tr><td>31</td><td>Maddoc</td><td>61</td><td>Brek</td></tr>
+                    <tr><td>32</td><td>Norda</td><td>62</td><td>Dagna</td></tr>
+                    <tr><td>33</td><td>Orvyn</td><td>63</td><td>Elka</td></tr>
+                    <tr><td>34</td><td>Pella</td><td>64</td><td>Grimur</td></tr>
+                    <tr><td>35</td><td>Queld</td><td>65</td><td>Hesta</td></tr>
+                    <tr><td>36</td><td>Runa</td><td>66</td><td>Ivar</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card">
+            <h3 class="subsection-label">Surnames — d66</h3>
+            <table>
+                <thead><tr><th>d66</th><th>Name</th><th>d66</th><th>Name</th></tr></thead>
+                <tbody>
+                    <tr><td>11</td><td>Ashmantle</td><td>41</td><td>Ironmark</td></tr>
+                    <tr><td>12</td><td>Boulderborn</td><td>42</td><td>Kettleforge</td></tr>
+                    <tr><td>13</td><td>Cinderhelm</td><td>43</td><td>Longseam</td></tr>
+                    <tr><td>14</td><td>Deepcut</td><td>44</td><td>Moltenfist</td></tr>
+                    <tr><td>15</td><td>Dustmantle</td><td>45</td><td>Nailbiter</td></tr>
+                    <tr><td>16</td><td>Embervein</td><td>46</td><td>Orebrow</td></tr>
+                    <tr><td>21</td><td>Faultline</td><td>51</td><td>Pickfast</td></tr>
+                    <tr><td>22</td><td>Greymantle</td><td>52</td><td>Quarryman</td></tr>
+                    <tr><td>23</td><td>Hammerfall</td><td>53</td><td>Rockwarden</td></tr>
+                    <tr><td>24</td><td>Hardseam</td><td>54</td><td>Splitstone</td></tr>
+                    <tr><td>25</td><td>Heatmark</td><td>55</td><td>Steelbraid</td></tr>
+                    <tr><td>26</td><td>Holdfast</td><td>56</td><td>Thundercut</td></tr>
+                    <tr><td>31</td><td>Ironbrow</td><td>61</td><td>Undermark</td></tr>
+                    <tr><td>32</td><td>Ashvein</td><td>62</td><td>Vaultborn</td></tr>
+                    <tr><td>33</td><td>Blackseam</td><td>63</td><td>Warpick</td></tr>
+                    <tr><td>34</td><td>Coalmark</td><td>64</td><td>Stonewarden</td></tr>
+                    <tr><td>35</td><td>Deepmantle</td><td>65</td><td>Ashborn</td></tr>
+                    <tr><td>36</td><td>Forgeback</td><td>66</td><td>Craghelm</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Physique -->
+        <div class="card third">
+            <h3 class="subsection-label">Build — d6</h3>
+            <table>
+                <thead><tr><th>d6</th><th>Build</th></tr></thead>
+                <tbody>
+                    <tr><td>1</td><td>Compact. Low centre of gravity, built like a clenched fist.</td></tr>
+                    <tr><td>2</td><td>Broad. Shoulders like a doorframe, takes up the whole tunnel.</td></tr>
+                    <tr><td>3</td><td>Wiry. Slender and sharp, stronger than you look.</td></tr>
+                    <tr><td>4</td><td>Heavy. Dense, things that hit you seem surprised.</td></tr>
+                    <tr><td>5</td><td>Lean. Tall for a dwarf, agile and quick.</td></tr>
+                    <tr><td>6</td><td>Irregular. A slight lean, a crooked gait.</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card third">
+            <h3 class="subsection-label">Face — d6</h3>
+            <table>
+                <thead><tr><th>d6</th><th>Face</th></tr></thead>
+                <tbody>
+                    <tr><td>1</td><td>Flat and broad, nose broken at least twice, eyes set deep.</td></tr>
+                    <tr><td>2</td><td>Sharp features, prominent brow, jaw like a shovel.</td></tr>
+                    <tr><td>3</td><td>Round and weathered, crow's feet from squinting at the forge fires.</td></tr>
+                    <tr><td>4</td><td>Asymmetrical. One ear lower, one eye that droops.</td></tr>
+                    <tr><td>5</td><td>Gaunt. Sharp cheekbones, sunken eyes.</td></tr>
+                    <tr><td>6</td><td>Soft featured. Rosy cheeks and big eyes.</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card third">
+            <h3 class="subsection-label">Beard — d6</h3>
+            <table>
+                <thead><tr><th>d6</th><th>Beard</th></tr></thead>
+                <tbody>
+                    <tr><td>1</td><td>None. Clean shaven by choice or by circumstance.</td></tr>
+                    <tr><td>2</td><td>Short and dense, oiled flat, practical.</td></tr>
+                    <tr><td>3</td><td>Full and long, braided once, coming loose.</td></tr>
+                    <tr><td>4</td><td>Patchy. Either hereditary or from explosive mishaps.</td></tr>
+                    <tr><td>5</td><td>Elaborate. Rings, beads, ribbons all woven in.</td></tr>
+                    <tr><td>6</td><td>Burned or cut short on one side.</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Traits - How you operate -->
+        <div class="card">
+            <h3 class="subsection-label">Traits — How You Operate (d66)</h3>
+            <p style="font-size:12px; color:var(--faint); margin-bottom:8px;">Roll d66 twice. The first result is how you operate.</p>
+            <table>
+                <thead><tr><th>d66</th><th>Trait</th></tr></thead>
+                <tbody>
+                    <tr><td>11</td><td>You move first, think second.</td></tr>
+                    <tr><td>12</td><td>You count all the exits when you enter a room.</td></tr>
+                    <tr><td>13</td><td>Quiet, but not timid, you prefer not to speak.</td></tr>
+                    <tr><td>14</td><td>You have a nervous laugh and you're usually nervous.</td></tr>
+                    <tr><td>15</td><td>You're a bookworm, always taking notes in a small journal.</td></tr>
+                    <tr><td>16</td><td>You refuse to leave anyone behind.</td></tr>
+                    <tr><td>21</td><td>You need to always have a plan, and a plan for that plan.</td></tr>
+                    <tr><td>22</td><td>You prefer to operate alone, but function well in the squad.</td></tr>
+                    <tr><td>23</td><td>You make friends with everyone and remember every detail.</td></tr>
+                    <tr><td>24</td><td>Outside of work you don't talk about work. Including at the Overhold.</td></tr>
+                    <tr><td>25</td><td>You love to push people's buttons.</td></tr>
+                    <tr><td>26</td><td>You're methodical, you check everything twice.</td></tr>
+                    <tr><td>31</td><td>You don't act without full knowledge of the situation.</td></tr>
+                    <tr><td>32</td><td>You always step up when no one else will.</td></tr>
+                    <tr><td>33</td><td>You keep a running count of everything: kills, exits, seconds.</td></tr>
+                    <tr><td>34</td><td>Your only plan is improvise.</td></tr>
+                    <tr><td>35</td><td>You ask questions about everything around you.</td></tr>
+                    <tr><td>36</td><td>You'll hold a grudge indefinitely.</td></tr>
+                    <tr><td>41</td><td>You name your equipment and mourn its loss.</td></tr>
+                    <tr><td>42</td><td>You're so calm under pressure it's unsettling.</td></tr>
+                    <tr><td>43</td><td>You're extremely competitive. Friends, enemies, doesn't matter.</td></tr>
+                    <tr><td>44</td><td>You collect something.</td></tr>
+                    <tr><td>45</td><td>You apologize quietly for every move you take.</td></tr>
+                    <tr><td>46</td><td>You don't complain and you don't acknowledge you're in pain.</td></tr>
+                    <tr><td>51</td><td>You trust a plan one hundred percent.</td></tr>
+                    <tr><td>52</td><td>You love sharing your theories about everything.</td></tr>
+                    <tr><td>53</td><td>You try to have a squad meal before every mission.</td></tr>
+                    <tr><td>54</td><td>You dress your best for missions. Have to meet death looking good.</td></tr>
+                    <tr><td>55</td><td>You keep a book of names.</td></tr>
+                    <tr><td>56</td><td>You consider retreat a tactical success.</td></tr>
+                    <tr><td>61</td><td>You have a tick when you're under pressure.</td></tr>
+                    <tr><td>62</td><td>You will always protect new recruits.</td></tr>
+                    <tr><td>63</td><td>You prefer to sleep under the stars.</td></tr>
+                    <tr><td>64</td><td>You're always trying to find problems to fix.</td></tr>
+                    <tr><td>65</td><td>You're extremely light-hearted and joke about everything.</td></tr>
+                    <tr><td>66</td><td>You have no comedic bone in your body. Very serious.</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- What you carry -->
+        <div class="card">
+            <h3 class="subsection-label">Traits — What You Carry (d66)</h3>
+            <p style="font-size:12px; color:var(--faint); margin-bottom:8px;">The second roll is what you carry.</p>
+            <table>
+                <thead><tr><th>d66</th><th>Detail</th></tr></thead>
+                <tbody>
+                    <tr><td>11</td><td>A stone from the crag where you were born.</td></tr>
+                    <tr><td>12</td><td>Someone else's Op number, scratched into your kit.</td></tr>
+                    <tr><td>13</td><td>A letter you have not sent.</td></tr>
+                    <tr><td>14</td><td>A flask you keep topped up and won't share.</td></tr>
+                    <tr><td>15</td><td>Three custom coins.</td></tr>
+                    <tr><td>16</td><td>A small tool that belonged to a lost friend.</td></tr>
+                    <tr><td>21</td><td>A bad habit.</td></tr>
+                    <tr><td>22</td><td>A scar from your job before ANVIL.</td></tr>
+                    <tr><td>23</td><td>A contact in Glimmerhold.</td></tr>
+                    <tr><td>24</td><td>An old injury that aches when rain is on its way.</td></tr>
+                    <tr><td>25</td><td>A promise to someone you had to leave behind.</td></tr>
+                    <tr><td>26</td><td>Something you took from your first mission.</td></tr>
+                    <tr><td>31</td><td>A reputation in a specific part of Glimmerhold you'd prefer stayed secret.</td></tr>
+                    <tr><td>32</td><td>A skill that has nothing to do with this job.</td></tr>
+                    <tr><td>33</td><td>The name of someone in a hostile faction you worked with.</td></tr>
+                    <tr><td>34</td><td>A ritual you perform before every mission.</td></tr>
+                    <tr><td>35</td><td>Debt. A large amount.</td></tr>
+                    <tr><td>36</td><td>A commendation you never filed.</td></tr>
+                    <tr><td>41</td><td>A piece of deepbeast you held onto that no one knows about.</td></tr>
+                    <tr><td>42</td><td>An alias that still has a reputation attached to it.</td></tr>
+                    <tr><td>43</td><td>A specific longstanding hatred of something.</td></tr>
+                    <tr><td>44</td><td>Knowledge of something the Overhold does not know about.</td></tr>
+                    <tr><td>45</td><td>A standing arrangement with someone outside ANVIL.</td></tr>
+                    <tr><td>46</td><td>A mission you were not supposed to survive.</td></tr>
+                    <tr><td>51</td><td>Something you stole from the Overhold. Small but meaningful.</td></tr>
+                    <tr><td>52</td><td>A map of somewhere you wish to go.</td></tr>
+                    <tr><td>53</td><td>Loyalty to someone not a part of ANVIL.</td></tr>
+                    <tr><td>54</td><td>A vice you barely manage.</td></tr>
+                    <tr><td>55</td><td>Unanswered questions about the craters. You think ANVIL knows.</td></tr>
+                    <tr><td>56</td><td>A wound that didn't fully heal.</td></tr>
+                    <tr><td>61</td><td>The last thing someone said to you before you left home.</td></tr>
+                    <tr><td>62</td><td>A regret about your family.</td></tr>
+                    <tr><td>63</td><td>A reason you joined ANVIL that no longer applies.</td></tr>
+                    <tr><td>64</td><td>Something you built before the job. You wonder if it's still there.</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- SKILLS -->
+    <h2 class="section-label" id="skills">Skills</h2>
+    <div class="grid">
+        <div class="card full">
+            <p>Skills represent what a dwarf has trained in and what they're good at. Each skill has a name, a creed, one mechanical permission, and three marks. Roll 3 skills from the d66 table, or choose 2. Skills can be leveled three times during downtime using the Train action.</p>
+            <div class="sub2-label">Skill Advancement — Train (2 Ember)</div>
+            <p>Choose one upgrade type and rewrite the skill line. Each upgrade type may only be taken once per skill. The player rewrites the line, the GM approves.</p>
+            <div class="dice-row">
+                <div style="border: 2px solid var(--card-border); padding: 8px 12px; min-width: 100px; font-size:11px;"><strong>Extend</strong><br><span style="color:var(--faint);">Applies to the whole squad.</span></div>
+                <div style="border: 2px solid var(--card-border); padding: 8px 12px; min-width: 100px; font-size:11px;"><strong>Deepen</strong><br><span style="color:var(--faint);">Triggers in one additional situation.</span></div>
+                <div style="border: 2px solid var(--card-border); padding: 8px 12px; min-width: 100px; font-size:11px;"><strong>Sharpen</strong><br><span style="color:var(--faint);">Effect becomes more decisive.</span></div>
+                <div style="border: 2px solid var(--card-border); padding: 8px 12px; min-width: 100px; font-size:11px;"><strong>Linger</strong><br><span style="color:var(--faint);">Effect lasts longer or carries into next phase.</span></div>
+                <div style="border: 2px solid var(--card-border); padding: 8px 12px; min-width: 100px; font-size:11px;"><strong>Bend</strong><br><span style="color:var(--faint);">Add one exception to a core rule, once per mission.</span></div>
+                <div style="border: 2px solid var(--card-border); padding: 8px 12px; min-width: 100px; font-size:11px;"><strong>Survive</strong><br><span style="color:var(--faint);">The skill gains one extra mark.</span></div>
+            </div>
+        </div>
+
+        <!-- Cold Ops -->
+        <div class="card">
+            <h3 class="subsection-label"><span class="badge">11–16</span> Cold Ops — Stealth, Heat Control, Smother</h3>
+            <div class="skill-entry"><div class="skill-name"><span class="skill-code">11</span> Skulk</div><div class="skill-creed">"I disappear between heartbeats."</div><div class="skill-permission">May reroll 1 CMP die while obscured, hiding or out of sight.</div></div>
+            <div class="skill-entry"><div class="skill-name"><span class="skill-code">12</span> Ashcloak</div><div class="skill-creed">"I leave no trace, make no sound."</div><div class="skill-permission">Smother triggers on 1-1 or 1 and 2.</div></div>
+            <div class="skill-entry"><div class="skill-name"><span class="skill-code">13</span> Shadow Axe</div><div class="skill-creed">"I know every blind spot before entering a room."</div><div class="skill-permission">Once per mission, a BLAST of 4+ does not raise any Heat.</div></div>
+            <div class="skill-entry"><div class="skill-name"><span class="skill-code">14</span> Dead Quiet</div><div class="skill-creed">"I lock in exactly when it counts."</div><div class="skill-permission">Once per mission, treat your FUSE result as a 1.</div></div>
+            <div class="skill-entry"><div class="skill-name"><span class="skill-code">15</span> Ghost Pact</div><div class="skill-creed">"I am unseen, unheard, undeniable."</div><div class="skill-permission">Once per mission, the GM must spend 2 additional aftermath dice to act against this dwarf.</div></div>
+            <div class="skill-entry"><div class="skill-name"><span class="skill-code">16</span> Cold Read</div><div class="skill-creed">"I have internalized the mission brief."</div><div class="skill-permission">Once per mission, gain 1 piece of intel about the mission from the GM.</div></div>
+        </div>
+
+        <!-- Breachers -->
+        <div class="card">
+            <h3 class="subsection-label"><span class="badge gold">21–26</span> Breachers — Explosives, Heat Weaponization</h3>
+            <div class="skill-entry"><div class="skill-name"><span class="skill-code">21</span> Smoke Eater</div><div class="skill-creed">"I thrive when the air is black."</div><div class="skill-permission">Once per mission, ignore one Heat rise entirely.</div></div>
+            <div class="skill-entry"><div class="skill-name"><span class="skill-code">22</span> Controlled Burn</div><div class="skill-creed">"I contain fire and use it."</div><div class="skill-permission">Gain 1 Squad Aftermath die when assigning BLAST 6.</div></div>
+            <div class="skill-entry"><div class="skill-name"><span class="skill-code">23</span> Fuse Cutter</div><div class="skill-creed">"I have steady hands and steady blasts."</div><div class="skill-permission">Once per mission, treat assigned FUSE as a 2.</div></div>
+            <div class="skill-entry"><div class="skill-name"><span class="skill-code">24</span> Overpacked</div><div class="skill-creed">"I bring extra explosives, for fun."</div><div class="skill-permission">On Explosive actions, may reroll TNT die, must keep new result.</div></div>
+            <div class="skill-entry"><div class="skill-name"><span class="skill-code">25</span> Demolition Expert</div><div class="skill-creed">"I know every wall's weak points."</div><div class="skill-permission">Explosive actions against structures ignore one [+].</div></div>
+            <div class="skill-entry"><div class="skill-name"><span class="skill-code">26</span> Pressure Cook</div><div class="skill-creed">"I believe chaos is the best ingredient."</div><div class="skill-permission">When a Hammer drops, gain 4 Squad Aftermath dice.</div></div>
+        </div>
+
+        <!-- Anchors -->
+        <div class="card">
+            <h3 class="subsection-label"><span class="badge tert">31–36</span> Anchors — Temper, Survival, Absorption</h3>
+            <div class="skill-entry"><div class="skill-name"><span class="skill-code">31</span> Ironbuilt</div><div class="skill-creed">"I am built like the mountain."</div><div class="skill-permission">Gain 1 additional GRIT.</div></div>
+            <div class="skill-entry"><div class="skill-name"><span class="skill-code">32</span> Stoneback</div><div class="skill-creed">"I am immovable when stuck in."</div><div class="skill-permission">When this dwarf takes no movement on their turn, Temper increases by 2.</div></div>
+            <div class="skill-entry"><div class="skill-name"><span class="skill-code">33</span> Blastcoat</div><div class="skill-creed">"I am prepared for the worst."</div><div class="skill-permission">This dwarf's gear is maimed once per mission on a clean hit.</div></div>
+            <div class="skill-entry"><div class="skill-name"><span class="skill-code">34</span> Rune Bracing</div><div class="skill-creed">"I am always ready for impact."</div><div class="skill-permission">Once per mission, redirect a hit targeting an adjacent dwarf to this dwarf instead.</div></div>
+            <div class="skill-entry"><div class="skill-name"><span class="skill-code">35</span> Last Wall</div><div class="skill-creed">"I am first in, last out."</div><div class="skill-permission">When on final GRIT, Temper increases by 2.</div></div>
+            <div class="skill-entry"><div class="skill-name"><span class="skill-code">36</span> Deep Plate</div><div class="skill-creed">"I am built for the collapse."</div><div class="skill-permission">Temper 5 against environmental damage: cave-ins, floods, fire, etc.</div></div>
+        </div>
+
+        <!-- Handlers -->
+        <div class="card">
+            <h3 class="subsection-label"><span class="badge">41–46</span> Handlers — Aftermath, Social, Intel</h3>
+            <div class="skill-entry"><div class="skill-name"><span class="skill-code">41</span> Counterintel</div><div class="skill-creed">"I know how the enemy thinks."</div><div class="skill-permission">Once per mission, remove 3 dice from the GM's Aftermath pool.</div></div>
+            <div class="skill-entry"><div class="skill-name"><span class="skill-code">42</span> Tunnel Sense</div><div class="skill-creed">"I hear things coming."</div><div class="skill-permission">Once per mission, after the GM declares an Aftermath move, the squad may act before it resolves.</div></div>
+            <div class="skill-entry"><div class="skill-name"><span class="skill-code">43</span> Loud and Proud</div><div class="skill-creed">"My confidence is contagious."</div><div class="skill-permission">Only marks down an NPC's Trust on a BLAST of 6.</div></div>
+            <div class="skill-entry"><div class="skill-name"><span class="skill-code">44</span> Interrogator</div><div class="skill-creed">"I get what I need one way or another."</div><div class="skill-permission">May intentionally mark Trust to extract one piece of intel from an NPC.</div></div>
+            <div class="skill-entry"><div class="skill-name"><span class="skill-code">45</span> Iron Nerves</div><div class="skill-creed">"I never flinch, I never react."</div><div class="skill-permission">Ignore the first Aftermath action targeting this dwarf each mission.</div></div>
+            <div class="skill-entry"><div class="skill-name"><span class="skill-code">46</span> Black Lung Humor</div><div class="skill-creed">"I laugh through the pain."</div><div class="skill-permission">Once per mission, move NPC Posture down 1 after a failed interaction.</div></div>
+        </div>
+
+        <!-- Forgelords -->
+        <div class="card">
+            <h3 class="subsection-label"><span class="badge gold">51–56</span> Forgelords — Gear, Prep, Logistics</h3>
+            <div class="skill-entry"><div class="skill-name"><span class="skill-code">51</span> Pack Rat</div><div class="skill-creed">"I carry more than anyone thinks possible."</div><div class="skill-permission">Gain 2 additional item slots.</div></div>
+            <div class="skill-entry"><div class="skill-name"><span class="skill-code">52</span> Salvager</div><div class="skill-creed">"I keep my gear intact."</div><div class="skill-permission">After extraction, recover any one destroyed item from the mission.</div></div>
+            <div class="skill-entry"><div class="skill-name"><span class="skill-code">53</span> Quickpatch</div><div class="skill-creed">"I fix things fast, instead of not at all."</div><div class="skill-permission">Clear 1 mark from any damaged gear once per mission.</div></div>
+            <div class="skill-entry"><div class="skill-name"><span class="skill-code">54</span> Sacrificial Rigging</div><div class="skill-creed">"I know what's worth burning."</div><div class="skill-permission">Destroy a piece of gear to reduce Heat by 3.</div></div>
+            <div class="skill-entry"><div class="skill-name"><span class="skill-code">55</span> Steady Mule</div><div class="skill-creed">"I always keep my legs moving."</div><div class="skill-permission">The encumbrance penalty does not apply to this dwarf.</div></div>
+            <div class="skill-entry"><div class="skill-name"><span class="skill-code">56</span> Requisitioner</div><div class="skill-creed">"I know how to pull strings at the Overhold."</div><div class="skill-permission">Once per downtime, reduce the cost of a stash item by 1 Ember.</div></div>
+        </div>
+
+        <!-- Flametouched -->
+        <div class="card">
+            <h3 class="subsection-label"><span class="badge tert">61–66</span> Flametouched — Shatterpoint, Hammer, Escalation</h3>
+            <div class="skill-entry"><div class="skill-name"><span class="skill-code">61</span> Anvilborn</div><div class="skill-creed">"I was forged in the worst of it."</div><div class="skill-permission">Immediately after a Hammer drops, your CMP die becomes d4 until the mission ends.</div></div>
+            <div class="skill-entry"><div class="skill-name"><span class="skill-code">62</span> Temper Gauge</div><div class="skill-creed">"I feel the mission tipping before it does."</div><div class="skill-permission">Once per mission, GM must reveal the next Hammer effect before it triggers.</div></div>
+            <div class="skill-entry"><div class="skill-name"><span class="skill-code">63</span> Coal Walker</div><div class="skill-creed">"I operate best when everything's on fire."</div><div class="skill-permission">While Heat is White Hot or higher, FUSE results of 5–6 count as 4.</div></div>
+            <div class="skill-entry"><div class="skill-name"><span class="skill-code">64</span> Cragrunner</div><div class="skill-creed">"I was built to find exits."</div><div class="skill-permission">During Shatterpoint, this dwarf knows a guaranteed escape route if not incapacitated.</div></div>
+            <div class="skill-entry"><div class="skill-name"><span class="skill-code">65</span> Furnace Crew</div><div class="skill-creed">"I can buy the squad one more breath."</div><div class="skill-permission">The first Hammer drop each mission is delayed by 3 Heat.</div></div>
+            <div class="skill-entry"><div class="skill-name"><span class="skill-code">66</span> White Irons</div><div class="skill-creed">"I have been here before and walked out."</div><div class="skill-permission">Once per mission, treat a clean hit to GRIT as a maim instead.</div></div>
+        </div>
+    </div>
+
+    <!-- BONDS -->
+    <h2 class="section-label" id="bonds">Bonds</h2>
+    <div class="grid">
+        <div class="card">
+            <h3 class="subsection-label">How Bonds Work</h3>
+            <p>Dwarves build Bonds through surviving missions together and spending time at the Overhold. Track separately for each squad mate on your Op Sheet. Each Bond level requires <strong>2 marks</strong> to advance. At campaign start, write down your squad and start each Bond with 1 mark filled. Bond levels are tracked identically on both dwarves' sheets.</p>
+            <div class="sub2-label">Advancing Bonds</div>
+            <ul>
+                <li><strong>BOND downtime action:</strong> Establishes or advances a Bond.</li>
+                <li><strong>Surviving White Hot or Shatterpoint:</strong> Fill one mark on all active Bonds.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3 class="subsection-label">Bond Levels</h3>
+            <table>
+                <thead><tr><th>Bond</th><th>Effect</th></tr></thead>
+                <tbody>
+                    <tr><td>1</td><td>Bonded. Your relationship exists. May Stack Up together.</td></tr>
+                    <tr><td>2</td><td>Only 1 Encumbrance penalty when working together.</td></tr>
+                    <tr><td>3</td><td>Aftermath from Stack Up actions is reduced by 1 (minimum 1).</td></tr>
+                    <tr><td>4</td><td>Once per mission, when a bonded dwarf is targeted by a hit, you may become the target instead.</td></tr>
+                    <tr><td>5</td><td>Stack Up actions between this pair may trigger Smother.</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- GEAR -->
+    <h2 class="section-label" id="gear">Gear & Stash</h2>
+    <div class="grid">
+        <div class="card full">
+            <h3 class="subsection-label">Item Tags</h3>
+            <div class="dice-row">
+                <div style="border: 2px solid var(--card-border); padding: 8px 12px; font-size:12px; min-width:90px;"><code>[~]</code> Consumable: fill a mark each use.</div>
+                <div style="border: 2px solid var(--card-border); padding: 8px 12px; font-size:12px; min-width:90px;"><code>[E]</code> Explosive: if struck, roll Explosion Dice.</div>
+                <div style="border: 2px solid var(--card-border); padding: 8px 12px; font-size:12px; min-width:90px;"><code>[V]</code> Volatile: functions as an Explosion die when detonated.</div>
+                <div style="border: 2px solid var(--card-border); padding: 8px 12px; font-size:12px; min-width:90px;"><code>[Q]</code> Quiet: never raises Heat.</div>
+                <div style="border: 2px solid var(--card-border); padding: 8px 12px; font-size:12px; min-width:90px;"><code>[B]</code> Bulk: costs 2 item slots.</div>
+                <div style="border: 2px solid var(--card-border); padding: 8px 12px; font-size:12px; min-width:90px;"><code>[F]</code> Fragile: destroyed when any mark filled.</div>
+            </div>
+        </div>
+        <div class="card">
+            <h3 class="subsection-label">Runeaxe & Explosives Kit</h3>
+            <p>These items aren't just weapons — they're tools and the foundation of any ANVIL operative's loadout. They have a high Ember cost to replace; take care of them.</p>
+            <ul>
+                <li><strong>Runeaxe:</strong> Main weapon and tool. Raises base CMP die to d6.</li>
+                <li><strong>Explosives Kit:</strong> The only explosive gear that is not [~]. Raises base TNT die to d6. Infinite small charges. Additional and different explosives can be taken from the stash.</li>
+            </ul>
+            <p>Both can be upgraded and modified with the <strong>Forge</strong> downtime action.</p>
+        </div>
+        <div class="card">
+            <h3 class="subsection-label">Overhold Stash</h3>
+            <p>The Overhold maintains a stash of operational equipment available between missions. The GM maintains the stash list; it grows and shrinks with the campaign. Higher Rep tiers unlock deeper stash access. Oddities are never guaranteed.</p>
+            <ul>
+                <li>Contents depend on Squad Reputation and Ember investment.</li>
+                <li>The stash is not a shop. Dwarves do not browse it.</li>
+                <li>ANVIL decides what is available and operatives requisition what they need.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- STASH TABLES -->
+    <h2 class="section-label" id="stash">Overhold Gear Stash</h2>
+    <div class="grid">
+        <div class="card">
+            <h3 class="subsection-label">Weapons & Tools</h3>
+            <table>
+                <thead><tr><th>Item</th><th>Tags</th><th>Effect</th><th>Slots</th><th>Ember</th></tr></thead>
+                <tbody>
+                    <tr><td>Runeaxe</td><td>—</td><td>ANVIL issued. Raises CMP to d6.</td><td>—</td><td>3</td></tr>
+                    <tr><td>Throwing knife</td><td>[~] [Q]</td><td>Ranged. Never raises Heat.</td><td>1</td><td>—</td></tr>
+                    <tr><td>Crowbar</td><td>—</td><td>Treat doors and locks as Temper -1 when breaching.</td><td>1</td><td>—</td></tr>
+                    <tr><td>Grapple and line</td><td>[B]</td><td>Enables vertical movement.</td><td>2</td><td>1</td></tr>
+                    <tr><td>Blast Shield</td><td>[B]</td><td>While held, T+1[++].</td><td>2</td><td>1</td></tr>
+                    <tr><td>Runed crossbow</td><td>[~]</td><td>Ranged TNT die.</td><td>1</td><td>2</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card">
+            <h3 class="subsection-label">Armour & Protection</h3>
+            <table>
+                <thead><tr><th>Item</th><th>Tags</th><th>Effect</th><th>Slots</th><th>Ember</th></tr></thead>
+                <tbody>
+                    <tr><td>Leather jack</td><td>—</td><td>Standard absorption layer.</td><td>1</td><td>—</td></tr>
+                    <tr><td>Reinforced leather</td><td>—</td><td>Temper +1 against standard attacks.</td><td>1</td><td>1</td></tr>
+                    <tr><td>Blast coat</td><td>[B]</td><td>Explosive damage that would destroy it maims instead once per mission.</td><td>2</td><td>2</td></tr>
+                    <tr><td>Depth plate</td><td>[B]</td><td>Temper +2. Environmental damage does not destroy it on a clean hit, maim only.</td><td>2</td><td>3</td></tr>
+                    <tr><td>Silencer wrap</td><td>[F]</td><td>BLAST raises Heat on 5+ instead of 4+.</td><td>1</td><td>1</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card full">
+            <h3 class="subsection-label">Explosives</h3>
+            <table>
+                <thead><tr><th>Item</th><th>Tags</th><th>Effect</th><th>Slots</th><th>Ember</th></tr></thead>
+                <tbody>
+                    <tr><td>Explosives Kit</td><td>[V]</td><td>ANVIL issued. Raises TNT to d6. Infinite small charges.</td><td>—</td><td>4</td></tr>
+                    <tr><td>Satchel charge</td><td>[~] [E] [V]</td><td>Each mark filled adds +1 Explosive die to the pool.</td><td>1</td><td>1</td></tr>
+                    <tr><td>Shaped charge</td><td>[~] [E]</td><td>Directed blast: ignore [+] of target Temper. Must be placed with FUSE 3 or lower or explodes.</td><td>1</td><td>2</td></tr>
+                    <tr><td>Flashpot</td><td>[~] [V] [Q]</td><td>Only affects living targets. d4 TNT die.</td><td>1</td><td>1</td></tr>
+                    <tr><td>Depth charge</td><td>[E] [V] [B]</td><td>Single use. +3 Explosive dice. Each hit counts as 2 vs structures.</td><td>2</td><td>3</td></tr>
+                    <tr><td>Burnpack</td><td>[~] [E] [V]</td><td>Incendiary. Each explosion die that hits sets target or room on fire. Fire deals 1 Maim and adds 1 Aftermath die per Beat until extinguished.</td><td>1</td><td>2</td></tr>
+                    <tr><td>Sapper Charges</td><td>[~] [E] [B]</td><td>d8 TNT die.</td><td>1</td><td>2</td></tr>
+                    <tr><td>Cluster Keg</td><td>[~] [E] [B]</td><td>d12 TNT die.</td><td>2</td><td>3</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card">
+            <h3 class="subsection-label">Consumables</h3>
+            <table>
+                <thead><tr><th>Item</th><th>Tags</th><th>Effect</th><th>Slots</th><th>Ember</th></tr></thead>
+                <tbody>
+                    <tr><td>Field kit</td><td>[~]</td><td>Clear 1 mark from a damaged gear or skill.</td><td>1</td><td>1</td></tr>
+                    <tr><td>Stimulant flask</td><td>[~]</td><td>Treat CMP as d4 for one roll. Cannot stack.</td><td>1</td><td>1</td></tr>
+                    <tr><td>Smoke canister</td><td>[~] [Q]</td><td>Fill a room with smoke. Enemies can't target players. Players in smoke treat FUSE 1-2 as 3.</td><td>1</td><td>1</td></tr>
+                    <tr><td>Rope</td><td>—</td><td>Utility. Tie, lower, bind.</td><td>1</td><td>—</td></tr>
+                    <tr><td>Torch</td><td>[~]</td><td>3 Beats of light per mark. Removes [DARK] condition while held.</td><td>1</td><td>—</td></tr>
+                    <tr><td>Lamp oil flask</td><td>[~] [V] [E]</td><td>Improvised explosive. 1 Explosive die when thrown.</td><td>1</td><td>—</td></tr>
+                    <tr><td>Medical stout</td><td>[~]</td><td>Roll a d6, on 5+ restore 1 GRIT.</td><td>1</td><td>3</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card">
+            <h3 class="subsection-label">Oddities</h3>
+            <p style="font-size:12px; color:var(--faint); margin-bottom:8px;">Unusual, limited, and not always available. The GM decides what is in the stash before each Prep phase. These are not standard issue.</p>
+            <table>
+                <thead><tr><th>Item</th><th>Tags</th><th>Effect</th><th>Slots</th><th>Ember</th></tr></thead>
+                <tbody>
+                    <tr><td>Deeptouched stone</td><td>[F]</td><td>Vibrates near creatures from below.</td><td>1</td><td>2</td></tr>
+                    <tr><td>Rune-etched chain</td><td>—</td><td>Single use. Binds a target that cannot escape by mundane means. Works on deepbeasts.</td><td>1</td><td>3</td></tr>
+                    <tr><td>Silence tarp</td><td>[Q]</td><td>Wrap an object or surface. For one turn it makes no sound. Single use.</td><td>1</td><td>2</td></tr>
+                    <tr><td>Borrowed uniform</td><td>[F]</td><td>Convincing disguise for one specific faction. Treat CMP rolls vs Posture as -2.</td><td>1</td><td>2</td></tr>
+                    <tr><td>Overhold cipher plate</td><td>—</td><td>Unlocks one ANVIL infrastructure point: sealed door, rune lock, cached weapons cache.</td><td>1</td><td>2</td></tr>
+                    <tr><td>Deepbeast ichor vial</td><td>[~] [F]</td><td>Applied to surface: repels deepbeasts for d4 beats. Applied to wound: one hit is ignored this turn.</td><td>1</td><td>3</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- FORGE -->
+    <h2 class="section-label">Forge — Upgrading Your Kit</h2>
+    <div class="grid">
+        <div class="card">
+            <h3 class="subsection-label">The Blade — d6</h3>
+            <p style="font-size:12px; color:var(--faint); margin-bottom:8px;">A Runeaxe can have its blade and rune upgraded once each.</p>
+            <table>
+                <thead><tr><th>d6</th><th>Name</th><th>Detail</th></tr></thead>
+                <tbody>
+                    <tr><td>1</td><td>Cold-Forged</td><td>Heat-based effects can only Maim this axe.</td></tr>
+                    <tr><td>2</td><td>Double Sided</td><td>CMP die can be rerolled once for Standard actions.</td></tr>
+                    <tr><td>3</td><td>Notched History</td><td>When you target an enemy and Botch, the next BLAST against them gains +1.</td></tr>
+                    <tr><td>4</td><td>Heavy Headed</td><td>Treat BLAST results of 5 as 6.</td></tr>
+                    <tr><td>5</td><td>Humming Steel</td><td>Will vibrate when deepbeasts are within one room.</td></tr>
+                    <tr><td>6</td><td>Mirror-Sheen</td><td>In [DARK] rooms, reflect light to see fine detail without a torch.</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="card">
+            <h3 class="subsection-label">The Rune — d6</h3>
+            <table>
+                <thead><tr><th>d6</th><th>Name</th><th>Detail</th></tr></thead>
+                <tbody>
+                    <tr><td>1</td><td>Thirsting</td><td>Glows red in combat. When you fill a mark on this axe, gain 2 Squad Aftermath dice.</td></tr>
+                    <tr><td>2</td><td>Static</td><td>Enemies targeted by this axe cannot use Skills to take the hit.</td></tr>
+                    <tr><td>3</td><td>Echo</td><td>TNT die can be rerolled for Standard Actions.</td></tr>
+                    <tr><td>4</td><td>Boulder</td><td>Once per mission, treat a FUSE 5+ as a 3.</td></tr>
+                    <tr><td>5</td><td>Sunder</td><td>Enemy Temper of 5 or higher is reduced by 1.</td></tr>
+                    <tr><td>6</td><td>Keen</td><td>Add +1 to BLAST die.</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="card">
+            <h3 class="subsection-label">The Mix — d6</h3>
+            <p style="font-size:12px; color:var(--faint); margin-bottom:8px;">An Explosives Kit can upgrade its Mix and Casing once each.</p>
+            <table>
+                <thead><tr><th>d6</th><th>Name</th><th>Detail</th></tr></thead>
+                <tbody>
+                    <tr><td>1</td><td>Volatile Batch</td><td>This kit is tagged [E] and explodes if marked.</td></tr>
+                    <tr><td>2</td><td>Fine-Grain</td><td>Explosive actions with FUSE 1-2 do not raise Heat.</td></tr>
+                    <tr><td>3</td><td>Depth-Salted</td><td>6s on Explosion dice explode twice.</td></tr>
+                    <tr><td>4</td><td>Sticky Residue</td><td>These explosives can attach to surfaces.</td></tr>
+                    <tr><td>5</td><td>Acrid Smoke</td><td>After an explosion, the room becomes [DARK] for 3 Beats.</td></tr>
+                    <tr><td>6</td><td>Low-Yield</td><td>Explosions only raise Heat on a BLAST of 6, but max Explosion dice is 3.</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="card">
+            <h3 class="subsection-label">The Casing — d6</h3>
+            <table>
+                <thead><tr><th>d6</th><th>Name</th><th>Detail</th></tr></thead>
+                <tbody>
+                    <tr><td>1</td><td>Shrapnel-Packed</td><td>Explosion dice explode on 5 or 6.</td></tr>
+                    <tr><td>2</td><td>Magnetized</td><td>Sticks to iron. Can be placed on T[++] metal objects without a FUSE roll.</td></tr>
+                    <tr><td>3</td><td>Waterproof Seal</td><td>Can be used underwater or in flooding environments.</td></tr>
+                    <tr><td>4</td><td>Timer-Rigged</td><td>Treat FUSE results of 1 or 6 as any value.</td></tr>
+                    <tr><td>5</td><td>Flash-Bang</td><td>Remove an Aftermath die from the GM pool for every hit.</td></tr>
+                    <tr><td>6</td><td>Oversized Primers</td><td>If an explosion kills an enemy, the Heat track drops by 1.</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- RUNNING MISSIONS -->
+    <h2 class="section-label" id="missions">Running Missions</h2>
+    <div class="grid">
+        <div class="card">
+            <h3 class="subsection-label">Mission Structure</h3>
+            <ol>
+                <li>The squad is assigned an objective by the Hand.</li>
+                <li>They're given what intel exists.</li>
+                <li>They drop in.</li>
+                <li>They complete objectives.</li>
+                <li>They extract.</li>
+            </ol>
+            <p style="margin-top:10px;">Every mission has a <strong>map</strong> and a <strong>sheet</strong>. The sheet handles the macro structure. The map handles the room-level detail. Successful objectives and completed missions earn the squad <strong>Embers</strong>.</p>
+            <div class="sub2-label">Room Key Format</div>
+            <pre>04. FORGE HALL
+A large hall filled with dark smoke and glowing furnaces.
+4x Wardens (T3, sword), 1x Smithy (T2, hammer)
+[SCALD]
+Door to 05 is sealed. T[++]
+- The wardens are forcing the smithy to work.</pre>
+        </div>
+        <div class="card">
+            <h3 class="subsection-label">Intel Tiers</h3>
+            <div class="sub2-label">Briefing Intel</div>
+            <p>Provided by the Hand. Official, possibly outdated, occasionally wrong. Gives: rough map layout, primary objective, known faction presence, recommended drop points.</p>
+            <div class="sub2-label">Scout Intel</div>
+            <p>Firsthand reconnaissance gathered during downtime via the Scout action. Always reliable. Can fill in: patrol routes, enemy Temper values, entrance details, secondary objective locations.</p>
+            <p style="font-size:12px; color:var(--faint); margin-top:10px;">The squad's pre-mission map is a partial key. Rooms with intel are filled in; everything else is dark until they move through it.</p>
+        </div>
+
+        <div class="card">
+            <h3 class="subsection-label">Ember Payout Guidance</h3>
+            <p>Missions should pay out enough for each dwarf to take 2 Overhold Actions and get 2-3 gear per downtime without clearing every objective. Target: <strong>5–7 Embers per dwarf per downtime.</strong></p>
+            <table>
+                <thead><tr><th>Objective</th><th>Payout</th></tr></thead>
+                <tbody>
+                    <tr><td>Primary objective</td><td>3 Embers per dwarf</td></tr>
+                    <tr><td>Each secondary objective</td><td>2 Embers per dwarf</td></tr>
+                    <tr><td>Full completion bonus</td><td>1 Ember per dwarf</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="card">
+            <h3 class="subsection-label">Heat & Hammers</h3>
+            <p>Hammers should radically change mission conditions. Every mission needs a <strong>Shatterpoint Hammer</strong>. Hammers should feel like consequences of the squad's impact, not arbitrary escalation.</p>
+            <div class="sub2-label">Hammer Checklist</div>
+            <ul>
+                <li>Does the Hammer change the physical space? (routes close, rooms flood, ceilings fall)</li>
+                <li>Does the Hammer change faction behavior? (reinforcements, elite units, full alert)</li>
+                <li>Does the Hammer affect at least one objective?</li>
+                <li>Is the Hammer something the players caused, not something passive?</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- FACTIONS -->
+    <h2 class="section-label" id="factions">Factions & Campaigns</h2>
+    <div class="grid">
+        <div class="card">
+            <h3 class="subsection-label">Factions</h3>
+            <p>Factions are the active forces in the world that ANVIL works against. They have goals, resources, and momentum of their own — they do not wait for the squad to come to them.</p>
+            <p>Each faction has an <strong>Agenda</strong>: a five-step plan they execute whether ANVIL intervenes or not. Each step has 2 marks to fill. When a faction reaches step 5 and completes their Agenda, a permanent campaign consequence locks in.</p>
+            <div class="sub2-label">Agenda Steps</div>
+            <div class="step-track">
+                <div class="step-row"><span class="step-num">Step 1</span> Early movement. Quiet, deniable. Easily disrupted. <code>Advances: 1–2</code></div>
+                <div class="step-row"><span class="step-num">Step 2</span> Establishing. Resources and folks are in place. <code>Advances: 1–3</code></div>
+                <div class="step-row"><span class="step-num">Step 3</span> Entrenched. Disruption requires a focused mission. <code>Advances: 1–4</code></div>
+                <div class="step-row"><span class="step-num">Step 4</span> Operational. Bold, exposed, damage accumulating. <code>Advances: 1–5</code></div>
+                <div class="step-row"><span class="step-num">Step 5</span> Complete and irreversible. Campaign consequence locked in.</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3 class="subsection-label">Disrupting Agendas</h3>
+            <table>
+                <thead><tr><th>Mission Result</th><th>Agenda Effect</th></tr></thead>
+                <tbody>
+                    <tr><td>Primary objective completed</td><td>Agenda does not advance, no roll.</td></tr>
+                    <tr><td>Primary failed, secondary completed</td><td>GM rolls, +1 per secondary completed.</td></tr>
+                    <tr><td>Mission failed entirely</td><td>Agenda advances automatically.</td></tr>
+                    <tr><td>All objectives completed</td><td>Roll back the Agenda one mark.</td></tr>
+                </tbody>
+            </table>
+            <div class="sub2-label">Faction Moves (Between Sessions)</div>
+            <p>Each active faction makes one Move per session. It is not rolled — it is narrated at the start of the next session. Moves scale with Agenda step; a faction at step 4 does not care who notices.</p>
+        </div>
+
+        <div class="card">
+            <h3 class="subsection-label">Overhold Strain</h3>
+            <p>The Overhold has <strong>3 Strain marks</strong>. Faction Moves that target ANVIL mark one Strain.</p>
+            <div class="step-track">
+                <div class="step-row"><span class="step-num">1 Strain</span> The Hand is nervous. No mechanical effect.</div>
+                <div class="step-row"><span class="step-num">2 Strain</span> One Overhold Action becomes unavailable until Strain clears.</div>
+                <div class="step-row"><span class="step-num">3 Strain</span> Two Overhold Actions unavailable. Rep advancement frozen.</div>
+            </div>
+            <div class="sub2-label">Clearing Strain</div>
+            <ul>
+                <li>A successful <strong>Pull Strings</strong> action clears 1 mark.</li>
+                <li>Extracting from a mission at Cold to Hot clears 1 mark.</li>
+                <li>Only one mark may clear per downtime.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3 class="subsection-label">Example Faction: The Hollow Choir</h3>
+            <div class="faction-block">
+                <div class="faction-row"><span class="faction-key">Name</span> The Hollow Choir</div>
+                <div class="faction-row"><span class="faction-key">Nature</span> Deep-cult accelerationists</div>
+                <div class="faction-row"><span class="faction-key">Starting Step</span> 2-2 (operating for months before ANVIL notices)</div>
+                <div class="faction-row"><span class="faction-key">Completion</span> The Wide Gate — titan deepbeasts awoken.</div>
+                <div class="faction-row"><span class="faction-key">Key Figure</span> Sevran — ritual leader, deeptouched, true believer</div>
+                <div class="faction-row"><span class="faction-key">Tone</span> Patient, convinced, increasingly bold</div>
+            </div>
+        </div>
+
+        <div class="card full">
+            <h3 class="subsection-label">Running a Campaign</h3>
+            <p>A campaign is the full arc of multiple Faction Agendas from first movement to resolution. There is no fixed mission count. The campaign ends when every active Agenda is either completed or dismantled — or when the consequences of completed Agendas make further ANVIL operations untenable.</p>
+            <div class="dice-row" style="margin-top:10px;">
+                <div style="border: 2px solid var(--card-border); padding: 10px 14px; font-size:12px; min-width:180px;"><strong>Tight Single Faction</strong><br>~7–10 missions</div>
+                <div style="border: 2px solid var(--card-border); padding: 10px 14px; font-size:12px; min-width:180px;"><strong>Two Factions in Tension</strong><br>~10–15 missions</div>
+                <div style="border: 2px solid var(--card-border); padding: 10px 14px; font-size:12px; min-width:180px;"><strong>Three Factions</strong><br>Long campaign. The squad will not stop all of them.</div>
+            </div>
+            <div class="sub2-label">Between Sessions, Ask:</div>
+            <ul style="columns: 3; column-gap: 24px;">
+                <li>What is each faction doing right now?</li>
+                <li>What does the squad know about it?</li>
+                <li>What happens if they ignore it for one more mission?</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- DOWNTIME -->
+    <h2 class="section-label" id="downtime">Downtime & The Overhold</h2>
+    <div class="grid">
+        <div class="card full">
+            <div class="callout">Between missions ANVIL ops return to the Overhold. A large brutalist structure on the northwest edge of Glimmerhold, low forge smoke hangs in the air in every room. The Queen employs ANVIL and her Hand runs it; the Glimmerhold council does not know it exists.</div>
+            <p>Downtime is not rest. It is recovery, politics, preparation, and grief. It is your job between the jobs.</p>
+        </div>
+
+        <div class="card">
+            <h3 class="subsection-label">Embers</h3>
+            <p>Embers are ANVIL's downtime currency. After completing missions all Embers go into the squad's shared bank. Squads can bank Embers between missions. Embers spent on actions or gear are gone permanently.</p>
+            <div class="sub2-label">Action Costs by Rep Tier</div>
+            <table>
+                <thead><tr><th>Rep Tier</th><th>Cost Modifier</th></tr></thead>
+                <tbody>
+                    <tr><td>1 — Myth</td><td>+2 Embers</td></tr>
+                    <tr><td>2 — Ghost</td><td>+1 Ember</td></tr>
+                    <tr><td>3 — Known</td><td>Base cost</td></tr>
+                    <tr><td>4 — Feared</td><td>−1 Ember (min 1)</td></tr>
+                    <tr><td>5 — Legend</td><td>−2 Embers (min 1)</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card">
+            <h3 class="subsection-label">Downtime Structure</h3>
+            <div class="step-track">
+                <div class="step-row"><span class="step-num">Step 1</span> <strong>Debrief.</strong> Review the mission. Resolve Ember payout, Rep shifts, campaign consequences.</div>
+                <div class="step-row"><span class="step-num">Step 2</span> <strong>Recovery.</strong> Resolve Scars, funerals, retirements. All GRIT restored.</div>
+                <div class="step-row"><span class="step-num">Step 3</span> <strong>Overhold Actions.</strong> Each dwarf takes up to 2 actions. No dwarf may take the same action twice.</div>
+                <div class="step-row"><span class="step-num">Step 4</span> <strong>Prep.</strong> Review next mission briefing, requisition loadout, choose drop point.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- OVERHOLD ACTIONS -->
+    <h2 class="section-label" id="overhold-actions">Overhold Actions</h2>
+    <div class="grid">
+        <div class="card">
+            <h3 class="subsection-label">Slag Off — 1 Ember</h3>
+            <p class="callout">Drink deep, talk loud, decompress.</p>
+            <p>The dwarf spends time in the Overhold's lower halls, drinking, fighting, and relaxing.</p>
+            <ul>
+                <li>Clear all marks on a skill.</li>
+                <li>May generate a rumor. Ask the GM one question during briefing.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3 class="subsection-label">Train — 2 Ember</h3>
+            <p class="callout">Evolve a skill.</p>
+            <p>The dwarf levels one skill of their choice. Choose one upgrade type and rewrite the skill line. Each upgrade type may only be taken once per skill. A skill can be leveled three times.</p>
+        </div>
+
+        <div class="card">
+            <h3 class="subsection-label">Forge — 3 Ember</h3>
+            <p class="callout">Craft specialized gear.</p>
+            <p>The dwarf works with the Overhold's armourers to upgrade their Runeaxe or Explosives Kit. May also request a piece of specialized custom equipment — the GM and player define it together.</p>
+        </div>
+
+        <div class="card">
+            <h3 class="subsection-label">Scout — 1–3 Ember</h3>
+            <p class="callout">Reveal mission intel.</p>
+            <p>The dwarf runs advance reconnaissance on a potential mission target. Reveals one piece of hidden mission intel per Ember: layout, Temper of key enemies, Hammer thresholds, faction presence, or extraction complications.</p>
+        </div>
+
+        <div class="card">
+            <h3 class="subsection-label">Pull Strings — 3 Ember</h3>
+            <p class="callout">Manipulate Glimmerhold politics.</p>
+            <p>The dwarf works back channels inside Glimmerhold to shift faction relations, suppress rumors, or reposition ANVIL's political standing.</p>
+            <ul>
+                <li>May adjust Squad Reputation by 1 mark.</li>
+                <li>May affect future mission assignments.</li>
+                <li>Clears 1 Overhold Strain mark.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3 class="subsection-label">Interrogate — 1 Ember</h3>
+            <p class="callout">Extract intel from prisoners or artifacts.</p>
+            <p>The dwarf works on a mission asset: a captured enemy, a recovered document, a strange relic. Generates specific actionable intel or reveals lore about enemy factions.</p>
+        </div>
+
+        <div class="card">
+            <h3 class="subsection-label">Reinforce — 2 Ember</h3>
+            <p class="callout">Add temporary mission assets.</p>
+            <p>The dwarf requisitions additional resources for the next mission: a support contact, a safe extraction point, a distraction, borrowed heavy equipment. These are single-use mission assets.</p>
+        </div>
+
+        <div class="card">
+            <h3 class="subsection-label">Bond — 1 Ember</h3>
+            <p class="callout">Create or advance a squad link.</p>
+            <p>Two dwarves spend downtime together and establish or advance a Bond. Fill one mark on the Bond track. If the Bond does not exist yet, this establishes it at the first mark of level 1.</p>
+        </div>
+
+        <div class="card">
+            <h3 class="subsection-label">Memorialize — 0 Ember</h3>
+            <p class="callout">Honor the dead and retired.</p>
+            <p>The dwarf formally adds an anvil to the Overhold's memorial chamber for a fallen or retired operative. Memorialized operatives permanently affect the Overhold in small ways: a name on a plaque, a runeaxe mounted above the forge, their methods taught to new recruits.</p>
+            <ul>
+                <li>Grants +1 Rep.</li>
+                <li>May unlock a one-time benefit tied to what that dwarf was known for.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- REPUTATION -->
+    <h2 class="section-label" id="reputation">Squad Reputation</h2>
+    <div class="grid">
+        <div class="card">
+            <h3 class="subsection-label">Reputation Track</h3>
+            <p>Reputation reflects how ANVIL's handlers, rivals, and enemies perceive the squad. It is a measure of <em>tactics</em>, not skill. Tracked across 25 marks divided into five tiers of 5. Marks advance or fall based on the Heat level missions end at.</p>
+            <div style="margin: 14px 0;">
+                <div class="rep-tier"><span class="tier-name">1 — MYTH</span><div class="rep-track"><div class="rep-box"></div><div class="rep-box"></div><div class="rep-box"></div><div class="rep-box"></div><div class="rep-box"></div></div></div>
+                <div class="rep-tier"><span class="tier-name">2 — GHOST</span><div class="rep-track"><div class="rep-box"></div><div class="rep-box"></div><div class="rep-box"></div><div class="rep-box"></div><div class="rep-box"></div></div></div>
+                <div class="rep-tier"><span class="tier-name">3 — KNOWN</span><div class="rep-track"><div class="rep-box"></div><div class="rep-box"></div><div class="rep-box"></div><div class="rep-box"></div><div class="rep-box"></div></div></div>
+                <div class="rep-tier"><span class="tier-name">4 — FEARED</span><div class="rep-track"><div class="rep-box"></div><div class="rep-box"></div><div class="rep-box"></div><div class="rep-box"></div><div class="rep-box"></div></div></div>
+                <div class="rep-tier"><span class="tier-name">5 — LEGEND</span><div class="rep-track"><div class="rep-box"></div><div class="rep-box"></div><div class="rep-box"></div><div class="rep-box"></div><div class="rep-box"></div></div></div>
+            </div>
+            <p style="font-size:12px; color:var(--faint);">Rep never goes above tier 5 or below tier 1. Cannot be reduced beyond MYTH 1 or raised above LEGEND 5.</p>
+        </div>
+        <div class="card">
+            <h3 class="subsection-label">Rep Tier Effects</h3>
+            <div class="skill-entry" style="border-color:var(--main);"><div class="skill-name">1 — Myth</div><div class="skill-permission">Leaves no trace. All Overhold Action costs +2 Embers. No enemy faction knows the squad exists.</div></div>
+            <div class="skill-entry" style="border-color:#7a8a5a;"><div class="skill-name">2 — Ghost</div><div class="skill-permission">The Hand trusts them and unlocks better stash access. All Overhold Actions cost +1 Ember. Low chatter in hostile networks.</div></div>
+            <div class="skill-entry" style="border-color:var(--highlight);"><div class="skill-name">3 — Known</div><div class="skill-permission">Base costs apply, standard stash access. Factions with good intel networks know ANVIL exists.</div></div>
+            <div class="skill-entry" style="border-color:var(--tert);"><div class="skill-name">4 — Feared</div><div class="skill-permission">The Hand gives priority. Overhold Actions cost −1 Ember (min 1). May call in one favour per campaign. Enemies preparing specifically for them.</div></div>
+            <div class="skill-entry" style="border-color:#333;"><div class="skill-name">5 — Legend</div><div class="skill-permission">Full Overhold backing. All Overhold Action costs −2 Embers (min 1). Deep stash access. Every faction is running counter intel and placing bounties.</div></div>
+        </div>
+    </div>
+
+    <!-- SCARS -->
+    <h2 class="section-label" id="scars">Scars</h2>
+    <div class="grid">
+        <div class="card">
+            <h3 class="subsection-label">Rolling for Scars</h3>
+            <p>Scars are permanent. They cannot be removed or healed but they are not punishments — they are changes. After every mission each surviving dwarf rolls for Scars.</p>
+            <ul>
+                <li>Roll a d6.</li>
+                <li>Add 1 extra d6 for every GRIT marked during the mission.</li>
+                <li>If any die shows a 1 or 2, gain 1 Scar.</li>
+                <li>Only ever gain 1 Scar per mission.</li>
+                <li>Each dwarf has 4 Scar slots. When all 4 are full and a new Scar would be gained, permanently lose 1 GRIT instead.</li>
+            </ul>
+            <table style="margin-top:10px;">
+                <thead><tr><th>GRIT Marked</th><th>Dice Rolled</th></tr></thead>
+                <tbody>
+                    <tr><td>0</td><td>1d6</td></tr>
+                    <tr><td>1</td><td>2d6</td></tr>
+                    <tr><td>2</td><td>3d6</td></tr>
+                    <tr><td>3</td><td>4d6</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card">
+            <h3 class="subsection-label">Scar Table — 11–26 Body & Senses</h3>
+            <div class="scar-entry"><strong>11. Missing Finger</strong><p>One less finger than before, no mechanical effect. You occasionally notice folks notice it.</p></div>
+            <div class="scar-entry"><strong>12. Burn Scarring</strong><p>Once per mission when taking a clean hit from fire or explosive damage, treat it as Maimed.</p></div>
+            <div class="scar-entry"><strong>13. Chronic Pain</strong><p>Once per mission the first time you roll 1 on CMP it becomes a 5. The dwarf knows it's coming.</p></div>
+            <div class="scar-entry"><strong>14. Missing Eye</strong><p>FUSE results of 1 on ranged or precise standard actions are treated as 2.</p></div>
+            <div class="scar-entry"><strong>15. Limp</strong><p>No mechanical effect unless a Hammer or environmental condition specifically affects movement.</p></div>
+            <div class="scar-entry"><strong>16. Tremor</strong><p>After a CMP roll of 5+, your next CMP roll treats a 4+ as one lower.</p></div>
+            <div class="scar-entry"><strong>21. Partial Hearing Loss</strong><p>Cannot be surprised by sounds alone. Once per mission, ignore a GM move that relies on sound.</p></div>
+            <div class="scar-entry"><strong>22. Tinnitus</strong><p>Constant ringing, it never stops. No mechanical effect. It is just always there.</p></div>
+            <div class="scar-entry"><strong>23. Tunnel Vision</strong><p>Once per mission, ask the GM one specific detail about what you're directly looking at.</p></div>
+            <div class="scar-entry"><strong>24. Sensitivity to Light</strong><p>May reroll CMP once in low light conditions.</p></div>
+            <div class="scar-entry"><strong>25. Phantom Limb</strong><p>Work with the GM to define one thing the adaptation does that an uninjured dwarf cannot.</p></div>
+            <div class="scar-entry"><strong>26. Smell Gone</strong><p>Completely immune to any mechanics that rely on scent.</p></div>
+        </div>
+
+        <div class="card">
+            <h3 class="subsection-label">Scar Table — 31–46 Mind & Reputation</h3>
+            <div class="scar-entry"><strong>31. Nightmares</strong><p>Something follows you into sleep. Between missions the GM may ask what you dreamt about.</p></div>
+            <div class="scar-entry"><strong>32. Hypervigilance</strong><p>Cannot be ambushed. GM must spend 1 additional Aftermath die to act against you when you haven't moved.</p></div>
+            <div class="scar-entry"><strong>33. Flat Affect</strong><p>You have stopped reacting to things. Others find it unsettling.</p></div>
+            <div class="scar-entry"><strong>34. Intrusive Recall</strong><p>A specific mission plays back without warning.</p></div>
+            <div class="scar-entry"><strong>41. Known Face</strong><p>In locations where the faction has intel on ANVIL, this dwarf raises Heat +1 on a BLAST of 5 or 6.</p></div>
+            <div class="scar-entry"><strong>42. Burned Contact</strong><p>One downtime action costs 1 additional Ember for the rest of the campaign.</p></div>
+            <div class="scar-entry"><strong>43. Marked by the Deep</strong><p>Roll a d6: 1-3 deepbeasts always begin friendly, 4-6 hostile.</p></div>
+            <div class="scar-entry"><strong>44. Rumored Dead</strong><p>Once per mission, approach an NPC as a complete unknown regardless of Squad Reputation.</p></div>
+            <div class="scar-entry"><strong>45. Marked for Death</strong><p>Regardless of Squad Rep, enemy factions always recognize you.</p></div>
+            <div class="scar-entry"><strong>46. Unwanted Attention</strong><p>Someone outside ANVIL wants to turn you into a Sleeper Agent.</p></div>
+        </div>
+
+        <div class="card">
+            <h3 class="subsection-label">Scar Table — 51–66 The Craft & The Marks</h3>
+            <div class="scar-entry"><strong>51. Shaky on Explosives</strong><p>TNT results of 6 on Explosive actions count as 4 instead.</p></div>
+            <div class="scar-entry"><strong>52. Cracked Grip</strong><p>CMP rerolls no longer apply to standard actions.</p></div>
+            <div class="scar-entry"><strong>53. Overcautious</strong><p>Once per mission automatically detect one hidden threat before it triggers.</p></div>
+            <div class="scar-entry"><strong>54. Reckless</strong><p>During White Hot and above, may reroll both CMP and TNT dice and keep the new results.</p></div>
+            <div class="scar-entry"><strong>55. Institutional Memory</strong><p>Once per mission ask the GM whether a situation resembles ANVIL's operational history and get the answer.</p></div>
+            <div class="scar-entry"><strong>56. Method</strong><p>Define a specific operational method. Once per mission when acting within it, FUSE results of 5+ count as 3.</p></div>
+            <div class="scar-entry"><strong>61. The Aftershakes</strong><p>When the mission ends, your hands don't stop moving for days. Other dwarves recognize it.</p></div>
+            <div class="scar-entry"><strong>62. Ritual</strong><p>If your pre-mission ritual completes, gain 1 Squad Aftermath die at mission start. If skipped, CMP steps up to d8.</p></div>
+            <div class="scar-entry"><strong>63. Callused</strong><p>Intimidation, horror, and morale effects do not apply to you. NPCs notice the fervor in your eyes.</p></div>
+            <div class="scar-entry"><strong>64. Memorial Ink</strong><p>You get a tattoo after the mission. When a dwarf dies or retires, you add to it. It becomes a record of your loss.</p></div>
+            <div class="scar-entry"><strong>65. The Weight</strong><p>You carry something from the mission. An object, a name, a promise. Define it and write it down.</p></div>
+            <div class="scar-entry"><strong>66. Still Standing</strong><p>Once per mission if you would mark your final GRIT, continue on 1 GRIT instead.</p></div>
+        </div>
+    </div>
+
+    <!-- GM TOOLKIT -->
+    <h2 class="section-label" id="gm-toolkit">GM Toolkit</h2>
+    <div class="grid">
+        <div class="card">
+            <h3 class="subsection-label">Advice</h3>
+            <span class="wip-stamp">Work in Progress</span>
+        </div>
+        <div class="card">
+            <h3 class="subsection-label">Enemy & Threat Templates</h3>
+            <span class="wip-stamp">Work in Progress</span>
+        </div>
+        <div class="card">
+            <h3 class="subsection-label">Mission Generation Tools</h3>
+            <span class="wip-stamp">Work in Progress</span>
+        </div>
+        <div class="card">
+            <h3 class="subsection-label">Starter Mission</h3>
+            <span class="wip-stamp">Work in Progress</span>
+        </div>
+        <div class="card">
+            <h3 class="subsection-label">World Lore</h3>
+            <span class="wip-stamp">Work in Progress</span>
+        </div>
+    </div>
+
+    <div style="margin-top:60px; padding-top:24px; border-top: 4px solid var(--card-border); font-size:11px; color:var(--faint); letter-spacing:0.1em;">
+        ANVIL v0.9 &mdash; Inspo: Metal Gear Solid, X-COM, Hitman, Deep Rock Galactic, Splinter Cell, Wildsea, Daggerheart, Cairn
+    </div>
+
+</div><!-- /wrapper -->
+
+<script>
+    // Close nav on link click
+    document.querySelectorAll('#nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.getElementById('nav-menu').classList.remove('open');
+        });
+    });
+</script>
+
+</body>
+</html>
