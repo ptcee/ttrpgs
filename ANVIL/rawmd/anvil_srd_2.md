@@ -1,5 +1,5 @@
 **ANVIL**
-> v0.9 - trimming fat
+> v1.0 - create sheets and playtesting.
 
 > One hundred years after the craters were first discovered, evil things began to crawl out from the deep depths and with them they corrupted the natural arcana of the world. Dwarves, being born of the depths found themselves uniquely resilient to these magical effects, thus ANVIL was created. A covert strike force of the most elite and explosive dwarves, assembled to carry out the most dangerous missions for the Queen of Glimmerhold. You are one such strike force, these are your missions. Get in, drop 'em like stones and get out.
 
@@ -7,11 +7,11 @@
 
 ANVIL is a fantasy roleplaying game where you will become an elite dwarven taskforce, dropping in to hotzones to accomplish missions for the Queen. Within each mission you'll have to succesfully accomplish objectives while managing how covert your squad acts.
 
-There is no wrong way to move through a mission–whether you are skulking through each room expertly dispatching foes without being seen or blasting your way through walls and sending deepbeasts back into the abyss what matters is accomplishing the objective. Sure, the Queen's Hand might not be happy with you lighting off a pile of powder kegs but that's a problem for later.
+There is no wrong way to move through a mission-whether you are skulking through each room expertly dispatching foes without being seen or blasting your way through walls and sending deepbeasts back into the abyss what matters is accomplishing the objective. Sure, the Queen's Hand might not be happy with you lighting off a pile of powder kegs but that's a problem for later.
 
 Upon succesful return from a mission the job isn't over. You'll navigate the complicated web of agendas throughout the realm to decide who to deal with and when, but not before crushing a pint of the finest ale with your squad, trauma bonding isn't the only way to build relationships.
 
-ANVIL is about managing your impact, execution and the GM–and the world's ability to respond to your actions. Every dwarf has a plan until their fuse is cut short. Use any method you can to drop 'em like stones.
+ANVIL is about managing your impact, execution and the GM-and the world's ability to respond to your actions. Every dwarf has a plan until their fuse is cut short. Use any method you can to drop 'em like stones.
 
 # Table of Contents
 
@@ -25,8 +25,8 @@ ANVIL is about managing your impact, execution and the GM–and the world's abil
 - [Creating a Dwarf Operative](#creating-a-dwarf-operative)
 - [Gear \& Stash](#gear--stash)
 - [Running Missions](#running-missions)
-- [Factions \& Campaigns](#factions--campaigns)
 - [Downtime \& The Overhold](#downtime--the-overhold)
+- - [Factions \& Campaigns](#factions--campaigns)
 - [GM Toolkit](#gm-toolkit)
 
 
@@ -54,13 +54,13 @@ Memorialize  -         Honor the dead. Grants +1 Rep.
 
 **Mission briefing.** The Hand assigns the mission, players receive Briefing Intel: rough layout, primary and secondary objectives, Ember payouts, known faction presence, and drop points. Scout intel fills in additional keyed rooms if the action was taken.
 
-**Loadout.** Players fill their 4 item slots from the prep stash. All operatives begin with a Runeaxe (CMP d6) and Explosives Kit (TNT d6). Stash access depends on Squad Reputation. Gear costs Embers at purchase.
+**Loadout.** Players fill their 4 item slots from the prep stash. All operatives begin with a Runeaxe (CMP d6) and Explosives Kit (IMP d6). Stash access depends on Squad Reputation. Gear costs Embers at purchase.
 
 ---
 
 ## PHASE 2 - DROP IN
 
-**Insertion.** The squad chooses their drop point. Entrances are defined in the mission sheet with characteristics: guarded, trapped, structural, gear-gated. They arrive by Strigwraith or on foot.
+**Insertion.** The squad chooses their drop point. Entrances are defined in the mission sheet with characteristics: guarded, trapped, structural, gear-gated. They arrive by Strigwraith or on foot. (Dwarves don't use parachutes, they crash into the earth on parashields.)
 
 **GM sets the table.** GM starts their Aftermath pool at the number of players. Heat starts at 0. Beat count starts at 0. Hammers are prepped and ready.
 
@@ -70,24 +70,24 @@ Memorialize  -         Honor the dead. Grants +1 Rep.
 
 **Player turns.** Each dwarf moves and takes an action. When the outcome is in question, *throw stones*.
 
-> Roll CMP and TNT. Assign one die as FUSE, one as BLAST.
+> Roll CMP and IMP. Assign one die as FUSE, one as BLAST.
 
 **FUSE** - execution, speed, precision.
-- 1–2: clean, efficient, fast
-- 3–4: standard, stable
-- 5–6: messy, slow, complicated
+- 1-2: clean, efficient, fast
+- 3-4: standard, stable
+- 5-6: messy, slow, complicated
 - Lower is better. Used against NPC Posture in social rolls.
 
 **BLAST** - impact, noise, force.
-- 1–3: subtle, controlled
-- 4–6: loud, disruptive; raises Heat by 1
+- 1-3: subtle, controlled
+- 4-6: loud, disruptive; raises Heat by 1
 - Checked against Temper to hit. Marked against NPC Trust on 4-6.
 
 **Explosive actions (gear marked [E]):** FUSE is detonation time. BLAST is how many Explosion dice to roll. Heat rises by the full value of the BLAST die, not just 1.
 
 **Smother:** Both assigned dice show 1 on a standard action - reduce Heat by 3.
 
-**Stack Up:** Multiple dwarves acting together. Pool all rolled dice, assign one FUSE and one BLAST from the pool. If two or more 6s appear in the full pool, raise Heat by 1 plus 1 per participating dwarf. Stack Ups cannot trigger Smother unless a rule says otherwise.
+**Stack Up:** Multiple dwarves acting together. Pool all rolled dice, assign one FUSE and one BLAST from the pool. If two or more 6s appear in the full pool, raise Heat by 1 per participating dwarf. Stack Ups cannot trigger Smother unless a rule says otherwise.
 
 ---
 
@@ -113,7 +113,7 @@ BLAST < Temper   Botch. No effect.
 
 Hits land on gear first or skills, then GRIT. Players may choose what absorbs. The fiction should support it.
 
-When a dwarf has no gear or skills left, d4 for both CMP and TNT.
+When a dwarf has no gear or skills left, d4 for both CMP and IMP.
 
 GRIT is last. 3 GRIT per dwarf. Maim marks 1. Clean hit to GRIT marks all 3 and the dwarf is going down. They take one last action before they go.
 
@@ -122,14 +122,14 @@ GRIT is last. 3 GRIT per dwarf. Maim marks 1. Clean hit to GRIT marks all 3 and 
 **Heat thresholds.**
 
 ```
-Cold        0–5    No Hammer
-Warm        6–10   No Hammer
-Hot         11–15  Hammer if prepped
-White Hot   16–19  Hammer if prepped
+Cold        0-5    No Hammer
+Warm        6-10   No Hammer
+Hot         11-15  Hammer if prepped
+White Hot   16-19  Hammer if prepped
 Shatterpoint 20+  Hammer always. Heat cannot be reduced.
 ```
 
-Hammers change mission conditions. They are never just more enemies–they close routes, flip room states, escalate faction behavior, wake something below.
+Hammers change mission conditions. They are never just more enemies-they close routes, flip room states, escalate faction behavior, wake something below.
 
 ---
 
@@ -165,9 +165,9 @@ Shatterpoint           +2 Rep marks
 
 # Throwing Stones - How to Roll Dice
 
-## Composure & Explosives
+## Composure & Impact
 
-Every dwarf has two dice: Composure (CMP) and Explosives (TNT). The base die for both is a d3. All ANVIL operatives are assigned a Runeaxe and an Explosives Kit that raises each die to d6.
+Every dwarf has two dice: Composure (CMP) and Impact (IMP). The base die for both is a d3. All ANVIL operatives are assigned a Runeaxe and an Explosives Kit that raises each die to d6.
 
 Rolling for the results of an action is called **throwing stones**. When you throw stones you roll both dice and assign one as FUSE and one as BLAST.
 
@@ -175,7 +175,7 @@ Rolling for the results of an action is called **throwing stones**. When you thr
 
 As a rule: **FUSE is about how. BLAST is about what.**
 
-Assign FUSE to the die that should reflect your control, speed, and precision. Assign BLAST to the die that reflects your impact, noise, and force. A dwarf can want low FUSE and low BLAST–silent and precise, or low FUSE and high BLAST–fast and destructive. High FUSE is almost never what you want: it means the action was slow, messy, or complicated.
+Assign FUSE to the die that should reflect your control, speed, and precision. Assign BLAST to the die that reflects your impact, noise, and force. A dwarf can want low FUSE and low BLAST-silent and precise, or low FUSE and high BLAST-fast and destructive. High FUSE is almost never what you want: it means the action was slow, messy, or complicated.
 
 ```
 You want to...                      Assigned die logic...
@@ -199,8 +199,8 @@ Standard actions are for any action that is uncertain and is not using an Explos
 
 | Roll | Assign | Effect |
 |------|--------|--------|
-| CMP + TNT | One die = FUSE | Execution quality. Lower is cleaner. |
-| | One die = BLAST | Impact. 4–6 raises Heat +1. Checked vs Temper. |
+| CMP + IMP | One die = FUSE | Execution quality. Lower is cleaner. |
+| | One die = BLAST | Impact. 4-6 raises Heat +1. Checked vs Temper. |
 | Both 1s | - | Smother. Heat −3. |
 
 ### Explosive Actions
@@ -209,7 +209,7 @@ Using gear marked [E] is an Explosive action. Throw stones as normal, then roll 
 
 | Roll | Assign | Effect |
 |------|--------|--------|
-| CMP + TNT | FUSE | Beats until detonation. |
+| CMP + IMP | FUSE | Beats until detonation. |
 | | BLAST | Number of Explosion Dice to roll. |
 | Heat | - | Rises by full BLAST die value (not just +1). |
 | Explosion Dice | - | 4+ = hit. 6 = explode again. All dice become GM Aftermath. |
@@ -273,9 +273,13 @@ A squad may combine their turns to act together for a **standard action**.
 
 If **two or more 6s** appear anywhere across the full pool:
 
-- Heat gauge: +1 plus 1 for each dwarf who rolled stones.
+- Heat gauge: +1 for each participating dwarf.
 
 Stack Up cannot trigger Smother.
+
+## Group Rolls
+
+A Group Roll is called by the GM, not chosen by the squad. It follows Stack Up rules for rolling and assigning, but is treated as a single throw stones for all outcomes and consequences. 
 
 ---
 
@@ -390,7 +394,7 @@ Clean hits and maims can be mitigated by gear, skills and GRIT.
 All gear and skills have 3 marks.
 
 - When gear marks are full it is unavailable for the rest of the mission. 
-- A dwarf with no gear rolls d3 for both CMP and TNT.
+- A dwarf with no gear rolls d3 for both CMP and IMP.
 - A skill with filled marks can still be used until all marks are filled.
 - Filled marks on skills do not clear unless Slag Off downtime action is taken.
 - A skilless dwarf is still capable, they've just lost their edge.
@@ -484,6 +488,31 @@ If a dwarf is **carrying multiple large things:**
 - discard a number of lowest dice equal to how many items carried
 - assign as normal
 
+## Chases
+
+When the squad is pursued the GM places a d6 on the table.
+- The value is how far the pursuers are from the squad.
+- The GM decides based on the narrative.
+- A close pursuer starts the die at 2.
+- A pursuer two rooms back starts it at 4.
+
+Each Beat the chase is active the squad describes how they run and makes a **Group Roll**.
+
+The GM then rolls a d6 for the pursuers against the squad's assigned FUSE and BLAST.
+
+- Pursuer d6 over FUSE: pursuer gains ground, move die down 1
+- Pursuer d6 under FUSE: squad gains ground, move die up 1
+- Pursuer d6 under BLAST: pursuers have line of sight, GM makes one free Aftermath move this Beat
+
+When the die reaches **6** the squad breaks contact and the chase ends.
+When the die reaches **1** the pursuers catch the squad.
+
+The GM may spend Aftermath to move the die down 1 outside the pursuer roll, or to cancel a move to 6 before the squad escapes.
+
+**Smother** during a chase moves the die up 1 and breaks line of sight if it has been established.
+
+---
+
 # Creating a Dwarf Operative
 
 Roll on each table and mark the results on your Opertive Sheet.
@@ -497,6 +526,7 @@ Your dwarf will end up with:
 - Traits and a thing you hold onto.
 - A Runeaxe and Explosives Kit.
 - Three skills.
+- One fear.
 - Four gear slots to fill from stash.
 
 ## Name
@@ -670,6 +700,31 @@ Roll d66 twice. The first result is how you operate. The second is what you carr
 | 63 | A reason you joined ANVIL that no longer applies. |
 | 64 | Something you built before the job. You wonder if it's still there. |
 
+## Fears
+
+When the fiction puts a dwarf face to face with their Fear they have a choice: push through it and accomplish their goal or give into it and let it shape what happens.
+
+When a dwarf **acts on their Fear** and it creates a genuine narrative moment, the GM may award 1 Squad Aftermath.
+
+When a squadmate **actively engages** with that dwarf in that moment, not watching, not waiting but responding to who that dwarf is right now, they may fill 1 Bond mark with them.
+
+The GM decides both, neither is automatic.
+
+| d12 | Fear |
+|-----|------|
+| 1 | Enclosed spaces. The tunnel gets narrow and something in you locks up. |
+| 2 | You cannot leave someone behind. Orders or not. |
+| 3 | Fire. Not explosions. Fire specifically. |
+| 4 | You will not let a civilian die on your watch. |
+| 5 | You don't trust anyone who outranks you. |
+| 6 | Deepbeast. Not fear of fighting them, fear of letting them into your mind. |
+| 7 | Being the last one left, you've been there before. |
+| 8 | Collapsing structures. You don't go in unless you've checked the ceiling. |
+| 9 | You cannot walk away from someone asking for help. |
+| 10 | Losing yourself to chaos. |
+| 11 | A specific faction, their colours, their sigil, something they did. |
+| 12 | The dark. Not tactically or professionally, just deep in your gut. |
+
 ## Skills
 
 Skills represent what a dwarf has trained in and what they're good at. 
@@ -707,7 +762,7 @@ Roll 3 skills from the d66 table, or choose 2.
 | 21 | Smoke Eater | *I thrive when the air is black.* | Once per mission, ignore one Heat rise entirely. |
 | 22 | Controlled Burn | *I contain fire and use it.* | Gain 1 Squad Aftermath die when assigning BLAST 6. |
 | 23 | Fuse Cutter | *I have steady hands and steady blasts.* | Once per mission, treat assigned FUSE as a 2. |
-| 24 | Overpacked | *I bring extra explosives, for fun.* | On Explosive actions, may reroll TNT die, must keep new result. |
+| 24 | Overpacked | *I bring extra explosives, for fun.* | On Explosive actions, may reroll IMP die, must keep new result. |
 | 25 | Demolition Expert | *I know every wall's weak points.* | Explosive actions against structures ignore one [+]. |
 | 26 | Pressure Cook | *I believe chaos is the best ingredient.* | When a Hammer drops, gain 4 Squad Aftermath dice. |
 
@@ -744,7 +799,7 @@ Roll 3 skills from the d66 table, or choose 2.
 | 55 | Steady Mule | *I always keep my legs moving.* | The encumbrance penalty does not apply to this dwarf. |
 | 56 | Requisitioner | *I know how to pull strings at the Overhold.* | Once per downtime, reduce the cost of a stash item by 1 Ember. |
 
-**FLAMETOUCHED** (11-16) *Shatterpoint survival, Hammer interaction, escalation*
+**FLAMETOUCHED** (61-66) *Shatterpoint survival, Hammer interaction, escalation*
 
 | d66 | Name | Creed | Permission |
 |-----|------|-------|------------|
@@ -800,19 +855,6 @@ BONDS
 
 Dwarves will use a multitude of gear throughout their career with ANVIL. They are assigned a Runeaxe and an Explosives Kit when they become operatives.
 
-## Item Tags
-
-All gear has tags associated with it.
-
-| Tag | Meaning |
-|-----|---------|
-| [~] | Consumable: fill a mark each time it is used |
-| [E] | Explosive: if struck by outside force roll d6 then that many Explosive dice |
-| [V] | Volatile: functions as an Explosive die when detonated |
-| [Q] | Quiet: never raises Heat |
-| [B] | Bulk: costs 2 item slots |
-| [F] | Fragile: destroyed when any mark filled |
-
 ## Runeaxe and Explosives Kit
 
 These items aren't just weapons, they're tools and the foundation of any ANVIL operatives loadout. They have a high Ember cost to replace, take care of them.
@@ -825,7 +867,7 @@ These items aren't just weapons, they're tools and the foundation of any ANVIL o
 **Explosives Kit:** 
 
 - The only explosive gear that is not [~].
-- Raises your base TNT die to d6.
+- Raises your base IMP die to d6.
 - Additional and different explosives can be taken from the stash.
 
 Both the Runeaxe and the Explosives Kit can be upgraded and modified with the Forge downtime action.
@@ -937,7 +979,7 @@ Use these benchmarks when setting payouts:
 - **Full completion bonus:** 1 Ember per dwarf.
   - A windfall that rewards clean play without making feeling mandatory.
 
-Adjust by mission weight. A harder or more complex mission warrants a primary payout of 4 and secondaries of 2–3. A shorter or lower stakes mission can sit at 2/1/1. Primary should always be worth more than a secondary.
+Adjust by mission weight. A harder or more complex mission warrants a primary payout of 4 and secondaries of 2-3. A shorter or lower stakes mission can sit at 2/1/1. Primary should always be worth more than a secondary.
 
 
 ### The Keyed Map
@@ -1028,184 +1070,6 @@ When players raise the Heat gauge, the world reacts accordingly.
 Hammers should feel like consequences of the squad's impact, not arbitrary escalation. A mission that reaches Hot because the squad blew three walls should have a Hammer that reflects the faction responding to three blown walls.
 
 Write each Hammer as a concrete event: what happens, what changes, what the squad now has to deal with.
-
----
-
-# Factions & Campaigns
-
-## Factions
-
-Factions are the active forces in the world that ANVIL is working against.
-
-- They have goals, resources, and momentum of their own.
-- They do not wait for the squad to come to them.
-
-Each faction has an **Agenda:**
-- A five step plan they are executing whether ANVIL intervenes or not. 
-- Each step has 2 marks to fill.
-- Each step the squad does not disrupt, the faction moves closer to completing it. 
-- When a faction reaches step 5 and completes their Agenda, a permanent campaign consequence locks in.
-
-The GM defines each faction's Agenda during campaign prep. Factions do not need to be fully detailed upfront, their Agenda steps and Moves can be built session to session as the campaign develops.
-
-### Faction Agendas
-
-Writes a short description of what a faction is doing at each step and how the world looks if that step completes unchecked.
-
-```
-Step 1   Early movement. Quiet, deniable. Easily disrupted.
-Step 2   Establishing. Resources and folks are in place.
-Step 3   Entrenched. Disruption requires a focused mission.
-Step 4   Operational. Bold, exposed, damage already accumulating.
-Step 5   Complete and irreversible. Campaign consequence locked in.
-```
-
-The squad can only directly engage one faction per mission but other factions keep moving while they do.
-
-#### Agenda Advancement
-
-If the squad does not run a mission against a faction during a downtime:
-
-- the GM rolls a d6 after debrief. 
-- On a result beating the threshold advance the faction's Agenda one mark.
-
-The threshold depends on the faction's current step. Higher steps mean more momentum, a faction that has been left alone is harder to slow down.
-
-```
-Step 1 [ ][ ]  Advances on 1-2
-Step 2 [ ][ ]  Advances on 1-3
-Step 3 [ ][ ]  Advances on 1-4
-Step 4 [ ][ ]  Advances on 1-5
-```
-
-Step 5 does not roll. If the squad does not run a mission to stop it, it completes.
-
-#### Disrupting Agendas
-
-Running a mission against a faction can stall their Agenda depending on the outcome.
-
-- **Primary objective completed:** Agenda does not advance, no roll.
-- **Primary failed, secondary completed:** GM rolls, adding +1 to the roll for each secondary completed.
-- **Mission failed entirely:** Agenda advances automatically, no roll.
-- **All objectives completed:** Roll back the Agenda one mark.
-  - If at Step 1 mark 1, faction dismantled.
-
-### Faction Moves
-
-Between sessions each active faction makes one **Move**.
-
-- These are actions that reflect their current Agenda step and what happened last mission
-- The GM chooses the Move that makes the most fictional sense.
-- It is not rolled. It is narrated at the start of the next session or woven into the mission briefing.
-- Moves scale with Agenda step.
-- A faction at step 1 is cautious. A faction at step 4 does not care who notices.
-
-**Move Examples:**
-
-**Step 1-2 Moves**
-- Place an informant or observer near a location the squad frequents
-- Begin quietly acquiring resources, personnel, or territory
-- Make contact with a potential ally faction
-- Establish a new site or forward position
-
-**Step 3 Moves**
-- Fortify a key location the squad will need to enter
-- Begin gathering intelligence specifically on ANVIL's methods
-- Move a high value asset to a more protected position
-- Strike at a peripheral ANVIL resource
-
-**Step 4-5 Moves**
-- Place an elite operative or counter-squad in an upcoming mission
-- Issue a bounty on a specific dwarf by name
-- Strike directly at the Overhold; a burned contact, a compromised safe house, a threat delivered to the Hand
-- Forge an alliance with another faction, combining assets for one mission
-
-A faction at step 4 that successfully targets the Overhold marks **Overhold Strain**.
-
----
-
-## Overhold Strain
-
-The Overhold has three Strain marks. Faction Moves that target ANVIL mark one Strain.
-
-```
-Strain [ ] [ ] [ ]
-```
-
-One Strain:
-
-- The Hand is nervous. 
-- No mechanical effect.
-- Briefings get shorter and the stash thins slightly.
-
-Two Strain:
-
-- One Overhold Action becomes unavailable until Strain clears. 
-- The GM decides which one based on what the faction targeted.
-
-Three Strain
-
-- The Overhold is compromised.
-- Two Overhold Actions are unavailable.
-- Rep advancement is frozen until Strain drops below three.
-
-**Clearing Strain:**
-
-- A successful Pull Strings action clears 1 mark.
-- Extracting from a mission at Cold to Hot clears 1 mark.
-- Only one mark may clear per downtime.
-
----
-
-## Multiple Factions
-
-Two or three active factions means the squad is constantly triaging. Every downtime they pick one faction to run against. The rest keep moving.
-
-Factions at similar Agenda steps may conflict with each other. When two factions are operating in the same location or competing for the same resource, the GM can drop that conflict directly into a mission.
-
-Factions do not coordinate with each other unless their Agendas align and the GM decides an alliance makes fictional sense. A faction Move at step 4-5 can establish that.
-
----
-
-## Running a Campaign
-
-A campaign is the full arc of multiple Faction Agendas from first movement to resolution. There is no fixed mission count. The campaign ends when every active Agenda is either completed or dismantled or when the consequences of completed Agendas make further ANVIL operations untenable.
-
-A tight single faction campaign runs roughly 7-10 missions. Two factions in tension runs 10-15. Three factions is a long campaign and the squad will not stop all of them.
-
-The Hand assigns missions based on what the squad knows and what the Overhold can confirm. 
-
-Between sessions the GM asks:
-
-- What is each faction doing right now?
-- What does the squad know about it?
-- What happens if they ignore it for one more mission?
-
-The answers build the next briefing.
-
----
-
-## Campaign Prep - Building a Faction
-
-When building a faction, define:
-
-- **Name and nature:** Who they are and what they want.
-- **Agenda steps:** What they are doing at each of the five steps.
-- **Completion consequence:** What the world looks like if step 5 finishes.
-- **Starting step:** Most factions begin at step 1 mark 1.
-- **Key Figures:** Any major NPCs of the faction.
-- **Tone:** How to roleplay faction members.
-
-**Example Faction: The Hollow Choir**
-
-```
-Name            The Hollow Choir
-Nature          Deep-cult accelerationists
-Starting step   2-2 (they have been operating for months before ANVIL notices)
-Completion      The Wide Gate, titan deepbeasts awoken.
-Key figure      Sevran - ritual leader, deeptouched, true believer
-Tone            Patient, convinced, increasingly bold
-```
 
 # Downtime & The Overhold
 
@@ -1420,7 +1284,7 @@ Someone outside ANVIL has taken an interest in you specifically, looking to turn
 ##### 51-56 THE CRAFT
 
 **51. Shaky on Explosives**
-A close call with a bad fuse. You'll still do the work. TNT results of 6 on Explosive actions count as 4 instead.
+A close call with a bad fuse. You'll still do the work. IMP results of 6 on Explosive actions count as 4 instead.
 
 **52. Cracked Grip**
 Your dominant hand does not close all the way anymore. The runeaxe is still there but CMP rerolls no longer apply to standard actions.
@@ -1429,7 +1293,7 @@ Your dominant hand does not close all the way anymore. The runeaxe is still ther
 You check everything twice now. Twice now. They have not missed a trap since then. Once per mission automatically detect one hidden threat before it triggers.
 
 **54. Reckless**
-Something broke in you, you've stopped calculating the odds. During White Hot and above Heat levels, you may reroll both CMP and TNT dice and keep the new results.
+Something broke in you, you've stopped calculating the odds. During White Hot and above Heat levels, you may reroll both CMP and IMP dice and keep the new results.
 
 **55. Institutional Memory**
 You've seen enough missions that patterns begin to emerge. Once per mission ask the GM whether a situation resembles something in ANVIL's operational history and get the answer.
@@ -1512,7 +1376,7 @@ A Runeaxe can have it's blade and it's rune upgraded once.
 |-----|------|--------|
 | 1 | Thirsting | Glows red in combat. When you fill a mark on this axe, gain 2 squad Aftermath dice. |
 | 2 | Static | Hair stands on end. Enemies targeted by this axe cannot use Skills to take the hit. |
-| 3 | Echo | The impact sounds like a mountain cracking. TNT die can be rerolled for Standard Actions. |
+| 3 | Echo | The impact sounds like a mountain cracking. IMP die can be rerolled for Standard Actions. |
 | 4 | Boulder | Hits with enhanced weight. Once per mission, treat a FUSE 5+ as a 3. |
 | 5 | Sunder | Designed for armour. Enemy Temper of 5 or higher is reduced by 1. |
 | 6 | Keen | The axe wants to hew. Add +1 to BLAST die. |
@@ -1670,91 +1534,917 @@ The squad's reputation arrives before they do.
 - Every faction is running counter intel, placing bounties and briefing their best people.
 - Some enemies will break and run, others will bring everything they have.
 
-## Overhold Gear Stash
+## Overhold Gear Stash & Loot
 
-### Weapons and Tools
+### Item Tags
 
+All gear has tags associated with it.
+
+| Tag | Meaning |
+|-----|---------|
+| [~] | Consumable: fill a mark each time it is used |
+| [E] | Explosive: if struck by outside force roll d6 then that many Explosive dice |
+| [V] | Volatile: functions as 1 Explosion die if destroyed |
+| [Q] | Quiet: BLAST does not raise Heat |
+| [B] | Bulk: takes up 2 item slots |
+| [F] | Fragile: consumed/destroyed when any mark filled |
+
+### Stash Gear
+ 
+Weapons, armour, and explosives.
+ 
+#### Weapons & Tools
+ 
 | Item | Tags | Effect | Slots | Ember cost |
 |------|------|--------|-------|------------|
-| Runeaxe | - | ANVIL issued. Raises CMP to d6. Already in kit. | - | 3 |
-| Throwing knife | [~] [Q] | Ranged. Never raises Heat. | 1 | - |
-| Crowbar | - | Treat doors and locks as Temper -1 when breaching. | 1 | - |
+| Runeaxe | - | ANVIL issued. Raises CMP to d6. Can only acquire if destroyed. | - | 4 |
+| Throwing knife | [~] [Q] | Ranged. | 1 | - |
+| Pry bar | - | Treat sealed doors as Temper -2. Can be used as a weapon: d4 IMP die. | 1 | - |
 | Grapple and line | [B] | Enables vertical movement. | 2 | 1 |
-| Blast Shield | [B] | While held, T+1[++]. | 2 | 1 |
-| Runed crossbow | [~] | Ranged TNT die. | 1 | 2 |
-
-### Armour and Protection
-
+| Blast shield | [B] | While held, T+1[++]. | 2 | 1 |
+| Field kit | [~] | Clear 1 mark form a piece of gear | 1 | 1 |
+| Stimulant flask | Treat CMP as d4 for one roll. Cannot stack. | [~] | 1 | 1 |
+| Runed crossbow | [~] | Ranged. | 1 | 2 |
+| Medical stout | Roll a d6, on a 4+ restore 1 GRIT | [~] | 1 | 3 |
+ 
+#### Armour & Protection
+ 
 | Item | Tags | Effect | Slots | Ember cost |
 |------|------|--------|-------|------------|
 | Leather jack | - | Standard absorption layer. | 1 | - |
 | Reinforced leather | - | Temper +1 against standard attacks. | 1 | 1 |
-| Blast coat | [B] | Explosive damage that would destroy it maims instead once per mission. | 2 | 2 |
-| Depth plate | [B] | Temper +2. Environmental damage does not destroy it on a clean hit, maim only. | 2 | 3 |
-| Silencer wrap | [F] | BLAST raises Heat on 5+ instead of 4+. | 1 | 1 |
-
+| Dampening wrap | [F] | BLAST raises Heat on 5+ instead of 4+. | 1 | 1 |
+| Blast coat | [B] | Explosive damage clean hits become maims. | 2 | 2 |
+| Depth plate | [B] | Temper +2. Environmental clean hits become maims. | 2 | 3 |
+ 
 ### Explosives
-
+ 
 | Item | Tags | Effect | Slots | Ember cost |
 |------|------|--------|-------|------------|
-| Explosives Kit | [V] | ANVIL issued. Raises TNT to d6. Infinite small charges. Already in kit. | - | 4 |
-| Satchel charge | [~] [E] [V] | Each mark filled adds +1 Explosive die to the pool. | 1 | 1 |
-| Shaped charge | [~] [E] | Directed blast: ignore [+] of target Temper. Must be placed with FUSE 3 or lower or explodes. | 1 | 2 |
-| Flashpot | [~] [V] [Q] | Only affects living targets. d4 TNT die. | 1 | 1 |
-| Depth charge | [E] [V] [B] | Single use. +3 Explosive dice. Each hit counts as 2 vs structures. | 2 | 3 |
-| Burnpack | [~] [E] [V] | Incendiary. Each explosion die that hits also sets the target or room feature on fire. Fire deals 1 Maim to target and adds 1 Aftermath die per Beat until extinguished. | 1 | 2 |
-| Sapper Charges | [~] [E] [B] | d8 TNT die. | 1 | 2 |
-| Cluster Keg | [~] [E] [B] | d12 TNT die. | 2 | 3 |
+| Explosives Kit | [E] | ANVIL issued. Raises IMP to d6. Infinite small charges. Can only acquire if destroyed. | - | 4 |
+| Powder train | [~] [E] [V] | A length of slow fuse connected to any other explosive. After placing, add +2 to FUSE roll for Explosive action. Can be cut. | 1 | 1 |
+| Satchel charge | [~] [E] | Each mark filled adds +1 Explosive die to the pool. | 1 | 1 |
+| Flashpot | [~] [E] [Q] | Only affects living targets. d4 IMP die. | 1 | 1 |
+| Breach pellets | [~] [E] [Q] | Destroys locks, hinges, etc. Only affects one target point. | 1 | 1 |
+| Smoke Canister | [~] [V] [Q] | When triggered fills the room with smoke. ([DARK] for BLAST beats.) | 1 | 1 |
+| Burnpack | [~] [E] | Incendiary. Each Explosion die that hits sets the target or room feature on fire. Fire deals 1 maim per Beat and adds 1 Aftermath die to the GM pool per Beat until extinguished. | 1 | 2 |
+| Deadman charge | [~] [E] [F] | Attached to a door, body, or object. Detonates when triggered. Visible if searched, GM must warn the squad once before an enemy triggers it. | 1 | 2 |
+| Thermite pot | [~] [E] [Q] | Slow burn. Deals each Explosion hit one per Beat. | 1 | 2 |
+| Concussion keg | [~] [E] [B] | Deals no damage. All hit targets are stunned: Players mark a skill. For 1 Beat GM must discard 1 Aftermath die to make a move. | 2 | 2 |
+| Ricochet charge | [~] [E] | In a room with [FORT], Explosion dice explode on 4+. | 1 | 2 |
+| Sapper charges | [~] [E] [B] | d8 IMP die. | 1 | 2 |
+| Shaped charge | [~] [E] | Directed blast: ignore one [+] of target Temper. Must be placed with FUSE 3 or lower or explodes immediately. | 1 | 2 |
+| Depth charge | [~] [E] [B] [F] | +3 Explosive dice. Each hit counts as 2 vs structures. | 2 | 3 |
+| Cluster keg | [~] [E] [B] | d12 IMP die. | 2 | 3 |
+ 
+---
+ 
+## Stash Items
+ 
+Things the squad can requisition with a purpose in mind. Get creative.
+ 
+| Item | Tags | Slots | Ember cost |
+|------|------|-------|------------|
+| Rope | - | 1 | - |
+| Spool of black thread | [F] | 1 | - |
+| Coil of wire | [Q] | 1 | - |
+| Length of iron chain | - | 1 | - |
+| Torch | [~] | 1 | - |
+| Signal flare | [~] | 1 | - |
+| Tinderbox and tallow | [~] | 1 | - |
+| Lamp oil flask | [~] [V] [E] | 1 | - |
+| Chain and lock | - | 1 | - |
+| Shackles | - | 1 | - |
+| Chalk | [Q] | 1 | - |
+| Dwarf-size sack | - | 1 | - |
+| Lead weights | [B] | 1 | - |
+| Wax seal kit | - | 1 | - |
+| Folded uniform | - | 1 | - |
+| Fishing net | - | 1 | - |
+| Sack of sand | - | 1 | - |
+| Iron pot | - | 1 | - |
+| Notebook | - | 1 | - |
+| Mirror kit | [Q] | 1 | 1 |
+| Snare trap | [~] | 1 | 1 |
+| Forged work order | [F] | 1 | 1 |
+| Pulley and cord | [B] | 2 | 1 |
+ 
+---
+ 
+## Looted Items
+ 
+Found in the world. Build loot tables keyed to location and faction, what's in a guard barracks looks different from what's in a deepcult shrine.
+ 
+| Item | Tags |
+|------|------|
+| Jar of rendered fat | - |
+| Vial of pig blood | [F] |
+| Dead rat | - |
+| Taxidermied cat | - |
+| Butcher's apron | - |
+| Crowfeather cloak | - |
+| Bottle of expensive wine | [F] |
+| Pocketwatch | - |
+| Small handbell | - |
+| Bucket | - |
+| Sack of flour | [~] |
+| Tin of boot black | [~] |
+| Bundle of dried herbs | [~] |
+| Wooden crutch | - |
+| Dwarf-height crate, flatpacked | - |
+| Whetstone | - |
+ 
+---
+ 
+## Oddities
+ 
+Oddities are unusual objects found during missions or available at GM discretion. They are not standard issue and are never guaranteed. The entries below are guidance for GM rulings, not rules. Use them as a template to build your own.
+ 
+| Item | Tags | GM Notes |
+|------|------|----------|
+| Whispering skull | - | A deepbeast skull with something still in it. Answers yes or no questions but doesn't always tell the truth. |
+| Debt marker | [F] | A stamped copper disc from a faction. Call it in once, that faction stands down for one mission, the relationship is gone after. |
+| Blind eye | [Q] | A preserved eye from below. The bearer can't be targeted by what they can't see, they also can't see in the dark. |
+| Sympathy wax | [~] [F] | Two identical candles. Light one and the other lights wherever it is. |
+| Corrosive vial | [~] [F] [V] | Eats through one surface over 1 Beat. Can't be stopped. |
+| Gag stone | [~] [Q] [F] | Absorbs all sound from one source for 3 Beats then crumbles after. |
+| The ledger | - | Left by someone. Full of names, debts, and secrets. |
+| Deepbeast tooth | - | Size of a dagger. Means something to creatures from below. |
+| Folded map | [F] | Shows somewhere not on any ANVIL brief. |
+| Hollow operative | - | A preserved forearm with an ANVIL tattoo. Planted at a scene, factions will pursue a dead operative's trail instead. |
+| Grief salt | [~] | Deepbeasts won't cross a threshold it's poured across. Enough for one threshold per mark. |
+| Still-beating heart | [~] | Something's heart, still going. Mark to delay GRIT damage by 1 Beat. |
+| Deeptouched stone | [F] | Allows telepathic communication with deepbeasts. |
+| Rune-etched chain | [~] | Binds a target that can't escape by mundane means. |
+| Dampening tarp | [~] [F] [Q] | Wrap an object or surface - it makes no sound for one turn. |
+| Cipher plate | [~] [F] | Unlocks one lock. |
+| Deepbeast ichor | [~] [F] | Applied to a surface: repels deepbeasts for d4 Beats. Applied to a wound: mark 1 skill and clear 1 GRIT |
 
-### Consumables
 
-| Item | Tags | Effect | Slots | Ember cost |
-|------|------|--------|-------|------------|
-| Field kit | [~] | Clear 1 mark from a damaged gear or skill. | 1 | 1 |
-| Stimulant flask | [~] | Treat CMP as d4 for one roll. Cannot stack. | 1 | 1 |
-| Smoke canister | [~] [Q] | Fill a room with smoke. Enemies in smoke cannot target players. Players in smoke treat FUSE results of 1 and 2 as 3. | 1 | 1 |
-| Rope | - | Utility. Tie, lower, bind. | 1 | - |
-| Torch | [~] | 3 Beats of light per mark. Removes [DARK] condition in a room while held. | 1 | - |
-| Lamp oil flask | [~] [V] [E] | Improvised explosive. 1 Explosive die when thrown. | 1 | - |
-| Medical stout | [~] | Roll a d6, on a 5+ restore 1 GRIT | 1 | 3 |
+---
 
-### Oddities
+# Factions & Campaigns
 
-Oddities are unusual, limited, and not always available. The GM decides what is in the stash before each Prep phase. These are not standard issue.
+## Factions
 
-| Item | Tags | Effect | Slots | Ember cost |
-|------|------|--------|-------|------------|
-| Deeptouched stone | [F] | Vibrates near creatures from below. | 1 | 2 |
-| Rune-etched chain | - | Single use. Binds a target that cannot escape by mundane means. Works on deepbeasts. | 1 | 3 |
-| Silence tarp | [Q] | Wrap an object or surface. For one turn it makes no sound, kicks, explosions, movement included. Single use. | 1 | 2 |
-| Borrowed uniform | [F] | Convincing disguise for one specific faction. Treat CMP rolls vs Posture as -2. | 1 | 2 |
-| Overhold cipher plate | - | Unlocks one ANVIL infrastructure point: a sealed door, a dormant rune lock, a cached weapons cache. Useless against non ANVIL architecture. | 1 | 2 |
-| Deepbeast ichor vial | [~] [F] | Applied to a surface: repels deepbeasts for d4 beats. Applied to a wound: one hit that would mark skills or GRIT is ignored this turn. Numbness is not exactly protection. | 1 | 3 |
+Factions are the active forces in the world that ANVIL is working against.
+
+- They have goals, resources, and momentum of their own.
+- They do not wait for the squad to come to them.
+
+Each faction has an **Agenda:**
+- A five step plan they are executing whether ANVIL intervenes or not. 
+- Each step has 2 marks to fill.
+- Each step the squad does not disrupt, the faction moves closer to completing it. 
+- When a faction reaches step 5 and completes their Agenda, a permanent campaign consequence locks in.
+
+The GM defines each faction's Agenda during campaign prep. Factions do not need to be fully detailed upfront, their Agenda steps and Moves can be built session to session as the campaign develops.
+
+### Faction Agendas
+
+Writes a short description of what a faction is doing at each step and how the world looks if that step completes unchecked.
+
+```
+Step 1   Early movement. Quiet, deniable. Easily disrupted.
+Step 2   Establishing. Resources and folks are in place.
+Step 3   Entrenched. Disruption requires a focused mission.
+Step 4   Operational. Bold, exposed, damage already accumulating.
+Step 5   Complete and irreversible. Campaign consequence locked in.
+```
+
+The squad can only directly engage one faction per mission but other factions keep moving while they do.
+
+#### Agenda Advancement
+
+If the squad does not run a mission against a faction during a downtime:
+
+- the GM rolls a d6 after debrief. 
+- On a result beating the threshold advance the faction's Agenda one mark.
+
+The threshold depends on the faction's current step. Higher steps mean more momentum, a faction that has been left alone is harder to slow down.
+
+```
+Step 1 [ ][ ]  Advances on 1-2
+Step 2 [ ][ ]  Advances on 1-3
+Step 3 [ ][ ]  Advances on 1-4
+Step 4 [ ][ ]  Advances on 1-5
+```
+
+Step 5 does not roll. If the squad does not run a mission to stop it, it completes.
+
+#### Disrupting Agendas
+
+Running a mission against a faction can stall their Agenda depending on the outcome.
+
+- **Primary objective completed:** Agenda does not advance, no roll.
+- **Primary failed, secondary completed:** GM rolls, adding +1 to the roll for each secondary completed.
+- **Mission failed entirely:** Agenda advances automatically, no roll.
+- **All objectives completed:** Roll back the Agenda one mark.
+  - If at Step 1 mark 1, faction dismantled.
+
+### Faction Moves
+
+Between sessions each active faction makes one **Move**.
+
+- These are actions that reflect their current Agenda step and what happened last mission
+- The GM chooses the Move that makes the most fictional sense.
+- It is not rolled. It is narrated at the start of the next session or woven into the mission briefing.
+- Moves scale with Agenda step.
+- A faction at step 1 is cautious. A faction at step 4 does not care who notices.
+
+**Move Examples:**
+
+**Step 1-2 Moves**
+- Place an informant or observer near a location the squad frequents
+- Begin quietly acquiring resources, personnel, or territory
+- Make contact with a potential ally faction
+- Establish a new site or forward position
+
+**Step 3 Moves**
+- Fortify a key location the squad will need to enter
+- Begin gathering intelligence specifically on ANVIL's methods
+- Move a high value asset to a more protected position
+- Strike at a peripheral ANVIL resource
+
+**Step 4-5 Moves**
+- Place an elite operative or counter-squad in an upcoming mission
+- Issue a bounty on a specific dwarf by name
+- Strike directly at the Overhold; a burned contact, a compromised safe house, a threat delivered to the Hand
+- Forge an alliance with another faction, combining assets for one mission
+
+A faction at step 4 that successfully targets the Overhold marks **Overhold Strain**.
+
+---
+
+## Overhold Strain
+
+The Overhold has three Strain marks. Faction Moves that target ANVIL mark one Strain.
+
+```
+Strain [ ] [ ] [ ]
+```
+
+One Strain:
+
+- The Hand is nervous. 
+- No mechanical effect.
+- Briefings get shorter and the stash thins slightly.
+
+Two Strain:
+
+- One Overhold Action becomes unavailable until Strain clears. 
+- The GM decides which one based on what the faction targeted.
+
+Three Strain
+
+- The Overhold is compromised.
+- Two Overhold Actions are unavailable.
+- Rep advancement is frozen until Strain drops below three.
+
+**Clearing Strain:**
+
+- A successful Pull Strings action clears 1 mark.
+- Extracting from a mission at Cold to Hot clears 1 mark.
+- Only one mark may clear per downtime.
+
+---
+
+## Multiple Factions
+
+Two or three active factions means the squad is constantly triaging. Every downtime they pick one faction to run against. The rest keep moving.
+
+Factions at similar Agenda steps may conflict with each other. When two factions are operating in the same location or competing for the same resource, the GM can drop that conflict directly into a mission.
+
+Factions do not coordinate with each other unless their Agendas align and the GM decides an alliance makes fictional sense. A faction Move at step 4-5 can establish that.
+
+---
+
+## Running a Campaign
+
+A campaign is the full arc of multiple Faction Agendas from first movement to resolution. There is no fixed mission count. The campaign ends when every active Agenda is either completed or dismantled or when the consequences of completed Agendas make further ANVIL operations untenable.
+
+A tight single faction campaign runs roughly 7-10 missions. Two factions in tension runs 10-15. Three factions is a long campaign and the squad will not stop all of them.
+
+The Hand assigns missions based on what the squad knows and what the Overhold can confirm. 
+
+Between sessions the GM asks:
+
+- What is each faction doing right now?
+- What does the squad know about it?
+- What happens if they ignore it for one more mission?
+
+The answers build the next briefing.
+
+---
+
+## Campaign Prep - Building a Faction
+
+When building a faction, define:
+
+- **Name and nature:** Who they are and what they want.
+- **Agenda steps:** What they are doing at each of the five steps.
+- **Completion consequence:** What the world looks like if step 5 finishes.
+- **Starting step:** Most factions begin at step 1 mark 1.
+- **Key Figures:** Any major NPCs of the faction.
+- **Tone:** How to roleplay faction members.
+
+**Example Faction: The Hollow Choir**
+
+```
+Name            The Hollow Choir
+Nature          Deep-cult accelerationists
+Starting step   2-2 (they have been operating for months before ANVIL notices)
+Completion      The Wide Gate, titan deepbeasts awoken.
+Key figure      Sevran - ritual leader, deeptouched, true believer
+Tone            Patient, convinced, increasingly bold
+```
 
 ---
 
 # GM Toolkit
 
-## Advice
+## Procedures & Tips
 
-wip
+### Procedures
+
+#### Before the Campaign
+- Create 2-3 active factions.
+- Give each faction:
+  - a 5-step Agenda
+  - a tone
+  - a key figure
+  - a completion consequence
+- Decide the current state of Glimmerhold.
+- Determine what ANVIL is currently worried about.
+- Create or expand the Overhold stash.
+
+#### Before Each Mission
+- Create the mission sheet.
+- Draw the keyed map.
+- Assign:
+  - entrances
+  - objectives
+  - faction presence
+  - environment tags
+  - Hammer events
+- Decide:
+  - what the faction wants right now
+  - what happens if the squad fails
+  - what changes at Hot, White Hot, and Shatterpoint
+- Prepare:
+  - enemy Temper values
+  - patrol routes
+  - hazards
+  - extraction complications
+
+#### During Briefing
+- Explain:
+  - the primary objective
+  - known threats
+  - known entrances
+  - Ember payout
+- Reveal Scout intel earned during downtime.
+- Answer squad planning questions honestly, roleplay the Hand earnestly.
+- Give partial information, not complete certainty.
+
+#### At Mission Start
+- Set:
+  - Heat to 0
+  - Beats to 0
+  - GM Aftermath equal to number of players
+- Describe:
+  - insertion
+  - atmosphere
+  - immediate surroundings
+- Ask:
+  - "What do you do?"
+
+#### During Play
+- Let players act freely.
+- Do not rotate initiative.
+- Only call for throw stones when:
+  - outcome is uncertain
+  - consequences matter
+  - pressure exists
+- Keep the fiction moving forward constantly.
+
+#### Running Aftermath
+- Spend Aftermath only when:
+  - something directly threatens players
+  - enemies attack
+  - traps activate
+  - hazards escalate
+- Minimum spend is 2 dice.
+- Assign FUSE and BLAST exactly like players do.
+- Use free moves often:
+  - patrols shifting
+  - doors locking
+  - sounds echoing
+  - smoke spreading
+  - lights failing
+
+#### Running Heat
+- Track Heat openly.
+- Raise Heat immediately when triggered.
+- Announce Heat stage transitions clearly.
+- Hammers are consequences of player actions.
+- Hammers should:
+  - change space
+  - change behavior
+  - complicate objectives
+  - force adaptation
+- Never use Hammers as random punishment.
+
+#### Running Combat
+- Combat is not a mode switch.
+- Keep asking:
+  - "What are you doing?"
+- Enemies should:
+  - flank
+  - reposition
+  - ignite explosives
+  - lock routes
+  - call reinforcements
+  - use the environment
+- Avoid stationary slugfests.
+
+#### Running Downtime
+- Slow the pace down.
+- Let dwarves breathe.
+- Ask questions:
+  - "What rumors are spreading?"
+  - "Who drinks alone?"
+  - "What does the funeral look like?"
+  - "Who avoids eye contact after the mission?"
+- Let politics and relationships matter.
+
+#### Between Missions
+- Advance faction Agendas.
+- Make faction Moves.
+- Update:
+  - Overhold Strain
+  - Reputation
+  - stash access
+  - rumors
+- Ask:
+  - "What changed because of the last mission?"
+
+### Advice & Tips
+
+#### Keep Things Moving
+
+ANVIL works best when the world never feels static.
+
+Doors close.
+Patrols move.
+Smoke spreads.
+Fires grow.
+People react.
+
+Even silence should feel active. "Everything has become still."
+
+#### Treat Missions Like Collapses
+
+The mission should slowly lose stability as Heat rises.
+
+Cold missions feel:
+- tense
+- surgical
+- uncertain
+
+White Hot missions feel:
+- desperate
+- loud
+- improvised
+
+Shatterpoint feels like:
+- survival
+- escape
+- disaster containment
+
+The mission should transform over time.
+
+#### Use Free Moves Constantly
+
+Free moves bring the world to life.
+
+Use them to:
+- foreshadow danger
+- reveal consequences
+- build pressure
+- reposition enemies
+
+Do not wait for players to fail rolls before changing the environment.
+
+#### Hammers Must Change The Situation
+
+A Hammer should never just mean:
+- "more guards appear"
+
+Instead:
+- exits seal
+- floodgates open
+- a target relocates
+- the foundry activates
+- prisoners riot
+- rival factions arrive
+- deepbeasts awaken
+
+A Hammer should force adaptation.
+
+#### Let Players Be Competent
+
+ANVIL operatives are elite.
+
+Do not make players roll for things like:
+- basic climbing
+- obvious observations
+- simple movement
+
+Roll when:
+- timing matters
+- consequences matter
+- pressure exists
+
+#### Ask Operational Questions
+
+Good ANVIL GMing sounds like:
+
+- "How are you doing that?"
+- "What are you doing while this happens?"
+- "Who is watching the rear?"
+- "What is your extraction plan now?"
+- "What does your attack look like?"
+
+#### Pressure Is Better Than Punishment
+
+The game works best when consequences escalate naturally.
+
+Players should feel:
+- cornered
+- rushed
+- exposed
+- overwhelmed
+
+without feeling arbitrarily punished.
+
+The world reacts because of what they're doing.
+
+#### Make The Overhold Matter
+
+The Overhold is not just a menu screen.
+
+It should feel:
+- heavy
+- political
+- tired
+- haunted
+
+Operatives should:
+- mourn people
+- argue about tactics
+- drink together
+- avoid each other
+- gossip
+- prepare
+- crack under strain
+
+Downtime is emotional decompression.
+
+#### Factions Should Remember Things
+
+A faction should evolve based on:
+- who survived
+- what exploded
+- what was stolen
+- what Heat level extraction hit
+- which operatives were seen
+
+The world should accumulate operational history.
+
+#### Play To The Dwarves
+
+ANVIL is not heroic fantasy.
+
+It is:
+- industrial
+- militant
+- dirty
+- loud
+- ritualistic
+
+The squad are not adventurers.
+
+They are professional operational wrecking crews sent into impossible places.
+
+Treat them like veterans.
 
 ## Enemy & Threat Templates
 
-wip
+wip of some blueprints for common enemy tiers
 
 ## Mission Generation Tools
 
-wip
+wip - either wallet dungeons or some tables
 
-## Starter Mission
+---
 
-wip
+# Rules for the Grid
 
-## World Lore
+*Everything below applies only when playing with miniatures and terrain. If you're playing theatre of the mind, ignore this section.*
 
-wip
+## Movement
+
+All dwarves move **5 squares** per turn.
+
+When moving carefully be it stealth, cautious advance, threading a patrol; reduce movement by your assigned **FUSE result**.
+
+> FUSE 3 while sneaking: move 2 squares.
+
+Encumbrance applies as normal on top of this.
+
+## Adjacency
+
+Any rule referencing adjacency; Stack Up, Rune Bracing, Bond redirects, means **within 1 square** in any direction.
+
+## Range
+
+Actions with a range component use **base range minus FUSE**.
+
+Low FUSE means faster, tighter execution. High FUSE means the action took longer, covered less ground, or landed short.
+
+
+## Blast Radius
+
+Explosions radiate outward from the point of detonation.
+
+| Size | Radius |
+|------|--------|
+| Small | 2 squares |
+| Medium | 3 squares |
+| Large | 4 squares |
+| Special | 5-6 squares |
+
+**Structures stop blast radius.** A structure that takes Explosion Dice hits stops the blast, it doesn't hit things on the other side.
+
+## Cover
+
+A target behind a wall, pillar, barricade or solid terrain feature gains:
+
+- **Temper +1**
+- **One additional [+]**
+
+> A dwarf at T3 in cover becomes T4[++]. A dwarf at T3[++] in cover becomes T4[+++].
+
+Line of sight is blocked by terrain, not by miniatures.
+
+## Enemy Movement
+
+Enemies move at one of three speeds.
+
+| Speed | Squares |
+|-------|---------|
+| Slow | 3 |
+| Normal | 5 |
+| Fast | 7 |
+
+Enemy speed is listed on their stat block. If not listed, use Normal.
+
+## The Hammer on the Table
+
+Hammers should do something physical. When a Hammer drops, change the table.
+
+- **Add terrain:** barricades go up, a gate drops, rubble falls
+- **Remove terrain:** a wall comes down, a bridge collapses, an exit is sealed
+- **Change terrain:** a room floods, fire spreads across tiles, lights go out
+- **Remove a room:** collapse it entirely, block every exit
+
+Explosions can trigger the same. A BLAST 6 in an [UNSTABLE] room can bring down the whole space.
+
+## Chase on the Grid
+
+The chase d6 still runs as written, the die face represents distance. Move the pursuing miniature closer or further on the table to match, rooms and corridors give the chase real geography.
+
+# Examples of Play
+
+## Example 1 - Mission Play
+
+GM:
+> The maintenance tunnel opens into a cramped storage chamber. Torchlight flickers through iron shelving. One guard in chainmail sits half asleep at a table on the far side. Beyond him, black scorch marks streak a reinforced stone wall.
+
+> Heat is 3. GM Aftermath is 4.
+
+GM:
+> What are you doing?
+
+Petra Stonewarden:
+> I want to slip in and kill the guard before he can react.
+
+GM:
+> You can certainly try, how do you do it?
+
+Petra:
+> I'll crouch down and sneak in along the wall, hiding behind the shelving and then take his head off with my axe.
+
+GM:
+> Brutal, clean, efficient, throw stones.
+
+Petra rolls:
+- CMP d6 = 2
+- IMP d6 = 5
+
+Petra Stonewarden:
+> I'll slam the 2 as FUSE and 5 as BLAST.
+
+GM:
+> Low FUSE, clean execution. BLAST 5 raises Heat by 1.
+
+> The guard is T3.
+
+> That's a clean hit.
+
+GM:
+> Petra crosses the room before the guard fully looks up. The runeaxe catches him under the jaw and drives him sideways into the table hard enough to split his head from his body.
+
+> Heat is at 4. Cold.
+
+Brek Ironmark:
+> Damn.
+
+GM:
+> As the body hits the floor, dust shakes loose from the ceiling above. Somewhere deeper in the foundry you hear boots moving.
+
+Dunvik Forgeback:
+> They're gonna hear us eventually anyway.
+
+> I want to breach the wall.
+
+GM:
+> With explosives?
+
+Dunvik Forgeback:
+> Obviously. I'm going to lay a TNT charge at the base of the wall next to this guard's table.
+
+GM:
+> You kick the guard's head to the corner and place a bundle of TNT at the base of the wall, throw stones.
+
+Dunvik rolls:
+- CMP d6 = 6
+- IMP d6 = 4
+
+Dunvik Forgeback:
+> Oh yeah! I'll use 4 as FUSE and 6 as BLAST.
+
+GM:
+> The charge detonates in 4 Beats.
+
+> Heat rises by 6 immediately to 10.
+
+GM:
+> The situation is getting warm.
+
+Dunvik rolls 6 Explosion Dice:
+- 2, 4, 4, 5, 6, 6
+
+GM:
+> Four hits. Both 6s explode again.
+
+Dunvik rolls:
+- 3, 5
+
+GM:
+> One more hit for a total of five.
+
+> The wall is T[+++]. You all take cover behind the shelves as the fuse burns down. Sssss, kaBOOOOOM! The dust clears and where there was once a wall lies a giant hole. It's obliterated.
+
+> I also gain 6 Aftermath dice.
+
+Brek Ironmark:
+> Oh no.
+
+GM:
+> The your newly created doorway is a furnace chamber glowing orange with molten runoff.
+
+> Alarm bells immediately begin ringing through the foundry.
+
+> And somewhere much deeper below you hear something roar back.
+
+## Example 2 - Downtime Play 
+
+GM:
+> You extracted White Hot after collapsing half the excavation site beneath Carrow's Mine.
+
+> Primary objective succeeded. One secondary failed.
+
+> Reputation increases by 1 mark.
+
+> The Hollow Choir does not advance their Agenda.
+
+GM:
+> Recovery phase.
+
+> Brek, you marked 2 GRIT during the mission. Roll 3d6 for Scars.
+
+Brek Ironmark rolls:
+- 2, 4, 5
+
+GM:
+> You gain a Scar.
+
+> Roll d66.
+
+Brek Ironmark rolls:
+- 32
+
+GM:
+> Hypervigilance.
+
+Brek Ironmark:
+> Yeah that makes sense.
+
+GM:
+> What caused it?
+
+Brek Ironmark:
+> After the collapse. When I was trapped under the rubble listening to those cultists walking around above me.
+
+GM:
+> Perfect. Write it down.
+
+Petra Stonewarden:
+> I'm taking Slag Off.
+
+GM:
+> What does that look like?
+
+Petra Stonewarden:
+> Drinking in the lower forge halls. Not really talking. Just sitting there sharpening my runeaxe.
+
+GM:
+> Clear the marks on Shadow Axe.
+
+> While you're down there, you overhear a rumor.
+
+> Someone in Glimmerhold is asking questions about the foundry explosion.
+
+Dunvik Forgeback:
+> Good luck narrowing that down.
+
+GM:
+> Dunvik?
+
+Dunvik Forgeback:
+> Forge action.
+
+> I want to upgrade my Explosives Kit.
+
+GM:
+> Roll on The Mix table.
+
+Dunvik Forgeback rolls:
+- 5
+
+GM:
+> Acrid Smoke.
+
+> Your explosions now turn rooms [DARK] for 3 Beats.
+
+Dunvik Forgeback:
+> Sick.
+
+Brek Ironmark:
+> I'm taking Bond with Petra.
+
+GM:
+> What are you doing together?
+
+Brek Ironmark:
+> Honestly? Probably just sitting there in silence after the mission.
+
+Petra Stonewarden:
+> Yeah. Sharpening our axes, drinking.
+
+GM:
+> Mark your Bond advancement.
+
+> The forge halls are quiet except for steel grinding against stone and the sound of distant hammers somewhere deeper in the Overhold.
+
+> Anything else anyone wants to do before you head to the briefing?
+
+---
+
+# Starter Mission
+
+wip - the hollow chant mission here... alternate mission INSIDE a giant titan beast
+
+# World Lore
+
+wip - writeup about orrelia and how the queens era gets to the gobfather/council era in loot goblins. anvil turns on queen, assassinates her, council takes over, gobfather fills the vaccuum.
 
 ---
 
 > Inspo: metal gear solid, x-com, hitman, deep rock galactic, splinter cell, wildsea, daggerheart, cairn
+
+# Printables
+
+wip - need to design: character sheet, campaign sheet (factions/overhold), mission sheet
