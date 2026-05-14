@@ -26,9 +26,13 @@ ANVIL is about managing your impact, execution and the GM-and the world's abilit
 - [Gear \& Stash](#gear--stash)
 - [Running Missions](#running-missions)
 - [Downtime \& The Overhold](#downtime--the-overhold)
-- - [Factions \& Campaigns](#factions--campaigns)
+- [Factions \& Campaigns](#factions--campaigns)
 - [GM Toolkit](#gm-toolkit)
-
+- [Rules for the Grid](#rules-for-the-grid)
+- [Examples of Play](#examples-of-play)
+- [Starter Mission](#starter-mission)
+- [World Lore](#world-lore)
+- [Printables](#printables)
 
 # The Core Loop - How to Play
 
@@ -38,18 +42,18 @@ ANVIL is about managing your impact, execution and the GM-and the world's abilit
 
 ## PHASE 1 - PREP (Before the Session)
 
-**At the Overhold.** Each dwarf takes up to 2 Overhold Actions. Actions cost Embers from the squad's shared bank. No dwarf may take the same action twice in one downtime.
+**At the Overhold.** Each dwarf takes up to 2 Overhold Actions. Actions cost Embers from the squad's shared vault. No dwarf may take the same action twice in one downtime.
 
 ```
-Slag Off     1 Ember   Decompress. Prevent or redirect a Scar.
-Train        2 Ember   Level one skill.
+Slag Off     1 Ember   Decompress. Clear skill marks.
+Fortify      2 Ember   Level one skill.
 Forge        3 Ember   Upgrade Runeaxe or Explosives Kit.
 Scout        1-3 Ember Reveal pieces of mission intel.
 Pull Strings 3 Ember   Shift faction relations or Rep by 1 mark.
 Interrogate  1 Ember   Extract intel from a prisoner or artifact.
 Reinforce    2 Ember   Add a single-use mission asset.
-Bond         1 Ember   Advance a Bond with one squadmate.
-Memorialize  -         Honor the dead. Grants +1 Rep.
+Bond         1 Ember   Advance squad Bond.
+Memorialize  -         Honor the dead. Adjust Rep by 1.
 ```
 
 **Mission briefing.** The Hand assigns the mission, players receive Briefing Intel: rough layout, primary and secondary objectives, Ember payouts, known faction presence, and drop points. Scout intel fills in additional keyed rooms if the action was taken.
@@ -83,7 +87,7 @@ Memorialize  -         Honor the dead. Grants +1 Rep.
 - 4-6: loud, disruptive; raises Heat by 1
 - Checked against Temper to hit. Marked against NPC Trust on 4-6.
 
-**Explosive actions (gear marked [E]):** FUSE is detonation time. BLAST is how many Explosion dice to roll. Heat rises by the full value of the BLAST die, not just 1.
+**Explosive actions (gear marked [E]):** FUSE is detonation time in individual turns. BLAST is how many Explosion dice to roll. Heat rises by the full value of the BLAST die, not just 1.
 
 **Smother:** Both assigned dice show 1 on a standard action - reduce Heat by 3.
 
@@ -113,7 +117,7 @@ BLAST < Temper   Botch. No effect.
 
 Hits land on gear first or skills, then GRIT. Players may choose what absorbs. The fiction should support it.
 
-When a dwarf has no gear or skills left, d4 for both CMP and IMP.
+When a dwarf has no gear or skills left, d3 for both CMP and IMP.
 
 GRIT is last. 3 GRIT per dwarf. Maim marks 1. Clean hit to GRIT marks all 3 and the dwarf is going down. They take one last action before they go.
 
@@ -175,10 +179,10 @@ Rolling for the results of an action is called **throwing stones**. When you thr
 
 As a rule: **FUSE is about how. BLAST is about what.**
 
-Assign FUSE to the die that should reflect your control, speed, and precision. Assign BLAST to the die that reflects your impact, noise, and force. A dwarf can want low FUSE and low BLAST-silent and precise, or low FUSE and high BLAST-fast and destructive. High FUSE is almost never what you want: it means the action was slow, messy, or complicated.
+Assign FUSE to the die that should reflect your control, speed, and precision. Assign BLAST to the die that reflects your impact, noise, and force. A dwarf can want low FUSE and low BLAST-silent and precise, or low FUSE and high BLAST-fast and destructive. High FUSE is **almost** never what you want: it means the action was slow, messy, or complicated.
 
 ```
-You want to...                      Assigned die logic...
+You want to...                     Assigned die logic...
 ──────────────────────────────────────────────────────────────
 Move quietly                       FUSE (lower = you get further)
 Hit hard through armour            BLAST (higher = more force)
@@ -209,7 +213,7 @@ Using gear marked [E] is an Explosive action. Throw stones as normal, then roll 
 
 | Roll | Assign | Effect |
 |------|--------|--------|
-| CMP + IMP | FUSE | Beats until detonation. |
+| CMP + IMP | FUSE | Turns until detonation. |
 | | BLAST | Number of Explosion Dice to roll. |
 | Heat | - | Rises by full BLAST die value (not just +1). |
 | Explosion Dice | - | 4+ = hit. 6 = explode again. All dice become GM Aftermath. |
@@ -236,21 +240,21 @@ Missions at Shatterpoint cannot have their Heat reduced.
 
 ## Temper
 
-There is no health or armour in ANVIL, only Temper. This represents an object or a folk's ability to resist impact.
+There is no health or armour in ANVIL, only Temper. This represents something's ability to resist impact.
 
 ### Reading Temper
 
 - **The value:** BLAST threshold. BLAST must equal or beat this to affect the target. 
   - No value means it cannot be handled by **standard actions**.
 - **The brackets:** Explosive threshold. The number of [+] symbols is how many Explosion Dice hits destroy it. 
-  - No brackets means one successful hit destroys it.
+  - **No brackets** always means **one successful hit** destroys it.
   - An **Explosive hit** is treated as a **clean hit.**
 
 When a BLAST die is applied against a Temper **value**:
 
 - **BLAST above Temper:** Clean hit. Fills all marks on target.
 - **BLAST equals Temper:** Maim. Fill 1 mark on target.
-- **BLAST below Temper:** Botch. Miss, glance, no effect.
+- **BLAST below Temper:** Botched. Glancing hit or no effect.
 
 **Examples:**
 
@@ -267,7 +271,7 @@ If a dwarf performs a **standard action** and assigns **two 1s**, reduce the Hea
 
 A squad may combine their turns to act together for a **standard action**. 
 
-- Each player *rolls stones*. 
+- Each player *throws stones*. 
 - All results are pooled.
 - Assign FUSE and BLAST as normal.
 
@@ -281,6 +285,8 @@ Stack Up cannot trigger Smother.
 
 A Group Roll is called by the GM, not chosen by the squad. It follows Stack Up rules for rolling and assigning, but is treated as a single throw stones for all outcomes and consequences. 
 
+Smother may trigger on a Group Roll.
+
 ---
 
 # Aftermath & Beats
@@ -289,7 +295,13 @@ A Group Roll is called by the GM, not chosen by the squad. It follows Stack Up r
 
 Aftermath dice are a **pool of d6** used by the GM to react and let the world put pressure on the players. 
 
+A GM may **spend** or **discard** Aftermath dice for various moves.
+- **Spending** Aftermath dice means taking then from the pool and throwing stones.
+- **Discarding** Aftermath dice means removing them from the pool.
+
 The GM must spend a **minimum of 2 aftermath dice** to throw stones. Spent **dice are removed**. If a pool has fewer than 2 dice, a GM cannot throw stones.
+
+There is no minimum on discarding Aftermath dice.
 
 All Aftermath dice (including Squad) are reset between missions.
 
@@ -298,12 +310,12 @@ All Aftermath dice (including Squad) are reset between missions.
 - **Mission start:** Gain Aftermath dice equal to number of players.
 - **Every 3 Beats:** Gain 2 Aftermath dice.
 - **Any assigned 6s:** Gain 1 Aftermath if a **throw stones** contains 6s.
-- **Explosion Dice:** Gain Aftermath dice equal to any Explosion Dice.
+- **Explosion Dice:** Gain Aftermath dice equal to any Explosion Dice rolled.
 
 ### Spending Aftermath
 
 Aftermath dice are used to: 
-- throw stones for enemies
+- attack or threaten the squad with NPCs
 - trigger traps
 - cause environmental effects
 - anything that actively pushes back against the squad
@@ -316,7 +328,7 @@ Free moves are effectively foreshadowing the world around the squad.
 
 - Free moves never directly threaten or act against players. 
 - They are passive actions happening within the mission.
-- Something costs Aftermath when it its actively acting against the squad.
+- Something costs Aftermath when it is actively acting against the squad.
 
 > **Free Move Examples**
 > 
@@ -331,7 +343,7 @@ Free moves are effectively foreshadowing the world around the squad.
 
 Some skills and situations may grant Squad Aftermath dice. These are kept separate from the GM's pool.
 
-Any dwarf may take 1 Squad Aftermath die before rolling to add it to their **throw stones** dice pool. Assign FUSE and BLAST as normal, discard the unused die.
+Any dwarf may take 1 Squad Aftermath die before rolling to add it to their **throw stones** dice pool. Assign FUSE and BLAST as normal, discard the unused die from the pool.
 
 ## Time and Beats
 
@@ -340,7 +352,6 @@ Time within the world is not specifically tracked in ANVIL. The Heat gauge and A
 A GM needs only pay attention to player turns:
 
 - Moving and taking an action is a player turn.
-- 
 - Mark 1 Beat after all players have had a turn.
 - Gain 2 Aftermath dice every 3 Beats.
 
@@ -356,11 +367,11 @@ When something attacks they describe their action and throw stones. Low FUSE is 
 
 ## Simultaneous Attacks
 
-If two entities wish to attack at the same time, the lower FUSE hits first.
+If two entities wish to attack at the same time, the lower FUSE hits first. If tied the higher BLAST hits first. If still tied, roll a d6: 1-3 the enemy goes first, 4-6 the player goes first.
 
 ## Temper in Combat
 
-Every dwarf has a base Temper of T3. Skills and items can modify this.
+Every dwarf has a base Temper of T3. Skills and gear can modify this.
 
 ### Enemy Temper
 
@@ -378,16 +389,17 @@ Clean hits and maims can be mitigated by gear, skills and GRIT.
 
 - The fiction must support the mitigation.
 - Players should describe why the gear or skill is taking the hit.
-- When no gear or skills can be marked, the damage fills GRIT.
+- When no gear or skills can be marked, the damage marks GRIT.
 - Enemy gear and skills absorb hits just like players.
 - Enemy gear has 3 marks unless noted otherwise.
+- All enemies have 3 GRIT unless noted otherwise.
 
 > **Reminder:**
 > 
 > - **BLAST above Temper:** Clean hit. Fills all marks on target.
 > - **BLAST equals Temper:** Maim. Fill 1 mark on target.
 > - **BLAST below Temper:** Botch. Miss, glance, no effect.
-> - An **Explosive hit** is treated as a **clean hit.**
+> - An **Explosion die hit** is treated as a **clean hit.**
 
 #### Gear & Skills
 
@@ -395,8 +407,8 @@ All gear and skills have 3 marks.
 
 - When gear marks are full it is unavailable for the rest of the mission. 
 - A dwarf with no gear rolls d3 for both CMP and IMP.
-- A skill with filled marks can still be used until all marks are filled.
-- Filled marks on skills do not clear unless Slag Off downtime action is taken.
+- A skill can still be used until all three marks are filled.
+- Filled marks on skills do not clear unless the Slag Off downtime action is taken.
 - A skilless dwarf is still capable, they've just lost their edge.
 
 Enemies and traps can target skills or gear directly. Disorienting gas does not damage armour, a veteran interrogator attacks your mind, not your gear. A smart guard may attempt to ignite your satchel charges.
@@ -413,40 +425,50 @@ GRIT is a dwarf's final resolve.
 
 When a dwarf marks their final GRIT they are going down. 
 
-- They may take one last action. 
+- They may immediately take one last action. 
 - It must be plausible given their position and condition. 
-- They may choose to reroll their roll stones.
+- They may choose to reroll their throw stones once.
 
 Then they are gone.
 
-# Alternatives To Combat - Social Interaction
+# Social Interaction
 
-## Posture & Trust
+## Posture & Tension
 
-Every NPC has a Posture on a scale of 1 to 6, if unsure of a specific NPCs posture, roll a d6.
+Every NPC has a Posture on a scale of 1 to 6, by default they sit at 3. If a GM wants variance, roll a d6.
 
-| Posture | State |
-|------|-------|
-| 6 | Hostile: will attack or raise alarm immediately |
-| 5 | Suspicious: not buying it, make one wrong move |
-| 4 | Wary: cautious, watching |
-| 3 | Neutral: not their problem yet |
-| 2 | Friendly: willing to help or look the other way |
-| 1 | Allied: may actively cover for the squad |
+| State | Level | Posture |
+|:---:|------|-------|
+|   | 6 | Hostile: will attack or raise alarm immediately |
+|   | 5 | Suspicious: one wrong move triggers violence or panic |
+|   | 4 | Wary: cautious, alert, unstable |
+| X | 3 | Neutral: uncertain, controllable |
+|   | 2 | Friendly: cooperative under pressure |
+|   | 1 | Trusting: compliant and helpful |
 
-` Trust: [ ]-[ ]-[ ]`
+` Tension: [ ]-[ ]-[ ] `
 
-Every NPC also has 3 Trust marks. When all Trust marks are filled it is destroyed and the NPC turns Hostile.
+Every NPC also has a Tension gauge that fills if the squad isn't keeping their cool.
+
+If the Tension gauge fills, the NPC breaks:
+- 1–2 (Trusting/Friendly): complies or submits under pressure
+- 3–4 (Neutral/Wary): flees or disengages
+- 5–6 (Suspicious/Hostile): attacks or raises alarm
 
 ## Social Rolls
 
-When a dwarf interacts with an NPC throw stones.
+Whether negotiation, deception or intimidation, if a dwarf's intention is to manipulate an NPC **throw stones**.
 
-- FUSE under Posture: Posture down 1. 
+- FUSE lower than Posture level: Shift 1 towards Trusting. 
 - FUSE equal Posture: No change.
-- BLAST 4-6: mark Trust.
-- NPC Posture and Trust does not reset between missions.
-- Squads can reset Posture and Trust through using disguises or Overhold Actions.
+- FUSE higher than Posture: Shift 1 towards Hostile.
+- BLAST 4-6: Mark a Tension.
+- If White Hot or Shatterpoint, BLAST 2-6 marks a Tension.
+- A GM can discard 1 Aftermath Die to mark a Tension.
+- NPC Posture does not reset between missions.
+- Squads can reset Posture through using disguises or Overhold Actions.
+
+> Much like Heat and Hammers, Break is not failure state, it is resolution and heightened pressure on the players. Low Posture enemies can become tools, high Posture enemies can become liabilities.
 
 ---
 
@@ -478,7 +500,7 @@ When carrying something the size of a dwarf or larger:
 
 When **two dwarves carry** the penalty applies to both. 
 
-- both roll stones with an extra d6
+- both throw stones with an extra d6
 - both discard the lowest die
 - then pool the dice together and assign
 
@@ -515,7 +537,7 @@ The GM may spend Aftermath to move the die down 1 outside the pursuer roll, or t
 
 # Creating a Dwarf Operative
 
-Roll on each table and mark the results on your Opertive Sheet.
+Roll on each table and mark the results on your Operative Sheet, then add 2 Ember to the Overhold's Ember vault.
 
 Ultimately a player may choose the result themselves but generally more interesting characters will come from letting the dice decide your dwarf.
 
@@ -523,11 +545,11 @@ Your dwarf will end up with:
 
 - A given and surname.
 - A physique.
-- Traits and a thing you hold onto.
+- A trait and a fear.
 - A Runeaxe and Explosives Kit.
 - Three skills.
-- One fear.
 - Four gear slots to fill from stash.
+- 2 Ember in the Ember Vault.
 
 ## Name
 
@@ -618,7 +640,7 @@ Roll d6 once on each table.
 
 ## Traits
 
-Roll d66 twice. The first result is how you operate. The second is what you carry.
+Roll d66 for your dwarf's main trait.
 
 **How you operate**
 
@@ -661,52 +683,13 @@ Roll d66 twice. The first result is how you operate. The second is what you carr
 | 65 | You're extremely light hearted and joke about everything. |
 | 66 | You have no comedic bone in your body, you're very serious. |
 
-**What you carry**
-
-| d66 | Detail |
-|-----|--------|
-| 11 | A stone from the crag where you were born. |
-| 12 | Someone else's Op number, scratched into your kit. |
-| 13 | A letter you have not sent. |
-| 14 | A flask you keep topped up and won't share. |
-| 15 | Three custom coins. |
-| 16 | A small tool that belonged to a lost friend. |
-| 21 | A bad habit. |
-| 22 | A scar from your job before ANVIL. |
-| 23 | A contact in Glimmerhold. |
-| 24 | An old injury that aches when rain is on it's way. |
-| 25 | A promise to someone you had to leave behind. |
-| 26 | Something you took from your first mission. |
-| 31 | A reputation in a specific part of Glimmerhold you'd prefer stayed secret. |
-| 32 | A skill that has nothing to do with this job. |
-| 33 | The name of someone in a hostile faction who you worked with. |
-| 34 | A ritual you perform before every mission. |
-| 35 | Debt, a large amount. |
-| 36 | A commendation you never filed. |
-| 41 | A piece of deepbeast you held onto that no one knows about. |
-| 42 | An alias that still has a reputation attached to it. |
-| 43 | A specific longstanding hatred of something. |
-| 44 | Knowledge of something the Overhold does not know about. |
-| 45 | A standing arrangement with someone outside ANVIL. |
-| 46 | A mission you were not supposed to survive. |
-| 51 | Something you stole from the Overhold. Small but meaningful. |
-| 52 | A map of somewhere you wish to go. |
-| 53 | Loyalty to someone not a part of ANVIL. |
-| 54 | A vice you barely manage. |
-| 55 | Unanswered questions about the craters, you think ANVIL knows. |
-| 56 | A wound that didn't fully heal. |
-| 61 | The last thing someone said to you before you left home. |
-| 62 | A regret about your family. |
-| 63 | A reason you joined ANVIL that no longer applies. |
-| 64 | Something you built before the job. You wonder if it's still there. |
-
 ## Fears
 
 When the fiction puts a dwarf face to face with their Fear they have a choice: push through it and accomplish their goal or give into it and let it shape what happens.
 
 When a dwarf **acts on their Fear** and it creates a genuine narrative moment, the GM may award 1 Squad Aftermath.
 
-When a squadmate **actively engages** with that dwarf in that moment, not watching, not waiting but responding to who that dwarf is right now, they may fill 1 Bond mark with them.
+When a squadmate **actively engages** with that dwarf in that moment, not watching, not waiting but responding to who that dwarf is right now, they may fill 1 Bond mark.
 
 The GM decides both, neither is automatic.
 
@@ -733,14 +716,15 @@ Each skill has:
 
 - a name
 - a creed
-- one mechanical permission
+- a mechanical permission
+- three fortification slots
 - three marks
 
 > **Skill Advancement**
 > 
 > During downtime, a dwarf may spend Embers to level skills. 
 > 
-> For full details, view the Overhold Actions.
+> For full details, view the Fortify Overhold Action.
 
 Roll 3 skills from the d66 table, or choose 2.
 
@@ -748,67 +732,67 @@ Roll 3 skills from the d66 table, or choose 2.
 
 | d66 | Name | Creed | Permission |
 |-----|------|-------|------------|
-| 11 | Skulk | *I disappear between heartbeats.* | May reroll 1 CMP die while obscured, hiding or out of sight. |
-| 12 | Ashcloak | *I leave no trace, make no sound.* | Smother triggers on 1-1 or 1 and 2. |
-| 13 | Shadow Axe | *I know every blind spot before entering a room.* | Once per mission, a BLAST of 4+ does not raise any Heat. |
-| 14 | Dead Quiet | *I lock in exactly when it counts.* | Once per mission, treat your FUSE result as a 1. |
-| 15 | Ghost Pact | *I am unseen, unheard, undeniable.* | Once per mission, the GM must spend 2 additional aftermath dice to act against this dwarf. |
-| 16 | Cold Read | *I have internalized the mission brief.* | Once per mission, gain 1 piece of intel about the mission from the GM. |
+| 11 | Skulk | *"I disappear between heartbeats."* | May reroll 1 CMP die while obscured, hiding or out of sight. |
+| 12 | Ashcloak | *"I leave no trace, make no sound."* | Smother triggers on 1-1 or 1-2. |
+| 13 | Shadow Axe | *"I know every blind spot before entering a room."* | Once per mission, a BLAST of 4+ does not raise any Heat. |
+| 14 | Dead Quiet | *"I lock in exactly when it counts."* | Once per mission, reduce assigned FUSE by 3. |
+| 15 | Ghost Pact | *"I am unseen, unheard, undeniable."* | First Aftermath action targeting you each Beat the GM must discard 1 Aftermath to throw stones. |
+| 16 | Cold Read | *"I have internalized the mission brief."* | Once per mission, gain 1 piece of intel about the mission from the GM. |
 
 **BREACHERS** (21-26) *explosives, heat weaponization, destruction*
 
 | d66 | Name | Creed | Permission |
 |-----|------|-------|------------|
-| 21 | Smoke Eater | *I thrive when the air is black.* | Once per mission, ignore one Heat rise entirely. |
-| 22 | Controlled Burn | *I contain fire and use it.* | Gain 1 Squad Aftermath die when assigning BLAST 6. |
-| 23 | Fuse Cutter | *I have steady hands and steady blasts.* | Once per mission, treat assigned FUSE as a 2. |
-| 24 | Overpacked | *I bring extra explosives, for fun.* | On Explosive actions, may reroll IMP die, must keep new result. |
-| 25 | Demolition Expert | *I know every wall's weak points.* | Explosive actions against structures ignore one [+]. |
-| 26 | Pressure Cook | *I believe chaos is the best ingredient.* | When a Hammer drops, gain 4 Squad Aftermath dice. |
+| 21 | Smoke Eater | *"I thrive when the air is black."* | Once per mission, ignore one Heat rise entirely. |
+| 22 | Controlled Burn | *"I contain fire and use it."* | Assigning explosive BLAST 6 gives 1 Squad Aftermath. |
+| 23 | Fuse Cutter | *"I have steady hands and steady blasts."* | Once per mission, treat assigned FUSE as 2 or 3. |
+| 24 | Overpacked | *"I bring extra explosives, for fun."* | On Explosive actions, may reroll IMP die, must keep new result. |
+| 25 | Demolition Expert | *"I know every wall's weak points."* | Explosive actions against structures ignore one [+]. |
+| 26 | Pressure Cook | *"I believe chaos is the best ingredient."* | When a Hammer drops, gain Squad Aftermath equal to current Heat tier. |
 
 **ANCHORS** (31-36) *Temper, survival, absorption*
 
 | d66 | Name | Creed | Permission |
 |-----|------|-------|------------|
-| 31 | Ironbuilt | *I am built like the mountain.* | Gain 1 additional GRIT. |
-| 32 | Stoneback | *I am immovable when stuck in.* | When this dwarf takes no movement on their turn, Temper increases by 2. |
-| 33 | Blastcoat | *I am prepared for the worst.* | This dwarf's gear is maimed once per mission on a clean hit. |
-| 34 | Rune Bracing | *I am always ready for impact.* | Once per mission, redirect a hit targeting an adjacent dwarf to this dwarf instead. |
-| 35 | Last Wall | *I am first in, last out.* | When on final GRIT, Temper increases by 2. |
-| 36 | Deep Plate | *I am built for the collapse.* | Temper 5 against environmental damage: cave-ins, floods, fire, etc. |
+| 31 | Ironbuilt | *"I am built like the mountain."* | Gain 1 additional GRIT. |
+| 32 | Stoneback | *"I am immovable when stuck in."* | If this dwarf did not move this turn, Temper +2. |
+| 33 | Blastcoat | *"I am prepared for the worst."* | Once per mission, when gear would be destroyed by a clean hit, maim it instead. |
+| 34 | Rune Bracing | *"I am always ready for impact."* | Once per mission, redirect a hit targeting an adjacent dwarf to this dwarf instead. |
+| 35 | Last Wall | *"I am first in, last out."* | When on final GRIT, Temper increases by 2. |
+| 36 | Deep Plate | *"I am built for the collapse."* | Temper 5 against environmental damage: cave-ins, flood, fire, pressure, environmental collapse. |
 
 **HANDLERS** (41-46) *aftermath, social, intel*
 
 | d66 | Name | Creed | Permission |
 |-----|------|-------|------------|
-| 41 | Counterintel | *I know how the enemy thinks.* | Once per mission, remove 3 dice from the GM's Aftermath pool. |
-| 42 | Tunnel Sense | *I hear things coming.* | Once per mission, after the GM declares an Aftermath move, the squad may act before it resolves. |
-| 43 | Loud and Proud | *My confidence is contagious.* | Only marks down an NPC's Trust on a BLAST of 6. |
-| 44 | Interrogator | *I get what I need one way or another.* | May intentionally mark Trust to extract one piece of intel from an NPC. |
-| 45 | Iron Nerves | *I never flinch, I never react.* | Ignore the first Aftermath action targeting this dwarf each mission. |
-| 46 | Black Lung Humor | *I laugh through the pain.* | Once per mission, move NPC Posture down 1 after a failed interaction. |
+| 41 | Counterintel | *"I know how the enemy thinks."* | Once per mission, remove 3 dice from the GM's Aftermath pool. |
+| 42 | Tunnel Sense | *"I hear things coming."* | Once per mission, after the GM declares an Aftermath move, may act before it resolves. |
+| 43 | Loud and Proud | *"My confidence is contagious."* | BLAST 4-5 never marks an NPC's Trust. |
+| 44 | Interrogator | *"I get what I need one way or another."* | May intentionally mark Trust to extract one piece of intel from an NPC. |
+| 45 | Iron Nerves | *"I never flinch, I never react."* | Ignore the first Aftermath action targeting this dwarf each mission. |
+| 46 | Black Lung Humor | *"I laugh through the pain."* | Once per mission after a failed interaction, either reduce Posture by 1 OR clear 1 Trust mark. |
 
 **FORGELORDS** (51-56) *gear, prep, logistics*
 
 | d66 | Name | Creed | Permission |
 |-----|------|-------|------------|
-| 51 | Pack Rat | *I carry more than anyone thinks possible.* | Gain 2 additional item slots. |
-| 52 | Salvager | *I keep my gear intact.* | After extraction, recover any one destroyed item from the mission. |
-| 53 | Quickpatch | *I fix things fast, instead of not at all.* | Clear 1 mark from any damaged gear once per mission. |
-| 54 | Sacrificial Rigging | *I know what's worth burning.* | Destroy a piece of gear to reduce Heat by 3. |
-| 55 | Steady Mule | *I always keep my legs moving.* | The encumbrance penalty does not apply to this dwarf. |
-| 56 | Requisitioner | *I know how to pull strings at the Overhold.* | Once per downtime, reduce the cost of a stash item by 1 Ember. |
+| 51 | Pack Rat | *"I carry more than anyone thinks possible."* | One [B] item only takes 1 slot. |
+| 52 | Salvager | *"I keep my gear intact."* | After extraction, recover any one destroyed item from the mission. |
+| 53 | Quickpatch | *"I fix things fast, instead of not at all."* | Clear 1 mark from any damaged gear once per mission. |
+| 54 | Sacrificial Rigging | *"I know what's worth burning."* | Destroy a piece of gear to reduce Heat by 2. |
+| 55 | Steady Mule | *"I always keep my legs moving."* | The encumbrance penalty does not apply to this dwarf. |
+| 56 | Requisitioner | *"I know how to pull strings at the Overhold."* | Once per downtime, reduce the cost of a stash item by 1 Ember. |
 
 **FLAMETOUCHED** (61-66) *Shatterpoint survival, Hammer interaction, escalation*
 
 | d66 | Name | Creed | Permission |
 |-----|------|-------|------------|
-| 61 | Anvilborn | *I was forged in the worst of it.* | Immediately after a Hammer drops, your CMP die becomes d4 until the mission ends. |
-| 62 | Temper Gauge | *I feel the mission tipping before it does.* | Once per mission, GM must reveal the next Hammer effect before it triggers. |
-| 63 | Coal Walker | *I operate best when everything's on fire.* | While Heat is White Hot or higher, FUSE results of 5-6 count as 4. |
-| 64 | Cragrunner | *I was built to find exits.* | During Shatterpoint, this dwarf knows a guaranteed escape route if not incapacitated. |
-| 65 | Furnace Crew | *I can buy the squad one more breath.* | The first Hammer drop each mission is delayed by 3 Heat. |
-| 66 | White Irons | *I have been here before and walked out.* | Once per mission, treat a clean hit to GRIT as a maim instead. |
+| 61 | Anvilborn | *"I was forged in the worst of it."* | Immediately after a Hammer drops, your CMP die becomes d4 until the mission ends. |
+| 62 | Temper Gauge | *"I feel the mission tipping before it does."* | Once per mission, GM must reveal the next Hammer effect before it triggers. |
+| 63 | Coal Walker | *"I operate best when everything's on fire."* | While Heat is White Hot or higher, FUSE results of 5-6 count as 4. |
+| 64 | Cragrunner | *"I was built to find exits."* | During Shatterpoint, this dwarf knows a guaranteed escape route if not incapacitated. |
+| 65 | Furnace Crew | *"I can buy the squad one more breath."* | The first Hammer drop each mission is delayed by 2 Heat. |
+| 66 | White Irons | *"I have been here before and walked out."* | Once per mission, treat a clean hit to GRIT as a maim instead. |
 
 ---
 
@@ -816,38 +800,33 @@ Roll 3 skills from the d66 table, or choose 2.
 
 Dwarves build Bonds through surviving missions together and spending time together at Overhold. 
 
-- Track separately for each squad mate on your Op Sheet. 
+- Tracked separately for each dwarf on their Op Sheet. 
 - Each Bond level requires 2 marks to advance. 
-- At campaign start, write down your squad and start each Bond with 1 mark filled.
-- When a new dwarf joins the squad, they start at Bond 0.
-- Bond levels are tracked identically on both dwarves' sheets. 
-- If one sheet says level 3 and the other says level 2, apply lower level until both are updated.
+- When joining the squad, all dwarves fill 1 Bond mark.
 
 ### Advancing Bonds
 
-- **BOND downtime action.** If the Bond does not exist yet, this establishes it at the first mark of level 1.
-- **Surviving a mission at White Hot or Shatterpoint.** Fill one mark on all active Bonds.
+- **Bond downtime action.** Fills 1 Bond mark.
+- **Surviving a mission at White Hot or Shatterpoint.** All dwarves fill 1 Bond mark.
+- Engaging with a squadmates **Fear** fills 1 Bond mark.
 
-### Bond Tracking - remove from rules once added to op sheet
+### Bond Tracking
 
 ```
-BONDS
-[name] oo | oo | oo | oo | oo
-[name] oo | oo | oo | oo | oo
-[name] oo | oo | oo | oo | oo
-[name] oo | oo | oo | oo | oo
-[name] oo | oo | oo | oo | oo
+SQUAD BOND
+1: [ ][ ] 2: [ ][ ] 3: [ ][ ] 4: [ ][ ] 5: [ ][ ]
+Kinship: ____________ (Reroll CMP or IMP once per mission when interacting with this dwarf.)
 ```
 
 ### Bond Levels
 
 | Bond | Effect |
 |------|--------|
-| 1 | Bonded. Your relationship exists. May Stack Up together. |
-| 2 | Only 1 Encumbrance penalty when working together. |
-| 3 | Aftermath generated by Stack Up actions is reduced by 1, to a minimum of 1. |
-| 4 | Once per mission, when a bonded dwarf is targeted by a hit, you may become the target instead. |
-| 5 | Stack Up actions between this pair may trigger Smother. |
+| 1 | Bonded. May Stack Up with squad. |
+| 2 | Ignore Encumbrance in Stack Up. |
+| 3 | You do not generate Aftermath from double 6s in Stack Up. |
+| 4 | Once per mission, you may redirect a maim from a squadmate to yourself. |
+| 5 | During Stack Up, your assigned dice may trigger Smother. |
 
 ---
 
@@ -1083,7 +1062,7 @@ Downtime is not rest. It is recovery, politics, preparation, and grief. It is yo
 
 Embers are ANVIL's downtime currency.
 
-After completing missions all Embers go into the squad's shared bank. Squads can bank Embers between missions.
+After completing missions all Embers go into the squad's shared vault. Squads can bank Embers between missions.
 
 A dwarf may burn Embers to take downtime actions or acquire gear from the stash. These Embers are gone permanently.
 
@@ -1131,7 +1110,7 @@ A dwarf down to their last GRIT and made it out needs a moment. A squad that los
 Each dwarf may take up to 2 actions during downtime. 
 
 - No dwarf may take the same action twice.
-- Actions require Embers burned from the squad's bank.
+- Actions require Embers burned from the squad's vault.
 - The base cost applies at Rep tier 3.
 - Rep modifies all costs:
   - tier 1 adds +2
@@ -1144,7 +1123,7 @@ Each dwarf may take up to 2 actions during downtime.
 | Action | Base cost |
 |--------|-----------|
 | Slag Off | 1 |
-| Train | 2 |
+| Fortify | 2 |
 | Forge | 3 |
 | Scout | 1-3 |
 | Pull Strings | 3 |
@@ -1206,16 +1185,16 @@ One less finger than before, no mechanical effect. You occasionally notice folks
 Significant burns across part of the body. Once per mission when taking a clean hit from fire or explosive damage, treat it as Maimed. You've looked into the flames and you're not afraid anymore.
 
 **13. Chronic Pain**
-Something healed wrong, it flares unpredictably. Once per mission the first time you roll 1 on CMP it becomes a 5. The dwarf knows it's coming and they push through.
+Something healed wrong, it flares unpredictably. Once per mission, the GM may add +2 to one of your standard action FUSE results. The dwarf knows it's coming and they push through.
 
 **14. Missing Eye**
-Depth perception is gone, range and fine detail are harder to judge. FUSE results of 1 on ranged or precise standard actions are treated as 2. The dwarf has learned to compensate in other ways.
+Depth perception is gone, range and fine detail are harder to judge. Precise or ranged actions can never benefit from Squad Aftermath. The dwarf has learned to compensate in other ways.
 
 **15. Limp**
 Movement is different now, but you get around all the same. No mechanical effect unless a Hammer or environmental condition specifically affects movement.
 
 **16. Tremor**
-One hand shakes under certain conditions. After a CMP roll of 5+, your next CMP roll treats a 4+ as one lower as you focus to work through it.
+One hand shakes under certain conditions. After assigning a FUSE of 5+, your next CMP roll is stepped down to d4 as you focus to work through it.
 
 
 ##### 21-26 THE SENSES
@@ -1245,16 +1224,16 @@ You cannot smell anything. Gas traps, chemical agents, and fire do not register 
 Something from a mission follows you into sleep, it does not affect the job. Between missions the GM may ask you what you dreamt about.
 
 **32. Hypervigilance**
-The dwarf does not fully switch off, ever. You cannot be ambushed. The GM must spend 1 additional Aftermath die to act against you when you haven't moved for the turn.
+The dwarf does not fully switch off, ever. You cannot be ambushed. The GM's first move against you if you haven't moved this Beat rolls 3 Aftermath dice.
 
-**33. Emotionaless**
-Something went quiet inside after the last mission. Social interactions feel different to those around you. High BLAST in social encounters never marks NPC Trust.
+**33. Emotionless**
+Something went quiet inside after the last mission. Social interactions feel different to those around you. Your BLAST never marks Trust.
 
 **34. Intrusive Memory**
 A specific moment replays without warning and you have learned to use it. Once per mission when facing a situation similar to the memory, gain 1 CMP reroll.
 
 **35. Claustrophobia**
-Tight spaces trigger a physical response but you try to manage it. In very confined spaces roll a d8 for your CMP die.
+Tight spaces trigger a physical response but you try to manage it. In confined spaces, your CMP becomes d8 as you lose your composure.
 
 **36. Survivor Guilt**
 (Reroll this if the squad all survived.) Someone did not make it back and you did. Once per mission when an ally is attacked, you may act immediately outside of normal turn order to reach them.
@@ -1308,7 +1287,7 @@ You've developed a specific way of doing things after something went wrong. Defi
 Not during, after. When the mission ends and extraction is complete your hands do not stop moving for days. No mechanical effect, other dwarves recognize it.
 
 **62. Ritual**
-You've developed a specific pre-mission ritual after a rough mission. If the ritual is completed before embarking, gain 1 Squad Aftermath dice at mission start. If interrupted or skipped, step CMP die up to d8 for the mission.
+You've developed a specific pre-mission ritual after a rough mission. If the ritual is completed before embarking, gain 1 Squad Aftermath dice at mission start. If interrupted or skipped, step CMP die up to d8 for the mission as you don't feel as calm as you would after your ritual.
 
 **63. Callused**
 You've stopped reacting to things that used to register. Intimidation, horror, and morale effects do not apply to you. NPCs notice the fevor in your eyes.
@@ -1332,26 +1311,80 @@ Dwarven decompression. The dwarf spends time in the Overhold's lower halls, drin
 - Clear all marks on a skill.
 - May generate a rumor. Ask the GM one question during briefing.
 
-### TRAIN (2 Ember)
-*Evolve a skill.*
-The dwarf levels one skill of their choice using the advancement rules.
+### FORTIFY (2 Ember)
+*Fortify a skill.*
 
-To level a skill, choose one upgrade type and rewrite the skill line to reflect what the dwarf has learned.
+The dwarf fortifies one skill of their choice using the advancement rules. Fortifications should evolve the skill's doctrine, not replace its identity.
 
---wip: replace one word or add one word to the creed, then modify the mechanic based on the upgrade type. the word should reflect the upgrade but doesn't need to be the upgrade word.
+When fortifying a skill:
 
-- Each upgrade type may only be taken once per skill.
-- The player rewrites the line, the GM approves.
-- Mark one Training box for that skill.
+- Choose a Fortification.
+- Alter its Creed slightly to reflect what the dwarf has learned.
+  - Usually this means adding or replacing a single word or phrase.
+- Discuss with the GM how the skill changes mechanically.
+- Mark the skill with the symbol of the Fortification taken.
 
-> - **Extend** applies to the whole squad, not just you.
-> - **Deepen** triggers in one additional situation or context.
-> - **Sharpen** the mechanical effect becomes more decisive.
-> - **Linger** the effect lasts longer or carries into the next phase.
-> - **Bend** add one exception to a core rule, once per mission.
-> - **Survive** the skill gains one extra mark.
+A skill may only be fortified 3 times and cannot take the same Fortification more than once.
 
-A skill can be leveled three times.
+> - **Extend (-)**: Applies to additional dwarves, not just you.
+> - **Deepen (#)**: Triggers in one additional situation or context.
+> - **Sharpen (X)**: Becomes more reliable, efficient or decisive.
+> - **Linger (..)**: Persists into the next Beat or related action.
+> - **Bend (~)**: Adds one exception to a core rule, once per mission.
+> - **Survive (^)**: A fourth skill mark can be added by circumstance.
+
+> #### SIDEBAR - Fortify Examples
+> **SKULK, BASE**  
+> *"I disappear between heartbeats."*  
+> May reroll 1 CMP die while obscured, hiding or out of sight.  
+> **SKULK, DEEPEN**  
+> *"I disappear between panicked heartbeats."*  
+> May reroll 1 CMP die while obscured, hiding, out of sight or during a Hammer.  
+> **SKULK, EXTEND**  
+> *"We disappear between heartbeats."*  
+> One additional dwarf may reroll 1 CMP die while obscured, hiding or out of sight.  
+>
+> **ASHCLOAK, BASE**  
+> *"I leave no trace, make no sound."*  
+> Smother triggers on 1-1 or 1-2.  
+> **ASHCLOAK, SHARPEN**  
+> *"I always leave no trace, make no sound."*  
+> Smother triggers on 1-1, 1-2 or 2-2.  
+> **ASHCLOAK, BEND**  
+> *"I leave no trace, ignite no fuse."*  
+> Once per mission, may trigger Smother during an explosive action.
+>
+> **CONTROLLED BURN, BASE**  
+> *"I contain fire and use it."*  
+> Assigning explosive BLAST 6 gives 1 Squad Aftermath.  
+> **CONTROLLED BURN, LINGER**  
+> *"I contain fire and keep using it."*  
+> Assigning explosive BLAST 6 gives 1 Squad Aftermath. Your next explosive action gains +1 BLAST.  
+> **CONTROLLED BURN, DEEPEN**  
+> *"I contain unstable fire and use it."*  
+> Assigning explosive BLAST 5-6 gives 1 Squad Aftermath.
+>
+> **TUNNEL SENSE, BASE**  
+> *"I hear things coming."*  
+> Once per mission, after the GM declares an Aftermath move, may act before it resolves.  
+> **TUNNEL SENSE, BEND**  
+> *"I hear things before they happen."*  
+> Once per mission, after the GM declares a Hammer, may act before it resolves. 
+>
+> **WHITE IRONS, BASE**  
+> *"I have been here before and walked out."*  
+> Once per mission, treat a clean hit to GRIT as a maim instead.  
+> **WHITE IRONS, SURVIVE**  
+> *"I have been here before and barely walked out."*  
+> Once per mission, fill the 4th mark on this skill instead of taking a clean hit to GRIT. 
+>
+> **SACRIFICIAL RIGGING, BASE**  
+> *"I know what's worth burning."*  
+> Destroy a piece of gear to reduce Heat by 2.  
+> **SACRIFICIAL RIGGING, EXTEND**  
+> *"I know what's worth all of us burning."*  
+> You or another dwarf may destroy one piece of gear to reduce Heat by 2. 
+> 
 
 ### FORGE (3 Ember)
 *Craft specialized gear.*
@@ -1440,16 +1473,16 @@ The dwarf requisitions additional resources for the next mission:
 
 ### BOND (1 Ember)
 *Create or advance a squad link.*
-Two dwarves spend downtime together and establish or advance a Bond.
+You take time to bond with your squad.
 
-- Fill one mark on the Bond track with the dwarf you're bonding with.
-- The players should describe what they're doing together.
+- Describe how you bond with your squad.
+- Fill one mark on your Bond track.
 
 ### MEMORIALIZE (0 Ember)
 *Honor the dead and retired.*
 The dwarf formally adds an anvil to the Overhold's memorial chamber for fallen or retired operative. Memorialized operatives permanently affect the Overhold in small ways: a name on a plaque, a runeaxe mounted above the forge, their methods taught to new recruits.
 
-- Grants +1 Rep.
+- Increase or decrease Squad Rep by 1 mark.
 - May unlock a one time benefit tied to what that dwarf was known for.
 
 ## Squad Reputation
@@ -1483,7 +1516,6 @@ SQUAD REPUTATION
 - Marks within a tier have no individual effect.
 - When marks would advance past a tier, move to the next tier and continue from mark 1.
 - The opposite for when you're reducing marks.
-- If you're at MYTH 1 and would reduce Rep it stays at MYTH 1.
 - You cannot be reduced beyond MYTH 1 or be raised above LEGEND 5.
 
 #### Rep Tier Effects
@@ -1562,10 +1594,10 @@ Weapons, armour, and explosives.
 | Pry bar | - | Treat sealed doors as Temper -2. Can be used as a weapon: d4 IMP die. | 1 | - |
 | Grapple and line | [B] | Enables vertical movement. | 2 | 1 |
 | Blast shield | [B] | While held, T+1[++]. | 2 | 1 |
-| Field kit | [~] | Clear 1 mark form a piece of gear | 1 | 1 |
-| Stimulant flask | Treat CMP as d4 for one roll. Cannot stack. | [~] | 1 | 1 |
+| Field kit | [~] | Clear 1 mark from a piece of gear | 1 | 1 |
+| Stimulant flask | [~] | Treat CMP as d4 for one roll. Cannot stack. | 1 | 1 |
 | Runed crossbow | [~] | Ranged. | 1 | 2 |
-| Medical stout | Roll a d6, on a 4+ restore 1 GRIT | [~] | 1 | 3 |
+| Medical stout  | [~] | Roll a d6, on a 4+ restore 1 GRIT| 1 | 3 |
  
 #### Armour & Protection
  
@@ -1702,7 +1734,7 @@ The GM defines each faction's Agenda during campaign prep. Factions do not need 
 
 ### Faction Agendas
 
-Writes a short description of what a faction is doing at each step and how the world looks if that step completes unchecked.
+Write a short description of what a faction is doing at each step and how the world looks if that step completes unchecked.
 
 ```
 Step 1   Early movement. Quiet, deniable. Easily disrupted.
@@ -1719,7 +1751,7 @@ The squad can only directly engage one faction per mission but other factions ke
 If the squad does not run a mission against a faction during a downtime:
 
 - the GM rolls a d6 after debrief. 
-- On a result beating the threshold advance the faction's Agenda one mark.
+- On a result matching the step's guide, advance the faction's Agenda one mark.
 
 The threshold depends on the faction's current step. Higher steps mean more momentum, a faction that has been left alone is harder to slow down.
 
@@ -1877,6 +1909,9 @@ Tone            Patient, convinced, increasingly bold
 - Decide the current state of Glimmerhold.
 - Determine what ANVIL is currently worried about.
 - Create or expand the Overhold stash.
+  - Giving players access to stash items based on their Ember value is the simplest way to run it.
+  - Add 2 Ember to the vault for each player so dwarves have Ember to prepare for the first mission.
+- Start the campaign with a mission briefing, gear stash requisition and then drop them in.
 
 #### Before Each Mission
 - Create the mission sheet.
@@ -1977,6 +2012,7 @@ Tone            Patient, convinced, increasingly bold
   - "What does the funeral look like?"
   - "Who avoids eye contact after the mission?"
 - Let politics and relationships matter.
+- Check if Overhold Strain clears.
 
 #### Between Missions
 - Advance faction Agendas.
@@ -2413,7 +2449,7 @@ Dunvik Forgeback:
 > Sick.
 
 Brek Ironmark:
-> I'm taking Bond with Petra.
+> I'm taking Bond with my squad.
 
 GM:
 > What are you doing together?
@@ -2425,7 +2461,7 @@ Petra Stonewarden:
 > Yeah. Sharpening our axes, drinking.
 
 GM:
-> Mark your Bond advancement.
+> Brek, mark your Bond advancement.
 
 > The forge halls are quiet except for steel grinding against stone and the sound of distant hammers somewhere deeper in the Overhold.
 
@@ -2435,7 +2471,7 @@ GM:
 
 # Starter Mission
 
-wip - the hollow chant mission here... alternate mission INSIDE a giant titan beast
+wip - the hollow chant mission here... maybe an alternate mission INSIDE a giant titan beast too
 
 # World Lore
 
