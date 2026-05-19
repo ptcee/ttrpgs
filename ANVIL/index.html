@@ -34,6 +34,7 @@
 
         html {
             scroll-behavior: smooth;
+            overflow-x: hidden;
         }
 
         body {
@@ -49,7 +50,6 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 100vw;
             background: var(--text);
             color: var(--bg);
             padding: 48px 48px 40px;
@@ -96,7 +96,6 @@
         #nav {
             background: var(--main);
             border-bottom: 4px solid var(--card-border);
-            width: 100vw;
             position: sticky;
             top: 0;
             z-index: 100;
@@ -187,7 +186,6 @@
             display: flex;
             align-items: baseline;
             gap: 16px;
-            width: 100%;
             position: sticky;
             top: 38px;
             z-index: 99;
@@ -785,6 +783,14 @@
                 min-width: 100%;
             }
 
+            #nav-menu {
+                flex-direction: column;
+            }
+
+            #nav-menu a {
+                width: 49%;
+            }
+
         }
     </style>
 </head>
@@ -802,7 +808,7 @@
             </svg></h1>
         <div class="version">v1.0 - create sheets and playtesting.</div>
         <div class="tagline">A fantasy TTRPG for four players and one GM.</div>
-        <p class="intro">One hundred years after the craters were first discovered, evil things began to crawl out from the deep depths and with them they corrupted the natural arcana of the world. Dwarves, being born of the depths found themselves uniquely resilient to these magical effects, thus ANVIL was created. A covert strike force of the most elite and explosive dwarves, assembled to carry out the most dangerous missions for theQueen of Glimmerhold. You are one such strike force, these are your missions. Get in, <em><strong>drop 'em like stones</strong></em> and get out.</p>
+        <p class="intro">Fifty years after the craters were first discovered, evil things began to crawl out from the deep depths and with them they corrupted the natural arcana of the world. Dwarves, being born of the depths found themselves uniquely resilient to these magical effects, thus ANVIL was created. A covert strike force of the most elite and explosive dwarves, assembled to carry out the most dangerous missions for theQueen of Glimmerhold. You are one such strike force, these are your missions. Get in, <em><strong>drop 'em like stones</strong></em> and get out.</p>
     </div>
 
     <div id="nav">
@@ -826,13 +832,15 @@
             <a href="#bonds">Bonds</a>
             <a href="#gear">Gear & Stash</a>
             <a href="#missions">Running Missions</a>
-            <a href="#factions">Factions & Campaigns</a>
             <a href="#downtime">Downtime & The Overhold</a>
             <a href="#scars">Scars</a>
             <a href="#overhold-actions">Overhold Actions</a>
             <a href="#reputation">Squad Reputation</a>
             <a href="#stash">Overhold Gear Stash</a>
+            <a href="#factions">Factions & Campaigns</a>
             <a href="#gm-toolkit">GM Toolkit</a>
+            <a href="#starter-mission">Starter Mission</a>
+            <a href="#printables">Printables</a>
         </div>
     </div>
     <div class="wrapper">
@@ -861,7 +869,7 @@
                     <div class="phase-body">
                         <p>Each dwarf takes up to <strong>2 Overhold Actions</strong>. Actions cost Embers from the squad's shared vault. No dwarf may take the same action twice in one downtime. See Overhold Actions for full list and cost.</p>
                         <div class="sub2-label">Mission Briefing</div>
-                        <p>The Hand assigns the mission, players receive <strong>Briefing Intel</strong>: rough layout, primary and secondary objectives, Ember payouts, known faction presence, and drop points. Scout intel fills in additional keyed rooms if the action was taken.</p>
+                        <p>The Hand assigns the mission, players receive <strong>Briefing Intel</strong>: rough layout, primary and secondary objectives, Ember payouts, known faction presence and drop points. Scout intel fills in additional keyed rooms if the action was taken.</p>
                         <div class="sub2-label">Loadout</div>
                         <p>Players fill their <strong>4 item slots</strong> from the prep stash. All operatives begin with a <strong>Runeaxe (CMP d6)</strong> and <strong>Explosives Kit (IMP d6)</strong>. Stash access depends on Squad Reputation. Gear costs Embers at purchase.</p>
                     </div>
@@ -954,7 +962,8 @@ Shatterpoint           +2 Rep marks</pre>
                     <h3 class="subsection-label">Composure &amp; Impact</h3>
                     <p>Every dwarf has two dice: <strong>Composure (CMP)</strong> and <strong>Impact (IMP)</strong>. The base die for both is a d3. All ANVIL operatives are assigned a <strong>Runeaxe</strong> and an <strong>Explosives Kit</strong> that raises each die to d6.</p>
                     <p>Rolling for the results of an action is called <strong>throwing stones</strong>. When you throw stones you roll both dice and assign one as FUSE and one as BLAST.</p>
-                    <div class="callout">As a rule: FUSE is about <em>how</em>. BLAST is about <em>what</em>.<br><br>Assign FUSE to the die that should reflect your control, speed, and precision. Assign BLAST to the die that reflects your impact, noise, and force. A dwarf can want low FUSE and low BLAST-silent and precise, or low FUSE and high BLAST-fast and destructive. High FUSE is <strong>almost</strong> never what you want: it means the action was slow, messy, or complicated.</div>
+                    <div class="callout">As a rule: FUSE is about <em>how</em>. BLAST is about <em>what</em>.<br><br>Assign FUSE to the die that should reflect your control, speed and precision. Assign BLAST to the die that reflects your impact, noise and force. A dwarf can want low FUSE and low BLAST-silent and precise, or low FUSE and high BLAST-fast and destructive. High FUSE is <strong>almost</strong> never what you want: it means the action was slow, messy, or complicated.</div>
+                    <p>A larger die isn't always a buff and a smaller die isn't always bad. Large CMP dice gives more varied Compusure results, a dwarf who is less steady. Smaller IMP dice give smaller BLAST, a weaker hit, a smaller explosion.</p>
                     <table>
                         <thead>
                             <tr>
@@ -1184,6 +1193,8 @@ Shatterpoint           +2 Rep marks</pre>
                     <p>When something attacks they describe their action and throw stones. Low FUSE is a quick clean execution, high FUSE turns into a brawl.</p>
                     <div class="sub2-label">Simultaneous Attacks</div>
                     <p>If two entities wish to attack at the same time, the lower FUSE hits first. If tied the higher BLAST hits first. If still tied, roll a d6: 1-3 the enemy goes first, 4-6 the player goes first.</p>
+                    <div class="sub2-label">Falling Damage</div>
+                    <p>Dwarves are stout and sturdy. When a dwarf falls, roll 1 Explosive die for every 10 feet fallen.</p>
                     <div class="sub2-label">Temper in Combat</div>
                     <p>Every dwarf has a base Temper of <strong>T3</strong>. Skills and gear can modify this.</p>
                     <table>
@@ -1341,57 +1352,57 @@ Shatterpoint           +2 Rep marks</pre>
                             <tr>
                                 <td><code>[DARK]</code></td>
                                 <td>Dim or no light.</td>
-                                <td>Add +2 to FUSE results.</td>
+                                <td>Standard action FUSE die +2.</td>
                             </tr>
                             <tr>
                                 <td><code>[SCALD]</code></td>
-                                <td>hot in here</td>
-                                <td><span class="wip">wip</span></td>
+                                <td>Superheated areas, the air is hot.</td>
+                                <td><span class="wip">[E] BLAST die +2.</span></td>
                             </tr>
                             <tr>
                                 <td><code>[FLOOD]</code></td>
-                                <td>wet in here</td>
-                                <td><span class="wip">wip</span></td>
+                                <td>Rising/standing water.</td>
+                                <td><span class="wip">Moving costs an action. [E] FUSE die +2. Dropped items sink.</span></td>
                             </tr>
                             <tr>
                                 <td><code>[FOG]</code></td>
-                                <td>foggy in here</td>
-                                <td><span class="wip">wip</span></td>
+                                <td>Low visibility.</td>
+                                <td><span class="wip">Stealth BLAST die -2. Ranged FUSE die +2.</span></td>
                             </tr>
                             <tr>
                                 <td><code>[BRIGHT]</code></td>
-                                <td>bright in here</td>
-                                <td><span class="wip">wip</span></td>
+                                <td>No cover, fully lit.</td>
+                                <td><span class="wip">Movement raises Heat +1. Stack Up generate 1 Heat when initiated.</span></td>
                             </tr>
                             <tr>
                                 <td><code>[TOXIC]</code></td>
-                                <td>poison in here</td>
-                                <td><span class="wip">wip</span></td>
+                                <td>Poisonous air.</td>
+                                <td><span class="wip">Without protection, IMP dice here are d8.</span></td>
                             </tr>
                             <tr>
                                 <td><code>[UNSTABLE]</code></td>
                                 <td>Structures are weak.</td>
-                                <td>On Explosive BLAST 6 roll d6: 4-6 one room exit becomes blocked.</td>
+                                <td>On [E] BLAST 6 roll d6: 4-6 one exit becomes blocked.</td>
                             </tr>
                             <tr>
                                 <td><code>[VERT]</code></td>
-                                <td>vertical area</td>
-                                <td><span class="wip">wip</span></td>
+                                <td>Multi-level, vertical area.</td>
+                                <td><span class="wip">Moving between levels is vertical.</span></td>
                             </tr>
                             <tr>
                                 <td><code>[FORT]</code></td>
-                                <td>fortified</td>
-                                <td><span class="wip">wip</span></td>
+                                <td>Reinforced and prepared.</td>
+                                <td><span class="wip">Structures here require an extra [++] to destroy.</span></td>
                             </tr>
                             <tr>
                                 <td><code>[DEEPTOUCH]</code></td>
-                                <td>weird</td>
-                                <td><span class="wip">wip</span></td>
+                                <td>Area is corrupted.</td>
+                                <td><span class="wip">CMP dice here are d10.</span></td>
                             </tr>
                             <tr>
                                 <td><code>[SECRET]</code></td>
-                                <td>hidden</td>
-                                <td><span class="wip">wip</span></td>
+                                <td>Something is hidden here.</td>
+                                <td><span class="wip">Dwarves can search for this or find out from intel.</span></td>
                             </tr>
                         </tbody>
                     </table>
@@ -1450,29 +1461,124 @@ Shatterpoint           +2 Rep marks</pre>
                     <h3 class="subsection-label">Codenames - d66</h3>
                     <table>
                         <thead>
-                            <tr><th>d66</th><th>Codename</th><th>d66</th><th>Codename</th></tr>
+                            <tr>
+                                <th>d66</th>
+                                <th>Codename</th>
+                                <th>d66</th>
+                                <th>Codename</th>
+                            </tr>
                         </thead>
                         <tbody>
-                            <tr><td>11</td><td>Tombstone</td><td>41</td><td>Duskrock</td></tr>
-                            <tr><td>12</td><td>Cinder</td><td>42</td><td>Grimbeard</td></tr>
-                            <tr><td>13</td><td>Patchwork</td><td>43</td><td>Lowburn</td></tr>
-                            <tr><td>14</td><td>Slag</td><td>44</td><td>Ironlung</td></tr>
-                            <tr><td>15</td><td>Crowbar</td><td>45</td><td>Buckshot</td></tr>
-                            <tr><td>16</td><td>Dustcoat</td><td>46</td><td>Greasefire</td></tr>
-                            <tr><td>21</td><td>Coalbreath</td><td>51</td><td>Blacktooth</td></tr>
-                            <tr><td>22</td><td>Lowstone</td><td>52</td><td>Coldsnap</td></tr>
-                            <tr><td>23</td><td>Sootnose</td><td>53</td><td>Roughcut</td></tr>
-                            <tr><td>24</td><td>Trollbuster</td><td>54</td><td>Hammerfall</td></tr>
-                            <tr><td>25</td><td>Notch</td><td>55</td><td>Ashpit</td></tr>
-                            <tr><td>26</td><td>Copperhead</td><td>56</td><td>Oreborn</td></tr>
-                            <tr><td>31</td><td>Clinker</td><td>61</td><td>Sparrow</td></tr>
-                            <tr><td>32</td><td>Ghostbeard</td><td>62</td><td>Pockmark</td></tr>
-                            <tr><td>33</td><td>Ember</td><td>63</td><td>Shortfuse</td></tr>
-                            <tr><td>34</td><td>Deadweight</td><td>64</td><td>Crumble</td></tr>
-                            <tr><td>35</td><td>Brimstone</td><td>65</td><td>Halfmark</td></tr>
-                            <tr><td>36</td><td>Knuckle</td><td>66</td><td>Lastlight</td></tr>
+                            <tr>
+                                <td>11</td>
+                                <td>Tombstone</td>
+                                <td>41</td>
+                                <td>Duskrock</td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>Cinder</td>
+                                <td>42</td>
+                                <td>Grimbeard</td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td>Patchwork</td>
+                                <td>43</td>
+                                <td>Lowburn</td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td>Slag</td>
+                                <td>44</td>
+                                <td>Ironlung</td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>Crowbar</td>
+                                <td>45</td>
+                                <td>Buckshot</td>
+                            </tr>
+                            <tr>
+                                <td>16</td>
+                                <td>Dustcoat</td>
+                                <td>46</td>
+                                <td>Greasefire</td>
+                            </tr>
+                            <tr>
+                                <td>21</td>
+                                <td>Coalbreath</td>
+                                <td>51</td>
+                                <td>Blacktooth</td>
+                            </tr>
+                            <tr>
+                                <td>22</td>
+                                <td>Lowstone</td>
+                                <td>52</td>
+                                <td>Coldsnap</td>
+                            </tr>
+                            <tr>
+                                <td>23</td>
+                                <td>Sootnose</td>
+                                <td>53</td>
+                                <td>Roughcut</td>
+                            </tr>
+                            <tr>
+                                <td>24</td>
+                                <td>Trollbuster</td>
+                                <td>54</td>
+                                <td>Hammerfall</td>
+                            </tr>
+                            <tr>
+                                <td>25</td>
+                                <td>Notch</td>
+                                <td>55</td>
+                                <td>Ashpit</td>
+                            </tr>
+                            <tr>
+                                <td>26</td>
+                                <td>Copperhead</td>
+                                <td>56</td>
+                                <td>Oreborn</td>
+                            </tr>
+                            <tr>
+                                <td>31</td>
+                                <td>Clinker</td>
+                                <td>61</td>
+                                <td>Sparrow</td>
+                            </tr>
+                            <tr>
+                                <td>32</td>
+                                <td>Ghostbeard</td>
+                                <td>62</td>
+                                <td>Pockmark</td>
+                            </tr>
+                            <tr>
+                                <td>33</td>
+                                <td>Flint</td>
+                                <td>63</td>
+                                <td>Shortfuse</td>
+                            </tr>
+                            <tr>
+                                <td>34</td>
+                                <td>Deadweight</td>
+                                <td>64</td>
+                                <td>Crumble</td>
+                            </tr>
+                            <tr>
+                                <td>35</td>
+                                <td>Brimstone</td>
+                                <td>65</td>
+                                <td>Halfmark</td>
+                            </tr>
+                            <tr>
+                                <td>36</td>
+                                <td>Knuckle</td>
+                                <td>66</td>
+                                <td>Lastlight</td>
+                            </tr>
                         </tbody>
-                        </table>
+                    </table>
                 </div>
 
                 <div class="card">
@@ -1718,27 +1824,122 @@ Shatterpoint           +2 Rep marks</pre>
                     <h3 class="subsection-label">Trinkets - What You Have (d66)</h3>
                     <table>
                         <thead>
-                        <tr><th>d66</th><th>Trinket</th><th>d66</th><th>Trinket</th></tr>
+                            <tr>
+                                <th>d66</th>
+                                <th>Trinket</th>
+                                <th>d66</th>
+                                <th>Trinket</th>
+                            </tr>
                         </thead>
                         <tbody>
-                        <tr><td>11</td><td>Dented thimble</td><td>41</td><td>Folded letter</td></tr>
-                        <tr><td>12</td><td>Chipped tooth</td><td>42</td><td>Worn badge</td></tr>
-                        <tr><td>13</td><td>Copper coin</td><td>43</td><td>Cracked lens</td></tr>
-                        <tr><td>14</td><td>Knotted cord</td><td>44</td><td>Pressed flower</td></tr>
-                        <tr><td>15</td><td>Tin flask</td><td>45</td><td>Broken watch</td></tr>
-                        <tr><td>16</td><td>Iron ring</td><td>46</td><td>Carved bone</td></tr>
-                        <tr><td>21</td><td>Child's drawing</td><td>51</td><td>Wax seal</td></tr>
-                        <tr><td>22</td><td>Burnt photograph</td><td>52</td><td>Loose button</td></tr>
-                        <tr><td>23</td><td>Stone chip</td><td>53</td><td>Dried herb</td></tr>
-                        <tr><td>24</td><td>Dog tags</td><td>54</td><td>Splinter of wood</td></tr>
-                        <tr><td>25</td><td>Folded map</td><td>55</td><td>Betting slip</td></tr>
-                        <tr><td>26</td><td>Tavern token</td><td>56</td><td>Stamped tin</td></tr>
-                        <tr><td>31</td><td>Crumpled note</td><td>61</td><td>Snapped blade</td></tr>
-                        <tr><td>32</td><td>Small key</td><td>62</td><td>Painted stone</td></tr>
-                        <tr><td>33</td><td>Glass eye</td><td>63</td><td>Braided hair</td></tr>
-                        <tr><td>34</td><td>Coal chunk</td><td>64</td><td>Scrap of uniform</td></tr>
-                        <tr><td>35</td><td>Bone die</td><td>65</td><td>Half a medal</td></tr>
-                        <tr><td>36</td><td>Shard of stained glass</td><td>66</td><td>Nothing</td></tr>
+                            <tr>
+                                <td>11</td>
+                                <td>Dented thimble</td>
+                                <td>41</td>
+                                <td>Folded letter</td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>Chipped tooth</td>
+                                <td>42</td>
+                                <td>Worn badge</td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td>Copper coin</td>
+                                <td>43</td>
+                                <td>Cracked lens</td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td>Knotted cord</td>
+                                <td>44</td>
+                                <td>Pressed flower</td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>Tin flask</td>
+                                <td>45</td>
+                                <td>Broken watch</td>
+                            </tr>
+                            <tr>
+                                <td>16</td>
+                                <td>Iron ring</td>
+                                <td>46</td>
+                                <td>Carved bone</td>
+                            </tr>
+                            <tr>
+                                <td>21</td>
+                                <td>Child's drawing</td>
+                                <td>51</td>
+                                <td>Wax seal</td>
+                            </tr>
+                            <tr>
+                                <td>22</td>
+                                <td>Burnt photograph</td>
+                                <td>52</td>
+                                <td>Loose button</td>
+                            </tr>
+                            <tr>
+                                <td>23</td>
+                                <td>Stone chip</td>
+                                <td>53</td>
+                                <td>Dried herb</td>
+                            </tr>
+                            <tr>
+                                <td>24</td>
+                                <td>Dog tags</td>
+                                <td>54</td>
+                                <td>Splinter of wood</td>
+                            </tr>
+                            <tr>
+                                <td>25</td>
+                                <td>Folded map</td>
+                                <td>55</td>
+                                <td>Betting slip</td>
+                            </tr>
+                            <tr>
+                                <td>26</td>
+                                <td>Tavern token</td>
+                                <td>56</td>
+                                <td>Stamped tin</td>
+                            </tr>
+                            <tr>
+                                <td>31</td>
+                                <td>Crumpled note</td>
+                                <td>61</td>
+                                <td>Snapped blade</td>
+                            </tr>
+                            <tr>
+                                <td>32</td>
+                                <td>Small key</td>
+                                <td>62</td>
+                                <td>Painted stone</td>
+                            </tr>
+                            <tr>
+                                <td>33</td>
+                                <td>Glass eye</td>
+                                <td>63</td>
+                                <td>Braided hair</td>
+                            </tr>
+                            <tr>
+                                <td>34</td>
+                                <td>Coal chunk</td>
+                                <td>64</td>
+                                <td>Scrap of uniform</td>
+                            </tr>
+                            <tr>
+                                <td>35</td>
+                                <td>Bone die</td>
+                                <td>65</td>
+                                <td>Half a medal</td>
+                            </tr>
+                            <tr>
+                                <td>36</td>
+                                <td>Shard of stained glass</td>
+                                <td>66</td>
+                                <td>Nothing</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -1748,27 +1949,122 @@ Shatterpoint           +2 Rep marks</pre>
                     <h3 class="subsection-label">Personality - How You Operate (d66)</h3>
                     <table>
                         <thead>
-                            <tr><th>d66</th><th>Personality</th><th>d66</th><th>Personality</th></tr>
+                            <tr>
+                                <th>d66</th>
+                                <th>Personality</th>
+                                <th>d66</th>
+                                <th>Personality</th>
+                            </tr>
                         </thead>
                         <tbody>
-                            <tr><td>11</td><td>Brooding</td><td>41</td><td>Reckless</td></tr>
-                            <tr><td>12</td><td>Gruff</td><td>42</td><td>Loyal</td></tr>
-                            <tr><td>13</td><td>Bitter</td><td>43</td><td>Haunted</td></tr>
-                            <tr><td>14</td><td>Steady</td><td>44</td><td>Proud</td></tr>
-                            <tr><td>15</td><td>Wry</td><td>45</td><td>Cold</td></tr>
-                            <tr><td>16</td><td>Volatile</td><td>46</td><td>Measured</td></tr>
-                            <tr><td>21</td><td>Stubborn</td><td>51</td><td>Hollow</td></tr>
-                            <tr><td>22</td><td>Shrewd</td><td>52</td><td>Relentless</td></tr>
-                            <tr><td>23</td><td>Tired</td><td>53</td><td>Superstitious</td></tr>
-                            <tr><td>24</td><td>Warm</td><td>54</td><td>Detached</td></tr>
-                            <tr><td>25</td><td>Sharp</td><td>55</td><td>Methodical</td></tr>
-                            <tr><td>26</td><td>Grieving</td><td>56</td><td>Wrathful</td></tr>
-                            <tr><td>31</td><td>Quiet</td><td>61</td><td>Earnest</td></tr>
-                            <tr><td>32</td><td>Suspicious</td><td>62</td><td>Fractured</td></tr>
-                            <tr><td>33</td><td>Devout</td><td>63</td><td>Hungry</td></tr>
-                            <tr><td>34</td><td>Weary</td><td>64</td><td>Distant</td></tr>
-                            <tr><td>35</td><td>Sardonic</td><td>65</td><td>Unbroken</td></tr>
-                            <tr><td>36</td><td>Reckless</td><td>66</td><td>Spent</td></tr>
+                            <tr>
+                                <td>11</td>
+                                <td>Brooding</td>
+                                <td>41</td>
+                                <td>Reckless</td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>Gruff</td>
+                                <td>42</td>
+                                <td>Loyal</td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td>Bitter</td>
+                                <td>43</td>
+                                <td>Haunted</td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td>Steady</td>
+                                <td>44</td>
+                                <td>Proud</td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>Wry</td>
+                                <td>45</td>
+                                <td>Cold</td>
+                            </tr>
+                            <tr>
+                                <td>16</td>
+                                <td>Volatile</td>
+                                <td>46</td>
+                                <td>Measured</td>
+                            </tr>
+                            <tr>
+                                <td>21</td>
+                                <td>Stubborn</td>
+                                <td>51</td>
+                                <td>Hollow</td>
+                            </tr>
+                            <tr>
+                                <td>22</td>
+                                <td>Shrewd</td>
+                                <td>52</td>
+                                <td>Relentless</td>
+                            </tr>
+                            <tr>
+                                <td>23</td>
+                                <td>Tired</td>
+                                <td>53</td>
+                                <td>Superstitious</td>
+                            </tr>
+                            <tr>
+                                <td>24</td>
+                                <td>Warm</td>
+                                <td>54</td>
+                                <td>Detached</td>
+                            </tr>
+                            <tr>
+                                <td>25</td>
+                                <td>Sharp</td>
+                                <td>55</td>
+                                <td>Methodical</td>
+                            </tr>
+                            <tr>
+                                <td>26</td>
+                                <td>Grieving</td>
+                                <td>56</td>
+                                <td>Wrathful</td>
+                            </tr>
+                            <tr>
+                                <td>31</td>
+                                <td>Quiet</td>
+                                <td>61</td>
+                                <td>Earnest</td>
+                            </tr>
+                            <tr>
+                                <td>32</td>
+                                <td>Suspicious</td>
+                                <td>62</td>
+                                <td>Fractured</td>
+                            </tr>
+                            <tr>
+                                <td>33</td>
+                                <td>Devout</td>
+                                <td>63</td>
+                                <td>Hungry</td>
+                            </tr>
+                            <tr>
+                                <td>34</td>
+                                <td>Weary</td>
+                                <td>64</td>
+                                <td>Distant</td>
+                            </tr>
+                            <tr>
+                                <td>35</td>
+                                <td>Sardonic</td>
+                                <td>65</td>
+                                <td>Unbroken</td>
+                            </tr>
+                            <tr>
+                                <td>36</td>
+                                <td>Reckless</td>
+                                <td>66</td>
+                                <td>Spent</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -1845,7 +2141,7 @@ Shatterpoint           +2 Rep marks</pre>
             <h2 class="section-label" id="skills">Skills</h2>
             <div class="grid">
                 <div class="card full">
-                    <p>Skills represent what a dwarf has trained in and what they're good at. Each skill has: a name, a creed, a mechanical permission, three fortification slots, and three marks.</p>
+                    <p>Skills represent what a dwarf has trained in and what they're good at. Each skill has: a name, a creed, a mechanical permission, three fortification slots and three marks.</p>
                     <p>Roll 3 skills from the d66 table, or choose 2.</p>
                     <div class="sub2-label">Skill Advancement</div>
                     <p>During downtime, a dwarf may spend Embers to level skills. For full details, view the Fortify Overhold Action.</p>
@@ -2128,6 +2424,10 @@ Kinship: ____________
                             </tr>
                         </tbody>
                     </table>
+                    <h3 class="subsection-label">Kinship</h3>
+                    <p>At character creation, each dwarf chooses a first of kin and marks them on their Op sheet.</p>
+                    <p>A dwarf may reroll CMP or IMP once per mission when interacting with this dwarf.</p> 
+
                 </div>
             </div>
         </div>
@@ -2188,7 +2488,7 @@ Kinship: ____________
                     <h3 class="subsection-label">Intel Tiers</h3>
                     <p>The squad is given partial intel. They can use the Scout downtime action to learn more.</p>
                     <div class="sub2-label">Briefing Intel</div>
-                    <p>Provided by the Hand at mission assignment. Official, possibly outdated, and occasionally wrong. Gives: rough map layout, primary objective, known faction presence, recommended drop points.</p>
+                    <p>Provided by the Hand at mission assignment. Official, possibly outdated and occasionally wrong. Gives: rough map layout, primary objective, known faction presence, recommended drop points.</p>
                     <div class="sub2-label">Scout Intel</div>
                     <p>Firsthand reconnaissance gathered during downtime via the Scout action. Is always reliable. Can fill in: patrol routes, enemy Temper values, entrance details, secondary objective locations.</p>
                     <p style="font-size:12px; color:var(--faint); margin-top:10px;">The squad's pre-mission map is a partial key. Rooms they have intel on are filled in. Everything else is dark until they move through it. Players can see their entry point and any directly adjacent rooms. Scout intel is represented as additional keyed rooms.</p>
@@ -2314,7 +2614,7 @@ Door to 05 is sealed. T[++]
                         <li>Hot and White Hot Hammers are optional but recommended for anything longer than six rooms.</li>
                         <li>Hammers should radically change mission conditions.</li>
                         <li>Write the specific hammer for your mission on the sheet.</li>
-                        <li>Define what changes, what closes, what activates, and what the squad has to deal with.</li>
+                        <li>Define what changes, what closes, what activates and what the squad has to deal with.</li>
                     </ul>
                     <div class="sub2-label">Hammer Checklist</div>
                     <ul>
@@ -2334,7 +2634,7 @@ Door to 05 is sealed. T[++]
             <div class="grid">
                 <div class="card">
                     <div class="callout">Between missions ANVIL ops return to the Overhold. A large brutalist structure on the northwest edge of Glimmerhold, low forge smoke hangs in the air in every room. The Queen employs ANVIL and her Hand runs it, the Glimmerhold council does not know it exists.</div>
-                    <p>Downtime is not rest. It is recovery, politics, preparation, and grief. It is your job between the jobs.</p>
+                    <p>Downtime is not rest. It is recovery, politics, preparation and grief. It is your job between the jobs.</p>
                     <div class="sub2-label">Embers</div>
                     <p>Embers are ANVIL's downtime currency. After completing missions all Embers go into the squad's shared vault. Squads can bank Embers between missions. A dwarf may burn Embers to take downtime actions or acquire gear from the stash. These Embers are gone permanently.</p>
                 </div>
@@ -2356,7 +2656,7 @@ Door to 05 is sealed. T[++]
                         </div>
                         <div class="step-row">
                             <h4>Step 2 <em>Recovery.</em></h4>
-                            <p>Resolve Scars, funerals, retirements, and decompression. This phase has no rolls unless a dwarf is rolling for Scars.</p>
+                            <p>Resolve Scars, funerals, retirements and decompression. This phase has no rolls unless a dwarf is rolling for Scars.</p>
                             <p>Give this phase space. A dwarf down to their last GRIT and made it out needs a moment. A squad that lost someone needs a funeral. Name the dead, describe the funeral anvil and let the silence sit.</p>
                             <ul>
                                 <li>All GRIT is fully recovered here.</li>
@@ -2460,13 +2760,13 @@ Door to 05 is sealed. T[++]
                         <p>Peripheral vision narrowed after a close blast or trauma. You see what you focus on with complete clarity. Once per mission, ask the GM one specific detail about what you're directly looking at.</p>
                     </div>
                     <div class="scar-entry"><strong>24. Sensitivity to Light</strong>
-                        <p>Eyes that took damage respond badly to sudden brightness. Torches, flares, and exposed forge light cause brief difficulty. In darkness the dwarf sees better than most. You may reroll CMP once in low light conditions.</p>
+                        <p>Eyes that took damage respond badly to sudden brightness. Torches, flares and exposed forge light cause brief difficulty. In darkness the dwarf sees better than most. You may reroll CMP once in low light conditions.</p>
                     </div>
                     <div class="scar-entry"><strong>25. Phantom Limb</strong>
                         <p>A limb is gone, a prosthetic or adapted technique may replace it. You have found ways to operate that others have not considered. Work with the GM to define one thing the adaptation does that an uninjured dwarf cannot.</p>
                     </div>
                     <div class="scar-entry"><strong>26. Smell Gone</strong>
-                        <p>You cannot smell anything. Gas traps, chemical agents, and fire do not register early. You are completely immune to any mechanics that rely on scent.</p>
+                        <p>You cannot smell anything. Gas traps, chemical agents and fire do not register early. You are completely immune to any mechanics that rely on scent.</p>
                     </div>
                 </div>
 
@@ -2537,7 +2837,7 @@ Door to 05 is sealed. T[++]
                         <p>You've developed a specific pre-mission ritual after a rough mission. If the ritual is completed before embarking, gain 1 Squad Aftermath dice at mission start. If interrupted or skipped, step CMP die up to d8 for the mission as you don't feel as calm as you would after your ritual.</p>
                     </div>
                     <div class="scar-entry"><strong>63. Callused</strong>
-                        <p>You've stopped reacting to things that used to register. Intimidation, horror, and morale effects do not apply to you. NPCs notice the fevor in your eyes.</p>
+                        <p>You've stopped reacting to things that used to register. Intimidation, horror and morale effects do not apply to you. NPCs notice the fevor in your eyes.</p>
                     </div>
                     <div class="scar-entry"><strong>64. Memorial Ink</strong>
                         <p>You get a tattoo after the mission. No mechanical effect. When a dwarf dies or retires, you may add to it by updating the description. It becomes a record of your loss.</p>
@@ -2559,60 +2859,60 @@ Door to 05 is sealed. T[++]
 
                 <div class="card full">
                     <p>The base cost applies at Rep tier 3. Rep modifies all costs: tier 1 adds +2, tier 2 adds +1, tier 4 subtracts 1, tier 5 subtracts 2. Minimum cost is always 1 Ember. Actions marked with no cost never require Embers.</p>
-                            <p>Memorialize always costs 0. It cost the squad something, just not Embers.</p>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Action</th>
-                                        <th>Base cost</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Slag Off</td>
-                                        <td>1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Interrogate</td>
-                                        <td>1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Bond</td>
-                                        <td>1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Fortify</td>
-                                        <td>2</td>
-                                    </tr>
-                                     <tr>
-                                        <td>Reinforce</td>
-                                        <td>2</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Forge</td>
-                                        <td>3</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Pull Strings</td>
-                                        <td>3</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Scout</td>
-                                        <td>1-3</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Memorialize</td>
-                                        <td>-</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                    <p>Memorialize always costs 0. It cost the squad something, just not Embers.</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Action</th>
+                                <th>Base cost</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Slag Off</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>Interrogate</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>Bond</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>Fortify</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>Reinforce</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>Forge</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Pull Strings</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Scout</td>
+                                <td>1-3</td>
+                            </tr>
+                            <tr>
+                                <td>Memorialize</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
                 </div>
 
                 <div class="card">
                     <h3 class="subsection-label">SLAG OFF (1 Ember)</h3>
                     <p class="callout"><em>Drink deep, talk loud, decompress.</em></p>
-                    <p>Dwarven decompression. The dwarf spends time in the Overhold's lower halls, drinking, fighting, and relaxing.</p>
+                    <p>Dwarven decompression. The dwarf spends time in the Overhold's lower halls, drinking, fighting and relaxing.</p>
                     <ul>
                         <li>Clear all marks on a skill.</li>
                         <li>May generate a rumor. Ask the GM one question during briefing.</li>
@@ -2958,7 +3258,7 @@ Door to 05 is sealed. T[++]
                     </div>
                     <div class="rep-tier">
                         <span class="tier-name">4 - Feared</span>
-                        <p>The squad does not go unnoticed anymore. The Hand gives them priority. All Overhold Action costs −1 Ember (minimum 1). The stash has better options, and the squad may call in one favour per campaign. Enemies have started preparing specifically for them.</p>
+                        <p>The squad does not go unnoticed anymore. The Hand gives them priority. All Overhold Action costs −1 Ember (minimum 1). The stash has better options and the squad may call in one favour per campaign. Enemies have started preparing specifically for them.</p>
                     </div>
                     <div class="rep-tier">
                         <span class="tier-name">5 - Legend</span>
@@ -2986,7 +3286,7 @@ Door to 05 is sealed. T[++]
 
                 <div class="card full">
                     <h3 class="subsection-label">Stash Gear</h3>
-                    <p>Weapons, armour, and explosives.</p>
+                    <p>Weapons, armour and explosives.</p>
                     <div class="sub2-label">Weapons &amp; Tools</div>
                     <table>
                         <thead>
@@ -3516,7 +3816,7 @@ Door to 05 is sealed. T[++]
                             <tr>
                                 <td>The ledger</td>
                                 <td>-</td>
-                                <td>Left by someone. Full of names, debts, and secrets.</td>
+                                <td>Left by someone. Full of names, debts and secrets.</td>
                             </tr>
                             <tr>
                                 <td>Deepbeast tooth</td>
@@ -3578,7 +3878,7 @@ Door to 05 is sealed. T[++]
             <!-- FACTIONS -->
             <h2 class="section-label" id="factions">Factions &amp; Campaigns</h2>
             <div class="grid">
-                 <div class="card full">
+                <div class="card full">
                     <h3 class="subsection-label">Running a Campaign</h3>
                     <p>A campaign is the full arc of multiple Faction Agendas from first movement to resolution. There is no fixed mission count. The campaign ends when every active Agenda is either completed or dismantled or when the consequences of completed Agendas make further ANVIL operations untenable.</p>
                     <div class="skillup-row">
@@ -3589,10 +3889,10 @@ Door to 05 is sealed. T[++]
                     <p>The Hand assigns missions based on what the squad knows and what the Overhold can confirm. Between sessions the GM asks: What is each faction doing right now? What does the squad know about it? What happens if they ignore it for one more mission? The answers build the next briefing.</p>
                 </div>
 
-                
+
                 <div class="card full">
                     <h3 class="subsection-label">Factions</h3>
-                    <p>Factions are the active forces in the world that ANVIL is working against. They have goals, resources, and momentum of their own. They do not wait for the squad to come to them.</p>
+                    <p>Factions are the active forces in the world that ANVIL is working against. They have goals, resources and momentum of their own. They do not wait for the squad to come to them.</p>
                     <p>Each faction has an <strong>Agenda</strong>: a five step plan they are executing whether ANVIL intervenes or not. Each step has 2 marks to fill. Each step the squad does not disrupt, the faction moves closer to completing it. When a faction reaches step 5 and completes their Agenda, a permanent campaign consequence locks in.</p>
                     <p>The GM defines each faction's Agenda during campaign prep. Factions do not need to be fully detailed upfront, their Agenda steps and Moves can be built session to session as the campaign develops.</p>
                     <div class="sub2-label">Faction Agendas</div>
@@ -3726,7 +4026,7 @@ Step 4 [ ][ ]  Advances on 1-5</pre>
             <h2 class="section-label" id="gm-toolkit">GM Toolkit</h2>
             <div class="grid">
                 <div class="card full">
-                    <h3 class="subsection-label">Procedures &amp; Tips</h3>
+                    <h3 class="subsection-label">Procedures</h3>
 
                     <div class="sub2-label">Before the Campaign</div>
                     <ul>
@@ -3743,7 +4043,7 @@ Step 4 [ ][ ]  Advances on 1-5</pre>
                         <li>Create the mission sheet.</li>
                         <li>Draw the keyed map.</li>
                         <li>Assign: entrances, objectives, faction presence, environment tags, Hammer events.</li>
-                        <li>Decide: what the faction wants right now, what happens if the squad fails, what changes at Hot, White Hot, and Shatterpoint.</li>
+                        <li>Decide: what the faction wants right now, what happens if the squad fails, what changes at Hot, White Hot and Shatterpoint.</li>
                         <li>Prepare: enemy Temper values, patrol routes, hazards, extraction complications.</li>
                     </ul>
 
@@ -3869,7 +4169,7 @@ Step 4 [ ][ ]  Advances on 1-5</pre>
             <h2 class="section-label" id="grid-rules">Rules for the Grid</h2>
             <div class="grid">
                 <div class="card full">
-                    <p><em>Everything below applies only when playing with miniatures and terrain. If you're playing theatre of the mind, ignore this section.</em></p>
+                    <p><strong> Everything below applies only when playing with miniatures and terrain. If you're playing theatre of the mind, ignore this section. </strong></p>
                 </div>
                 <div class="card dark">
                     <h3 class="subsection-label">Movement</h3>
@@ -4037,21 +4337,415 @@ Step 4 [ ][ ]  Advances on 1-5</pre>
         </div>
 
         <div>
-            <!-- STARTER MISSION -->
-            <h2 class="section-label" id="starter-mission">Starter Mission</h2>
+            <!-- WORLD LORE -->
+            <h2 class="section-label" id="world-lore">World Lore</h2>
             <div class="grid">
                 <div class="card full">
-                    <span class="wip">wip - the hollow chant mission here... maybe an alternate mission INSIDE a giant titan beast too</span>
+                    <h3 class="subsection-label">History & Deepbeast Primer</h3>
+                    <p>One hundred years ago, three comets struck Orrelia and formed the Three Craters. From the depths of those craters came the Deepbeasts, vast arcane-adapted organisms that feed on magical energy the way predators feed on flesh. They navigate reality through arcane lines. They are drawn to spellcasting, relic activation and any event that disturbs the magical ecology of the world.</p>
+
+                    <p>Dwarves are uniquely resilient to arcane corruption. That is why the Queen created ANVIL; a covert strike force that operates without generating arcane signals, resolving threats with kinetic force and structural disruption-you blow things up. You do not leave witnesses and you are not officially acknowledged.</p>
+
+                    <p>The Deepbeasts are not defeated through attrition, they are taken care of by removing the conditions that sustain them. An encounter ends when the arcane energy is gone or the environment collapses. Victory is mission completion, not body count.</p>
+
+                    <p><strong>Deepbeast Detection Triggers:</strong></p>
+                    <ul>
+                        <li>Active spellcasting or recent arcane discharge</li>
+                        <li>Enchanted or arcane infrastructure</li>
+                        <li>Relics or ruins with lingering arcana</li>
+                        <li>High residual magical contamination</li>
+                    </ul>
+
+                    <p><strong>Deepbeast Behavior:</strong></p>
+                    <ul>
+                        <li><strong>Drift:</strong> Slow ambient movement. Minimal aggression unless disturbed.</li>
+                        <li><strong>Feeding:</strong> Prioritizes arcane sources over physical targets. Disrupts spells and relics on contact.</li>
+                        <li><strong>Frenzy:</strong> Triggered by high arcane density or disrupted feeding. Indiscriminate environmental destruction.</li>
+                    </ul>
+
+                    <p>ANVIL does not generate arcane signals and is not inherently detected. However, explosives, structural collapses and interference with relic sites can release dormant arcane energy and escalate Deepbeast activity indirectly.</p>
+
                 </div>
             </div>
         </div>
 
         <div>
-            <!-- WORLD LORE -->
-            <h2 class="section-label" id="world-lore">World Lore</h2>
-            <div class="grid">
-                <div class="card full">
-                    <span class="wip">wip - writeup about orrelia and how the queens era gets to the gobfather/council era in loot goblins. anvil turns on queen, assassinates her, council takes over, gobfather fills the vaccuum.</span>
+            <div>
+                <!-- STARTER MISSION -->
+                <h2 class="section-label" id="starter-mission">Starter Mission</h2>
+                <div class="grid">
+
+                    <!-- INTRO -->
+                    <div class="card full dark">
+                        <h3 class="subsection-label">THE GUTTED KING</h3>
+                        <p>A Titan-class Deepbeast, three days dead, half submerged in a flooded lower tunnel. Still warm and still moving in places. A rival salvage crew hired by a corrupt noble is already inside. The Convergence Gland; a single organ unique to Titan-class Deepbeasts, the source of their depth-sense will degrade in 72 hours, the mission clock is biological.</p>
+                    </div>
+
+                    <!-- MISSION BRIEF -->
+                    <div class="card full">
+                        <h3 class="subsection-label">Mission Brief</h3>
+                        <div class="sub2-label">Primary Objective</div>
+                        <p>Extract the Convergence Gland from the skull basin (room 10) intact. <strong>4 Embers per dwarf.</strong></p>
+                        <div class="sub2-label">Secondary Objectives</div>
+                        <ul>
+                            <li>Recover Ferula Goss's research notes from her field station (room 03). <strong>2 Embers per dwarf.</strong></li>
+                            <li>Neutralize or scatter the Irongate mercenaries, at least 4 of 6 out of the fight before room 10. <strong>2 Embers per dwarf.</strong></li>
+                            <li>Extract clean before secondary contractions lock the lower passages. <strong>1 Ember per dwarf.</strong></li>
+                        </ul>
+                        <div class="sub2-label">Payout</div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Objective</th>
+                                    <th>Payout</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Primary: Convergence Gland extracted intact</td>
+                                    <td>4 per dwarf</td>
+                                </tr>
+                                <tr>
+                                    <td>Secondary: Goss's research notes</td>
+                                    <td>2 per dwarf</td>
+                                </tr>
+                                <tr>
+                                    <td>Secondary: 4+ Irongate neutralized</td>
+                                    <td>2 per dwarf</td>
+                                </tr>
+                                <tr>
+                                    <td>Secondary: clean extraction before Shatterpoint</td>
+                                    <td>1 per dwarf</td>
+                                </tr>
+                                <tr>
+                                    <td>Full completion bonus</td>
+                                    <td>1 per dwarf</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Maximum</strong></td>
+                                    <td><strong>10 per dwarf</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- SITUATION -->
+                    <div class="card">
+                        <h3 class="subsection-label">The Situation</h3>
+                        <p>Lord Caswick Drenmore; minor noble, major debts and desperate ambitions has hired the alchemist Ferula Goss and her salvage company to retrieve the Convergence Gland before it degrades. Goss brought twenty workers and six Irongate mercenaries to make sure nobody takes it from her.</p>
+                        <p>Goss's operation entered 18 hours ago, the gland has roughly 54 hours remaining. The Hand wants it before Drenmore's courier arrives at extraction.</p>
+                    </div>
+
+                    <!-- FACTIONS -->
+                    <div class="card">
+                        <h3 class="subsection-label">Factions</h3>
+                        <div class="sub2-label">Goss Salvage</div>
+                        <p>Twenty workers, unarmed or lightly equipped. Scared of the biology, scared of the Irongate crew, doing a job for money they haven't been paid yet.</p>
+                        <div class="sub2-label">Irongate Mercenaries</div>
+                        <p>Six dwarves, professional soldiers. They answer to their sergeant, not to Goss. They are not here to salvage - they are here to hold the gland until Drenmore's courier arrives.</p>
+                        <p><strong>Irongate Patrol:</strong> 06 &gt; 08 &gt; 06 (1 room every 2 Beats)</p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Heat</th>
+                                    <th>Behavior</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Cold</td>
+                                    <td>Workers moving methodically. Three Irongate at nerve cluster (07), two on patrol (06&gt;08), sergeant forward (09). Cordial with a cover story.</td>
+                                </tr>
+                                <tr>
+                                    <td>Hot</td>
+                                    <td>Goss pulls workers back to 03 or 10. All six Irongate move toward the sound. Goss accelerates extraction.</td>
+                                </tr>
+                                <tr>
+                                    <td>White Hot</td>
+                                    <td>Irongate running Goss's operation by force. Workers fleeing. Goss at 10, working alone, furious.</td>
+                                </tr>
+                                <tr>
+                                    <td>Shatterpoint</td>
+                                    <td>Duvane holds 10. Goss has the gland or has destroyed it. Everyone not out in 4 Beats isn't getting out.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- ENEMIES -->
+                    <div class="card">
+                        <h3 class="subsection-label">Enemies</h3>
+                        <pre>GOSS WORKER
+T1 | tools
+Not a combatant. Scatters at T2+ violence.
+─────────────────────────────
+GRIT:  ○○○</pre>
+
+                        <pre>IRONGATE GRUNT
+T3 | chainmail, short blade, crossbow
+─────────────────────────────────────
+Gear:  ○○○
+GRIT:  ○○○</pre>
+
+                        <pre>SGT. DUVANE
+T5[++] | plate, war hammer
+○○○ Ironwall: reduce first Scar to Maim once per exchange.
+○○○ Coordinated: allied Irongate in same room add
+    1 FUSE die while Duvane stands.
+─────────────────────────────────────────────────────
+Gear:  ○○○
+GRIT:  ○○○○○</pre>
+
+                        <pre>FERULA GOSS
+T1 | alchemical tools
+Not a combat target. At White Hot throws a volatile
+compound on her turn: T3 BLAST, [TOXIC], 1 Beat,
+full room.
+─────────────────────────────────────────────────────
+GRIT:  ○○○</pre>
+                    </div>
+
+                    <!-- MAP -->
+                    <div class="card">
+                        <h3 class="subsection-label">Map</h3>
+                        <pre>      [01 JAW ENTRY]
+            |
+      [02 THROAT PASSAGE]
+            |
+      [03 LUNG CHAMBER / GOSS FIELD STATION]
+         /     \
+ [04 BILE RUN] [05 STOMACH FLOOR]
+      |               |
+ [06 DARK VEIN]  [07 NERVE CLUSTER]
+        \             /
+        [08 LOWER GUT]
+              |
+        [09 SPINAL RUN]
+              |
+        [10 SKULL BASIN / CONVERGENCE GLAND]
+              |
+        [11 CREST BREACH] ← extraction</pre>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Tag</th>
+                                    <th>Room(s)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>[FLOOD]</td>
+                                    <td>01, 11</td>
+                                </tr>
+                                <tr>
+                                    <td>[TOXIC]</td>
+                                    <td>04</td>
+                                </tr>
+                                <tr>
+                                    <td>[DARK]</td>
+                                    <td>06</td>
+                                </tr>
+                                <tr>
+                                    <td>[UNSTABLE]</td>
+                                    <td>07</td>
+                                </tr>
+                                <tr>
+                                    <td>[SCALD]</td>
+                                    <td>09, 10</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p style="margin-top:8px;"><strong>Entry:</strong> 01 Jaw (main), 11 Crest Breach (climbing gear required) &nbsp;|&nbsp; <strong>Unguarded shortcut:</strong> 05 connects upper and lower halves without passing through 07</p>
+                    </div>
+
+                    <!-- ROOMS 01-06 -->
+                    <div class="card">
+                        <h3 class="subsection-label">Rooms 01-06</h3>
+                        <div class="callout">
+                        <div class="sub2-label call">01. Jaw Entry <code>[FLOOD]</code></div>
+                        <p><em>The teeth are the size of doors. A salvage rig has been bolted into the soft palate - ropes, pulleys, a hand-cranked winch. Professional work. Recent.</em></p>
+                        <ul>
+                            <li>No enemies. Two Goss workers managing the rig - flee at any threat.</li>
+                            <li>Sabotaging the winch seals the jaw permanently - denies 01 entry and exit for all parties.</li>
+                            <li>A manifest is pinned to the rig: twenty workers, six Irongate, one Principal (Goss). Names, not codenames.</li>
+                        </ul>
+                        <p><strong>Connects to:</strong> 02</p>
+                        </div>
+
+                        <div class="callout">
+                        <div class="sub2-label">02. Throat Passage</div>
+                        <p><em>The walls contract slowly. Not enough to crush. Enough to notice. Three workers are moving crates toward the jaw. They don't make eye contact.</em></p>
+                        <ul>
+                            <li>3x Goss Workers (T1) - moving equipment out, distracted.</li>
+                            <li>At Cold the workers assume the squad are Irongate reinforcements if not corrected. They'll complain about the job, the smell and not being paid yet.</li>
+                            <li>One worker mentions Duvane told Goss the gland "belongs to Lord Drenmore now" and she didn't take it well.</li>
+                        </ul>
+                        <p><strong>Connects to:</strong> 01, 03</p>
+                        </div>
+
+                        <div class="callout">
+                        <div class="sub2-label">03. Lung Chamber - Goss Field Station</div>
+                        <p><em>The lung never fully collapsed. Goss has set up inside it - tables made from crate lids, a lamp rig, reference drawings pinned to the membrane wall. It smells like chemicals and old blood.</em></p>
+                        <ul>
+                            <li>3x Irongate Grunts (T3) - posted at exits, bored but alert.</li>
+                            <li>Ferula Goss (T1) - working at the central table, does not look up.</li>
+                            <li>Research notes in a waxed oilskin case in front of Goss. Taking them unnoticed requires a FUSE assignment. Asking her directly gets a lecture on Titan neurology and then a refusal.</li>
+                            <li>Lung membrane walls are pressurized - BLAST 5+ ruptures a section, venting [TOXIC] for 1 Beat and scattering the notes.</li>
+                        </ul>
+                        <p><strong>Connects to:</strong> 02, 04, 07</p>
+                        </div>
+
+                        <div class="callout">
+                        <div class="sub2-label">04. Bile Run <code>[TOXIC]</code></div>
+                        <p><em>The duct runs at a downward angle. The floor is membrane stretched over a slow-moving current of spent bile. The air tastes like the inside of a forge accident.</em></p>
+                        <ul>
+                            <li>No enemies - Goss workers avoid this route entirely.</li>
+                            <li>Falling in: T3 BLAST per Beat until pulled out. Anything dropped may surface in 06.</li>
+                            <li>A rope line runs along the wall - old, frayed, probably holds.</li>
+                        </ul>
+                        <p><strong>Connects to:</strong> 03, 06</p>
+                        </div>
+
+                        <div class="callout">
+                        <div class="sub2-label">05. Stomach Floor</div>
+                        <p><em>The acid is spent. What remains is a slow archaeology of the Titan's diet - gear, bone, coins fused into new shapes, a helmet with something still inside it.</em></p>
+                        <ul>
+                            <li>No enemies.</li>
+                            <li>Lootable: 2d6 Embers of dissolved salvage for one full Beat of searching.</li>
+                            <li>The helmet contains a dwarven skull with an ANVIL tooth-mark on the jaw bone. No record of this mission exists.</li>
+                            <li>Three Goss workers hiding here know the Irongate patrol timing through 07.</li>
+                        </ul>
+                        <p><strong>Connects to:</strong> 02, 07</p>
+                        </div>
+
+                        <div class="callout">
+                        <div class="sub2-label">06. Dark Vein <code>[DARK]</code></div>
+                        <p><em>A branching passage through what was once a major blood vessel. Dry now. The walls are the color of old rust and the floor crunches underfoot.</em></p>
+                        <ul>
+                            <li>2x Irongate Grunts (T3) - on patrol (06 &gt; 08 &gt; 06, 1 room every 2 Beats), currently at 06.</li>
+                            <li>The patrol carries the only light. Without it, all FUSE assignments here take a penalty die.</li>
+                            <li>Brittle floor - running or heavy armor is audible from 07. Reaching 08 undetected requires a FUSE assignment.</li>
+                        </ul>
+                        <p><strong>Connects to:</strong> 04, 08</p>
+                        </div>
+                    </div>
+
+                    <!-- ROOMS 07-11 -->
+                    <div class="card">
+                        <h3 class="subsection-label">Rooms 07-11</h3>
+
+                        <div class="callout">
+                        <div class="sub2-label">07. Nerve Cluster <code>[UNSTABLE]</code></div>
+                        <p><em>Single file. The walls are translucent membrane and things move behind them - not fast, not intentional, just alive. The floor pulses. The ceiling is low enough to matter.</em></p>
+                        <ul>
+                            <li>3x Irongate Grunts (T3) - holding the chokepoint, professional, not complacent.</li>
+                            <li>Nerve walls react to concussive force: BLAST 4+ causes a secondary contraction - everyone takes T2 BLAST and the passage seals for 1 Beat.</li>
+                            <li>Duvane's bootprints are visible and deep, heading toward 10.</li>
+                        </ul>
+                        <p><strong>Connects to:</strong> 03, 08</p>
+                        </div>
+
+                        <div class="callout">
+                        <div class="sub2-label">08. Lower Gut</div>
+                        <p><em>Warm. The walls move with slow peristaltic rhythm. A low biological patience that has not received the news of the Titan's death.</em></p>
+                        <ul>
+                            <li>2x Irongate Grunts (T3) - resting, eating, weapons within reach.</li>
+                            <li>One grunt carries a written order from Duvane: <em>Hold the gut. Nothing comes back up without my say.</em></li>
+                            <li>If combat starts, one grunt triggers a salvage charge to collapse the passage to 07 - cutting off reinforcement and retreat.</li>
+                        </ul>
+                        <p><strong>Connects to:</strong> 06, 07, 09</p>
+                        </div>
+
+                        <div class="callout">
+                        <div class="sub2-label">09. Spinal Run <code>[SCALD]</code></div>
+                        <p><em>The spine runs above the passage like a vaulted ceiling made of something that was never bone. Still faintly luminous. The air is copper and pressure and something older than either.</em></p>
+                        <ul>
+                            <li>Sgt. Duvane (T5[++]) + 1x Irongate Grunt (T3) - Duvane at the entrance to 10, waiting for Goss.</li>
+                            <li>[SCALD] - superheated air. Explosive [E] BLAST die +2 in this room.</li>
+                            <li>Duvane will not negotiate. He will tell the squad exactly what his orders are before fighting starts - he considers it professional courtesy.</li>
+                            <li>No cover. Anyone entering from 08 is fully exposed.</li>
+                        </ul>
+                        <p><strong>Connects to:</strong> 08, 10</p>
+                        </div>
+
+                        <div class="callout">
+                        <div class="sub2-label">10. Skull Basin - Convergence Gland <code>[SCALD]</code></div>
+                        <p><em>The skull interior is a chamber the size of a large room. The Convergence Gland hangs at its center in a web of cartilage and dried nerve tissue, still faintly pulsing. It is the size of a dwarf's torso. It is the only one in the world.</em></p>
+                        <ul>
+                            <li>No enemies unless Duvane retreats here or Goss is working alone at White Hot.</li>
+                            <li>Extracting the gland requires one full Beat - the operative doing it cannot act offensively. Requires two dwarves to carry or Goss's reinforced case.</li>
+                            <li>Dwarves within arm's reach feel a faint spatial awareness of the room behind them, around corners, through walls. This is not a mechanical effect. It is just strange.</li>
+                            <li>At Shatterpoint the gland has begun to darken at its edges. 2 Beats before it is useless.</li>
+                        </ul>
+                        <p><strong>Connects to:</strong> 09, 11</p>
+                        </div>
+
+                        <div class="callout">
+                        <div class="sub2-label">11. Crest Breach <code>[FLOOD]</code></div>
+                        <p><em>The skull crested and split on final impact. Cold air comes through. Real light, dim and tunnelish. The drop is fifteen feet onto uncertain footing.</em></p>
+                        <ul>
+                            <li>No enemies.</li>
+                            <li>Requires rope or climbing gear for a clean descent. Without it: FUSE assignment or T2 BLAST on landing.</li>
+                            <li>The gland must be lowered on a line - cannot be dropped. A dwarf taking T3+ BLAST while carrying it makes a FUSE assignment or it cracks, halving value.</li>
+                            <li>At Shatterpoint: partially obstructed - costs 1 extra Beat, everyone takes T1 BLAST from debris.</li>
+                        </ul>
+                        <p><strong>Connects to:</strong> 10</p>
+                        </div>
+                    </div>
+
+                    <!-- HAMMERS -->
+                    <div class="card full">
+                        <h3 class="subsection-label">Hammers</h3>
+                        <div class="sub2-label heat-stage hot">Hot - "Goss Accelerates"</div>
+                        <p>Ferula Goss has heard the fighting and stopped waiting for Irongate's all-clear. She takes two workers and pushes directly for 10 via a service route, bypassing 07 and 08, emerging in 09. She is moving fast and has her extraction case. Duvane receives a runner with updated orders: <em>secure the gland now, don't wait.</em></p>
+                        <div class="sub2-label heat-stage whitehot">White Hot - "Irongate Takes Over"</div>
+                        <p>Duvane has decided Goss is a liability. He relieves her of the extraction case by force - she is now locked in 03 with one loyal worker and a lot of volatile compounds. Remaining Irongate run a combat perimeter between 08 and 10. Goss, furious and unsupervised, begins preparing something in 03 that she should not be preparing unsupervised.</p>
+                        <div class="sub2-label heat-stage shatter">Shatterpoint - "The Titan Settles"</div>
+                        <p>The carcass shifts. Room 04 ruptures - bile floods upward through 06, making both [TOXIC] and impassable without gear. Room 11 partially collapses. The gland has 2 Beats before full degradation. Duvane is in 10 with whatever Irongate remains. The squad has one window and it is closing.</p>
+                    </div>
+
+                    <!-- INTEL -->
+                    <div class="card">
+                        <h3 class="subsection-label">Intel Tiers</h3>
+                        <div class="sub2-label">Briefing Intel</div>
+                        <p>Titan carcass, partially submerged, three days dead. Interior biologically active - heat, toxic pockets, structural instability. Rival operation entered 18 hours ago: salvage company under alchemist Ferula Goss, funded by Lord Caswick Drenmore. Six professional mercenaries on site. Convergence Gland location: skull basin, deep interior. Two known entry points: jaw (01), unknown secondary near the crest.</p>
+                        <div class="sub2-label">Scout Intel</div>
+                        <ul>
+                            <li>Irongate split: three at nerve cluster (07), two on patrol (06 &gt; 08), sergeant forward at spinal run (09)</li>
+                            <li>Goss field station in lung chamber (03) - notes there, Goss there, three Irongate posted</li>
+                            <li>Stomach floor (05) is unguarded and connects upper and lower halves without passing 07</li>
+                            <li>Three Goss workers in 05 have fled and know the Irongate patrol timing</li>
+                            <li>Hammer hint: the biology responds to concussive force - the nerve cluster contracts when hit hard</li>
+                        </ul>
+                    </div>
+
+                    <!-- ENTRY & EXTRACTION -->
+                    <div class="card">
+                        <h3 class="subsection-label">Entry &amp; Extraction</h3>
+                        <div class="sub2-label">Entry</div>
+                        <ul>
+                            <li><strong>01 Jaw</strong> - main entry, Goss rig visible, workers present, manageable at Cold with a cover story</li>
+                            <li><strong>11 Crest Breach</strong> - requires climbing gear, bypasses the entire map, one room from the objective but blind, no secondary objectives accessible, Duvane is one room away</li>
+                        </ul>
+                        <div class="sub2-label">Extraction</div>
+                        <ul>
+                            <li>The gland requires two dwarves to carry or Goss's reinforced case</li>
+                            <li>Lowering it through 11 requires a dedicated dwarf on rope duty - cannot act offensively during lowering</li>
+                            <li>Securing Goss's case in 03 makes extraction significantly cleaner</li>
+                            <li>Shatterpoint affects both exits - a squad still in the lower half when the Titan settles is in serious trouble</li>
+                        </ul>
+                    </div>
+
+                    <!-- GM NOTES -->
+                    <div class="card full dark">
+                        <h3 class="subsection-label">GM Notes</h3>
+                        <p>This mission has three layers of tension running simultaneously: the biology, the Irongate crew and Ferula Goss. The biology is impersonal and clock-like. The Irongate crew is professional and predictable. Goss is neither. Play her like someone who has been awake for three days, has strong opinions about everything and is approximately four bad decisions away from doing something irreversible to a one-of-a-kind biological artifact.</p>
+                        <p>Duvane is worth playing with full conviction. He is not cruel, he is doing a contracted job and he will tell you so. The moment his contract conflicts with his survival he will reassess, not flee, reassess. He is the most dangerous thing in the carcass.</p>
+                        <p>The skull in room 05 is a planted hook. Don't explain it this session.</p>
+                        <p>If everything goes wrong it goes wrong at the nerve cluster, the passage seals, the squad is split, Duvane has the gland and Goss is doing something catastrophic in 03. That's still a good session.</p>
+                        <div class="callout">Campaign thread: Drenmore wanted the gland for something specific and Goss's notes name the application. The Hand will read those notes and go quiet for a moment before saying anything. Whatever Drenmore is building it requires the depth-sense of a Titan-class organism.</div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -4061,7 +4755,10 @@ Step 4 [ ][ ]  Advances on 1-5</pre>
             <h2 class="section-label" id="printables">Printables</h2>
             <div class="grid">
                 <div class="card full">
-                    <span class="wip">wip - need to design: character sheet, campaign sheet (factions/overhold), mission sheet</span>
+                    <p>Character sheets, mission sheets and campaign tracking sheets for printing.</p>
+                    <ul>
+                        <li><a href="misc/op-sheet.pdf" target="_blank">Operative Sheet</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
