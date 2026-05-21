@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ANVIL - Player Quick Reference</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --main: #511b1b;
+            --highlight: #beb9a6;
+            --tert: #715d78;
+            --terhi: #ca4141;
+            --bg: #f5f0e8;
+            --border: #b1b1b1;
+            --text: #242424;
+            --faint: #58595a;
+            --card-bg: #edeae0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #888;
+            font-family: 'Courier Prime', 'Courier New', monospace;
+            font-size: 8.5pt;
+            line-height: 1.45;
+            color: var(--text);
+        }
+
+        .page {
+            width: 8.5in;
+            height: 11in;
+            background: var(--bg);
+            margin: 0.3in auto;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ── HEADER ── */
+        .header {
+            background: var(--text);
+            color: var(--bg);
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            padding: 5pt 12pt 4pt;
+            border-bottom: 3pt solid var(--highlight);
+            flex-shrink: 0;
+        }
+
+        .header-title {
+            font-family: 'Staatliches', sans-serif;
+            font-size: 28pt;
+            letter-spacing: 8pt;
+            color: var(--highlight);
+            line-height: 1;
+        }
+
+        .header-sub {
+            font-size: 7pt;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #c8c3b8;
+        }
+
+        .cls-1 {
+            fill: var(--highlight);
+        }
+
+        .cls-2 {
+            fill: var(--terhi);
+        }
+
+        /* ── TWO-COL BODY ── */
+        .body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .col {
+            padding: 7pt 8pt 6pt;
+            display: flex;
+            flex-direction: column;
+            gap: 5pt;
+            overflow: hidden;
+        }
+
+        .col:first-child {
+            border-right: 2pt solid var(--border);
+        }
+
+        /* ── SECTION ── */
+        .sec-head {
+            font-family: 'Staatliches', sans-serif;
+            font-size: 11pt;
+            letter-spacing: 0.12em;
+            color: var(--text);
+            border-bottom: 1.5pt solid var(--text);
+            padding-bottom: 1pt;
+            margin-bottom: 2pt;
+            text-transform: uppercase;
+        }
+
+        .sub-head {
+            font-size: 6.5pt;
+            font-weight: bold;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--main);
+            margin-top: 3pt;
+            margin-bottom: 1pt;
+        }
+
+        /* ── BLOCK ── */
+        .block {
+            background: var(--card-bg);
+            border-top: 2.5pt solid var(--text);
+            border: 1pt solid #b1b1b1;
+            border-top: 2.5pt solid var(--text);
+            padding: 4pt 6pt;
+        }
+
+        .block.red {
+            border-top-color: var(--terhi);
+        }
+
+        .block.gold {
+            border-top-color: var(--highlight);
+        }
+
+        .block.purple {
+            border-top-color: var(--tert);
+        }
+
+        /* ── TABLE ── */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 7.5pt;
+            margin-top: 2pt;
+        }
+
+        th {
+            background: var(--text);
+            color: var(--bg);
+            text-align: left;
+            padding: 2pt 4pt;
+            font-size: 6.5pt;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        td {
+            padding: 1.5pt 4pt;
+            border-bottom: 0.5pt solid var(--border);
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) td {
+            background: rgba(0, 0, 0, 0.03);
+        }
+
+        /* ── HEAT TRACK ── */
+        .heat-track {
+            display: flex;
+            gap: 2pt;
+            margin-top: 3pt;
+        }
+
+        .hs {
+            flex: 1;
+            text-align: center;
+            font-size: 6pt;
+            font-weight: bold;
+            letter-spacing: 0.03em;
+            padding: 2pt 1pt;
+            border: 1pt solid #999;
+            line-height: 1.3;
+        }
+
+        .hs.cold {
+            background: #f0e0a0;
+        }
+
+        .hs.warm {
+            background: #ffc08c;
+        }
+
+        .hs.hot {
+            background: #ff9f9f;
+        }
+
+        .hs.wh {
+            background: #b9feff;
+        }
+
+        .hs.shatter {
+            background: var(--text);
+            color: var(--highlight);
+            border-color: var(--highlight);
+        }
+
+        /* ── CALLOUT ── */
+        .callout {
+            border-left: 3pt solid var(--highlight);
+            background: rgba(189, 163, 96, 0.1);
+            padding: 3pt 5pt;
+            font-style: italic;
+            color: var(--faint);
+            font-size: 7pt;
+            margin-top: 3pt;
+        }
+
+        code {
+            background: rgba(0, 0, 0, 0.08);
+            padding: 0 3pt;
+            font-family: 'Courier Prime', monospace;
+            font-size: 7pt;
+        }
+
+        strong {
+            color: var(--terhi);
+        }
+
+        p {
+            margin-bottom: 2pt;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        ul {
+            padding-left: 10pt;
+            margin: 2pt 0;
+            list-style-type: square;
+        }
+
+        li {
+            margin-bottom: 1pt;
+        }
+
+        .env-tag {
+            display: inline-block;
+            background: var(--text);
+            color: var(--highlight);
+            font-size: 6pt;
+            padding: 0.5pt 3pt;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        .inline-rule {
+            border: none;
+            border-top: 1pt solid var(--border);
+            margin: 3pt 0;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            .page {
+                margin: 0;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+
+        <!-- HEADER -->
+        <div class="header">
+            <div><span class="header-title">ANVIL</span><svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76.74 108.55" width="15px">
+                <g id="Layer_2-2" data-name="Layer 2">
+                    <g id="Layer_1-2" data-name="Layer 1-2">
+                        <path class="cls-1" d="M76.65,60.56c-.24-2.11-1.81-3.63-3.59-3.81-3.53-.35-43.06,0-43.06,0-2.75.29-3.88,3.11-3.61,6.04H1.75c-1.01.1-1.91.41-1.73,1.79.12.92,2.15,3.9,2.76,4.79,5.44,7.95,12.39,13.1,21.19,14.57.85.14,2.03.05,2.84.22.56.12,1.3,2.66,1.47,3.35.95,3.88.61,8.44-1.22,11.91-2.69.02-5.14.33-6.98,2.81-.88,1.19-2.7,5.63-.76,6.33l48.73-.05c1.36-.73.31-4.09-.26-5.24-1.56-3.12-4.54-3.97-7.49-3.78-2.63-4.38-2.46-10.7-.11-15.23,2.77-.67,8.43.29,10.19-1.05.22-.17.88-.91.91-2.25.09-3.77,0-15.06,0-15.06h4.12c.41,0,1.13-.8,1.23-1.31.14-.7.11-3.25.02-4.02h-.01Z" />
+                    </g>
+                    <path class="cls-2" d="M59.11,23.55c-.2.59-.17,1.21-.33,1.81-.69,2.68-3.27,4.65-6.39,5.85.68-2.4,1.51-4.78,2-7.2,2.11-10.48-.6-18.53-12.89-23.17-.49-.19-2-.79-2.43-.84-.34-.04-.12.11-.07.19,1.7,3.17,2.07,4.65.59,8.19-4.17,10-21.88,21.88-17.3,32.66,1.51,3.56,5.13,6.16,9.15,8.19.32.21,1.52.63,2.82,1.06,2.67.89,5.46,1.37,8.27,1.4,1.48.02,3.13-.01,4.66-.14,2.55-.21,4.97-1.18,6.99-2.75,4.93-3.84,12.15-11.03,12.28-12.26.53-5.15-3.02-9.6-7.33-13.01Z" />
+                </g>
+            </svg></div>
+            <span class="header-sub">Player Quick Reference &nbsp;·&nbsp; v1.0</span>
+            <span class="header-sub">Drop 'em like stones.</span>
+        </div>
+
+        <div class="body">
+
+            <!-- LEFT COL -->
+            <div class="col">
+
+                <!-- THROWING STONES -->
+                <div class="block">
+                    <div class="sec-head">Throwing Stones</div>
+                    <p>Roll <strong>CMP + IMP</strong>. Assign one die as <strong>FUSE</strong>, one as <strong>BLAST</strong>.</p>
+                    <div class="callout">FUSE = <em>how</em> it happens. BLAST = <em>what</em> it does.</div>
+
+                    <div class="sub-head">Standard Action</div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Die</th>
+                                <th>Role</th>
+                                <th>Effect</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>FUSE</td>
+                                <td>Execution</td>
+                                <td>Lower = cleaner, faster, quieter</td>
+                            </tr>
+                            <tr>
+                                <td>BLAST</td>
+                                <td>Impact</td>
+                                <td>Checked vs Temper. 4-6 raises Heat +1</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><strong>Both 1s</strong></td>
+                                <td><strong>Smother</strong> - Reduce Heat by 3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="sub-head">Explosive Action [E]</div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Die</th>
+                                <th>Role</th>
+                                <th>Effect</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>FUSE</td>
+                                <td>Delay</td>
+                                <td>Turns until detonation</td>
+                            </tr>
+                            <tr>
+                                <td>BLAST</td>
+                                <td># Dice</td>
+                                <td>Number of Explosion Dice (ExD) to roll</td>
+                            </tr>
+                            <tr>
+                                <td>Heat</td>
+                                <td>-</td>
+                                <td>Rises by full BLAST die value (not just +1)</td>
+                            </tr>
+                            <tr>
+                                <td>Explosion Die</td>
+                                <td>-</td>
+                                <td>4+ = hit, 6 = explode again, all become GM Aftermath</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="sub-head">Stack Up (squad combines turns)</div>
+                    <p>Each dwarf throws stones. Pool all dice, assign one FUSE + one BLAST. Two or more 6s across pool = Heat +1 per participating dwarf. <em>Cannot trigger Smother.</em></p>
+
+                    <div class="sub-head">Group Roll (GM calls for)</div>
+                    <p>Same as Stack Up rules, but treated as one throw for all outcomes. <em>Can trigger Smother.</em></p>
+
+                    <div class="sub-head">Squad Aftermath Dice</div>
+                    <p>Before rolling, any dwarf may grab 1 Squad Aftermath die and add it to their pool. Assign FUSE/BLAST normally, discard unused die from pool.</p>
+
+                    <div class="sub-head">Assignment Guide</div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Trying to…</th>
+                                <th>Key die logic</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Move quietly / execute cleanly</td>
+                                <td>FUSE low</td>
+                            </tr>
+                            <tr>
+                                <td>Hit hard / cause max damage</td>
+                                <td>BLAST high</td>
+                            </tr>
+                            <tr>
+                                <td>Negotiate / de-escalate NPC</td>
+                                <td>FUSE under Posture</td>
+                            </tr>
+                            <tr>
+                                <td>Make noise as distraction</td>
+                                <td>BLAST high</td>
+                            </tr>
+                            <tr>
+                                <td>Keep Heat down</td>
+                                <td>BLAST low</td>
+                            </tr>
+                            <tr>
+                                <td>Set long-delay charge</td>
+                                <td>FUSE high</td>
+                            </tr>
+                            <tr>
+                                <td>Blow something up immediately</td>
+                                <td>FUSE low</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- HIT RESOLUTION -->
+                <div class="block red">
+                    <div class="sec-head">Hit Resolution</div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Result</th>
+                                <th>Effect</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>BLAST &gt; Temper</code></td>
+                                <td>Clean hit: all marks filled</td>
+                            </tr>
+                            <tr>
+                                <td><code>BLAST = Temper</code></td>
+                                <td>Maim: fill 1 mark</td>
+                            </tr>
+                            <tr>
+                                <td><code>BLAST &lt; Temper</code></td>
+                                <td>Botch: no effect</td>
+                            </tr>
+                            <tr>
+                                <td>Explosion die 4+</td>
+                                <td>Always a clean hit</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="sub-head">Temper Notation</div>
+                    <p><code>T3</code> = BLAST 3+ to affect, 1 ExD hit destroys. &nbsp;<code>T3[++]</code> = BLAST 3+, needs 2 ExD hits. &nbsp;<code>T[++]</code> = Explosives only, 2 ExD hits to destroy. Dwarves are base <strong>T3</strong>.</p>
+
+                    <div class="sub-head">Simultaneous Attacks</div>
+                    <p>Lower FUSE goes first. Tie: higher BLAST goes first. Still tie: d6 (1-3 enemy, 4-6 player).</p>
+                </div>
+
+            </div><!-- /left col -->
+
+            <!-- RIGHT COL -->
+            <div class="col">
+
+                <!-- DAMAGE & GRIT -->
+                <div class="block">
+                    <div class="sec-head">Damage &amp; Staying Alive</div>
+                    <p>Hits land on <strong>gear or skills first</strong> (player's choice, fiction must support it). GRIT is last resort.</p>
+                    <ul>
+                        <li>All gear and skills have <strong>3 marks</strong>. Full = unavailable for mission.</li>
+                        <li>No gear left: roll <strong>d3</strong> for both CMP and IMP.</li>
+                        <li>Skills can still be used until all 3 marks fill. Filled skill marks don't clear until Slag Off downtime.</li>
+                        <li>All dwarves have <strong>3 GRIT</strong>.</li>
+                    </ul>
+                    <div class="sub-head">GRIT Damage</div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Hit type</th>
+                                <th>GRIT effect</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Maim</td>
+                                <td>Mark 1 GRIT</td>
+                            </tr>
+                            <tr>
+                                <td>Clean hit</td>
+                                <td>Mark all 3 GRIT, <strong>going down</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="sub-head">Going Down</div>
+                    <p>Dwarf marks final GRIT. They take <strong>one last action</strong>. May reroll throw stones once. Then they're gone. A player or foe may choose to knock unconscious instead of kill.</p>
+                    <p><em>Falling:</em> ExD1 per 10ft fallen.</p>
+                </div>
+
+                <!-- HEAT -->
+                <div class="block gold">
+                    <div class="sec-head">Heat</div>
+                    <p>Heat rises when BLAST assigned is <strong>4, 5, or 6</strong>, or when using [E] (full BLAST value). Hammers change mission conditions.</p>
+                    <div class="heat-track">
+                        <div class="hs cold"><strong>Cold</strong><br>0-5<br>No Hammer</div>
+                        <div class="hs warm"><strong>Warm</strong><br>6-10<br>No Hammer</div>
+                        <div class="hs hot"><strong>Hot</strong><br>11-15<br>Hammer if prepped</div>
+                        <div class="hs wh"><strong>White Hot</strong><br>16-19<br>Hammer if prepped</div>
+                        <div class="hs shatter"><strong>Shatter&shy;point</strong><br>20+<br>Hammer always</div>
+                    </div>
+                    <p style="margin-top:3pt;font-size:7pt;color:var(--faint)"><em>Shatterpoint: Heat cannot be reduced. Mission is collapsing, race to extract.</em></p>
+                </div>
+
+                <!-- ENVIRONMENT TAGS -->
+                <div class="block">
+                    <div class="sec-head">Environment Tags</div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tag</th>
+                                <th>Effect</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>[DARK]</code></td>
+                                <td>Standard action FUSE die +2</td>
+                            </tr>
+                            <tr>
+                                <td><code>[SCALD]</code></td>
+                                <td>[E] BLAST die +2</td>
+                            </tr>
+                            <tr>
+                                <td><code>[FLOOD]</code></td>
+                                <td>Moving costs an action. [E] FUSE die +2. Dropped items sink.</td>
+                            </tr>
+                            <tr>
+                                <td><code>[FOG]</code></td>
+                                <td>Stealth actions BLAST -2. Ranged actions FUSE +2.</td>
+                            </tr>
+                            <tr>
+                                <td><code>[BRIGHT]</code></td>
+                                <td>Movement raises Heat +1. Stack Up generates +1 Heat when initiated.</td>
+                            </tr>
+                            <tr>
+                                <td><code>[TOXIC]</code></td>
+                                <td>Without protection: IMP die d8</td>
+                            </tr>
+                            <tr>
+                                <td><code>[UNSTABLE]</code></td>
+                                <td>On [E] BLAST 6; d6: 4-6 one exit blocked</td>
+                            </tr>
+                            <tr>
+                                <td><code>[FORT]</code></td>
+                                <td>Structures need extra [++] to destroy</td>
+                            </tr>
+                            <tr>
+                                <td><code>[DEEPTOUCH]</code></td>
+                                <td>CMP die d10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- ENCUMBRANCE -->
+                <div class="block red">
+                    <div class="sec-head">Encumbrance</div>
+                    <div class="sub-head">Carrying something dwarf-sized or larger</div>
+                    <p>Roll an extra d6, discard the lowest die before assigning. Two dwarves carrying: both take the penalty when taking actions.</p>
+                </div>
+
+            </div><!-- /right col -->
+        </div><!-- /body -->
+    </div><!-- /page -->
+</body>
+
+</html>

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ANVIL - Overhold & Loadout Reference</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --main: #511b1b;
+    --highlight: #beb9a6;
+    --tert: #715d78;
+    --terhi: #ca4141;
+    --bg: #f5f0e8;
+    --border: #b1b1b1;
+    --text: #242424;
+    --faint: #58595a;
+    --card-bg: #edeae0;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #888;
+    font-family: 'Courier Prime', 'Courier New', monospace;
+    font-size: 8.5pt;
+    line-height: 1.45;
+    color: var(--text);
+  }
+
+  .page {
+    width: 8.5in;
+    height: 11in;
+    background: var(--bg);
+    margin: 0.3in auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    background: var(--text);
+    color: var(--bg);
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 5pt 12pt 4pt;
+    border-bottom: 3pt solid var(--highlight);
+    flex-shrink: 0;
+  }
+
+  .header-title {
+    font-family: 'Staatliches', sans-serif;
+    font-size: 28pt;
+    letter-spacing: 8pt;
+    color: var(--highlight);
+    line-height: 1;
+  }
+
+  .header-sub {
+    font-size: 7pt;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #c8c3b8;
+  }
+
+  .cls-1 {
+            fill: var(--highlight);
+        }
+
+        .cls-2 {
+            fill: var(--terhi);
+        }
+
+  /* ── TWO-COL BODY ── */
+  .body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  .col {
+    padding: 7pt 8pt 6pt;
+    display: flex;
+    flex-direction: column;
+    gap: 5pt;
+    overflow: hidden;
+  }
+
+  .col:first-child {
+    border-right: 2pt solid var(--border);
+  }
+
+  /* ── SECTION ── */
+  .sec-head {
+    font-family: 'Staatliches', sans-serif;
+    font-size: 11pt;
+    letter-spacing: 0.12em;
+    color: var(--text);
+    border-bottom: 1.5pt solid var(--text);
+    padding-bottom: 1pt;
+    margin-bottom: 2pt;
+    text-transform: uppercase;
+  }
+
+  .sub-head {
+    font-size: 6.5pt;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--main);
+    margin-top: 4pt;
+    margin-bottom: 1pt;
+  }
+
+  /* ── BLOCK ── */
+  .block {
+    background: var(--card-bg);
+    border: 1pt solid #b1b1b1;
+    border-top: 2.5pt solid var(--text);
+    padding: 4pt 6pt;
+  }
+
+  .block.red    { border-top-color: var(--terhi); }
+  .block.gold   { border-top-color: var(--highlight); }
+  .block.purple { border-top-color: var(--tert); }
+  .block.dark   { background: var(--text); color: #e9e9e9; border-top-color: var(--highlight); }
+  .block.dark .sec-head   { color: var(--highlight); border-color: rgba(255,255,255,0.3); }
+  .block.dark .sub-head   { color: var(--highlight); }
+  .block.dark th          { background: rgba(255,255,255,0.12); color: var(--highlight); }
+  .block.dark td          { border-color: rgba(255,255,255,0.1); color: #ddd; }
+  .block.dark strong      { color: var(--highlight); }
+  .block.dark .callout    { border-color: var(--highlight); color: var(--highlight); background: rgba(190,185,166,0.08); }
+
+  /* ── PHASE STEPS ── */
+  .phase-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 3pt;
+  }
+
+  .phase-step {
+    display: flex;
+    gap: 6pt;
+    align-items: flex-start;
+    padding: 3pt 5pt;
+    background: rgba(255,255,255,0.45);
+    border-left: 3pt solid var(--main);
+  }
+
+  .phase-step.red   { border-left-color: var(--terhi); }
+  .phase-step.gold  { border-left-color: var(--highlight); }
+  .phase-step.purple{ border-left-color: var(--tert); }
+
+  .phase-num {
+    font-family: 'Staatliches', sans-serif;
+    font-size: 14pt;
+    color: var(--main);
+    line-height: 1;
+    min-width: 18pt;
+    text-align: center;
+  }
+
+  .phase-step.red    .phase-num { color: var(--terhi); }
+  .phase-step.gold   .phase-num { color: #9a7a2e; }
+  .phase-step.purple .phase-num { color: var(--tert); }
+
+  .phase-content { flex: 1; }
+  .phase-label {
+    font-weight: bold;
+    font-size: 8pt;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text);
+    display: block;
+    margin-bottom: 1pt;
+  }
+
+  /* ── TABLE ── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 7.5pt;
+    margin-top: 2pt;
+  }
+
+  th {
+    background: var(--text);
+    color: var(--bg);
+    text-align: left;
+    padding: 2pt 4pt;
+    font-size: 6.5pt;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  td {
+    padding: 1.5pt 4pt;
+    border-bottom: 0.5pt solid var(--border);
+    vertical-align: top;
+  }
+
+  tr:nth-child(even) td { background: rgba(0,0,0,0.03); }
+
+  /* ── CALLOUT ── */
+  .callout {
+    border-left: 3pt solid var(--highlight);
+    background: rgba(189,163,96,0.1);
+    padding: 3pt 5pt;
+    font-style: italic;
+    color: var(--faint);
+    font-size: 7pt;
+    margin-top: 3pt;
+  }
+
+  /* ── REP TRACK ── */
+  .rep-track {
+    display: flex;
+    flex-direction: column;
+    gap: 2pt;
+    margin-top: 3pt;
+  }
+
+  .rep-row {
+    display: flex;
+    align-items: baseline;
+    gap: 5pt;
+    padding: 2pt 4pt;
+    border-bottom: 0.5pt solid var(--border);
+    font-size: 7.5pt;
+  }
+
+  .rep-row:last-child { border-bottom: none; }
+
+  .rep-tier-name {
+    font-family: 'Staatliches', sans-serif;
+    font-size: 10pt;
+    color: var(--main);
+    min-width: 52pt;
+    line-height: 1;
+  }
+
+  .rep-boxes {
+    display: flex;
+    gap: 2pt;
+    align-items: center;
+  }
+
+  .rep-box {
+    width: 8pt;
+    height: 8pt;
+    border: 1pt solid var(--text);
+    background: var(--bg);
+    display: inline-block;
+  }
+
+  .rep-effect {
+    color: var(--faint);
+    font-size: 7pt;
+    flex: 1;
+    font-style: italic;
+  }
+
+  /* ── ITEM TAGS ── */
+  .tags-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3pt;
+    margin-top: 3pt;
+  }
+
+  .tag-pill {
+    background: var(--text);
+    color: var(--highlight);
+    font-size: 6.5pt;
+    padding: 1pt 4pt;
+    letter-spacing: 0.05em;
+    font-weight: bold;
+  }
+
+  code {
+    background: rgba(0,0,0,0.08);
+    padding: 0 3pt;
+    font-family: 'Courier Prime', monospace;
+    font-size: 7pt;
+  }
+
+  strong { color: var(--terhi); }
+
+  p { margin-bottom: 2pt; }
+  p:last-child { margin-bottom: 0; }
+
+  ul {
+    padding-left: 10pt;
+    margin: 2pt 0;
+    list-style-type: square;
+  }
+
+  li { margin-bottom: 1pt; }
+
+  .inline-note {
+    font-size: 6.5pt;
+    color: var(--faint);
+    font-style: italic;
+    margin-top: 2pt;
+  }
+
+  @media print {
+    body { background: white; }
+    .page { margin: 0; box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div><span class="header-title">ANVIL</span><svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76.74 108.55" width="15px">
+                <g id="Layer_2-2" data-name="Layer 2">
+                    <g id="Layer_1-2" data-name="Layer 1-2">
+                        <path class="cls-1" d="M76.65,60.56c-.24-2.11-1.81-3.63-3.59-3.81-3.53-.35-43.06,0-43.06,0-2.75.29-3.88,3.11-3.61,6.04H1.75c-1.01.1-1.91.41-1.73,1.79.12.92,2.15,3.9,2.76,4.79,5.44,7.95,12.39,13.1,21.19,14.57.85.14,2.03.05,2.84.22.56.12,1.3,2.66,1.47,3.35.95,3.88.61,8.44-1.22,11.91-2.69.02-5.14.33-6.98,2.81-.88,1.19-2.7,5.63-.76,6.33l48.73-.05c1.36-.73.31-4.09-.26-5.24-1.56-3.12-4.54-3.97-7.49-3.78-2.63-4.38-2.46-10.7-.11-15.23,2.77-.67,8.43.29,10.19-1.05.22-.17.88-.91.91-2.25.09-3.77,0-15.06,0-15.06h4.12c.41,0,1.13-.8,1.23-1.31.14-.7.11-3.25.02-4.02h-.01Z" />
+                    </g>
+                    <path class="cls-2" d="M59.11,23.55c-.2.59-.17,1.21-.33,1.81-.69,2.68-3.27,4.65-6.39,5.85.68-2.4,1.51-4.78,2-7.2,2.11-10.48-.6-18.53-12.89-23.17-.49-.19-2-.79-2.43-.84-.34-.04-.12.11-.07.19,1.7,3.17,2.07,4.65.59,8.19-4.17,10-21.88,21.88-17.3,32.66,1.51,3.56,5.13,6.16,9.15,8.19.32.21,1.52.63,2.82,1.06,2.67.89,5.46,1.37,8.27,1.4,1.48.02,3.13-.01,4.66-.14,2.55-.21,4.97-1.18,6.99-2.75,4.93-3.84,12.15-11.03,12.28-12.26.53-5.15-3.02-9.6-7.33-13.01Z" />
+                </g>
+            </svg></div>
+    <span class="header-sub">Overhold Reference &nbsp;·&nbsp; v1.0</span>
+    <span class="header-sub">Between the jobs.</span>
+  </div>
+
+  <div class="body">
+
+    <!-- ════════ LEFT COLUMN ════════ -->
+    <div class="col">
+
+      <!-- DOWNTIME LOOP -->
+      <div class="block dark">
+        <div class="sec-head">Downtime Loop</div>
+        <p style="font-size:7pt;color:#c8c3b8;margin-bottom:4pt;">Run in order after every mission. Each dwarf may take <strong>up to 2 Overhold Actions</strong> in Step 3. No dwarf may take the same action twice per downtime.</p>
+        <div class="phase-steps">
+          <div class="phase-step red">
+            <div class="phase-num" style="color: #f7a9a9">1</div>
+            <div class="phase-content">
+              <span class="phase-label" style="color: #f7a9a9">Debrief</span>
+              <p style="font-size:7pt;color:#ddd;">Review the mission with the Hand. Did Heat hit Hammer thresholds? Primary/secondary objectives complete? Was ANVIL exposed? What rumors spread? GM narrates consequences. Distribute <strong>Ember payout</strong> into the squad vault. Adjust <strong>Squad Reputation</strong> by extraction Heat (see Rep track).</p>
+            </div>
+          </div>
+          <div class="phase-step gold">
+            <div class="phase-num" style="color:#e1c279;">2</div>
+            <div class="phase-content">
+              <span class="phase-label" style="color:#e1c279;">Recovery</span>
+              <p style="font-size:7pt;color:#ddd;">Resolve Scars, funerals, retirements. All GRIT fully restored. Roll Scars for each surviving dwarf. Dwarves who died or retired roll new operatives here. <em style="color:var(--highlight)">Give this space - name the dead, hold the silence.</em></p>
+            </div>
+          </div>
+          <div class="phase-step purple">
+            <div class="phase-num" style="color:#cec4d2;">3</div>
+            <div class="phase-content">
+              <span class="phase-label" style="color:#cec4d2;">Overhold Actions</span>
+              <p style="font-size:7pt;color:#ddd;">Each dwarf takes up to 2 actions. Burn Embers from the squad vault. No repeats. See action list at right.</p>
+            </div>
+          </div>
+          <div class="phase-step">
+            <div class="phase-num">4</div>
+            <div class="phase-content">
+              <span class="phase-label">Prep &amp; Loadout</span>
+              <p style="font-size:7pt;">Review mission briefing. Each dwarf has <strong>4 item slots</strong>. All operatives carry Runeaxe (CMP d6) and Explosives Kit (IMP d6) - these don't use slots. Requisition additional gear from the stash. Spend Embers as needed. Agree on drop point and extraction route. When loadouts are set, the mission begins.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SCARS -->
+      <div class="block red">
+        <div class="sec-head">Scars</div>
+        <p>After every mission, each surviving dwarf rolls for Scars. Roll a d6, +1d6 per GRIT marked during the mission. If any die shows <strong>1 or 2</strong>, gain 1 Scar (max 1 per mission).</p>
+        <table>
+          <thead><tr><th>GRIT Marked</th><th>Dice Rolled</th></tr></thead>
+          <tbody>
+            <tr><td>0</td><td>1d6</td></tr>
+            <tr><td>1</td><td>2d6</td></tr>
+            <tr><td>2</td><td>3d6</td></tr>
+            <tr><td>3</td><td>4d6</td></tr>
+          </tbody>
+        </table>
+        <p class="inline-note">4 Scar slots per dwarf. When all full and a new Scar would be gained, permanently lose 1 GRIT instead. Player may choose a Scar rather than roll.</p>
+      </div>
+
+      <!-- REP TRACK -->
+      <div class="block gold">
+        <div class="sec-head">Squad Reputation</div>
+        <p style="font-size:7pt;margin-bottom:3pt;">Reputation shifts after every mission based on extraction Heat. Marks move along a 25-mark track divided into 5 tiers.</p>
+        <table style="margin-bottom:3pt;">
+          <thead><tr><th>Extraction Heat</th><th>Rep Shift</th></tr></thead>
+          <tbody>
+            <tr><td>Cold</td><td>−2 marks</td></tr>
+            <tr><td>Warm</td><td>−1 mark</td></tr>
+            <tr><td>Hot</td><td>No change</td></tr>
+            <tr><td>White Hot</td><td>+1 mark</td></tr>
+            <tr><td>Shatterpoint</td><td>+2 marks</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div><!-- /left col -->
+
+    <!-- ════════ RIGHT COLUMN ════════ -->
+    <div class="col">
+
+      <!-- OVERHOLD ACTIONS -->
+      <div class="block">
+        <div class="sec-head">Overhold Actions</div>
+        <p style="font-size:7pt;margin-bottom:4pt;">Base costs shown (at Rep 3 - Known). Rep modifies all costs. Minimum always 1 Ember.</p>
+
+        <div class="sub-head">Slag Off - 1 Ember</div>
+        <p><em>Drink deep, talk loud, decompress.</em> Clear all marks on one skill. May generate a rumor - ask the GM one question during briefing.</p>
+
+        <div class="sub-head">Scout - 1-3 Ember</div>
+        <p><em>Reveal mission intel.</em> 1 Ember per piece of hidden intel revealed: layout, enemy Temper values, Hammer thresholds, faction presence, or extraction complications.</p>
+
+        <div class="sub-head">Bond - 1 Ember</div>
+        <p><em>Create or advance a squad link.</em> Describe how you bond. Fill 1 mark on your Bond track.</p>
+        
+
+        <div class="sub-head">Interrogate - 1 Ember</div>
+        <p><em>Extract intel from prisoners or artifacts.</em> Work on a captured enemy, document, or relic. Generates actionable intel or faction lore.</p>
+
+        <div class="sub-head">Reinforce - 2 Ember</div>
+        <p><em>Add temporary mission assets.</em> Requisition a support contact, safe extract point, distraction, or borrowed heavy equipment. Single use.</p>
+
+        <div class="sub-head">Fortify - 2 Ember</div>
+        <p><em>Fortify a skill.</em> Choose a Fortification, adjust the skill's Creed slightly, mark it. Max 3 fortifications per skill, no repeat types.</p>
+
+        <div class="sub-head">Forge - 3 Ember</div>
+        <p><em>Upgrade Runeaxe or Explosives Kit.</em> Runeaxe gets one Blade upgrade + one Rune upgrade. Explosives Kit gets one Mix + one Casing upgrade. Roll d6 or choose with GM.</p>
+
+        <div class="sub-head">Pull Strings - 3 Ember</div>
+        <p><em>Manipulate Glimmerhold politics.</em> Adjust Squad Rep by 1 mark. May affect future mission assignments.</p>
+
+        <div class="sub-head">Memorialize - 0 Ember</div>
+        <p><em>Honor the fallen.</em> Add an anvil to the memorial chamber for a dead or retired operative. Adjust Squad Rep by 1 mark (up or down). May unlock a one-time benefit tied to what that dwarf was known for.</p>
+      </div>
+
+    </div><!-- /right col -->
+  </div><!-- /body -->
+</div><!-- /page -->
+</body>
+</html>
