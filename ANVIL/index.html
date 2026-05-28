@@ -84,7 +84,7 @@
             line-height: 1.75;
         }
 
-        .version {
+        .header .version {
             font-size: 11px;
             color: var(--highlight);
             letter-spacing: 0.15em;
@@ -806,7 +806,7 @@
                     <path class="cls-2" d="M59.11,23.55c-.2.59-.17,1.21-.33,1.81-.69,2.68-3.27,4.65-6.39,5.85.68-2.4,1.51-4.78,2-7.2,2.11-10.48-.6-18.53-12.89-23.17-.49-.19-2-.79-2.43-.84-.34-.04-.12.11-.07.19,1.7,3.17,2.07,4.65.59,8.19-4.17,10-21.88,21.88-17.3,32.66,1.51,3.56,5.13,6.16,9.15,8.19.32.21,1.52.63,2.82,1.06,2.67.89,5.46,1.37,8.27,1.4,1.48.02,3.13-.01,4.66-.14,2.55-.21,4.97-1.18,6.99-2.75,4.93-3.84,12.15-11.03,12.28-12.26.53-5.15-3.02-9.6-7.33-13.01Z" />
                 </g>
             </svg></h1>
-        <div class="version">v0.99 - rules outdated vs print doc</div>
+        <div class="version">v0.9 - outdated from print doc</div>
         <div class="tagline">A fantasy TTRPG for four players and one GM.</div>
         <p class="intro">Fifty years after the craters were first discovered, evil things began to crawl out from the deep depths and with them they corrupted the natural arcana of the world. Dwarves, being born of the depths found themselves uniquely resilient to these magical effects, thus ANVIL was created. A covert strike force of the most elite and explosive dwarves, assembled to carry out the most dangerous missions for the Queen of Glimmerhold. You are one such strike force, these are your missions. Get in, <em><strong>drop 'em like stones</strong></em> and get out.</p>
     </div>
@@ -1246,7 +1246,7 @@ Shatterpoint           +2 Rep marks</pre>
                         An Explosion die hit is treated as a clean hit.
                     </div>
                     <div class="sub2-label">Gear &amp; Skills</div>
-                    <p>All gear and skills have <strong>3 marks</strong>. When gear marks are full it is unavailable for the rest of the mission. A dwarf with no gear rolls d3 for both CMP and IMP. A skill can still be used until all three marks are filled. Filled marks on skills do not clear unless the Slag Off downtime action is taken. A skilless dwarf is still capable, they've just lost their edge.</p>
+                    <p>All gear and skills have <strong>3 marks</strong>. When gear marks are full it is unavailable for the rest of the mission. A dwarf with no gear rolls d3 for both CMP and IMP. A skill can still be used until all three marks are filled. Filled marks on skills do not clear unless the Release Steam downtime action is taken. A skilless dwarf is still capable, they've just lost their edge.</p>
                     <p>Enemies and traps can target skills or gear directly. Disorienting gas does not damage armour, a veteran interrogator attacks your mind, not your gear. A smart guard may attempt to ignite your satchel charges.</p>
                     <div class="sub2-label">GRIT</div>
                     <p>GRIT is a dwarf's final resolve. Every dwarf starts with <strong>3 GRIT</strong>.</p>
@@ -2386,7 +2386,7 @@ Shatterpoint           +2 Rep marks</pre>
                     <p>Dwarves build Bonds through surviving missions together and spending time together at Overhold. Tracked separately for each dwarf on their Op Sheet. Each Bond level requires 2 marks to advance. When joining the squad, all dwarves fill 1 Bond mark.</p>
                     <div class="sub2-label">Advancing Bonds</div>
                     <ul>
-                        <li><strong>Bond downtime action.</strong> Fills 1 Bond mark.</li>
+                        <li><strong>Share Hearth downtime action.</strong> Fills 1 Bond mark.</li>
                         <li><strong>Surviving a mission at White Hot or Shatterpoint.</strong> All dwarves fill 1 Bond mark.</li>
                         <li>Engaging with a squadmates <strong>Fear</strong> fills 1 Bond mark.</li>
                     </ul>
@@ -2873,7 +2873,7 @@ Door to 05 is sealed. T[++]
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Slag Off</td>
+                                <td>Release Steam</td>
                                 <td>1</td>
                             </tr>
                             <tr>
@@ -2881,7 +2881,7 @@ Door to 05 is sealed. T[++]
                                 <td>1</td>
                             </tr>
                             <tr>
-                                <td>Bond</td>
+                                <td>Share Hearth</td>
                                 <td>1</td>
                             </tr>
                             <tr>
@@ -2914,7 +2914,7 @@ Door to 05 is sealed. T[++]
                 </div>
 
                 <div class="card">
-                    <h3 class="subsection-label">SLAG OFF (1 Ember)</h3>
+                    <h3 class="subsection-label">RELEASE STEAM (1 Ember)</h3>
                     <p class="callout"><em>Drink deep, talk loud, decompress.</em></p>
                     <p>Dwarven decompression. The dwarf spends time in the Overhold's lower halls, drinking, fighting and relaxing.</p>
                     <ul>
@@ -3203,9 +3203,9 @@ Door to 05 is sealed. T[++]
                 </div>
 
                 <div class="card">
-                    <h3 class="subsection-label">BOND (1 Ember)</h3>
-                    <p class="callout"><em>Create or advance a squad link.</em></p>
-                    <p>You take time to bond with your squad. Describe how you bond with your squad. Fill one mark on your Bond track.</p>
+                    <h3 class="subsection-label">SHARE HEARTH (1 Ember)</h3>
+                    <p class="callout"><em>Around shared flame, squads become kin.</em></p>
+                    <p>You take time to bond with your squad. Describe how you bond with your squad then fill one mark on your Bond track.</p>
                 </div>
 
                 <div class="card">
@@ -4833,7 +4833,7 @@ Step 4 [ ][ ]  Advances on 1-5</pre>
                         <p><strong>GM:</strong> What caused it?</p>
                         <p><strong>Brek Ironmark:</strong> After the collapse. When I was trapped under the rubble listening to those cultists walking around above me.</p>
                         <p><strong>GM:</strong> Perfect. Write it down.</p>
-                        <p><strong>Petra Stonewarden:</strong> I'm taking Slag Off.</p>
+                        <p><strong>Petra Stonewarden:</strong> I'm taking Release Steam.</p>
                         <p><strong>GM:</strong> What does that look like?</p>
                         <p><strong>Petra Stonewarden:</strong> Drinking in the lower forge halls. Not really talking. Just sitting there sharpening my runeaxe.</p>
                         <p><strong>GM:</strong> Clear the marks on Shadow Axe. While you're down there, you overhear a rumor. Someone in Glimmerhold is asking questions about the foundry explosion.</p>
@@ -4844,7 +4844,7 @@ Step 4 [ ][ ]  Advances on 1-5</pre>
                         <p>Dunvik Forgeback rolls: 5</p>
                         <p><strong>GM:</strong> Acrid Smoke. Your explosions now turn rooms [DARK] for 3 Beats.</p>
                         <p><strong>Dunvik Forgeback:</strong> Sick.</p>
-                        <p><strong>Brek Ironmark:</strong> I'm taking Bond with my squad.</p>
+                        <p><strong>Brek Ironmark:</strong> I'm taking Share Hearth with my squad.</p>
                         <p><strong>GM:</strong> What are you doing together?</p>
                         <p><strong>Brek Ironmark:</strong> Honestly? Probably just sitting there in silence after the mission.</p>
                         <p><strong>Petra Stonewarden:</strong> Yeah. Sharpening our axes, drinking.</p>
@@ -5312,7 +5312,7 @@ GRIT:  ○○○</pre>
             </div>
         </div>
 
-        <div class="version">
+        <div>
             ANVIL v1.0 &mdash; Inspo: Metal Gear Solid, X-COM, Hitman, Deep Rock Galactic, Splinter Cell, Wildsea, Daggerheart, Cairn
         </div>
 
@@ -5332,6 +5332,13 @@ GRIT:  ○○○</pre>
             link.addEventListener('click', () => {
                 document.getElementById('nav-menu').classList.remove('open');
             });
+        });
+
+        const button = document.getElementById('showbutton');
+        const box = document.getElementById('fortex');
+
+        button.addEventListener('click', () => {
+            box.classList.toggle('hide');
         });
     </script>
 
