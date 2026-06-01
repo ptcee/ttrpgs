@@ -69,7 +69,7 @@
             margin: 10vh auto;
         }
 
-        button {
+        .button {
             outline: 0;
             grid-gap: 8px;
             align-items: center;
@@ -93,12 +93,12 @@
             width: 350px;
         }
 
-        button:hover {
+        .button:hover {
             box-shadow: 4px 4px 0 #000;
             transform: translate(-4px, -4px);
         }
 
-        button:focus-visible {
+        .button:focus-visible {
             outline-offset: 1px;
         }
 
@@ -133,26 +133,27 @@
                 <h1>PTC GAMES!</h1>
                 <h4>yes hi hello i make rgps games and systems when im bored pls enjoy</h4>
                 <hr>
-                <button><a href="ANVIL/">ANVIL</a></button>
-                <button><a href="osrad/">OSRad.</a></button>
+                <a href="ANVIL/">ANVIL</a>
+                <a href="osrad/">OSRad.</a>
                 <hr>
                 <h4>WIPs</h4>
-                <button class="wip"><a href="#">LOOT GOBLINS</a></button>
-                <button class="wip"><a href="#">RUNES & REELS</a></button>
+                <a href="#" class="wip" onclick="shaker();">LOOT GOBLINS</a>
+                <a href="#" class="wip" onclick="shaker();">RUNES & REELS</a>
                 <hr>
                 
             </nav>
         </div>
     </div>
     <script>
-    const button = document.querySelector('.wip');
+        function shaker(el) {
+            el.classList.remove("wipshake");
+            void el.offsetWidth;
+            el.classList.add("wipshake");
 
-        button.addEventListener('click', () => {
-          button.classList.add('wipshake');
+            setTimeout(() => {
+                el.classList.remove("wipshake");
+            }, 500);
         }
-          button.addEventListener('animationend', () => {
-            button.classList.remove('wipshake');
-          }, { once: true }); 
     </script>
 
 </body>
