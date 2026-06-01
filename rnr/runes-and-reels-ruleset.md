@@ -1,6 +1,18 @@
 # Runes and Reels
 
-A fishing card game for 2–4 players. Draft lures, cast your line, and land the biggest catch. First player to collect **20 points** worth of fish wins.
+---
+
+*Every spring, when the ice breaks on Lake Embervast and the amber water runs cold and clear, the anglers come.*
+
+*They come from Glimmerhold and the Ashridge settlements, from the Shore hamlets and the waypost towns along the southern road. They come with rune-carved rods and enchanted tackle, with family lures passed down through generations and new gear bought that morning from the Embervast dockside shops. They come to fish, to compete, and to carve their names into the weathered post at the end of Dock One.*
+
+*Lake Embervast is the deepest body of water in southern Orrelia. Its floor has never been charted. The fish here run larger and stranger than anywhere else in the region, fed by mineral-rich runoff from the Ashridge peaks that turns the water a warm amber at dusk. Locals say things live in the lower water that don't surface twice. The runesmiths who certify tackle at the dawn inspection say the same enchants behave differently here — sharper, somehow, like the lake is paying attention.*
+
+*The Embervast Derby began as a tithe-fishing event three hundred years ago, when the Shore settlements needed a hard winter fed and one good season could make the difference. The angler who contributed most was granted a season's debt forgiveness by the Glimmerhold merchant charters. The debt forgiveness is ceremonial now, but the Embervast Charter — a legal document granting the winner naming rights to one unnamed feature of the lake for a year — is still technically binding. People take it seriously.*
+
+*The Golden Mahseer has been landed three times in the derby's recorded history. Each winner's name is carved into Dock One's post below the waterline, visible only at low water. Nobody knows who carved them there first, or when.*
+
+*Tight lines.*
 
 ---
 
@@ -64,18 +76,18 @@ Each player begins with an identical deck of 20 cards.
 
 Each player has four permanent equipment slots that persist across all rounds. A slot can hold one enchantment at a time and may be **overwritten** by placing a new lure into it.
 
-| Slot | Effect Category |
-|------|----------------|
-| **Hook** | Line tension management (reduce tension, re-roll snag values) |
-| **Line** | Snag interaction (ignore snags, reduce snag tension) |
-| **Rod** | Casting (play 2 lures, draw before casting) |
-| **Reel** | Draw and hand management (draw extra, retrieve from discard) |
+| Slot | Suit | Effect Category |
+|------|------|----------------|
+| **Hook** | Red | Line tension management (reduce tension, re-roll snag values) |
+| **Line** | Blue | Snag interaction (ignore snags, reduce snag tension) |
+| **Rod** | Green | Casting (play 2 lures, draw before casting) |
+| **Reel** | Yellow | Draw and hand management (draw extra, retrieve from discard) |
 
 ---
 
 ### Locations (4 cards)
 
-The dock 1 angler chooses a location each round. Each location grants a bonus to the player(s) with the **lowest current score**.
+The angler in dock slot 1 chooses a location each round. Each location grants a bonus to the player(s) with the **fewest pouches of gold**.
 
 | Location | Trailing Player Bonus |
 |----------|-----------------------|
@@ -90,12 +102,14 @@ The dock 1 angler chooses a location each round. Each location grants a bonus to
 
 ### Scoring Brackets
 
-| Bracket | Points | Line Slack |
-|---------|--------|------------|
-| Small | 1 pt | 7–9 |
-| Average | 2 pts | 5–6 |
-| Big | 3 pts | 3–4 |
-| Master | 5 pts | 1–2 |
+Fish are worth **pouches of gold** when caught. The winner is the first angler to collect **20 pouches of gold**.
+
+| Bracket | Pouches of Gold | Line Slack |
+|---------|----------------|------------|
+| Small | 1 pouch | 7–9 |
+| Average | 2 pouches | 5–6 |
+| Big | 3 pouches | 3–4 |
+| Master | 5 pouches | 1–2 |
 
 ---
 
@@ -109,7 +123,7 @@ Each round consists of **Morning Prep** followed by **three Fish On phases**.
 
 #### 1. Draft Lures
 
-Starting with the angler in dock position 1 (or randomly on the first round):
+Starting with the angler in dock slot 1 (or randomly on the first round):
 
 - **a)** Reveal lures from the shop deck equal to the number of players.
 - **b)** Players snake draft one lure each.
@@ -179,7 +193,7 @@ All players draw back up to **7 cards**.
 
 ## Winning
 
-The first player to accumulate **20 or more points** wins.
+The first player to collect **20 pouches of gold** wins the Embervast Derby.
 
 ---
 
@@ -197,35 +211,36 @@ FISH ON (× 3)
   └─ Reveal fish (note Line Slack, Suit, Bracket, Effects)
   └─ Players cast lures face-down in dock order (+ snag if no suit)
   └─ Activate enchantment (optional)
-  └─ Reveal lures — highest tension value catches first
+  └─ Reveal lures — highest tension value goes first in catch order
   └─ Catch attempt: flip snag, play 1 more lure, check line tension vs line slack
   └─ Next player in catch order attempts if fish not caught
   └─ All draw up to 7
 
 REPEAT
 ```
+
 ---
 
-# Runes and Reels — Fish Deck (40 cards)
+# Fish Deck (40 cards)
 
 Each fish has a **Line Slack** value, a **Suit**, a **Scoring Bracket**, and optional **Effects**.
 
 Line Tension during a catch attempt must stay **equal to or under** Line Slack or the line snaps.
 
-| Bracket | Points | Line Slack |
-|---------|--------|------------|
-| Small | 1 pt | 7–9 |
-| Average | 2 pts | 5–6 |
-| Big | 3 pts | 3–4 |
-| Master | 5 pts | 1–2 |
+| Bracket | Pouches of Gold | Line Slack |
+|---------|----------------|------------|
+| Small | 1 pouch | 7–9 |
+| Average | 2 pouches | 5–6 |
+| Big | 3 pouches | 3–4 |
+| Master | 5 pouches | 1–2 |
 
 Suit distribution: 10 Red, 10 Yellow, 10 Blue, 10 Green.
 
 ---
 
-## Master (5 pts, Slack 1–2) — 6 cards
+## Master (5 pouches, Slack 1–2) — 6 cards
 
-*Tight window. Low-tension lures only. Snags are extremely dangerous.*
+*Tight window. Low-tension lures only. Any snag is extremely dangerous.*
 
 | # | Name | Slack | Suit | Effect |
 |---|------|-------|------|--------|
@@ -238,7 +253,7 @@ Suit distribution: 10 Red, 10 Yellow, 10 Blue, 10 Green.
 
 ---
 
-## Big (3 pts, Slack 3–4) — 10 cards
+## Big (3 pouches, Slack 3–4) — 10 cards
 
 *Forgiving enough for mid-range lures. Snags still threaten on Slack 3.*
 
@@ -257,9 +272,9 @@ Suit distribution: 10 Red, 10 Yellow, 10 Blue, 10 Green.
 
 ---
 
-## Average (2 pts, Slack 5–6) — 14 cards
+## Average (2 pouches, Slack 5–6) — 14 cards
 
-*The bread and butter of most rounds. Effects appear here to keep mid-game interesting.*
+*The bread and butter of most rounds.*
 
 | # | Name | Slack | Suit | Effect |
 |---|------|-------|------|--------|
@@ -280,9 +295,9 @@ Suit distribution: 10 Red, 10 Yellow, 10 Blue, 10 Green.
 
 ---
 
-## Small (1 pt, Slack 7–9) — 10 cards
+## Small (1 pouch, Slack 7–9) — 10 cards
 
-*Wide window. Almost any lure lands these. Strong effects here create risk-reward decisions on low-value fish.*
+*Wide window. Almost any combination lands these.*
 
 | # | Name | Slack | Suit | Effect |
 |---|------|-------|------|--------|
@@ -299,15 +314,15 @@ Suit distribution: 10 Red, 10 Yellow, 10 Blue, 10 Green.
 
 ---
 
-## Design Notes
+## Fish Deck Design Notes
 
-- **Master fish** are rare (6 cards) and punishing. A single snag on a Slack 1 fish almost certainly snaps the line. Low-tension builds and Line/Hook enchants are essential for reliably landing these.
-- **Small fish** have wide slack windows (7–9) so even a 4+4+3 snag combination (total 11) would snap only the most extreme rolls. They are catch-and-release territory unless a player needs 1pt to cross the 20pt threshold.
+- **Master fish** are rare (6 cards) and punishing. A single snag on a Slack 1 fish almost certainly snaps the line. Low-tension builds and Line/Hook enchants are essential.
+- **Small fish** have wide slack windows (7–9). They are mostly incidental catches unless a player needs 1 pouch to close out the game.
 - **Effects density:** 14 of 40 fish have effects. Punishing effects appear at Big and Average tiers. Rewarding effects are spread across tiers.
 
 ---
 
-# Runes and Reels — Shop Deck (50 cards)
+# Shop Deck (50 cards)
 
 Each shop lure has:
 - **Tension Value** — added to line tension when cast from hand
@@ -324,7 +339,7 @@ Each shop lure has:
 | Rod | Green |
 | Reel | Yellow |
 
-A lure's suit is fixed to its slot category. A Hook lure is always Red regardless of which slot it is eventually enchanted into. This means drafting toward a rune build also shapes your casting hand's suit coverage.
+A lure's suit is fixed to its slot category. A Hook lure is always Red regardless of which slot it is eventually enchanted into. Drafting toward a rune build also shapes your casting hand's suit coverage.
 
 ---
 
@@ -414,9 +429,32 @@ A lure's suit is fixed to its slot category. A Hook lure is always Red regardles
 
 ---
 
-## Design Notes
+## Interactive Lures — Player Targeting (12 cards)
 
-**Tension value distribution:**
+*These lures have effects that directly interact with other anglers. All effects are triggered by game state rather than named targets — no player is singled out by choice. Distributed across all four suits (3 per suit). These are additional shop cards; include them in the shop deck or use as an optional expansion module.*
+
+> **Designer note:** These are held separately so you can test the base 50-card shop deck first and introduce interactive effects once the core loop is stable.
+
+| # | Name | Suit | Tension | Cast Effect | Enchant Effect |
+|---|------|------|---------|-------------|----------------|
+| S1 | Sabiki Rig | Red | 2 | The player to your left must discard 1 card. | Once per round: when you successfully catch a fish, the player to your left discards 1 card. |
+| S2 | Snag Transfer | Red | 3 | If you have a snag in play, pass it to the player ahead of you in catch order instead. They must include it in their attempt. | Once per round: pass your snag to the next player in catch order instead of resolving it yourself. |
+| S3 | Fouled Cast | Red | 1 | Name a suit. Each player holding no cards of that suit must take a snag. | Once per round: name a suit. Each player who casts a non-matching lure this phase takes a snag in addition to any other effects. |
+| S4 | Chumming | Blue | 2 | Each other player draws 1 card. You draw 2. | Once per round: each other player draws 1 card. You draw 2. |
+| S5 | Undercut | Blue | 3 | If another player's cast lure is higher tension than yours, reduce theirs by 1 for catch order this phase. | Once per round: reduce the highest tension cast lure on the table by 1 for catch order purposes (not line tension). |
+| S6 | Tangled Lines | Blue | 2 | Choose two other players. They swap their cast lures before catch order is resolved. | Once per round: two other players of your choice swap their cast lures before catch order is resolved. |
+| S7 | Poach | Green | 4 | If you place second in catch order and the first player fails, your line tension counts as 1 lower for your attempt. | Once per round: if you place second in catch order, your line tension counts as 1 lower. |
+| S8 | Cut Current | Green | 2 | The player in dock slot 1 must move to the last open dock slot next round. | Once per round: if you catch the fish, the player in dock slot 1 moves to the last open slot next round. |
+| S9 | Lure Snatch | Green | 3 | Look at another player's cast lure before reveal. You may swap your cast lure with theirs. They do not see yours first. | Once per round: after casting but before reveal, look at one other player's face-down lure and swap yours with it if you choose. |
+| S10 | Flood the Pool | Yellow | 1 | Each player draws 2 cards then discards 2 cards. | Once per round: each player draws 2 cards then discards 2 cards. |
+| S11 | False Cast | Yellow | 2 | Place a lure face-down. Before reveal, you may swap it with any card from your hand without showing either. The player to your right must also reveal their lure one step later than normal. | Once per round: delay one other player's lure reveal by one step. You may change your own lure after seeing theirs. |
+| S12 | Downrigger | Yellow | 3 | The player with the most pouches of gold must cast their highest tension lure this phase. | Once per round: the player with the most pouches of gold must cast their highest tension lure this phase. |
+
+---
+
+## Shop Deck Design Notes
+
+**Tension value distribution (base 50):**
 
 | Tension | Count |
 |---------|-------|
@@ -432,4 +470,9 @@ A lure's suit is fixed to its slot category. A Hook lure is always Red regardles
 - Rod + Reel creates draw-engine builds with high catch-order presence
 - Popper (Rod) + Drop Shot Rig (Hook) reward catching fish frequently and compound well
 - Baitcaster (Reel) gives permanent hand size 8, overlapping with Creek's location bonus — acceptable since it costs a rune slot and a draft pick
-- Stiff Rig (Line) references line slack 4 or lower for its cast effect and slack 3 or lower for enchant — confirm these thresholds feel right against the Big bracket (slack 3–4) in playtesting
+- Stiff Rig (Line) references line slack 4 or lower for its cast effect and slack 3 or lower for enchant — confirm these thresholds feel right against the Big bracket in playtesting
+
+**Interactive lure notes:**
+- Snag Transfer and Lure Snatch are the most politically charged — expect table reactions. Both are game-state conditional rather than free-target, which keeps them from feeling personal.
+- Downrigger is a soft leader-punish that scales naturally without tracking. Worth testing early.
+- Cut Current is the most powerful dock manipulation in the deck — watch whether it creates runaway dock-slot cycling with multiple copies in play.
