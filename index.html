@@ -69,8 +69,6 @@
             margin: 10vh auto;
         }
 
-
-
         button {
             outline: 0;
             grid-gap: 8px;
@@ -151,7 +149,7 @@
 
         button.addEventListener('click', () => {
           button.classList.add('wipshake');
-          
+        }
           button.addEventListener('animationend', () => {
             button.classList.remove('wipshake');
           }, { once: true }); 
