@@ -254,7 +254,7 @@ Suit distribution: 10 Red, 10 Yellow, 10 Blue, 10 Green.
 
 | # | Name | Slack | Suit | Effect |
 |---|------|-------|------|--------|
-| 1 | Golden Mahseer | 1 | Red | Only the player with the lowest tension cast may attempt. If they fail, the fish escapes. |
+| 1 | Golden Mahseer | 1 | Red | Only the player with the lowest tension cast among players matching the fish's suit may attempt. |
 | 2 | Taimen | 1 | Blue | — |
 | 3 | Sturgeon | 2 | Green | The catching player must succeed on their first attempt or the fish escapes (no chain). |
 | 4 | Arapaima | 2 | Yellow | Players may not activate enchantments this round. |
