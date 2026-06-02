@@ -13,7 +13,6 @@
             --bg: #0d1a1f;
             --bg-mid: #132028;
             --bg-card: #162530;
-            --bg-card-alt: #0f1e27;
             --water-deep: #0a2535;
             --amber: #cd812b;
             --amber-light: #e8a84a;
@@ -118,8 +117,9 @@
             display: block;
             color: var(--text-muted);
             text-decoration: none;
+            text-transform: uppercase;
             font-size: 13px;
-            padding: 3px 0;
+            padding: 3px 2px;
             letter-spacing: 0.04em;
         }
 
@@ -128,10 +128,14 @@
             font-weight: 800;
         }
 
+        .nav-menu a:nth-child(odd) {
+            background-color: var(--water-deep);
+        }
+
         .hero {
             padding: 120px 1.5rem 60px;
             text-align: center;
-            border-bottom: 1px solid var(--border);
+            /* border-bottom: 1px solid var(--border); */
             background: radial-gradient(ellipse at 50% 0%, #0a2535 0%, var(--bg) 70%);
             position: relative;
             overflow: hidden;
@@ -142,13 +146,9 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            height: 60px;
-            opacity: 0.08;
-            background: repeating-linear-gradient(0deg,
-                    transparent,
-                    transparent 6px,
-                    var(--teal) 6px,
-                    var(--teal) 7px);
+            height: 150px;
+            opacity: 0.2;
+            background: linear-gradient(180deg, rgba(13, 26, 31, 1) 0%, rgba(58, 184, 176, 1) 50%, rgba(13, 26, 31, 1) 100%);
         }
 
         .hero-eyebrow {
@@ -802,7 +802,7 @@
             fill: #3eb6ae;
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 600px) {
             .concept-grid {
                 grid-template-columns: 1fr;
             }
@@ -822,6 +822,10 @@
             .nav-menu {
                 columns: 1;
             }
+
+            .hero-title svg {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -831,7 +835,7 @@
     <nav class="nav">
         <a href="#top" class="nav-title">RUNES &amp; REELS</a>
         <button class="nav-toggle">
-            &#9776; TACKLEBOX
+            <span style="font-weight: 800; font-size: 1.3em;">&#9776;</span> TACKLEBOX
         </button>
         <div class="nav-menu">
             <a href="#concepts">• Core Concepts</a>
@@ -1650,7 +1654,7 @@
             <div id="hook-lures" class="lure-section">
                 <div class="lure-section-title">
                     Hook Lures
-                    <span class="suit-tag suit-tag-red" style="font-size:12px;padding:3px 8px">Red &middot; 13 cards</span>
+                    <span class="suit-tag suit-tag-red" style="font-size:14px; padding:3px 8px">Red &middot; 13 cards</span>
                 </div>
                 <p class="lure-section-note">Hook enchants reduce or manipulate your line tension during catch attempts.</p>
                 <div class="table-wrap">
@@ -1765,7 +1769,7 @@
             <div id="line-lures" class="lure-section">
                 <div class="lure-section-title">
                     Line Lures
-                    <span class="suit-tag suit-tag-blue" style="font-size:12px;padding:3px 8px">Blue &middot; 12 cards</span>
+                    <span class="suit-tag suit-tag-blue" style="font-size:14px; padding:3px 8px">Blue &middot; 12 cards</span>
                 </div>
                 <p class="lure-section-note">Line enchants change how snag cards contribute to your line tension.</p>
                 <div class="table-wrap">
@@ -1873,7 +1877,7 @@
             <div id="rod-lures" class="lure-section">
                 <div class="lure-section-title">
                     Rod Lures
-                    <span class="suit-tag suit-tag-green" style="font-size:12px;padding:3px 8px">Green &middot; 13 cards</span>
+                    <span class="suit-tag suit-tag-green" style="font-size:14px; padding:3px 8px">Green &middot; 13 cards</span>
                 </div>
                 <p class="lure-section-note">Rod enchants change how you play lures during the cast phase.</p>
                 <div class="table-wrap">
@@ -1988,7 +1992,7 @@
             <div id="reel-lures" class="lure-section">
                 <div class="lure-section-title">
                     Reel Lures
-                    <span class="suit-tag suit-tag-yellow" style="font-size:12px;padding:3px 8px">Yellow &middot; 12 cards</span>
+                    <span class="suit-tag suit-tag-yellow" style="font-size:14px; padding:3px 8px">Yellow &middot; 12 cards</span>
                 </div>
                 <p class="lure-section-note">Reel enchants affect how you draw, filter, and recover cards.</p>
                 <div class="table-wrap">
