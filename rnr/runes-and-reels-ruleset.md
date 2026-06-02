@@ -4,13 +4,13 @@
 
 *Every spring, when the ice breaks on Lake Embervast and the amber water runs cold and clear, the anglers come.*
 
-*They come from Glimmerhold and the Ashridge settlements, from the Shore hamlets and the waypost towns along the southern road. They come with rune-carved rods and enchanted tackle, with family lures passed down through generations and new gear bought that morning from the Embervast dockside shops. They come to fish, to compete, and to carve their names into the weathered post at the end of Dock One.*
+*They come from Glimmerhold and the Ashridge settlements, from the shore hamlets and the waypost towns along the southern road. They come with rune-carved rods and enchanted tackle, with family lures passed down through generations and new gear bought that morning from the Embervast dockside shops. They come to fish, to compete, and to carve their names into the weathered post at the end of the Big Dock.*
 
-*Lake Embervast is the deepest body of water in southern Orrelia. Its floor has never been charted. The fish here run larger and stranger than anywhere else in the region, fed by mineral-rich runoff from the Ashridge peaks that turns the water a warm amber at dusk. Locals say things live in the lower water that don't surface twice. The runesmiths who certify tackle at the dawn inspection say the same enchants behave differently here — sharper, somehow, like the lake is paying attention.*
+*Lake Embervast is the deepest body of water in southern Orrelia. Its floor has never been charted. The fish here run larger and stranger than anywhere else in the region, fed by mineral-rich runoff from the Ashridge peaks that turns the water a warm amber at dusk. Locals say things live in the lower water that have never been seen. The runesmiths who certify tackle at the dawn inspection say the same enchants behave differently here, like they force the lake to pay attention.*
 
-*The Embervast Derby began as a tithe-fishing event three hundred years ago, when the Shore settlements needed a hard winter fed and one good season could make the difference. The angler who contributed most was granted a season's debt forgiveness by the Glimmerhold merchant charters. The debt forgiveness is ceremonial now, but the Embervast Charter — a legal document granting the winner naming rights to one unnamed feature of the lake for a year — is still technically binding. People take it seriously.*
+*The Embervast Derby began as a tithe-fishing event three hundred years ago, when the shore settlements needed a hard winter feed and one good season could make the difference. The angler who contributed most was granted a season's debt forgiveness by the Glimmerhold merchant charters. The debt forgiveness is ceremonial now, but the Embervast Charter, a legal document granting the winner naming rights to one unnamed feature of the lake for a year, is still technically binding. People take it seriously.*
 
-*The Golden Mahseer has been landed three times in the derby's recorded history. Each winner's name is carved into Dock One's post below the waterline, visible only at low water. Nobody knows who carved them there first, or when.*
+*The Golden Mahseer has been landed three times in the derby's recorded history. Each winner's name is carved into Big Dock's post below the waterline, visible only at low water. Nobody knows who carved there first or when.
 
 *Tight lines.*
 
@@ -18,12 +18,12 @@
 
 ## Core Concepts
 
-**Line Slack** — the stat on each fish card. Represents how much give a fish allows on the line. Big powerful fish run slow and heavy, keeping slack low. Small skittish fish dart and pull tight, giving the angler more room to work with.
+**Line Slack** - the stat on each fish card. Represents how much give a fish allows on the line. Big powerful fish run slow and heavy, keeping slack low. Small skittish fish dart and pull tight, giving the angler more room to work with.
 
-**Line Tension** — the sum of all lure values, snag values, and active effects during a catch attempt. Must stay **equal to or under** the fish's Line Slack or the line snaps.
+**Line Tension** - the sum of all lure values, snag values, and active effects during a catch attempt. Must stay **equal to or under** the fish's Line Slack or the line snaps.
 
-> A Master-tier fish has low Line Slack (1–2). You must use very low-tension lures to land it.
-> A Small-tier fish has high Line Slack (7–9). Almost any lure combination will stay under the threshold.
+> A Master-tier fish has low Line Slack (1-2). You must use very low-tension lures to land it.
+> A Small-tier fish has high Line Slack (7-9). Almost any lure combination will stay under the threshold.
 
 ---
 
@@ -57,7 +57,7 @@ Each player begins with an identical deck of 20 cards.
 - Some fish have **Effects** that apply for the round they are revealed
 
 **Snag Deck** (40 cards)
-- When revealed face-up, snag cards add **1–3** to your line tension
+- When revealed face-up, snag cards add **1-3** to your line tension
 - Some snag cards have special effects when flipped:
 
 | Qty | Effect |
@@ -110,10 +110,10 @@ Fish are worth **pouches of gold** when caught. The winner is the first angler t
 
 | Bracket | Pouches of Gold | Line Slack |
 |---------|----------------|------------|
-| Small | 1 pouch | 7–9 |
-| Average | 2 pouches | 5–6 |
-| Big | 3 pouches | 3–4 |
-| Master | 5 pouches | 1–2 |
+| Small | 1 pouch | 7-9 |
+| Average | 2 pouches | 5-6 |
+| Big | 3 pouches | 3-4 |
+| Master | 5 pouches | 1-2 |
 
 ---
 
@@ -156,12 +156,12 @@ After each draft set, any player who has taken their final pick places their ang
 
 Repeat this phase **three times** per round.
 
-#### Step 1 — Reveal the Fish
+#### Step 1 - Reveal the Fish
 
 - Flip the top card of the fish deck face-up.
 - Note the fish's **Line Slack**, **Suit**, **Bracket**, and any **Effects** for this phase.
 
-#### Step 2 — Cast
+#### Step 2 - Cast
 
 In dock order:
 - Each player selects 1 lure from their hand and places it **face-down**.
@@ -169,7 +169,7 @@ In dock order:
 - Enchantments are activated depending on each runes conditions.
 - If you have **no matching suit** in hand, take the **top card of the snag deck** and place it face-down **horizontally beneath** your lure.
 
-#### Step 3 — Reveal
+#### Step 3 - Reveal
 
 All players flip their lures face-up simultaneously.
 
@@ -180,7 +180,7 @@ All players flip their lures face-up simultaneously.
 3. Still tied → matching suit wins
 4. Still tied → each tied player reveals one additional lure; higher value wins
 
-#### Step 4 — Catch Attempt
+#### Step 4 - Catch Attempt
 
 The leading player attempts to land the fish:
 
@@ -193,7 +193,7 @@ The leading player attempts to land the fish:
 
 If the fish is not caught, the **next player in catch order** attempts in the same manner. Continue until the fish is caught or all players have failed (fish gets away).
 
-#### Step 5 — Draw Up
+#### Step 5 - Draw Up
 
 All players draw back up to **7 cards**.
 
@@ -221,7 +221,7 @@ FISH ON (× 3)
   └─ Reveal fish (note Line Slack, Suit, Bracket, Effects)
   └─ Players cast lures face-down in dock order (+ snag if no suit)
   └─ Activate enchantment (optional)
-  └─ Reveal lures — highest tension value goes first in catch order
+  └─ Reveal lures - highest tension value goes first in catch order
   └─ Catch attempt: flip snag, play 1 more lure, check line tension vs line slack
   └─ Next player in catch order attempts if fish not caught
   └─ All draw up to 7
@@ -239,16 +239,16 @@ Line Tension during a catch attempt must stay **equal to or under** Line Slack o
 
 | Bracket | Pouches of Gold | Line Slack |
 |---------|----------------|------------|
-| Small | 1 pouch | 7–9 |
-| Average | 2 pouches | 5–6 |
-| Big | 3 pouches | 3–4 |
-| Master | 5 pouches | 1–2 |
+| Small | 1 pouch | 7-9 |
+| Average | 2 pouches | 5-6 |
+| Big | 3 pouches | 3-4 |
+| Master | 5 pouches | 1-2 |
 
 Suit distribution: 10 Red, 10 Yellow, 10 Blue, 10 Green.
 
 ---
 
-## Master (5 pouches, Slack 1–2) — 6 cards
+## Master (5 pouches, Slack 1-2) - 6 cards
 
 *Tight window. Low-tension lures only. Any snag is extremely dangerous.*
 
@@ -263,7 +263,7 @@ Suit distribution: 10 Red, 10 Yellow, 10 Blue, 10 Green.
 
 ---
 
-## Big (3 pouches, Slack 3–4) — 10 cards
+## Big (3 pouches, Slack 3-4) - 10 cards
 
 *Forgiving enough for mid-range lures. Snags still threaten on Slack 3.*
 
@@ -282,7 +282,7 @@ Suit distribution: 10 Red, 10 Yellow, 10 Blue, 10 Green.
 
 ---
 
-## Average (2 pouches, Slack 5–6) — 14 cards
+## Average (2 pouches, Slack 5-6) - 14 cards
 
 *The bread and butter of most rounds.*
 
@@ -305,7 +305,7 @@ Suit distribution: 10 Red, 10 Yellow, 10 Blue, 10 Green.
 
 ---
 
-## Small (1 pouch, Slack 7–9) — 10 cards
+## Small (1 pouch, Slack 7-9) - 10 cards
 
 *Wide window. Almost any combination lands these.*
 
@@ -441,9 +441,9 @@ A lure's suit is fixed to its slot category. A Hook lure is always Red regardles
 
 ## Interactive Lures — Player Targeting (12 cards)
 
-*These lures have effects that directly interact with other anglers. All effects are triggered by game state rather than named targets — no player is singled out by choice. Distributed across all four suits (3 per suit). These are additional shop cards; include them in the shop deck or use as an optional expansion module.*
+*These lures have effects that directly interact with other anglers. All effects are triggered by game state rather than named targets, no player is singled out by choice. Distributed across all four suits (3 per suit). These are additional shop cards.*
 
-> **Designer note:** These are held separately so you can test the base 50-card shop deck first and introduce interactive effects once the core loop is stable.
+> **Designer note:** These are held separately so to test the base 50 card shop deck first and introduce interactive effects once the core loop is stable.
 
 | # | Name | Suit | Tension | Cast Effect | Enchant Effect |
 |---|------|------|---------|-------------|----------------|
@@ -475,14 +475,7 @@ A lure's suit is fixed to its slot category. A Hook lure is always Red regardles
 
 **Master fish interaction:** With line slack of 1–2, a catch attempt using a Tension 1 lure + Tension 1 follow-up = 2. Any snag snaps the line on a Slack 1 fish. Hook and Line enchants are essential for reliably targeting Master-bracket fish.
 
-**Slot synergies to watch in playtesting:**
-- Hook + Line creates very low line-tension builds optimised for Master fish
-- Rod + Reel creates draw-engine builds with high catch-order presence
-- Popper (Rod) + Drop Shot Rig (Hook) reward catching fish frequently and compound well
-- Baitcaster (Reel) gives permanent hand size 8, overlapping with Creek's location bonus — acceptable since it costs a rune slot and a draft pick
-- Stiff Rig (Line) references line slack 4 or lower for its cast effect and slack 3 or lower for enchant — confirm these thresholds feel right against the Big bracket in playtesting
-
 **Interactive lure notes:**
-- Snag Transfer and Lure Snatch are the most politically charged — expect table reactions. Both are game-state conditional rather than free-target, which keeps them from feeling personal.
-- Downrigger is a soft leader-punish that scales naturally without tracking. Worth testing early.
-- Cut Current is the most powerful dock manipulation in the deck — watch whether it creates runaway dock-slot cycling with multiple copies in play.
+- Snag Transfer and Lure Snatch are politically charged, watch table reactions. Both are game-state conditional rather than free-target, which should keep them from feeling personal.
+- Downrigger is a soft leader punish that scales naturally without tracking.
+- Cut Current is the most powerful dock manipulation in the deck...????
