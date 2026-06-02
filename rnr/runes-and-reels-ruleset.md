@@ -74,7 +74,11 @@ Each player begins with an identical deck of 20 cards.
 
 ### Rune Slots
 
-Each player has four permanent equipment slots that persist across all rounds. A slot can hold one enchantment at a time and may be **overwritten** by placing a new lure into it.
+Each player has four permanent equipment slots that persist across all rounds. Each player may place up to 1 lure into a rune slot during Morning Prep.
+
+If that slot already contains an enchantment, the new enchantment replaces it.
+
+Players may have one enchantment in each of the four rune slots.
 
 | Slot | Suit | Effect Category |
 |------|------|----------------|
@@ -126,7 +130,8 @@ Each round consists of **Morning Prep** followed by **three Fish On phases**.
 Starting with the angler in dock slot 1 (or randomly on the first round):
 
 - **a)** Reveal lures from the shop deck equal to the number of players.
-- **b)** Players snake draft one lure each.
+- **b)** Players draft one lure each, starting with dock position 4 to 1.
+- Next draft start at 3>2>1>4 then 2>1>4>3.
 - On your draft turn, you may **forgo your pick** to immediately place your angler card at the earliest open dock slot. You are locked out of all remaining picks this draft.
 
 Repeat steps **a** and **b** two more times (three draft sets total).
