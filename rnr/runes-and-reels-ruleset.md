@@ -10,7 +10,7 @@
 
 *The Embervast Derby began as a tithe-fishing event three hundred years ago, when the shore settlements needed a hard winter feed and one good season could make the difference. The angler who contributed most was granted a season's debt forgiveness by the Glimmerhold merchant charters. The debt forgiveness is ceremonial now, but the Embervast Charter, a legal document granting the winner naming rights to one unnamed feature of the lake for a year, is still technically binding. People take it seriously.*
 
-*The Golden Mahseer has been landed three times in the derby's recorded history. Each winner's name is carved into Big Dock's post below the waterline, visible only at low water. Nobody knows who carved there first or when.
+*The Golden Mahseer has been landed three times in the derby's recorded history. Each winner's name is carved into Big Dock's post below the waterline, visible only at low water. Nobody knows who carved there first or when.*
 
 *Tight lines.*
 
