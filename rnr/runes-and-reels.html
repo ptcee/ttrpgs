@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Runes & Reels - The Embervast Derby</title>
+<link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d1a1f;
+    --bg-mid: #132028;
+    --bg-card: #162530;
+    --bg-card-alt: #0f1e27;
+    --water-deep: #0a2535;
+    --amber: #d4862a;
+    --amber-light: #e8a84a;
+    --teal: #3ab8b0;
+    --teal-light: #5dd4cc;
+    --teal-dark: #1e7a74;
+    --red: #c94040;
+    --green: #4a9e6a;
+    --blue: #4a7ab5;
+    --yellow: #c9a840;
+    --text: #d8cdb8;
+    --text-muted: #8a9a9a;
+    --text-dim: #506060;
+    --border: #1e3a44;
+    --border-bright: #2a5060;
+    --suit-red: #c94040;
+    --suit-blue: #4a7ab5;
+    --suit-green: #4a9e6a;
+    --suit-yellow: #c9a840;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Courier Prime', monospace;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* NAV */
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: rgba(13, 26, 31, 0.97);
+    border-bottom: 1px solid var(--border-bright);
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 48px;
+  }
+
+  .nav-title {
+    font-family: 'Staatliches', sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.12em;
+    color: var(--teal);
+    text-decoration: none;
+  }
+
+  .nav-toggle {
+    background: none;
+    border: 1px solid var(--border-bright);
+    color: var(--text);
+    font-family: 'Courier Prime', monospace;
+    font-size: 13px;
+    padding: 4px 10px;
+    cursor: pointer;
+    letter-spacing: 0.05em;
+  }
+
+  .nav-toggle:hover { border-color: var(--teal); color: var(--teal); }
+
+  .nav-menu {
+    display: none;
+    position: fixed;
+    top: 48px;
+    left: 0;
+    width: 100%;
+    background: rgba(13, 26, 31, 0.99);
+    border-bottom: 1px solid var(--border-bright);
+    padding: 1rem 1.5rem;
+    z-index: 99;
+    columns: 2;
+    gap: 1rem;
+  }
+
+  .nav-menu.open { display: block; }
+
+  .nav-menu a {
+    display: block;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 13px;
+    padding: 3px 0;
+    letter-spacing: 0.04em;
+  }
+
+  .nav-menu a:hover { color: var(--teal); }
+
+  /* HERO */
+  .hero {
+    padding: 120px 1.5rem 60px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    background: radial-gradient(ellipse at 50% 0%, #0a2535 0%, var(--bg) 70%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-ripple {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    opacity: 0.08;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 6px,
+      var(--teal) 6px,
+      var(--teal) 7px
+    );
+  }
+
+  .hero-eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    color: var(--teal);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-title {
+    font-family: 'Staatliches', sans-serif;
+    font-size: clamp(64px, 12vw, 120px);
+    letter-spacing: 0.06em;
+    line-height: 0.9;
+    color: var(--text);
+    margin-bottom: 0.25rem;
+  }
+
+  .hero-title span { color: var(--teal); }
+
+  .hero-subtitle {
+    font-family: 'Staatliches', sans-serif;
+    font-size: clamp(18px, 3vw, 26px);
+    letter-spacing: 0.15em;
+    color: var(--amber);
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+
+  .hero-lore {
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    font-style: italic;
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .hero-lore p { margin-bottom: 0.75rem; }
+
+  .hero-tagline {
+    font-family: 'Staatliches', sans-serif;
+    font-size: 24px;
+    letter-spacing: 0.2em;
+    color: var(--teal-light);
+  }
+
+  /* LAYOUT */
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* SECTIONS */
+  .section {
+    padding: 3rem 0 2rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section:last-child { border-bottom: none; }
+
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    color: var(--teal-dark);
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+  }
+
+  h2 {
+    font-family: 'Staatliches', sans-serif;
+    font-size: clamp(32px, 5vw, 48px);
+    letter-spacing: 0.08em;
+    color: var(--text);
+    line-height: 1;
+    margin-bottom: 1.5rem;
+  }
+
+  h3 {
+    font-family: 'Staatliches', sans-serif;
+    font-size: 26px;
+    letter-spacing: 0.08em;
+    color: var(--amber);
+    margin: 2rem 0 0.75rem;
+  }
+
+  h4 {
+    font-family: 'Courier Prime', monospace;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin: 1.5rem 0 0.5rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 4px;
+  }
+
+  p { margin-bottom: 0.75rem; }
+  p:last-child { margin-bottom: 0; }
+
+  strong { color: var(--amber-light); font-weight: 700; }
+
+  em { color: var(--text-muted); font-style: italic; }
+
+  a { color: var(--teal); text-decoration: none; }
+  a:hover { color: var(--teal-light); }
+
+  /* CALLOUT */
+  .callout {
+    background: var(--bg-card);
+    border-left: 3px solid var(--teal);
+    padding: 0.75rem 1rem;
+    margin: 1rem 0;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  .callout strong { color: var(--teal-light); }
+
+  .callout-amber {
+    border-left-color: var(--amber);
+  }
+
+  .callout-amber strong { color: var(--amber-light); }
+
+  /* TABLES */
+  .table-wrap { overflow-x: auto; margin: 1rem 0; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+
+  th {
+    font-family: 'Courier Prime', monospace;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--teal);
+    border-bottom: 1px solid var(--border-bright);
+    padding: 6px 10px;
+    text-align: left;
+  }
+
+  td {
+    padding: 6px 10px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    color: var(--text);
+  }
+
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: rgba(58, 184, 176, 0.03); }
+
+  /* CONCEPT CARDS */
+  .concept-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .concept-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 1rem 1.25rem;
+  }
+
+  .concept-card-label {
+    font-family: 'Staatliches', sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    color: var(--teal);
+    margin-bottom: 0.25rem;
+  }
+
+  .concept-card p {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  /* BRACKET TABLE */
+  .bracket-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+  }
+
+  .bracket-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .bracket-name {
+    font-family: 'Staatliches', sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+  }
+
+  .bracket-scales {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+  }
+
+  .bracket-slack {
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 0.08em;
+  }
+
+  .bracket-small .bracket-name { color: #4a9e6a; }
+  .bracket-average .bracket-name { color: #4a7ab5; }
+  .bracket-big .bracket-name { color: var(--amber); }
+  .bracket-master .bracket-name { color: var(--red); }
+
+  /* RUNE SLOTS */
+  .rune-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+  }
+
+  .rune-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 1rem 1.25rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .rune-slot-name {
+    font-family: 'Staatliches', sans-serif;
+    font-size: 28px;
+    letter-spacing: 0.06em;
+    line-height: 1;
+    min-width: 60px;
+  }
+
+  .rune-suit-pill {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    margin-bottom: 4px;
+    font-weight: 700;
+  }
+
+  .rune-desc { font-size: 12px; color: var(--text-muted); }
+
+  .suit-red-pill { background: rgba(201,64,64,0.15); color: var(--suit-red); border: 1px solid rgba(201,64,64,0.3); }
+  .suit-blue-pill { background: rgba(74,122,181,0.15); color: var(--suit-blue); border: 1px solid rgba(74,122,181,0.3); }
+  .suit-green-pill { background: rgba(74,158,106,0.15); color: var(--suit-green); border: 1px solid rgba(74,158,106,0.3); }
+  .suit-yellow-pill { background: rgba(201,168,64,0.15); color: var(--suit-yellow); border: 1px solid rgba(201,168,64,0.3); }
+
+  .rune-hook .rune-slot-name { color: var(--suit-red); }
+  .rune-line .rune-slot-name { color: var(--suit-blue); }
+  .rune-rod .rune-slot-name { color: var(--suit-green); }
+  .rune-reel .rune-slot-name { color: var(--suit-yellow); }
+
+  /* PHASE STEPS */
+  .phase-block {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 1.25rem 1.5rem;
+    margin: 1rem 0;
+  }
+
+  .phase-title {
+    font-family: 'Staatliches', sans-serif;
+    font-size: 28px;
+    letter-spacing: 0.08em;
+    color: var(--amber);
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+  }
+
+  .step-list { list-style: none; }
+
+  .step-item {
+    display: flex;
+    gap: 0.75rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+  }
+
+  .step-item:last-child { border-bottom: none; }
+
+  .step-num {
+    font-family: 'Staatliches', sans-serif;
+    font-size: 20px;
+    color: var(--teal);
+    min-width: 24px;
+    line-height: 1.2;
+  }
+
+  /* DRAFT BOX */
+  .draft-box {
+    background: var(--water-deep);
+    border: 1px solid var(--border-bright);
+    padding: 1rem 1.5rem;
+    margin: 1rem 0;
+    font-size: 13px;
+  }
+
+  .draft-set {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 4px 0;
+  }
+
+  .draft-label {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--text-dim);
+    min-width: 36px;
+  }
+
+  .draft-arrow { color: var(--teal); font-size: 13px; }
+
+  .draft-num {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 2px 8px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--amber-light);
+  }
+
+  /* REFERENCE BLOCK */
+  .ref-block {
+    background: var(--water-deep);
+    border: 1px solid var(--border-bright);
+    padding: 1.25rem 1.5rem;
+    font-size: 12px;
+    font-family: 'Courier Prime', monospace;
+    color: var(--text-muted);
+    white-space: pre-wrap;
+    line-height: 1.6;
+    margin: 1rem 0;
+  }
+
+  /* LOCATION CARDS */
+  .location-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+  }
+
+  .location-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 1rem 1.25rem;
+  }
+
+  .location-name {
+    font-family: 'Staatliches', sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.08em;
+    color: var(--teal);
+    margin-bottom: 4px;
+  }
+
+  .location-desc { font-size: 13px; color: var(--text-muted); }
+
+  /* FISH CARDS */
+  .fish-section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin: 2rem 0 0.75rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+  }
+
+  .fish-bracket-title {
+    font-family: 'Staatliches', sans-serif;
+    font-size: 32px;
+    letter-spacing: 0.06em;
+  }
+
+  .fish-bracket-meta {
+    font-size: 12px;
+    color: var(--text-dim);
+    letter-spacing: 0.06em;
+  }
+
+  .fish-master .fish-bracket-title { color: var(--red); }
+  .fish-big .fish-bracket-title { color: var(--amber); }
+  .fish-average .fish-bracket-title { color: var(--blue); }
+  .fish-small .fish-bracket-title { color: var(--green); }
+
+  .fish-note {
+    font-size: 12px;
+    font-style: italic;
+    color: var(--text-dim);
+    margin-bottom: 0.75rem;
+  }
+
+  /* LURE SECTION */
+  .lure-section {
+    margin: 2rem 0 1rem;
+    border-top: 1px solid var(--border);
+    padding-top: 1.5rem;
+  }
+
+  .lure-section-title {
+    font-family: 'Staatliches', sans-serif;
+    font-size: 28px;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .lure-section-note {
+    font-size: 12px;
+    font-style: italic;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+  }
+
+  /* SUIT TAGS IN TABLES */
+  .suit-tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 1px 5px;
+  }
+
+  .suit-tag-red { background: rgba(201,64,64,0.15); color: var(--suit-red); }
+  .suit-tag-blue { background: rgba(74,122,181,0.15); color: var(--suit-blue); }
+  .suit-tag-green { background: rgba(74,158,106,0.15); color: var(--suit-green); }
+  .suit-tag-yellow { background: rgba(201,168,64,0.15); color: var(--suit-yellow); }
+
+  /* WIN BANNER */
+  .win-banner {
+    background: var(--bg-card);
+    border: 1px solid var(--amber);
+    padding: 1.5rem 2rem;
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  .win-banner-number {
+    font-family: 'Staatliches', sans-serif;
+    font-size: 80px;
+    line-height: 0.9;
+    color: var(--amber);
+    display: block;
+  }
+
+  .win-banner-label {
+    font-family: 'Staatliches', sans-serif;
+    font-size: 28px;
+    letter-spacing: 0.15em;
+    color: var(--text);
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .win-banner-note {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-style: italic;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  /* FOOTER */
+  .footer {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    color: var(--text-dim);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    border-top: 1px solid var(--border);
+  }
+
+  .footer a { color: var(--teal-dark); }
+
+  /* DESIGNER NOTE */
+  .designer-note {
+    background: rgba(58, 184, 176, 0.04);
+    border: 1px dashed var(--teal-dark);
+    padding: 0.75rem 1rem;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin: 1rem 0;
+  }
+
+  .designer-note strong { color: var(--teal); }
+
+  /* SNAG EFFECTS */
+  .snag-grid {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 0 1rem;
+    margin: 1rem 0;
+  }
+
+  .snag-qty {
+    font-family: 'Staatliches', sans-serif;
+    font-size: 24px;
+    color: var(--teal);
+    line-height: 1.2;
+    padding-top: 2px;
+  }
+
+  .snag-effect {
+    font-size: 13px;
+    color: var(--text-muted);
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .snag-grid .snag-effect:last-child { border-bottom: none; }
+
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    .concept-grid { grid-template-columns: 1fr; }
+    .bracket-grid { grid-template-columns: repeat(2, 1fr); }
+    .rune-grid { grid-template-columns: 1fr; }
+    .location-grid { grid-template-columns: 1fr; }
+    .nav-menu { columns: 1; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="#top" class="nav-title">RUNES &amp; REELS</a>
+  <button class="nav-toggle" onclick="document.querySelector('.nav-menu').classList.toggle('open')">&#9776; CONTENTS</button>
+  <div class="nav-menu">
+    <a href="#concepts">Core Concepts</a>
+    <a href="#components">Components</a>
+    <a href="#rune-slots">Rune Slots</a>
+    <a href="#locations">Locations</a>
+    <a href="#scoring">Scoring</a>
+    <a href="#morning-prep">Morning Prep</a>
+    <a href="#fish-on">Fish On</a>
+    <a href="#winning">Winning</a>
+    <a href="#reference">Reference</a>
+    <a href="#fish-deck">Fish Deck</a>
+    <a href="#shop-deck">Shop Deck</a>
+    <a href="#hook-lures">Hook Lures</a>
+    <a href="#line-lures">Line Lures</a>
+    <a href="#rod-lures">Rod Lures</a>
+    <a href="#reel-lures">Reel Lures</a>
+    <a href="#interactive-lures">Interactive Lures</a>
+  </div>
+</nav>
+
+<div id="top" class="hero">
+  <div class="hero-eyebrow">The Embervast Derby</div>
+  <div class="hero-title">RUNES<br><span>&amp;</span><br>REELS</div>
+  <div class="hero-subtitle">A Card Game of Fish, Lines &amp; Enchanted Tackle</div>
+  <div class="hero-lore">
+    <p>Every spring, when the ice breaks on Lake Embervast and the amber water runs cold and clear, the anglers come.</p>
+    <p>They come from Glimmerhold and the Ashridge settlements, from the shore hamlets and the waypost towns along the southern road. They come with rune-carved rods and enchanted tackle, with family lures passed down through generations and new gear bought that morning from the Embervast dockside shops. They come to fish, to compete, and to carve their names into the weathered post at the end of the Big Dock.</p>
+    <p>Lake Embervast is the deepest body of water in southern Orrelia. Its floor has never been charted. The fish here run larger and stranger than anywhere else in the region, fed by mineral-rich runoff from the Ashridge peaks that turns the water a warm amber at dusk. Locals say things live in the lower water that have never been seen. The runesmiths who certify tackle at the dawn inspection say enchantments behave differently here.</p>
+    <p>The Embervast Derby began as a tithe-fishing event three hundred years ago, when the shore settlements needed a large winter harvest and one good season could make the difference. The angler who contributed most was granted a season's debt forgiveness by the Glimmerhold merchant charters. The debt forgiveness is ceremonial now, but the Embervast Charter, a legal document granting the winner naming rights to an island in the centre of the lake for a year, is still technically binding.</p>
+    <p>The Gilded Seer has been landed three times in the derby's recorded history. Each winner's name is carved into Big Dock's post below the waterline, visible only at low water. This could be the year your name gets added.</p>
+  </div>
+  <div class="hero-tagline">TIGHT LINES.</div>
+  <div class="hero-ripple"></div>
+</div>
+
+<div class="page">
+
+  <!-- CORE CONCEPTS -->
+  <div id="concepts" class="section">
+    <div class="section-label">Rules</div>
+    <h2>Core Concepts</h2>
+    <div class="concept-grid">
+      <div class="concept-card">
+        <div class="concept-card-label">Line Slack</div>
+        <p>The stat on each fish card. Big powerful fish run slow and heavy, keeping slack low. Small skittish fish dart and turn, giving the angler more line to work with.</p>
+      </div>
+      <div class="concept-card">
+        <div class="concept-card-label">Line Tension</div>
+        <p>The sum of all lure values, snag values, and active effects during a catch attempt. Must stay <strong>equal to or under</strong> the fish's Line Slack or the line snaps.</p>
+      </div>
+    </div>
+    <div class="callout">
+      <strong>Master-tier fish</strong> have low Line Slack (1-2). You must use very low-tension lures to land them.
+    </div>
+    <div class="callout">
+      <strong>Small-tier fish</strong> have high Line Slack (7-9). Almost any lure combination will stay under the threshold.
+    </div>
+  </div>
+
+  <!-- COMPONENTS -->
+  <div id="components" class="section">
+    <div class="section-label">Setup</div>
+    <h2>Components</h2>
+
+    <h3>Player Lure Decks</h3>
+    <p>Each player begins with an identical deck of 20 cards.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Qty</th><th>Tension Value</th><th>Suits</th></tr></thead>
+        <tbody>
+          <tr><td>4</td><td>1</td><td>Red, Yellow, Blue, Green (1 each)</td></tr>
+          <tr><td>4</td><td>2</td><td>Red, Yellow, Blue, Green (1 each)</td></tr>
+          <tr><td>4</td><td>3</td><td>Red, Yellow, Blue, Green (1 each)</td></tr>
+          <tr><td>4</td><td>4</td><td>Red, Yellow, Blue, Green (1 each)</td></tr>
+          <tr><td>2</td><td>0 (Wild)</td><td>Any suit</td></tr>
+          <tr><td>1</td><td>1 or 5</td><td>Red or Blue</td></tr>
+          <tr><td>1</td><td>2 or 3</td><td>Green or Yellow</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout">
+      <strong>Split Cards:</strong> Orient the card so the value you want to use is on the side closest to the center of the table. The other value is ignored.
+    </div>
+    <div class="callout">
+      <strong>Wild Cards:</strong> May be declared as any suit. Counts as the fish's suit when resolving tiebreakers.
+    </div>
+
+    <h3>Shared Decks</h3>
+
+    <h4>Fish Deck</h4>
+    <p>Each fish has a <strong>Line Slack</strong> value and a <strong>Suit</strong> (Red, Yellow, Blue, or Green). Fish are scored by bracket. Some fish have <strong>Effects</strong> that apply for the round they are revealed.</p>
+
+    <h4>Snag Deck (40 cards)</h4>
+    <p>When revealed face-up, snag cards add <strong>1-3</strong> to your line tension. Some snag cards have special effects when flipped.</p>
+    <div class="snag-grid">
+      <div class="snag-qty">4x</div><div class="snag-effect">Discard a card, then draw a card.</div>
+      <div class="snag-qty">3x</div><div class="snag-effect">Advance your dock position by 1. The player you displaced may draw 1 card.</div>
+      <div class="snag-qty">3x</div><div class="snag-effect">Reduce your line tension by 1, but discard the top card of your tackle deck.</div>
+      <div class="snag-qty">30x</div><div class="snag-effect">Add 1-3 to line tension (no effect).</div>
+    </div>
+
+    <h4>Shop Deck (50 cards)</h4>
+    <p>Each shop lure has a <strong>Tension Value</strong>, a <strong>Suit</strong>, a <strong>Cast Effect</strong> (used when played from hand), and an <strong>Enchant Effect</strong> (used when placed permanently into a rune slot). A lure's suit is determined by its slot category: <strong>Hook = Red, Line = Blue, Rod = Green, Reel = Yellow</strong>.</p>
+  </div>
+
+  <!-- RUNE SLOTS -->
+  <div id="rune-slots" class="section">
+    <div class="section-label">Equipment</div>
+    <h2>Rune Slots</h2>
+    <p>Each player has four permanent equipment slots that persist across all rounds. Each player may place up to 1 lure into a rune slot during Morning Prep. If that slot already contains an enchantment, the new enchantment replaces it. Players may have one enchantment in each of the four rune slots.</p>
+
+    <div class="rune-grid">
+      <div class="rune-card rune-hook">
+        <div>
+          <div class="rune-slot-name">Hook</div>
+        </div>
+        <div>
+          <div class="rune-suit-pill suit-red-pill">Red</div>
+          <div class="rune-desc">Line tension management. Reduce tension, re-roll snag values.</div>
+        </div>
+      </div>
+      <div class="rune-card rune-line">
+        <div>
+          <div class="rune-slot-name">Line</div>
+        </div>
+        <div>
+          <div class="rune-suit-pill suit-blue-pill">Blue</div>
+          <div class="rune-desc">Snag interaction. Ignore snags, reduce snag tension.</div>
+        </div>
+      </div>
+      <div class="rune-card rune-rod">
+        <div>
+          <div class="rune-slot-name">Rod</div>
+        </div>
+        <div>
+          <div class="rune-suit-pill suit-green-pill">Green</div>
+          <div class="rune-desc">Casting. Play 2 lures, draw before casting.</div>
+        </div>
+      </div>
+      <div class="rune-card rune-reel">
+        <div>
+          <div class="rune-slot-name">Reel</div>
+        </div>
+        <div>
+          <div class="rune-suit-pill suit-yellow-pill">Yellow</div>
+          <div class="rune-desc">Draw and hand management. Draw extra, retrieve from discard.</div>
+        </div>
+      </div>
+    </div>
+
+    <h4>Passive vs Active</h4>
+    <p><strong>Passive enchantments</strong> trigger automatically whenever their condition is met. They are always on and require no decision to activate.</p>
+    <p><strong>Active enchantments</strong> are marked <em>Once per round</em> and must be deliberately triggered. You may activate <strong>one active enchantment per revealed fish</strong>, regardless of how many active runes you have slotted. You may use a different active rune on each of the three Fish On phases.</p>
+  </div>
+
+  <!-- LOCATIONS -->
+  <div id="locations" class="section">
+    <div class="section-label">Where You Fish</div>
+    <h2>Locations</h2>
+    <p>The angler in dock slot 1 chooses a location each round. Each location grants a bonus to the player(s) with the <strong>fewest scales</strong>.</p>
+    <div class="location-grid">
+      <div class="location-card">
+        <div class="location-name">Creek</div>
+        <div class="location-desc">Hand size is 8 whenever drawing cards this round.</div>
+      </div>
+      <div class="location-card">
+        <div class="location-name">River</div>
+        <div class="location-desc">May discard the first revealed fish to reveal a new one.</div>
+      </div>
+      <div class="location-card">
+        <div class="location-name">Pond</div>
+        <div class="location-desc">May discard up to 2 cards before drawing at end of each Fish On phase.</div>
+      </div>
+      <div class="location-card">
+        <div class="location-name">Lake</div>
+        <div class="location-desc">May remove one snag card from hand, then draw a replacement.</div>
+      </div>
+    </div>
+    <div class="callout callout-amber">
+      <strong>Tied for last:</strong> All tied players receive the bonus. If all players are tied, nobody receives it.
+    </div>
+  </div>
+
+  <!-- SCORING -->
+  <div id="scoring" class="section">
+    <div class="section-label">Points</div>
+    <h2>Scoring Brackets</h2>
+    <p>Fish are worth <strong>scales</strong> when caught. The winner is the first angler to collect <strong>20 scales</strong>.</p>
+    <div class="bracket-grid">
+      <div class="bracket-card bracket-small">
+        <div class="bracket-name">Small</div>
+        <div class="bracket-scales">1 scale</div>
+        <div class="bracket-slack">slack 7-9</div>
+      </div>
+      <div class="bracket-card bracket-average">
+        <div class="bracket-name">Average</div>
+        <div class="bracket-scales">2 scales</div>
+        <div class="bracket-slack">slack 5-6</div>
+      </div>
+      <div class="bracket-card bracket-big">
+        <div class="bracket-name">Big</div>
+        <div class="bracket-scales">3 scales</div>
+        <div class="bracket-slack">slack 3-4</div>
+      </div>
+      <div class="bracket-card bracket-master">
+        <div class="bracket-name">Master</div>
+        <div class="bracket-scales">5 scales</div>
+        <div class="bracket-slack">slack 1-2</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GAMEPLAY -->
+  <div id="morning-prep" class="section">
+    <div class="section-label">Gameplay</div>
+    <h2>Morning Prep</h2>
+    <p>Each round consists of <strong>Morning Prep</strong> followed by <strong>three Fish On phases</strong>.</p>
+
+    <h3>1. Draft Lures</h3>
+    <p>Starting with the angler in dock slot 1 (or randomly on the first round), reveal lures from the shop deck equal to the number of players. Players draft one lure each. The first drafter rotates each set.</p>
+
+    <div class="draft-box">
+      <div class="draft-set">
+        <span class="draft-label">Set 1</span>
+        <span class="draft-num">4</span><span class="draft-arrow">&#8594;</span>
+        <span class="draft-num">3</span><span class="draft-arrow">&#8594;</span>
+        <span class="draft-num">2</span><span class="draft-arrow">&#8594;</span>
+        <span class="draft-num">1</span>
+      </div>
+      <div class="draft-set">
+        <span class="draft-label">Set 2</span>
+        <span class="draft-num">3</span><span class="draft-arrow">&#8594;</span>
+        <span class="draft-num">2</span><span class="draft-arrow">&#8594;</span>
+        <span class="draft-num">1</span><span class="draft-arrow">&#8594;</span>
+        <span class="draft-num">4</span>
+      </div>
+      <div class="draft-set">
+        <span class="draft-label">Set 3</span>
+        <span class="draft-num">2</span><span class="draft-arrow">&#8594;</span>
+        <span class="draft-num">1</span><span class="draft-arrow">&#8594;</span>
+        <span class="draft-num">4</span><span class="draft-arrow">&#8594;</span>
+        <span class="draft-num">3</span>
+      </div>
+    </div>
+
+    <div class="callout callout-amber">
+      On your draft turn, you may <strong>forgo your pick</strong> to immediately place your angler card at the earliest open dock slot. You are locked out of all remaining picks this draft.
+    </div>
+    <p>After each draft set, any player who has taken their final pick places their angler card at the earliest available dock slot. Dock order runs slot 1 (earliest) to slot 4 (latest) and determines play order for the rest of the round.</p>
+
+    <h3>2. Prepare Your Tackle</h3>
+    <ul class="step-list">
+      <li class="step-item"><span class="step-num">1</span><span>Each player may place <strong>1 lure</strong> face-down into a rune slot as an enchantment.</span></li>
+      <li class="step-item"><span class="step-num">2</span><span>Place all remaining drafted cards onto your <strong>tackle deck</strong>.</span></li>
+      <li class="step-item"><span class="step-num">3</span><span>The angler in <strong>dock slot 1</strong> chooses a location.</span></li>
+      <li class="step-item"><span class="step-num">4</span><span>Shuffle your tackle deck and draw <strong>7 cards</strong>.</span></li>
+    </ul>
+  </div>
+
+  <!-- FISH ON -->
+  <div id="fish-on" class="section">
+    <div class="section-label">Gameplay</div>
+    <h2>Fish On</h2>
+    <p>Repeat this phase <strong>three times</strong> per round.</p>
+
+    <div class="phase-block">
+      <div class="phase-title">Step 1 - Reveal the Fish</div>
+      <ul class="step-list">
+        <li class="step-item"><span class="step-num">&#8594;</span><span>Flip the top card of the fish deck face-up.</span></li>
+        <li class="step-item"><span class="step-num">&#8594;</span><span>Note the fish's <strong>Line Slack</strong>, <strong>Suit</strong>, <strong>Bracket</strong>, and any <strong>Effects</strong> for this phase.</span></li>
+      </ul>
+    </div>
+
+    <div class="phase-block">
+      <div class="phase-title">Step 2 - Cast</div>
+      <p style="font-size:13px;color:var(--text-muted);margin-bottom:0.75rem">In dock order:</p>
+      <ul class="step-list">
+        <li class="step-item"><span class="step-num">&#8594;</span><span>Each player selects 1 lure from their hand and places it <strong>face-down</strong>.</span></li>
+        <li class="step-item"><span class="step-num">&#8594;</span><span>The lure must <strong>match the fish's suit</strong> if possible.</span></li>
+        <li class="step-item"><span class="step-num">&#8594;</span><span>Enchantments are activated depending on each rune's conditions.</span></li>
+        <li class="step-item"><span class="step-num">&#8594;</span><span>If you have <strong>no matching suit</strong> in hand, take the top card of the snag deck and place it face-down <strong>horizontally beneath</strong> your lure.</span></li>
+      </ul>
+    </div>
+
+    <div class="phase-block">
+      <div class="phase-title">Step 3 - Reveal</div>
+      <p style="font-size:13px;color:var(--text-muted);margin-bottom:0.75rem">All players flip their lures face-up simultaneously. Determine catch order (highest lure tension value goes first):</p>
+      <ul class="step-list">
+        <li class="step-item"><span class="step-num">1</span><span>Highest lure tension value</span></li>
+        <li class="step-item"><span class="step-num">2</span><span>Tie: matching suit wins</span></li>
+        <li class="step-item"><span class="step-num">3</span><span>Still tied: lowest dock slot number wins</span></li>
+      </ul>
+    </div>
+
+    <div class="phase-block">
+      <div class="phase-title">Step 4 - Catch Attempt</div>
+      <p style="font-size:13px;color:var(--text-muted);margin-bottom:0.75rem">The leading player attempts to land the fish:</p>
+      <ul class="step-list">
+        <li class="step-item"><span class="step-num">1</span><span><strong>Flip up</strong> any snag card beneath your lure.</span></li>
+        <li class="step-item"><span class="step-num">2</span><span><strong>Play one additional lure</strong> from your hand.</span></li>
+        <li class="step-item"><span class="step-num">3</span><span>Calculate <strong>line tension</strong>: cast lure + additional lure + snag value + any active effects.</span></li>
+        <li class="step-item"><span class="step-num">&#8804;</span><span><strong>Line Tension &le; Line Slack:</strong> Fish caught. Take the fish card and place it beside your tackle deck.</span></li>
+        <li class="step-item"><span class="step-num">&gt;</span><span><strong>Line Tension &gt; Line Slack:</strong> Line snaps. If you had a snag in play, place it on the bottom of your tackle deck.</span></li>
+      </ul>
+      <div class="callout" style="margin-top:0.75rem">
+        If the fish is not caught, the <strong>next player in catch order</strong> attempts in the same manner. Continue until the fish is caught or all players have failed.
+      </div>
+    </div>
+
+    <div class="phase-block">
+      <div class="phase-title">Step 5 - Draw Up</div>
+      <ul class="step-list">
+        <li class="step-item"><span class="step-num">&#8594;</span><span>All players draw back up to <strong>7 cards</strong>.</span></li>
+        <li class="step-item"><span class="step-num">&#8594;</span><span>If your tackle deck runs out, shuffle your discard pile to form a new tackle deck.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- WINNING -->
+  <div id="winning" class="section">
+    <div class="section-label">Victory</div>
+    <h2>Winning</h2>
+    <div class="win-banner">
+      <span class="win-banner-number">20</span>
+      <span class="win-banner-label">SCALES TAKES THE CHARTER</span>
+      <p class="win-banner-note">Scales represent the recorded weight of your catch as tallied at the weigh-in station at the end of Big Dock. At the close of each day, the dockmaster marks your running total on the leaderboard post.</p>
+    </div>
+  </div>
+
+  <!-- REFERENCE -->
+  <div id="reference" class="section">
+    <div class="section-label">Quick Reference</div>
+    <h2>Turn Order</h2>
+    <div class="ref-block">MORNING PREP
+  &rarr; Draft lures (3 sets, rotating order from dock slot 1)
+  &rarr; Place angler card at dock when last pick is taken (or forgo pick to go immediately)
+  &rarr; Place 1 enchantment
+  &rarr; Dock slot 1 chooses location
+  &rarr; Shuffle tackle deck, draw 7
+
+FISH ON (x 3)
+  &rarr; Reveal fish (note Line Slack, Suit, Bracket, Effects)
+  &rarr; Players cast lures face-down in dock order (+ snag if no suit)
+  &rarr; Activate enchantment (optional, once per revealed fish)
+  &rarr; Reveal lures - highest tension value goes first in catch order
+  &rarr; Catch attempt: flip snag, play 1 more lure, check tension vs slack
+  &rarr; Next player in catch order attempts if fish not caught
+  &rarr; All draw up to 7
+
+REPEAT</div>
+  </div>
+
+  <!-- FISH DECK -->
+  <div id="fish-deck" class="section">
+    <div class="section-label">Cards</div>
+    <h2>Fish Deck</h2>
+    <p>40 cards. Each fish has a <strong>Line Slack</strong> value, a <strong>Suit</strong>, a <strong>Scoring Bracket</strong>, and optional <strong>Effects</strong>. Line Tension must stay equal to or under Line Slack or the line snaps. Suit distribution: 10 Red, 10 Yellow, 10 Blue, 10 Green.</p>
+
+    <div class="fish-section-header fish-master">
+      <div class="fish-bracket-title">Master</div>
+      <div class="fish-bracket-meta">5 scales &middot; Slack 1-2 &middot; 6 cards</div>
+    </div>
+    <p class="fish-note">Tight window. Low-tension lures only. Any snag is extremely dangerous.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>#</th><th>Name</th><th>Slack</th><th>Suit</th><th>Effect</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>The Gilded Seer</td><td>1</td><td><span class="suit-tag suit-tag-red">Red</span></td><td>Only the player with the lowest tension cast among players matching the fish's suit may attempt.</td></tr>
+          <tr><td>2</td><td>Old Slate</td><td>1</td><td><span class="suit-tag suit-tag-blue">Blue</span></td><td>-</td></tr>
+          <tr><td>3</td><td>The Deepwalker</td><td>2</td><td><span class="suit-tag suit-tag-green">Green</span></td><td>The catching player must succeed on their first attempt or the fish escapes (no chain).</td></tr>
+          <tr><td>4</td><td>Ambervast Queen</td><td>2</td><td><span class="suit-tag suit-tag-yellow">Yellow</span></td><td>Players may not activate enchantments this round.</td></tr>
+          <tr><td>5</td><td>Greymantle</td><td>2</td><td><span class="suit-tag suit-tag-red">Red</span></td><td>-</td></tr>
+          <tr><td>6</td><td>The Pale Runner</td><td>2</td><td><span class="suit-tag suit-tag-blue">Blue</span></td><td>Each player must discard 1 card before casting.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="fish-section-header fish-big">
+      <div class="fish-bracket-title">Big</div>
+      <div class="fish-bracket-meta">3 scales &middot; Slack 3-4 &middot; 10 cards</div>
+    </div>
+    <p class="fish-note">Forgiving enough for mid-range lures. Snags still threaten on Slack 3.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>#</th><th>Name</th><th>Slack</th><th>Suit</th><th>Effect</th></tr></thead>
+        <tbody>
+          <tr><td>7</td><td>Ashridge Pike</td><td>3</td><td><span class="suit-tag suit-tag-green">Green</span></td><td>-</td></tr>
+          <tr><td>8</td><td>Stoneback</td><td>3</td><td><span class="suit-tag suit-tag-red">Red</span></td><td>-</td></tr>
+          <tr><td>9</td><td>Coldwater Brak</td><td>3</td><td><span class="suit-tag suit-tag-blue">Blue</span></td><td>-</td></tr>
+          <tr><td>10</td><td>Kelwick's Carp</td><td>3</td><td><span class="suit-tag suit-tag-yellow">Yellow</span></td><td>Each player draws 1 card before casting.</td></tr>
+          <tr><td>11</td><td>Gloomfin</td><td>4</td><td><span class="suit-tag suit-tag-green">Green</span></td><td>Catch order is reversed this round (lowest tension cast goes first).</td></tr>
+          <tr><td>12</td><td>Silverthread</td><td>4</td><td><span class="suit-tag suit-tag-yellow">Yellow</span></td><td>Each player must take a snag regardless of suit in hand.</td></tr>
+          <tr><td>13</td><td>Copperscale</td><td>4</td><td><span class="suit-tag suit-tag-red">Red</span></td><td>Players may play 2 lures this round. Line tension is the sum of both.</td></tr>
+          <tr><td>14</td><td>The Embervast Long</td><td>4</td><td><span class="suit-tag suit-tag-blue">Blue</span></td><td>-</td></tr>
+          <tr><td>15</td><td>Duskfin</td><td>4</td><td><span class="suit-tag suit-tag-green">Green</span></td><td>-</td></tr>
+          <tr><td>16</td><td>Mudgut</td><td>4</td><td><span class="suit-tag suit-tag-red">Red</span></td><td>The first player to fail a catch attempt this round draws 2 cards.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="fish-section-header fish-average">
+      <div class="fish-bracket-title">Average</div>
+      <div class="fish-bracket-meta">2 scales &middot; Slack 5-6 &middot; 14 cards</div>
+    </div>
+    <p class="fish-note">The bread and butter of most rounds.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>#</th><th>Name</th><th>Slack</th><th>Suit</th><th>Effect</th></tr></thead>
+        <tbody>
+          <tr><td>17</td><td>Shoremouth Char</td><td>5</td><td><span class="suit-tag suit-tag-blue">Blue</span></td><td>-</td></tr>
+          <tr><td>18</td><td>Gollow</td><td>5</td><td><span class="suit-tag suit-tag-yellow">Yellow</span></td><td>-</td></tr>
+          <tr><td>19</td><td>Thornback</td><td>5</td><td><span class="suit-tag suit-tag-green">Green</span></td><td>Snag cards this round add +1 to their tension value.</td></tr>
+          <tr><td>20</td><td>The Watcher</td><td>5</td><td><span class="suit-tag suit-tag-red">Red</span></td><td>All players must cast their highest tension lure this round.</td></tr>
+          <tr><td>21</td><td>Flatstone</td><td>5</td><td><span class="suit-tag suit-tag-yellow">Yellow</span></td><td>-</td></tr>
+          <tr><td>22</td><td>Greyeye</td><td>5</td><td><span class="suit-tag suit-tag-blue">Blue</span></td><td>-</td></tr>
+          <tr><td>23</td><td>Brackenfin</td><td>6</td><td><span class="suit-tag suit-tag-green">Green</span></td><td>-</td></tr>
+          <tr><td>24</td><td>Redgill</td><td>6</td><td><span class="suit-tag suit-tag-red">Red</span></td><td>-</td></tr>
+          <tr><td>25</td><td>Tallow Bream</td><td>6</td><td><span class="suit-tag suit-tag-yellow">Yellow</span></td><td>-</td></tr>
+          <tr><td>26</td><td>Deepcaller</td><td>6</td><td><span class="suit-tag suit-tag-blue">Blue</span></td><td>-</td></tr>
+          <tr><td>27</td><td>Stillwater Bass</td><td>6</td><td><span class="suit-tag suit-tag-green">Green</span></td><td>Players may not activate enchantments this round.</td></tr>
+          <tr><td>28</td><td>The Itch</td><td>6</td><td><span class="suit-tag suit-tag-red">Red</span></td><td>This fish may only be caught by a player with no snag in play.</td></tr>
+          <tr><td>29</td><td>Amber Drifter</td><td>6</td><td><span class="suit-tag suit-tag-yellow">Yellow</span></td><td>Each player may discard 1 card and draw 1 card before casting.</td></tr>
+          <tr><td>30</td><td>Snapper</td><td>6</td><td><span class="suit-tag suit-tag-blue">Blue</span></td><td>The angler in dock slot 1 must cast first and reveal their lure immediately.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="fish-section-header fish-small">
+      <div class="fish-bracket-title">Small</div>
+      <div class="fish-bracket-meta">1 scale &middot; Slack 7-9 &middot; 10 cards</div>
+    </div>
+    <p class="fish-note">Wide window. Almost any combination lands these.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>#</th><th>Name</th><th>Slack</th><th>Suit</th><th>Effect</th></tr></thead>
+        <tbody>
+          <tr><td>31</td><td>Gillyfish</td><td>7</td><td><span class="suit-tag suit-tag-yellow">Yellow</span></td><td>-</td></tr>
+          <tr><td>32</td><td>Pebbleback</td><td>7</td><td><span class="suit-tag suit-tag-blue">Blue</span></td><td>-</td></tr>
+          <tr><td>33</td><td>Mudmover</td><td>7</td><td><span class="suit-tag suit-tag-green">Green</span></td><td>-</td></tr>
+          <tr><td>34</td><td>Shore Dart</td><td>7</td><td><span class="suit-tag suit-tag-red">Red</span></td><td>-</td></tr>
+          <tr><td>35</td><td>Tallow Pip</td><td>8</td><td><span class="suit-tag suit-tag-yellow">Yellow</span></td><td>-</td></tr>
+          <tr><td>36</td><td>Coppernose</td><td>8</td><td><span class="suit-tag suit-tag-red">Red</span></td><td>-</td></tr>
+          <tr><td>37</td><td>Rockwriggler</td><td>8</td><td><span class="suit-tag suit-tag-green">Green</span></td><td>-</td></tr>
+          <tr><td>38</td><td>Shimmer</td><td>8</td><td><span class="suit-tag suit-tag-blue">Blue</span></td><td>-</td></tr>
+          <tr><td>39</td><td>The Lucky One</td><td>9</td><td><span class="suit-tag suit-tag-yellow">Yellow</span></td><td>The player who catches this fish draws 2 cards.</td></tr>
+          <tr><td>40</td><td>Snagbait</td><td>9</td><td><span class="suit-tag suit-tag-blue">Blue</span></td><td>Snags reduce cast lure tension by 1 this round (minimum 0).</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- SHOP DECK -->
+  <div id="shop-deck" class="section">
+    <div class="section-label">Cards</div>
+    <h2>Shop Deck</h2>
+    <p>50 cards drafted during Morning Prep. Each lure has a <strong>Tension Value</strong>, a <strong>Suit</strong> (fixed to slot category), a <strong>Cast Effect</strong>, and an <strong>Enchant Effect</strong>. Drafting toward a rune build also shapes your casting hand's suit coverage.</p>
+
+    <div class="table-wrap" style="margin-top:1rem">
+      <table>
+        <thead><tr><th>Slot</th><th>Suit</th><th>Effect Category</th></tr></thead>
+        <tbody>
+          <tr><td>Hook</td><td><span class="suit-tag suit-tag-red">Red</span></td><td>Line tension management</td></tr>
+          <tr><td>Line</td><td><span class="suit-tag suit-tag-blue">Blue</span></td><td>Snag interaction</td></tr>
+          <tr><td>Rod</td><td><span class="suit-tag suit-tag-green">Green</span></td><td>Casting</td></tr>
+          <tr><td>Reel</td><td><span class="suit-tag suit-tag-yellow">Yellow</span></td><td>Draw and hand management</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- HOOK LURES -->
+    <div id="hook-lures" class="lure-section">
+      <div class="lure-section-title">
+        Hook Lures
+        <span class="suit-tag suit-tag-red" style="font-size:12px;padding:3px 8px">Red &middot; 13 cards</span>
+      </div>
+      <p class="lure-section-note">Hook enchants reduce or manipulate your line tension during catch attempts.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>#</th><th>Name</th><th>T</th><th>Cast Effect</th><th>Enchant Effect</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Barbed Jig</td><td>2</td><td>Your line tension counts as 1 lower this catch attempt.</td><td>Once per round: reduce your line tension by 1 before resolving a catch attempt.</td></tr>
+            <tr><td>2</td><td>Weighted Sinker</td><td>3</td><td>Ignore the tension from one snag card this catch attempt.</td><td>Snag cards in your catch attempts add a maximum of 1 tension regardless of value.</td></tr>
+            <tr><td>3</td><td>Treble Hook</td><td>4</td><td>If you catch the fish, draw 1 card.</td><td>Whenever you catch a fish, draw 1 card.</td></tr>
+            <tr><td>4</td><td>Offset Hook</td><td>1</td><td>Your line tension is treated as 0 if there are no snags in play.</td><td>If you have no snag in play during a catch attempt, your lure tension counts as 1 lower.</td></tr>
+            <tr><td>5</td><td>Circle Hook</td><td>2</td><td>Roll a d4 and increase any one snag's tension value by the result.</td><td>Once per round: roll a d4 and increase any one snag's tension value by the result.</td></tr>
+            <tr><td>6</td><td>Drop Shot Rig</td><td>3</td><td>Your line tension counts as 1 lower for each fish caught today (max -2).</td><td>Your line tension counts as 1 lower for each fish caught this round (max -2).</td></tr>
+            <tr><td>7</td><td>Gap Hook</td><td>2</td><td>If your lure matches the fish suit, your line tension counts as 2 lower.</td><td>Matching-suit catch attempts reduce your line tension by 1.</td></tr>
+            <tr><td>8</td><td>Worm Hook</td><td>1</td><td>Draw 1 card after this catch attempt, regardless of outcome.</td><td>Whenever your line snaps, draw 1 card.</td></tr>
+            <tr><td>9</td><td>Aberdeen Hook</td><td>3</td><td>Treat your total line tension as halved (round up) this catch attempt.</td><td>Once per round: treat one snag's value as 1.</td></tr>
+            <tr><td>10</td><td>Needle Point</td><td>4</td><td>If your tension exactly equals the fish's line slack, you catch it and draw 2 cards.</td><td>Whenever your tension exactly equals the fish's line slack, you catch it and draw 1 card.</td></tr>
+            <tr><td>11</td><td>Siwash Hook</td><td>2</td><td>Discard 1 card from hand to reduce your line tension by 1 this catch attempt.</td><td>Once per round: discard 1 card to reduce your line tension by 1.</td></tr>
+            <tr><td>12</td><td>Kahle Hook</td><td>3</td><td>If you fail this attempt, choose which player attempts next instead of following catch order.</td><td>Once per round: if you fail a catch attempt, choose which player attempts next.</td></tr>
+            <tr><td>13</td><td>Octopus Hook</td><td>2</td><td>This lure's tension counts as 0 if you cast a matching suit.</td><td>Matching-suit lures you cast have their tension reduced by 1 (minimum 0).</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- LINE LURES -->
+    <div id="line-lures" class="lure-section">
+      <div class="lure-section-title">
+        Line Lures
+        <span class="suit-tag suit-tag-blue" style="font-size:12px;padding:3px 8px">Blue &middot; 12 cards</span>
+      </div>
+      <p class="lure-section-note">Line enchants change how snag cards contribute to your line tension.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>#</th><th>Name</th><th>T</th><th>Cast Effect</th><th>Enchant Effect</th></tr></thead>
+          <tbody>
+            <tr><td>14</td><td>Floating Minnow</td><td>3</td><td>Roll a d4. Subtract the result from your line tension this attempt.</td><td>Once per round: after revealing a snag, roll a d4 and subtract the result from its tension value (minimum 0).</td></tr>
+            <tr><td>15</td><td>Braided Leader</td><td>2</td><td>If you have a snag in play, it adds 0 tension this catch attempt.</td><td>Snags you reveal add 1 less tension (minimum 0).</td></tr>
+            <tr><td>16</td><td>Monofilament Wrap</td><td>1</td><td>Ignore the snag under your lure entirely this catch attempt.</td><td>Once per round: ignore one snag card entirely when revealed.</td></tr>
+            <tr><td>17</td><td>Wire Trace</td><td>3</td><td>If your line snaps, remove your snag from the game instead of placing it in your deck.</td><td>The first time each round your line snaps and you had a snag in play, remove it from the game instead.</td></tr>
+            <tr><td>18</td><td>Shock Leader</td><td>2</td><td>If you take a snag this cast, draw 1 card.</td><td>Whenever you are forced to take a snag, draw 1 card.</td></tr>
+            <tr><td>19</td><td>Fluorocarbon Rig</td><td>4</td><td>Your snag adds 0 tension this cast. Discard it after.</td><td>Once per round: your snag adds 0 tension. Discard it after.</td></tr>
+            <tr><td>20</td><td>Tapered Leader</td><td>2</td><td>Look at the top 2 cards of the snag deck. You may swap them.</td><td>At the start of each Fish On phase, look at the top card of the snag deck before casting.</td></tr>
+            <tr><td>21</td><td>Stiff Rig</td><td>3</td><td>If the fish has line slack 4 or lower, your snag adds 0 tension this attempt.</td><td>Snags add 0 tension when you attempt to catch fish with line slack 3 or lower.</td></tr>
+            <tr><td>22</td><td>Hair Rig</td><td>2</td><td>You may take a snag voluntarily (even with a matching suit) to draw 2 cards.</td><td>Once per round: take a snag voluntarily to draw 2 cards.</td></tr>
+            <tr><td>23</td><td>Chod Rig</td><td>1</td><td>If your snag has a draw or dock effect, trigger it and it adds 0 tension.</td><td>Once per round: a snag you reveal triggers its special effect and adds 0 tension.</td></tr>
+            <tr><td>24</td><td>Blow-Back Rig</td><td>3</td><td>If your line snaps, return your snag to the snag deck instead of your tackle deck.</td><td>Whenever your line snaps, return your snag to the snag deck instead of your tackle deck.</td></tr>
+            <tr><td>25</td><td>Inline Lead</td><td>2</td><td>Reduce your snag's tension by 2 this catch attempt (minimum 0).</td><td>Snags you reveal have their tension reduced by 1 (minimum 1).</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ROD LURES -->
+    <div id="rod-lures" class="lure-section">
+      <div class="lure-section-title">
+        Rod Lures
+        <span class="suit-tag suit-tag-green" style="font-size:12px;padding:3px 8px">Green &middot; 13 cards</span>
+      </div>
+      <p class="lure-section-note">Rod enchants change how you play lures during the cast phase.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>#</th><th>Name</th><th>T</th><th>Cast Effect</th><th>Enchant Effect</th></tr></thead>
+          <tbody>
+            <tr><td>26</td><td>Popper</td><td>3</td><td>Play a second lure face-down alongside this one. Use the higher value for catch order; sum both for line tension.</td><td>Once per round: play 2 lures face-down. Use the higher for catch order; sum both for line tension.</td></tr>
+            <tr><td>27</td><td>Spinnerbait</td><td>2</td><td>Draw 1 card before the reveal step this Fish On phase.</td><td>Once per round: draw 1 card before lures are revealed.</td></tr>
+            <tr><td>28</td><td>Crankbait</td><td>4</td><td>If this is the highest tension lure revealed, draw 2 cards after the round resolves.</td><td>Whenever you place first in catch order, draw 1 card.</td></tr>
+            <tr><td>29</td><td>Jerkbait</td><td>3</td><td>After all lures are revealed, you may swap this lure with a card from your hand.</td><td>Once per round: after reveal, swap your cast lure with any card from your hand.</td></tr>
+            <tr><td>30</td><td>Swimbait</td><td>2</td><td>Cast this lure as any suit regardless of the fish's suit. It counts as matching.</td><td>Your lures always count as matching the fish's suit for catch attempts (not tiebreakers).</td></tr>
+            <tr><td>31</td><td>Buzzbait</td><td>3</td><td>If you place first in catch order and catch the fish, all other players discard 2 cards.</td><td>Once per round: if you place first in catch order and catch the fish, all other players discard 2 cards.</td></tr>
+            <tr><td>32</td><td>Blade Bait</td><td>2</td><td>This lure's tension counts as +1 for every snag in the play area (all players), maximum +3.</td><td>Your cast lure's tension counts as +1 for each snag in the play area, maximum +3.</td></tr>
+            <tr><td>33</td><td>Topwater Frog</td><td>4</td><td>If you do not place first in catch order, return this lure to your hand instead of discarding it.</td><td>Once per round: if you do not place first in catch order, return your cast lure to your hand.</td></tr>
+            <tr><td>34</td><td>Trolling Lure</td><td>1</td><td>Cast face-up. You may swap your lure after all others are revealed but before catch attempts begin.</td><td>Once per round: reveal your lure last. You may swap it after seeing all others.</td></tr>
+            <tr><td>35</td><td>Soft Plastic</td><td>2</td><td>Cast 2 cards face-down. Discard 1 unrevealed before the reveal step.</td><td>Once per round: cast 2 lures face-down; discard 1 before reveal without showing it.</td></tr>
+            <tr><td>36</td><td>Jigging Spoon</td><td>3</td><td>If your lure ties with another player for catch order, you automatically win the tiebreaker this round.</td><td>Once per round: you win any catch order tiebreaker regardless of dock slot or suit.</td></tr>
+            <tr><td>37</td><td>Jig Head</td><td>1</td><td>Add 1 to this lure's value for catch order, but add 1 to your line tension on a catch attempt.</td><td>Your cast lures count as +1 for catch order but add +1 to line tension on catch attempts.</td></tr>
+            <tr><td>38</td><td>Stickbait</td><td>4</td><td>If this lure matches the fish suit and places first in catch order, draw 1 card before your catch attempt.</td><td>Whenever you place first in catch order with a matching-suit lure, draw 1 card before your catch attempt.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- REEL LURES -->
+    <div id="reel-lures" class="lure-section">
+      <div class="lure-section-title">
+        Reel Lures
+        <span class="suit-tag suit-tag-yellow" style="font-size:12px;padding:3px 8px">Yellow &middot; 12 cards</span>
+      </div>
+      <p class="lure-section-note">Reel enchants affect how you draw, filter, and recover cards.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>#</th><th>Name</th><th>T</th><th>Cast Effect</th><th>Enchant Effect</th></tr></thead>
+          <tbody>
+            <tr><td>39</td><td>Baitrunner</td><td>2</td><td>Draw 2 cards after this Fish On phase resolves.</td><td>Whenever your line snaps, draw 1 card.</td></tr>
+            <tr><td>40</td><td>Free Spool</td><td>1</td><td>Retrieve any 1 card from your discard pile and add it to your hand.</td><td>Once per round: retrieve 1 card from your discard pile.</td></tr>
+            <tr><td>41</td><td>Long Cast</td><td>3</td><td>Draw 3 cards, then discard 2.</td><td>At the start of each Fish On phase, draw 1 card then discard 1.</td></tr>
+            <tr><td>42</td><td>Drag Setter</td><td>2</td><td>Look at the top 3 cards of your tackle deck. Put them back in any order.</td><td>At the start of morning prep, look at the top 3 cards of your tackle deck and reorder them freely.</td></tr>
+            <tr><td>43</td><td>Line Counter</td><td>1</td><td>Draw 1 card. If you have 3 or more snags in your discard pile, draw 2 instead.</td><td>Draw 1 additional card during draw-up if you have 2 or more snags in your discard pile.</td></tr>
+            <tr><td>44</td><td>Bail Wire</td><td>2</td><td>Return 1 card from your discard pile to the bottom of your tackle deck.</td><td>Once per round: return 1 card from your discard to the bottom of your tackle deck.</td></tr>
+            <tr><td>45</td><td>Spinning Reel</td><td>3</td><td>Discard any number of cards from hand and draw that many plus 1.</td><td>Once per round: discard up to 2 cards and draw that many.</td></tr>
+            <tr><td>46</td><td>Baitcaster</td><td>4</td><td>Draw until you have 8 cards in hand.</td><td>Your hand size is 8 instead of 7.</td></tr>
+            <tr><td>47</td><td>Fly Reel</td><td>2</td><td>Place this card on the bottom of your tackle deck instead of discarding it after play.</td><td>Once per round: place any 1 card you would discard on the bottom of your tackle deck instead.</td></tr>
+            <tr><td>48</td><td>Level Wind</td><td>1</td><td>Draw 2 cards. Discard 1 card from your hand.</td><td>Whenever you draw cards during draw-up, draw 1 extra then discard 1.</td></tr>
+            <tr><td>49</td><td>Anti-Reverse</td><td>3</td><td>The next snag you would take this round goes to the bottom of your tackle deck instead of into play.</td><td>Once per round: the first snag you would take goes to the bottom of your tackle deck instead.</td></tr>
+            <tr><td>50</td><td>Centrepin</td><td>2</td><td>Reveal the top card of your tackle deck. You may discard it or leave it.</td><td>At the start of each Fish On phase, reveal the top card of your tackle deck and choose to discard it or leave it.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- INTERACTIVE LURES -->
+    <div id="interactive-lures" class="lure-section">
+      <div class="lure-section-title">Interactive Lures</div>
+      <p class="lure-section-note">These lures directly interact with other anglers. All effects are triggered by game state rather than named targets. Distributed across all four suits (3 per suit).</p>
+      <div class="designer-note">
+        <strong>Designer note:</strong> These are held separately so you can test the base 50-card shop deck first and introduce interactive effects once the core loop is stable.
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>#</th><th>Name</th><th>Suit</th><th>T</th><th>Cast Effect</th><th>Enchant Effect</th></tr></thead>
+          <tbody>
+            <tr><td>S1</td><td>Sabiki Rig</td><td><span class="suit-tag suit-tag-red">Red</span></td><td>2</td><td>The player to your left must discard 1 card.</td><td>Once per round: when you catch a fish, the player to your left discards 1 card.</td></tr>
+            <tr><td>S2</td><td>Snag Transfer</td><td><span class="suit-tag suit-tag-red">Red</span></td><td>3</td><td>If you have a snag in play, pass it to the player ahead of you in catch order instead.</td><td>Once per round: pass your snag to the next player in catch order instead of resolving it yourself.</td></tr>
+            <tr><td>S3</td><td>Fouled Cast</td><td><span class="suit-tag suit-tag-red">Red</span></td><td>1</td><td>Name a suit. Each player holding no cards of that suit must take a snag.</td><td>Once per round: name a suit. Each player who casts a non-matching lure this phase takes a snag.</td></tr>
+            <tr><td>S4</td><td>Chumming</td><td><span class="suit-tag suit-tag-blue">Blue</span></td><td>2</td><td>Each other player draws 1 card. You draw 2.</td><td>Once per round: each other player draws 1 card. You draw 2.</td></tr>
+            <tr><td>S5</td><td>Undercut</td><td><span class="suit-tag suit-tag-blue">Blue</span></td><td>3</td><td>If another player's cast lure is higher tension than yours, reduce theirs by 1 for catch order this phase.</td><td>Once per round: reduce the highest tension cast lure on the table by 1 for catch order (not line tension).</td></tr>
+            <tr><td>S6</td><td>Tangled Lines</td><td><span class="suit-tag suit-tag-blue">Blue</span></td><td>2</td><td>Choose two other players. They swap their cast lures before catch order is resolved.</td><td>Once per round: two other players of your choice swap their cast lures before catch order is resolved.</td></tr>
+            <tr><td>S7</td><td>Poach</td><td><span class="suit-tag suit-tag-green">Green</span></td><td>4</td><td>If you place second in catch order and the first player fails, your line tension counts as 1 lower.</td><td>Once per round: if you place second in catch order, your line tension counts as 1 lower.</td></tr>
+            <tr><td>S8</td><td>Cut Current</td><td><span class="suit-tag suit-tag-green">Green</span></td><td>2</td><td>The player in dock slot 1 must move to the last open dock slot next round.</td><td>Once per round: if you catch the fish, the player in dock slot 1 moves to the last open slot next round.</td></tr>
+            <tr><td>S9</td><td>Lure Snatch</td><td><span class="suit-tag suit-tag-green">Green</span></td><td>3</td><td>Look at another player's cast lure before reveal. You may swap yours with theirs.</td><td>Once per round: after casting but before reveal, look at one other player's face-down lure and swap yours with it if you choose.</td></tr>
+            <tr><td>S10</td><td>Flood the Pool</td><td><span class="suit-tag suit-tag-yellow">Yellow</span></td><td>1</td><td>Each player draws 2 cards then discards 2 cards.</td><td>Once per round: each player draws 2 cards then discards 2 cards.</td></tr>
+            <tr><td>S11</td><td>False Cast</td><td><span class="suit-tag suit-tag-yellow">Yellow</span></td><td>2</td><td>Before reveal, you may swap your lure with any card from your hand. The player to your right reveals their lure one step later.</td><td>Once per round: delay one other player's lure reveal by one step. You may change your own lure after seeing theirs.</td></tr>
+            <tr><td>S12</td><td>Downrigger</td><td><span class="suit-tag suit-tag-yellow">Yellow</span></td><td>3</td><td>The player with the most scales must cast their highest tension lure this phase.</td><td>Once per round: the player with the most scales must cast their highest tension lure this phase.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="footer">
+  <p>Runes &amp; Reels &middot; The Embervast Derby &middot; Part of the world of Orrelia</p>
+  <p style="margin-top:0.5rem"><a href="https://ptcee.github.io/ttrpgs/ANVIL/">ANVIL</a> &middot; <a href="https://ptcee.github.io/ttrpgs/osrad/">OSRad</a></p>
+</div>
+
+<script>
+  document.querySelector('.nav-toggle').addEventListener('click', function() {
+    document.querySelector('.nav-menu').classList.toggle('open');
+  });
+  document.querySelectorAll('.nav-menu a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      document.querySelector('.nav-menu').classList.remove('open');
+    });
+  });
+</script>
+
+</body>
+</html>
