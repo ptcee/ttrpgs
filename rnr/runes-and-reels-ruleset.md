@@ -130,8 +130,13 @@ Each round consists of **Morning Prep** followed by **three Fish On phases**.
 Starting with the angler in dock slot 1 (or randomly on the first round):
 
 - **a)** Reveal lures from the shop deck equal to the number of players.
-- **b)** Players draft one lure each, starting with dock position 4 to 1.
-- Next draft start at 3>2>1>4 then 2>1>4>3.
+- **b)** Players draft one lure each.
+- The first drafter rotates each set.
+```
+Set 1: 4 → 3 → 2 → 1
+Set 2: 3 → 2 → 1 → 4
+Set 3: 2 → 1 → 4 → 3
+```
 - On your draft turn, you may **forgo your pick** to immediately place your angler card at the earliest open dock slot. You are locked out of all remaining picks this draft.
 
 Repeat steps **a** and **b** two more times (three draft sets total).
@@ -161,7 +166,7 @@ Repeat this phase **three times** per round.
 In dock order:
 - Each player selects 1 lure from their hand and places it **face-down**.
 - The lure must **match the fish's suit** if possible.
-- Players may **activate one imbued enchantment** at this point.
+- Enchantments are activated depending on each runes conditions.
 - If you have **no matching suit** in hand, take the **top card of the snag deck** and place it face-down **horizontally beneath** your lure.
 
 #### Step 3 — Reveal
