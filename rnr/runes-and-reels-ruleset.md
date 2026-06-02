@@ -6,11 +6,11 @@
 
 *They come from Glimmerhold and the Ashridge settlements, from the shore hamlets and the waypost towns along the southern road. They come with rune-carved rods and enchanted tackle, with family lures passed down through generations and new gear bought that morning from the Embervast dockside shops. They come to fish, to compete, and to carve their names into the weathered post at the end of the Big Dock.*
 
-*Lake Embervast is the deepest body of water in southern Orrelia. Its floor has never been charted. The fish here run larger and stranger than anywhere else in the region, fed by mineral-rich runoff from the Ashridge peaks that turns the water a warm amber at dusk. Locals say things live in the lower water that have never been seen. The runesmiths who certify tackle at the dawn inspection say the same enchants behave differently here, like they force the lake to pay attention.*
+*Lake Embervast is the deepest body of water in southern Orrelia. Its floor has never been charted. The fish here run larger and stranger than anywhere else in the region, fed by mineral-rich runoff from the Ashridge peaks that turns the water a warm amber at dusk. Locals say things live in the lower water that have never been seen. The runesmiths who certify tackle at the dawn inspection say enchantments behave differently here.*
 
-*The Embervast Derby began as a tithe-fishing event three hundred years ago, when the shore settlements needed a hard winter feed and one good season could make the difference. The angler who contributed most was granted a season's debt forgiveness by the Glimmerhold merchant charters. The debt forgiveness is ceremonial now, but the Embervast Charter, a legal document granting the winner naming rights to one unnamed feature of the lake for a year, is still technically binding. People take it seriously.*
+*The Embervast Derby began as a tithe-fishing event three hundred years ago, when the shore settlements needed a large winter harvest and one good season could make the difference. The angler who contributed most was granted a season's debt forgiveness by the Glimmerhold merchant charters. The debt forgiveness is ceremonial now, but the Embervast Charter, a legal document granting the winner naming rights to island in the centre of the lake for a year, is still technically binding.*
 
-*The Gilded Seer has been landed three times in the derby's recorded history. Each winner's name is carved into Big Dock's post below the waterline, visible only at low water. Nobody knows who carved there first or when.*
+*The Gilded Seer has been landed three times in the derby's recorded history. Each winner's name is carved into Big Dock's post below the waterline, visible only at low water. This could be the year your name gets added.*
 
 *Tight lines.*
 
@@ -18,7 +18,7 @@
 
 ## Core Concepts
 
-**Line Slack** - the stat on each fish card. Represents how much give a fish allows on the line. Big powerful fish run slow and heavy, keeping slack low. Small skittish fish dart and pull tight, giving the angler more room to work with.
+**Line Slack** - the stat on each fish card. Represents how much give a fish allows on the line. Big powerful fish run slow and heavy, keeping slack low. Small skittish fish dart and turn, giving the angler more line to work with.
 
 **Line Tension** - the sum of all lure values, snag values, and active effects during a catch attempt. Must stay **equal to or under** the fish's Line Slack or the line snaps.
 
@@ -43,7 +43,7 @@ Each player begins with an identical deck of 20 cards.
 | 1 | 1 or 5 | Red or Blue |
 | 1 | 2 or 3 | Green or Yellow |
 
-> **Split Cards:** Orient the card so the value you want to use is on the side closest to the center of the tackle deck. The other value is ignored.
+> **Split Cards:** Orient the card so the value you want to use is on the side closest to the center of the table. The other value is ignored.
 
 > **Wild Cards:** May be declared as any suit. Counts as the fish's suit when resolving tiebreakers.
 
@@ -62,9 +62,9 @@ Each player begins with an identical deck of 20 cards.
 
 | Qty | Effect |
 |-----|--------|
-| 4 | Draw a card |
-| 3 | Advance your dock position by 1 |
-| 3 | Reduce your line tension by 1 instead |
+| 4 | Discard a card, then draw a card. |
+| 3 | Advance your dock position by 1. The player you displaced may draw 1 card. |
+| 3 | Reduce your line tension by 1, but discard the top card of your tackle deck. |
 
 **Shop Deck** (50 cards)
 - Each shop lure has a **Tension Value**, a **Suit**, a **Cast Effect** (used when played from hand), and an **Enchant Effect** (used when placed permanently into a rune slot)
@@ -182,9 +182,8 @@ All players flip their lures face-up simultaneously.
 **Determine catch order** (highest lure tension value goes first):
 
 1. Highest lure tension value
-2. Tie → lowest dock slot number wins
-3. Still tied → matching suit wins
-4. Still tied → each tied player reveals one additional lure; higher value wins
+2. Tie → matching suit wins
+3. Still tied → lowest dock slot number wins
 
 #### Step 4 - Catch Attempt
 
@@ -368,14 +367,14 @@ A lure's suit is fixed to its slot category. A Hook lure is always Red regardles
 | # | Name | Tension | Cast Effect | Enchant Effect |
 |---|------|---------|-------------|----------------|
 | 1 | Barbed Jig | 2 | Your line tension counts as 1 lower this catch attempt. | Once per round: reduce your line tension by 1 before resolving a catch attempt. |
-| 2 | Weighted Sinker | 3 | Ignore the tension from one snag card this catch attempt. | Snag cards in your catch attempts add a maximum of 1 tension regardless of face value. |
+| 2 | Weighted Sinker | 3 | Ignore the tension from one snag card this catch attempt. | Snag cards in your catch attempts add a maximum of 1 tension regardless of value. |
 | 3 | Treble Hook | 4 | If you catch the fish, draw 1 card. | Whenever you catch a fish, draw 1 card. |
-| 4 | Offset Hook | 1 | Your line tension is treated as 0 if you have no snag in play. | If you have no snag in play during a catch attempt, your lure tension counts as 1 lower. |
-| 5 | Circle Hook | 2 | Re-roll any one snag's tension value and use the new result. | Once per round: re-roll one snag tension value after it is revealed. |
+| 4 | Offset Hook | 1 | Your line tension is treated as 0 if there are no snags in play. | If you have no snag in play during a catch attempt, your lure tension counts as 1 lower. |
+| 5 | Circle Hook | 2 | Roll a d4 and increase any one snag's tension value by the result. | Once per round: Roll a d4 and increase any one snag's tension value by the result. |
 | 6 | Drop Shot Rig | 3 | Your line tension counts as 1 lower for each fish you have caught today (max -2). | Your line tension counts as 1 lower for each fish you have caught this round (max -2). |
 | 7 | Gap Hook | 2 | If your lure matches the fish suit, your line tension counts as 2 lower. | Matching-suit catch attempts reduce your line tension by 1. |
-| 8 | Worm Hook | 1 | Draw 1 card after this catch attempt resolves, regardless of outcome. | Whenever your line snaps, draw 1 card. |
-| 9 | Aberdeen Hook | 3 | Treat your total line tension as halved (round up) this catch attempt. | Once per round: treat one snag's tension value as 1. |
+| 8 | Worm Hook | 1 | Draw 1 card after this catch attempt, regardless of outcome. | Whenever your line snaps, draw 1 card. |
+| 9 | Aberdeen Hook | 3 | Treat your total line tension as halved (round up) this catch attempt. | Once per round: treat one snag's value as 1. |
 | 10 | Needle Point | 4 | If your line tension exactly equals the fish's line slack, you catch it and draw 2 cards. | Whenever your line tension exactly equals the fish's line slack, you catch it and draw 1 card. |
 | 11 | Siwash Hook | 2 | Discard 1 card from hand to reduce your line tension by 1 this catch attempt. | Once per round: discard 1 card to reduce your line tension by 1. |
 | 12 | Kahle Hook | 3 | If you fail this catch attempt, choose which player attempts next instead of following catch order. | Once per round: if you fail a catch attempt, choose which player attempts next. |
@@ -392,7 +391,7 @@ A lure's suit is fixed to its slot category. A Hook lure is always Red regardles
 | 14 | Floating Minnow | 3 | Roll a d4. Subtract the result from your line tension this attempt. | Once per round: after revealing a snag, roll a d4 and subtract the result from its tension value (minimum 0). |
 | 15 | Braided Leader | 2 | If you have a snag in play, it adds 0 tension this catch attempt. | Snags you reveal add 1 less tension (minimum 0). |
 | 16 | Monofilament Wrap | 1 | Ignore the snag under your lure entirely this catch attempt. | Once per round: ignore one snag card entirely when revealed. |
-| 17 | Wire Trace | 3 | If your line snaps, remove your snag from the game instead of placing it in your deck. | Whenever your line snaps and you had a snag in play, remove it from the game instead of placing it in your deck. |
+| 17 | Wire Trace | 3 | If your line snaps, remove your snag from the game instead of placing it in your deck. | The first time each round your line snaps and you had a snag in play, remove it from the game instead of placing it in your deck. |
 | 18 | Shock Leader | 2 | If you take a snag this cast, draw 1 card. | Whenever you are forced to take a snag, draw 1 card. |
 | 19 | Fluorocarbon Rig | 4 | Your snag adds 0 tension this cast. Discard it after. | Once per round: your snag adds 0 tension. Discard it after. |
 | 20 | Tapered Leader | 2 | Look at the top 2 cards of the snag deck. You may swap them. | At the start of each Fish On phase, look at the top card of the snag deck before casting. |
