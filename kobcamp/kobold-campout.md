@@ -2,7 +2,7 @@
 
 For 2–4 players, a slice of life TTRPG using one deck of cards. An improv conversation through the eyes of kids in the realm of Orrelia.
 
-> Kobold Campout is meant to evoke the likes of a comic strip; Calvin and Hobbes walking through the woods talking to each other, dictated and led by your hand of playing cards.
+Kobold Campout is meant to evoke the likes of a comic strip; Calvin and Hobbes walking through the woods talking to each other, dictated and led by your hand of playing cards.
 
 > Within the Brightmist Wood, a young kobold and their friends slip away from camp while their parents set up tents and cook dinner. What follows is a quiet afternoon of wandering, pretending, and discovery; unremarkable events to grown-ups, but grand and enchanting to youngsters.
 >
