@@ -6,7 +6,7 @@ Kobold Campout is meant to evoke the likes of a comic strip; Calvin and Hobbes w
 
 > Within the Brightmist Wood, a young kobold and their friends slip away from camp while their parents set up tents and cook dinner. What follows is a quiet afternoon of wandering, pretending, and discovery; unremarkable events to grown-ups, but grand and enchanting to youngsters.
 >
-> You are those youngsters, and this is how you spent the afternoon.
+> You are those youngsters, and this is how you spend the afternoon.
 
 ---
 
@@ -76,7 +76,7 @@ Once questions are answered and your Truth is written, shuffle all cards back in
 
 Deal **3 cards** to each player.
 
-Place the top 3 cards of the deck in the centre of the table. These are the locations you walk through. Reveal the first one, this is the first location the kids are walking through.
+Place the top 3 cards of the deck in the centre of the table. These are the locations where your adventure takes place. Reveal the first one, this is the first location you're walking through.
 
 ### Locations
 
@@ -147,7 +147,7 @@ Your played card uses its colour, value, and suit together to determine where th
 
 #### Changing Your Truth
 
-At the end of each location, check if anyone played your suit. If yes, adjust your Truth by adding, removing or changing exactly one word. Write the new version underneath your old Truth.
+At the end of each location, check if anyone played your suit. If yes, adjust your Truth by adding, removing or changing exactly one word based on what happened at this location. Write the new version underneath your old Truth.
 
 #### Card Colour
 
@@ -166,29 +166,33 @@ At the end of each location, check if anyone played your suit. If yes, adjust yo
 #### Card Value
 
 **2–3: Small moment**
-*"I found a weird rock." "My boot got muddy."*
-A small observation, a passing comment, something ordinary.
+> > *"I found a weird rock." "My boot got muddy."*
+- A small observation, a passing comment, something ordinary.
 
 **4–7: Meaningful moment**
-*"I told her about the thing I heard dad say." "We stopped and watched it for a while."*
-Something with a bit of weight. A confidence, a feeling or a moment that lingers.
+> *"I told her about the thing I heard dad say." "We stopped and watched it for a while."*
+- Something with a bit of weight. A confidence, a feeling or a moment that lingers.
 
 **8–10: Big moment**
-*"I slipped and nearly went into the water." "I said something I probably shouldn't have."*
-Something that changes the mood or shifts how the kids see each other.
+> *"I slipped and nearly went into the water." "I said something I probably shouldn't have."*
+- Something that changes the mood or shifts how the kids see each other.
 
-**Jack: Imagine** (*"What if?"*)
-Pose a hypothetical. Spin out something that hasn't happened yet and let the other players respond.
+**Jack: Imagine**
+> *"What if?"*
+- Pose a hypothetical. Spin out something that hasn't happened yet and let the other players respond.
 
-**Queen: Remember** (*"What happened before?"*)
-Pull in something from earlier; before the game started, before the walk, before today.
+**Queen: Remember**
+> *"What happened before?"*
+- Pull in something from earlier; before the game started, before the walk, before today.
 
-**King: Adventure** (*"What happens now?"*)
-Something happens, the story moves. Place the King beside the current location when played.
+**King: Adventure**
+> *"What happens now?"*
+- Something happens, the story moves. Place the King beside the current location when played.
 > Kings always escalate or advance the scene before play continues.
 
-**Ace = Reveal** (*"What's true?"*)
-Say something true. Your ace: confess something about yourself. Another ace: say something true about or directly to another player.
+**Ace = Reveal**
+> *"What's true?"*
+- Say something true. Your ace: confess something about yourself. Another ace: say something true about or directly to another player.
 
 > At the end of the game, the Kings on the table form a trail of the afternoon's most memorable moments, a little timeline of what happened out in the woods.
 
