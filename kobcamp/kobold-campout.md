@@ -141,6 +141,8 @@ Any player may respond in the moment without playing a card, but only the active
 
 Your played card uses its colour, value, and suit together to determine where the story goes.
 
+A played card is discarded and not used again during the game.
+
 > When you play a card, interpret colour, value, and suit together in whatever order best fits the moment.
 >
 > Remember, even the smallest card can describe something incredible through the lens of a kid.
@@ -216,3 +218,7 @@ Once the group has returned to camp, the table answers 3 questions together:
   - Read your first Truth, then read your last Truth.
 
 Afterwards everyone curls up in their bedrolls and tucks away for the night.
+
+> font-family: "Sniglet", system-ui;
+>
+> colours, warm earthy tones, a fun bright highlight colour, childlike and fun shapes, imagination, soft edges.
