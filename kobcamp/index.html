@@ -638,11 +638,13 @@
       align-items: flex-start;
     }
     .kings-note .crown { font-size: 1.4rem; flex-shrink: 0; }
+    .charcard {width: 400px;}
 
     @media (max-width: 520px) {
       .colour-grid { grid-template-columns: 1fr; }
       .card-grid { grid-template-columns: repeat(2, 1fr); }
-      img { width: 60vw;}
+      .charcard {width: 90vw;}
+      img { width: 80vw;}
     }
   </style>
 </head>
@@ -976,7 +978,7 @@
 
   <h2>Character Card</h2>
    <div class="value-grid">
-    <div class="value-card" style="width: 600px;">
+    <div class="value-card charcard">
       <img src="kobcamp-card.png">
     </div>
    </div>
